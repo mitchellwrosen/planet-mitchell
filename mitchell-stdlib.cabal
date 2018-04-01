@@ -134,6 +134,7 @@ library
     , Parallelism
     , Posix
     , Predicate
+    , Prelude
     , Pretty
     , Prim
     , Printf

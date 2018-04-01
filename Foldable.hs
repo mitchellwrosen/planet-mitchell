@@ -1,5 +1,5 @@
 module Foldable
-  ( Foldable(fold, foldMap, foldr, foldr', foldl, foldl', toList, null, length,
+  ( Foldable(fold, foldMap, foldr, foldr', foldl', toList, null, length,
       elem, sum, product)
   , foldrM
   , foldlM

@@ -1,3 +1,5 @@
+{-# language PackageImports #-}
+
 module Debug
   ( -- * Tracing strings
     trace
@@ -32,7 +34,7 @@ module Debug
   , showStackTrace
   ) where
 
-import Prelude
+import "base" Prelude
 
 import Debug.Trace
 import GHC.ExecutionStack hiding (Location(..), getStackTrace)
