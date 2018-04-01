@@ -1,0 +1,19 @@
+module Applicative
+  ( Applicative(..)
+  , liftA
+  , liftA3
+  , forever
+  , filterM
+  , mapAndUnzipM
+  , zipWithM
+  , zipWithM_
+  , replicateM
+  , replicateM_
+  , when
+  , whenJust
+  , unless
+  ) where
+
+import Control.Applicative
+import Control.Monad
+import Control.Monad.Extra

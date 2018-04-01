@@ -1,0 +1,21 @@
+module Ptr.Foreign
+  ( ForeignPtr
+  , newForeignPtr
+  , newForeignPtr_
+  , addForeignPtrFinalizer
+  , newForeignPtrEnv
+  , addForeignPtrFinalizerEnv
+  , withForeignPtr
+  , finalizeForeignPtr
+  , touchForeignPtr
+  , castForeignPtr
+  , plusForeignPtr
+  , mallocForeignPtr
+  , mallocForeignPtrBytes
+  , mallocForeignPtrArray
+  , mallocForeignPtrArray0
+  , unsafeForeignPtrToPtr
+  ) where
+
+import Foreign.ForeignPtr
+import Foreign.ForeignPtr.Unsafe

@@ -1,0 +1,22 @@
+module Ord
+  ( Ord(..)
+  , Ordering(..)
+  , Comparison(..)
+  , defaultComparison
+  , comparing
+  , Down(..)
+  , Min(..)
+  , Max(..)
+  , Arg(..)
+  , ArgMin
+  , ArgMax
+  , Ord1(..)
+  , compare1
+  , Ord2(..)
+  , compare2
+  ) where
+
+import Data.Functor.Classes
+import Data.Functor.Contravariant
+import Data.Ord
+import Data.Semigroup

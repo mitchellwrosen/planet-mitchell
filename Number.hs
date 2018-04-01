@@ -1,0 +1,224 @@
+{-# language CPP                #-}
+{-# language ExplicitNamespaces #-}
+
+module Number
+  ( -- * Numeric types
+    Int
+  , Int8
+  , Int16
+  , Int32
+  , Int64
+  , Integer
+  , Natural
+  , Fixed(..)
+  , HasResolution(..)
+  , showFixed
+  , E0
+  , Uni
+  , E1
+  , Deci
+  , E2
+  , Centi
+  , E3
+  , Milli
+  , E6
+  , Micro
+  , E9
+  , Nano
+  , E12
+  , Pico
+  , Ratio
+  , Rational
+  , (%)
+  , numerator
+  , denominator
+  , approxRational
+  , Word
+  , Word8
+  , Word16
+  , byteSwap16
+  , Word32
+  , byteSwap32
+  , Word64
+  , byteSwap64
+  , Float
+  , Double
+  , Complex
+  , realPart
+  , imagPart
+  , mkPolar
+  , cis
+  , polar
+  , magnitude
+  , phase
+  , conjugate
+  , Sum(..)
+  , Product(..)
+    -- * Numeric type classes
+  , Num(..)
+  , subtract
+  , fromIntegral
+  , Real(..)
+  , realToFrac
+  , div'
+  , mod'
+  , divMod'
+  , Integral(..)
+  , even
+  , odd
+  , gcd
+  , lcm
+  , Fractional(..)
+  , Floating(..)
+  , RealFrac(..)
+  , RealFloat(..)
+  , fromRat
+    -- * Showing numbers
+  , showSigned
+  , showIntAtBase
+  , showInt
+  , showHex
+  , showOct
+  , showEFloat
+  , showFFloat
+  , showGFloat
+  , showFFloatAlt
+  , showGFloatAlt
+  , showFloat
+#if MIN_VERSION_base(4,11,0)
+  , showHFloat
+#endif
+  , floatToDigits
+    -- * Reading numbers
+  , readSigned
+  , readInt
+  , readDec
+  , readOct
+  , readHex
+  , readFloat
+  , lexDigits
+    -- * Type-level numbers
+  , Nat
+  , KnownNat
+  , natVal
+  , natVal'
+  , SomeNat(..)
+  , someNatVal
+  , sameNat
+  , type (<=)
+  , type (<=?)
+  , type (+)
+  , type (*)
+  , type (^)
+  , type (-)
+  , Min
+  , Max
+  , Lcm
+  , Gcd
+  , Divides
+#if MIN_VERSION_base(4,11,0)
+  , Div
+  , Mod
+  , Log2
+#endif
+  , CmpNat
+    -- * Constraints
+  , plusNat
+  , timesNat
+  , powNat
+  , minNat
+  , maxNat
+  , gcdNat
+  , lcmNat
+  , divNat
+  , modNat
+  , plusZero
+  , timesZero
+  , timesOne
+  , powZero
+  , powOne
+  , maxZero
+  , minZero
+  , gcdZero
+  , gcdOne
+  , lcmZero
+  , lcmOne
+  , plusAssociates
+  , timesAssociates
+  , minAssociates
+  , maxAssociates
+  , gcdAssociates
+  , lcmAssociates
+  , plusCommutes
+  , timesCommutes
+  , minCommutes
+  , maxCommutes
+  , gcdCommutes
+  , lcmCommutes
+  , plusDistributesOverTimes
+  , timesDistributesOverPow
+  , timesDistributesOverGcd
+  , timesDistributesOverLcm
+  , minDistributesOverPlus
+  , minDistributesOverTimes
+  , minDistributesOverPow1
+  , minDistributesOverPow2
+  , minDistributesOverMax
+  , maxDistributesOverPlus
+  , maxDistributesOverTimes
+  , maxDistributesOverPow1
+  , maxDistributesOverPow2
+  , maxDistributesOverMin
+  , gcdDistributesOverLcm
+  , lcmDistributesOverGcd
+  , minIsIdempotent
+  , maxIsIdempotent
+  , lcmIsIdempotent
+  , gcdIsIdempotent
+  , plusIsCancellative
+  , timesIsCancellative
+  , dividesPlus
+  , dividesTimes
+  , dividesMin
+  , dividesMax
+  , dividesPow
+  , dividesGcd
+  , dividesLcm
+  , plusMonotone1
+  , plusMonotone2
+  , timesMonotone1
+  , timesMonotone2
+  , powMonotone1
+  , powMonotone2
+  , minMonotone1
+  , minMonotone2
+  , maxMonotone1
+  , maxMonotone2
+  , divMonotone1
+  , divMonotone2
+  , euclideanNat
+  , plusMod
+  , timesMod
+  , modBound
+  , dividesDef
+  , timesDiv
+  , eqLe
+  , leEq
+  , leId
+  , leTrans
+  , zeroLe
+  ) where
+
+import Data.Complex
+import Data.Constraint.Nat
+import Data.Fixed
+import Data.Monoid
+import Data.Ratio
+import GHC.Int
+import GHC.Float
+import GHC.Num
+import GHC.Real
+import GHC.TypeLits
+import GHC.Word
+import Numeric
+import Numeric.Natural
