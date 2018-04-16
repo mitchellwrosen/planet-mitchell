@@ -1,10 +1,19 @@
 module Chan
-  ( Chan
-  , newChan
-  , writeChan
+  ( -- * Creating channels
+    newChan
+  , InChan
+  , OutChan
+    -- * Reading
   , readChan
+  , readChanOnException
+  , tryReadChan
+  , Element(..)
+  , estimatedLength
+    -- * Writing
+  , writeChan
+  , tryWriteChan
+    -- * Broadcasting
   , dupChan
-  , writeList2Chan
   ) where
 
-import Control.Concurrent.Chan
+import Control.Concurrent.Chan.Unagi.Bounded

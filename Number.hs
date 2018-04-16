@@ -73,6 +73,8 @@ module Number
   , RealFrac(..)
   , RealFloat(..)
   , fromRat
+  , Erf(..)
+  , InvErf(..)
     -- * Showing numbers
   , showSigned
   , showIntAtBase
@@ -213,6 +215,7 @@ import Data.Complex
 import Data.Constraint.Nat
 import Data.Fixed
 import Data.Monoid
+import Data.Number.Erf
 import Data.Ratio
 import GHC.Int
 import GHC.Float

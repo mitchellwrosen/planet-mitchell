@@ -3,25 +3,36 @@
 {-# language CPP #-}
 
 module Concurrency
-  ( -- * ThreadId
-    ThreadId
-  , myThreadId
-  , mkWeakThreadId
-    -- * Spawning threads
+  ( -- * Concurrency
+    -- ** High-level concurrency
+    concurrently
+  , concurrently_
+  , race
+  , race_
+  , mapConcurrently
+  , mapConcurrently_
+  , forConcurrently
+  , forConcurrently_
+  , replicateConcurrently
+  , replicateConcurrently_
+  , Concurrently(..)
+    -- ** Low-level concurrency using @forkIO@
   , forkIO
   , forkIOWithUnmask
   , forkOn
   , forkOnWithUnmask
+  , throwTo
+  , killThread
+    -- ** Low-level concurrency using @async@
   , Async
-  , asyncThreadId
-#if MIN_VERSION_async(2,2,0)
-  , compareAsyncs
-#endif
   , async
   , asyncBound
   , asyncOn
   , asyncWithUnmask
   , asyncOnWithUnmask
+  , cancel
+  , uninterruptibleCancel
+  , cancelWith
   , withAsync
   , withAsyncBound
   , withAsyncOn
@@ -51,28 +62,10 @@ module Concurrency
   , pollSTM
   , link
   , link2
+  , asyncThreadId
 #if MIN_VERSION_async(2,2,0)
+  , compareAsyncs
   , ExceptionInLinkedThread(..)
-#endif
-  , race
-  , race_
-  , concurrently
-  , concurrently_
-  , mapConcurrently
-  , mapConcurrently_
-  , forConcurrently
-  , forConcurrently_
-  , replicateConcurrently
-  , replicateConcurrently_
-  , Concurrently(..)
-    -- * Throwing asynchronous exceptions
-  , throwTo
-  , killThread
-  , timeout
-  , cancel
-  , uninterruptibleCancel
-  , cancelWith
-#if MIN_VERSION_async(2,2,0)
   , AsyncCancelled(..)
 #endif
     -- * Delay
@@ -81,6 +74,9 @@ module Concurrency
     -- * Cooperative concurrency
   , yield
     -- * Thread info
+  , ThreadId
+  , myThreadId
+  , mkWeakThreadId
   , ThreadStatus(..)
   , BlockReason(..)
   , threadStatus
@@ -97,4 +93,3 @@ module Concurrency
 import Control.Concurrent.Async
 import Control.Exception
 import GHC.Conc
-import System.Timeout

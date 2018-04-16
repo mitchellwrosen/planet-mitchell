@@ -1,4 +1,4 @@
-module List.NonEmpty
+module List1
   ( module Data.List.NonEmpty
   ) where
 

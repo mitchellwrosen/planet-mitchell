@@ -2,9 +2,8 @@ module Monoid
   ( -- * Monoid
     Monoid(mempty)
     -- * Generic Monoid
-  , gmemptydefault
-  , gmappenddefault
+  , gmempty
   ) where
 
 import Data.Monoid
-import Generics.Deriving.Monoid
+import Data.Semigroup.Generic

@@ -7,8 +7,8 @@ module Semigroup
   , Dual(..)
   , cycle1
     -- * Generic Semigroup
-  , gsappenddefault
+  , gmappend
   ) where
 
 import Data.Semigroup
-import Generics.Deriving.Semigroup
+import Data.Semigroup.Generic
