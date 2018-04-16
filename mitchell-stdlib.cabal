@@ -61,6 +61,7 @@ library
     , typed-process
     , unagi-chan
     , unordered-containers
+    , vault
     , vector
     , weigh
     , writer-cps-mtl
@@ -209,6 +210,7 @@ library
     , Type
     , Typeable
     , Unique
+    , Vault
     , Vector
     , Vector.Generic
     , Vector.Mutable

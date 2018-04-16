@@ -121,11 +121,16 @@ And some objectively good decisions, too:
 
 - `hedgehog`
 
-  TODO
+  `hedgehog` is a property-based testing library.
+
+  It is re-exported from the `Test`, `Test.Gen`, and `Test.Range` modules.
 
 - `list-transformer`
 
-  TODO
+  `list-transformer` implements the "ListT done right" type with a clean, simple
+  API.
+
+  It is re-exported from the `ListT` module.
 
 - `logict`
 
@@ -141,7 +146,10 @@ And some objectively good decisions, too:
 
 - `mmorph`
 
-  TODO
+  `mmorph` provides "functors over monads" and "monads over monads".
+
+  It is re-exported from the `MFunctor` and `MMonad` modules, and also provides
+  `generalize` in the `Identity` module.
 
 - `monad-ste`
 
@@ -240,6 +248,10 @@ And some objectively good decisions, too:
   TODO
 
 - `unordered-containers`
+
+  TODO
+
+- `vault`
 
   TODO
 
