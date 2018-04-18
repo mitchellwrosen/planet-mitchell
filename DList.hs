@@ -1,5 +1,16 @@
+{-| This module contains:
+
+    * The 'DList' type and related functionality from @dlist@.
+
+    The following functions are not exported:
+
+    * 'head' (partial)
+    * 'tail' (partial)
+-}
+
 module DList
-  ( DList(Nil, Cons)
+  ( -- * DList
+    DList(Nil, Cons)
   , fromList
   , toList
   , apply
@@ -11,8 +22,6 @@ module DList
   , concat
   , replicate
   , list
-  , head
-  , tail
   , unfoldr
   , foldr
   , map

@@ -1,3 +1,8 @@
+{-| This module contains:
+
+    * The "Control.Monad.Cont" module from @mtl@.
+-}
+
 module Cont
   ( -- * Cont
     Cont

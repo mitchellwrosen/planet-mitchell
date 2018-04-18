@@ -1,16 +1,37 @@
 {-# language PackageImports #-}
 
 module Prelude
-  ( module Alternative
-  , module ByteString
+  ( -- * Alternative
+    Alternative(..)
+  , guard
+  , optional
+    -- * Applicative
+  , Applicative(..)
+  , filterM
+  , forever
+  , liftA3
+  , replicateM
+  , replicateM_
+  , unless
+  , when
+  , whenJust
+  , zipWithM
+  , zipWithM_
+    -- * ByteString
+  , ByteString
+    -- * Category
   , module Category
+    -- * Foldl
   , module Foldl
+    -- * Function
   , module Function
+    -- * Monad
   , module Monad
   , module X
   ) where
 
-import Alternative (Alternative(..), guard, optional)
+import Alternative
+import Applicative
 import ByteString (ByteString)
 import Category
 import Foldl (Fold(..), FoldM(..))

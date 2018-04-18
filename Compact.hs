@@ -1,5 +1,11 @@
+{-| This module contains:
+
+    * The "Data.Compact" module from @compact@.
+-}
+
 module Compact
-  ( Compact
+  ( -- * Compact
+    Compact
   , compact
   , compactWithSharing
   , compactAdd

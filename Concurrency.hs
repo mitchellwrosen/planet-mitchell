@@ -1,4 +1,9 @@
--- | Basic concurrency operations.
+{-| This module contains:
+
+    * High-level types and functions from @async@.
+    * Low-level types and functions from "Control.Concurrent" in @base@.
+    * Even lower-level types and functions from "GHC.Conc" in @base@.
+-}
 
 {-# language CPP #-}
 
@@ -91,5 +96,4 @@ module Concurrency
   ) where
 
 import Control.Concurrent.Async
-import Control.Exception
 import GHC.Conc

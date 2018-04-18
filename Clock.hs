@@ -1,3 +1,9 @@
+{-| This module contains:
+
+    * The "System.CPUTime" module from @base@.
+    * On GHC 8.4+, the "GHC.Clock" module from @base@.
+-}
+
 {-# language CPP #-}
 
 module Clock
