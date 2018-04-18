@@ -1,6 +1,5 @@
 module Function
-  ( id
-  , const
+  ( const
   , flip
   , ($)
   , ($!)
