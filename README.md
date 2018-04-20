@@ -41,6 +41,10 @@ And some objectively good decisions, too:
 
   It is re-exported from the `Concurrency` module.
 
+- `atomic-primops`
+
+  TODO
+
 - `bits`
 
   `bits` provides a few missing bits from `base` like `lsb`.

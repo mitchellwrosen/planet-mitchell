@@ -10,6 +10,7 @@ library
   build-depends:
       ansi-terminal
     , async >= 2.1.1 && < 2.3
+    , atomic-primops
     , base >= 4.10 && < 5.0
     , bits
     , bytestring
@@ -84,18 +85,19 @@ library
     , Comonad
     , ComonadApply
     , Compact
+    , Compose
     , Concurrency
+    , Const
     , Constraint
     , Cont
     , Contravariant
-    , Compose
-    , Const
+    , Counter
+    , DList
     , Data
     , Debug
     , Decidable
     , Distributive
     , Divisible
-    , DList
     , Dynamic
     , Either
     , Enum
@@ -114,15 +116,15 @@ library
     , Functor
     , Generic
     , Graph
-    , Hashable
     , HashMap
     , HashSet
+    , Hashable
     , Heap
+    , IO
+    , IORef
     , Identity
     , IntMap
     , IntSet
-    , IO
-    , IORef
     , Ix
     , Label
     , LazyByteString
@@ -131,12 +133,13 @@ library
     , List1
     , ListT
     , Logic
+    , MFunctor
+    , MMonad
+    , MVar
     , Managed
     , Map
     , Maybe
     , MaybeT
-    , MFunctor
-    , MMonad
     , Monad
     , MonadBase
     , MonadFail
@@ -146,7 +149,6 @@ library
     , MonadTrans
     , MonadZip
     , Monoid
-    , MVar
     , Number
     , Optparse
     , Ord
@@ -169,45 +171,45 @@ library
     , Ptr.Static
     , Ptr.Weak
     , QSem
+    , RTS
     , Random
     , Read
     , Reader
     , Reflection
-    , RTS
+    , ST
+    , STM
     , Semigroup
     , Sequence
     , Set
     , ShortByteString
     , Show
     , Socket
-    , ST
     , StableName
     , State
-    , STM
     , Storable
     , String
     , Sum
     , System
-    , Tagged
-    , TBimap
     , TBQueue
+    , TBimap
     , TChan
+    , TMVar
+    , TMap
+    , TMultimap
+    , TSem
+    , TSet
+    , TVar
+    , Tagged
     , Terminal
     , Test
     , Test.Gen
     , Test.Range
     , Text
     , Time
-    , TMap
-    , TMultimap
-    , TMVar
     , Traversable
     , Tree
     , Trie
-    , TSem
-    , TSet
     , Tuple
-    , TVar
     , Type
     , Typeable
     , Unique

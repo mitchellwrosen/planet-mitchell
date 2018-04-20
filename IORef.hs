@@ -11,7 +11,16 @@ module IORef
   , atomicWriteIORef
   , atomicWriteIORef'
   , mkWeakIORef
+    -- * Atomic check-and-set
+  , Ticket
+  , peekTicket
+  , readForCAS
+  , casIORef
+  , casIORef2
+  , atomicModifyIORefCAS
+  , atomicModifyIORefCAS_
   ) where
 
-import UnliftIO.IORef
 import Data.IORef.Extra (atomicWriteIORef', writeIORef')
+import Data.Atomics
+import UnliftIO.IORef
