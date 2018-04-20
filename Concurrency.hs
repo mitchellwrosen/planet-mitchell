@@ -1,7 +1,8 @@
 {-| This module contains:
 
-    * High-level types and functions from @async@.
-    * Low-level types and functions from "Control.Concurrent" in @base@.
+    * High-level types and functions from @async@, generalized by @unliftio@.
+    * Low-level types and functions from "Control.Concurrent" in @base@,
+      generalized by @unliftio@.
     * Even lower-level types and functions from "GHC.Conc" in @base@.
 -}
 
@@ -23,7 +24,7 @@ module Concurrency
   , Concurrently(..)
     -- ** Low-level concurrency using @forkIO@
   , forkIO
-  , forkIOWithUnmask
+  , forkWithUnmask
   , forkOn
   , forkOnWithUnmask
   , throwTo
@@ -95,5 +96,13 @@ module Concurrency
   , closeFdWith
   ) where
 
+#if MIN_VERSION_async(2,2,0)
 import Control.Concurrent.Async
+  (ExceptionInLinkedThread(..), AsyncCancelled(..), compareAsyncs)
+#endif
 import GHC.Conc
+  (BlockReason(..), ThreadStatus(..), closeFdWith, labelThread, threadStatus,
+    threadWaitReadSTM, threadWaitWriteSTM)
+import UnliftIO.Concurrent
+import UnliftIO.Async
+import UnliftIO.STM (registerDelay)

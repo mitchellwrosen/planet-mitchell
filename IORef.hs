@@ -13,5 +13,5 @@ module IORef
   , mkWeakIORef
   ) where
 
-import Data.IORef
-import Data.IORef.Extra
+import UnliftIO.IORef
+import Data.IORef.Extra (atomicWriteIORef', writeIORef')

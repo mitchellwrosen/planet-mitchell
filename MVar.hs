@@ -1,5 +1,6 @@
 module MVar
-  ( MVar
+  ( -- * MVar
+    MVar
   , newEmptyMVar
   , newMVar
   , takeMVar
@@ -17,6 +18,8 @@ module MVar
   , modifyMVarMasked
   , tryReadMVar
   , mkWeakMVar
+  , BlockedIndefinitelyOnMVar(..)
   ) where
 
-import Control.Concurrent.Extra
+import Control.Exception (BlockedIndefinitelyOnMVar(..))
+import UnliftIO.MVar

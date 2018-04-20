@@ -1,6 +1,7 @@
 module IO
-  ( module System.IO
+  ( module UnliftIO.IO
   , module System.IO.Error
+  , IO
   , timeout
   , once
   , onceFork
@@ -11,8 +12,9 @@ module IO
   , unsafeFixIO
   ) where
 
-import Control.Concurrent.Extra
-import System.IO
+import Control.Concurrent.Extra (once, onceFork)
+import System.IO (IO)
 import System.IO.Error
 import System.IO.Unsafe
-import System.Timeout
+import UnliftIO.IO
+import UnliftIO.Timeout

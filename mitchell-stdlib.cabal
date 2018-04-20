@@ -60,6 +60,7 @@ library
     , transformers-base
     , typed-process
     , unagi-chan
+    , unliftio
     , unordered-containers
     , vault
     , vector

@@ -13,4 +13,5 @@ module TBQueue
   , isFullTBQueue
   ) where
 
-import Control.Concurrent.STM.TBQueue
+import UnliftIO.STM
+import Control.Concurrent.STM.TBQueue (flushTBQueue)

@@ -15,4 +15,5 @@ module TMVar
   , mkWeakTMVar
   ) where
 
-import Control.Concurrent.STM.TMVar
+import Control.Concurrent.STM.TMVar (tryPutTMVar)
+import UnliftIO.STM

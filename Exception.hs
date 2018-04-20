@@ -1,34 +1,8 @@
 module Exception
-  ( -- * Exception types
-    SomeException(..)
-  , Exception(..)
-  , mapException
-  , IOException
-  , ArithException(..)
-  , ArrayException(..)
-  , AssertionFailed(..)
-  , CompactionFailed(..)
-  , ErrorCall(..)
-  , NoMethodError(..)
-  , PatternMatchFail(..)
-  , RecConError(..)
-  , RecSelError(..)
-  , RecUpdError(..)
-  , TypeError(..)
-    -- ** Asynchronous exceptions
-  , SomeAsyncException(..)
-  , AsyncException(..)
-  , asyncExceptionToException
-  , asyncExceptionFromException
-  , AllocationLimitExceeded(..)
-  , BlockedIndefinitelyOnMVar(..)
-  , BlockedIndefinitelyOnSTM(..)
-  , Deadlock(..)
-  , NestedAtomically(..)
-  , NonTermination(..)
-    -- * Throwing exceptions
-  , throwIO
+  ( -- * Throwing exceptions
+    throwIO
   , ioError
+  , userError
     -- * Catching exceptions
   , catch
   , catches
@@ -38,8 +12,13 @@ module Exception
   , handleJust
   , try
   , tryJust
+    -- * Cleanup
+  , bracket
+  , bracket_
+  , bracketOnError
+  , finally
+  , onException
     -- * Masking exceptions
-    -- * Exception masking
   , MaskingState(..)
   , mask
   , mask_
@@ -48,12 +27,21 @@ module Exception
   , getMaskingState
   , interruptible
   , allowInterrupt
-    -- * Cleanup
-  , bracket
-  , bracket_
-  , bracketOnError
-  , finally
-  , onException
+    -- * Exception types
+  , SomeException(..)
+  , Exception(..)
+  , mapException
+  , IOException
+    -- ** Asynchronous exceptions
+  , SomeAsyncException(..)
+  , AsyncException(..)
+  , asyncExceptionToException
+  , asyncExceptionFromException
   ) where
 
 import Control.Exception
+  (AsyncException(..), MaskingState(..), allowInterrupt,
+    asyncExceptionFromException, asyncExceptionToException, getMaskingState,
+    interruptible, ioError, mapException)
+import System.IO.Error (userError)
+import UnliftIO.Exception

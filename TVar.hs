@@ -5,6 +5,10 @@ module TVar
   , readTVar
   , readTVarIO
   , writeTVar
+  , modifyTVar
+  , modifyTVar'
+  , swapTVar
+  , mkWeakTVar
   ) where
 
-import Control.Concurrent.STM.TVar
+import UnliftIO.STM -- Control.Concurrent.STM.TVar
