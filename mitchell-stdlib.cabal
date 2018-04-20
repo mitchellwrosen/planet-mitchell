@@ -200,7 +200,6 @@ library
     , TMap
     , TMultimap
     , TMVar
-    , TQueue
     , Traversable
     , Tree
     , Trie
