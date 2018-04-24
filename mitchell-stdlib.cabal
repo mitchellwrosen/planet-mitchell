@@ -47,7 +47,6 @@ library
     , prettyprinter
     , primitive
     , profunctors
-    , promises
     , psqueues
     , reflection
     , regex-applicative
@@ -169,7 +168,6 @@ library
     , Printf
     , Process
     , Product
-    , Promise
     , Proxy
     , Ptr
     , Ptr.Foreign

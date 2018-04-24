@@ -282,3 +282,10 @@ And some objectively good decisions, too:
 - `writer-cps-mtl`
 
   TODO
+
+# Packages to know
+
+Here are some interesting packages I've come across that (currently) are not
+part of this standard library:
+
+- `promises`
