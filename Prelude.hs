@@ -19,6 +19,12 @@ module Prelude
   , whenJust
   , zipWithM
   , zipWithM_
+    -- * Bool
+  , Bool(..)
+  , (&&)
+  , (||)
+  , not
+  , otherwise
     -- * ByteString
   , ByteString
     -- * Category
@@ -45,8 +51,19 @@ module Prelude
   , foldM_
   , foldMapBy
   , foldBy
+    -- * Debug
+  , trace
+  , traceId
+  , traceShow
+  , traceShowId
+  , traceStack
+  , traceIO
     -- * Equality
   , Eq(..)
+    -- * Error
+  , assert
+  , error
+  , undefined
     -- * Foldl
   , Fold(..)
   , FoldM(..)
@@ -60,6 +77,12 @@ module Prelude
   , fix
   , Endo(..)
     -- * Functor
+  , Functor(..)
+  , (<$>)
+  , ($>)
+#if MIN_VERSION_base(4,11,0)
+  , (<&>)
+#endif
   , void
     -- * IO
   , IO
@@ -202,6 +225,9 @@ module Prelude
   , module Monad
     -- * MonadIO
   , module MonadIO
+    -- * Monoid
+  , Monoid
+  , mempty
     -- * Number
   , Int
   , Int8
@@ -267,9 +293,12 @@ module Prelude
 
 import Alternative
 import Applicative
+import Bool
 import ByteString (ByteString)
 import Category
+import Debug
 import Equality (Eq(..))
+import Error
 import Foldl (Fold(..), FoldM(..))
 import Foldable
 import Function
@@ -280,6 +309,7 @@ import ListT (ListT)
 import Maybe
 import Monad
 import MonadIO
+import Monoid
 import Number
 import Semigroup
 import Set (Set)
