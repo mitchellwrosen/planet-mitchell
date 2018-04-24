@@ -77,6 +77,7 @@ library
     , Bits
     , Bool
     , ByteString
+    , ByteString.Partial
     , Category
     , Chan
     , Char

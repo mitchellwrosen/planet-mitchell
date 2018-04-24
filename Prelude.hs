@@ -45,8 +45,11 @@ module Prelude
   , foldM_
   , foldMapBy
   , foldBy
+    -- * Equality
+  , Eq(..)
     -- * Foldl
-  , module Foldl
+  , Fold(..)
+  , FoldM(..)
     -- * Function
   , const
   , flip
@@ -183,8 +186,22 @@ module Prelude
   , zipWith5
   , zipWith6
   , zipWith7
+    -- * ListT
+  , ListT
+    -- * Maybe
+  , Maybe(..)
+  , maybe
+  , isJust
+  , isNothing
+  , fromMaybe
+  , listToMaybe
+  , maybeToList
+  , catMaybes
+  , mapMaybe
     -- * Monad
   , module Monad
+    -- * MonadIO
+  , module MonadIO
     -- * Number
   , Int
   , Int8
@@ -233,25 +250,14 @@ module Prelude
   , SomeNat(..)
   , someNatVal
   , sameNat
-  , type (<=)
-  , type (<=?)
-  , type (+)
-  , type (*)
-  , type (^)
-  , type (-)
-  , Min
-  , Max
-  , Lcm
-  , Gcd
-  , Divides
-#if MIN_VERSION_base(4,11,0)
-  , Div
-  , Mod
-  , Log2
-#endif
-  , CmpNat
+    -- * Semigroup
+  , Semigroup(..)
+    -- * Set
+  , Set
     -- * Show
   , Show(..)
+    -- * Text
+  , Text
     -- * Tuple
   , fst
   , snd
@@ -263,13 +269,20 @@ import Alternative
 import Applicative
 import ByteString (ByteString)
 import Category
+import Equality (Eq(..))
 import Foldl (Fold(..), FoldM(..))
 import Foldable
 import Function
 import Functor
 import IO
 import List
+import ListT (ListT)
+import Maybe
 import Monad
+import MonadIO
 import Number
+import Semigroup
+import Set (Set)
 import Show
+import Text (Text)
 import Tuple

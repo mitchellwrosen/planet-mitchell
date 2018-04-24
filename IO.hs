@@ -1,7 +1,7 @@
 module IO
-  ( module UnliftIO.IO
+  ( module System.IO
   , module System.IO.Error
-  , IO
+  , module UnliftIO.IO
   , timeout
   , once
   , onceFork
@@ -13,7 +13,11 @@ module IO
   ) where
 
 import Control.Concurrent.Extra (once, onceFork)
-import System.IO (IO)
+import System.IO hiding
+  (hClose, hFileSize, hFlush, hGetBuffering, hGetEcho, hIsClosed, hIsEOF,
+    hIsOpen, hIsReadable, hIsSeekable, hIsTerminalDevice, hIsWritable, hReady,
+    hSeek, hSetBuffering, hSetEcho, hSetFileSize, hTell, hWaitForInput,
+    withBinaryFile, withFile)
 import System.IO.Error
 import System.IO.Unsafe
 import UnliftIO.IO
