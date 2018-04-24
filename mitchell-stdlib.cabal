@@ -65,7 +65,6 @@ library
     , unagi-chan
     , unliftio
     , unordered-containers
-    , vault
     , vector
     , weigh
     , writer-cps-mtl
@@ -221,7 +220,6 @@ library
     , Type
     , Typeable
     , Unique
-    , Vault
     , Vector
     , Vector.Generic
     , Vector.Mutable

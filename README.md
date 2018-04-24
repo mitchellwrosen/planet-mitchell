@@ -199,10 +199,6 @@ And some objectively good decisions, too:
 
   TODO
 
-- `promises`
-
-  TODO
-
 - `psqueues`
 
   TODO
@@ -271,10 +267,6 @@ And some objectively good decisions, too:
 
   TODO
 
-- `vault`
-
-  TODO
-
 - `vector`
 
   TODO
@@ -289,7 +281,8 @@ And some objectively good decisions, too:
 
 # Packages to know
 
-Here are some interesting packages I've come across that (currently) are not
-part of this standard library:
+Here are some interesting packages that (currently) are not part of this
+standard library:
 
 - `promises`
+- `vault`
