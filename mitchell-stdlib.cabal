@@ -39,6 +39,7 @@ library
     , mmorph
     , monad-ste
     , mtl
+    , multiset
     , mwc-random
     , network
     , nf
@@ -127,6 +128,7 @@ library
     , IORef
     , Identity
     , IntMap
+    , IntMultiSet
     , IntPSQ
     , IntSet
     , Ix
@@ -154,6 +156,7 @@ library
     , MonadTrans
     , MonadZip
     , Monoid
+    , MultiSet
     , Number
     , Optparse
     , Ord

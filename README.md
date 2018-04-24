@@ -163,6 +163,10 @@ And some objectively good decisions, too:
 
   TODO
 
+- `multiset`
+
+  TODO
+
 - `mwc-random`
 
   TODO
