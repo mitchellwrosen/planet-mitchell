@@ -48,6 +48,7 @@ library
     , primitive
     , profunctors
     , promises
+    , psqueues
     , reflection
     , regex-applicative
     , safe-exceptions
@@ -119,6 +120,7 @@ library
     , Generic
     , Graph
     , HashMap
+    , HashPSQ
     , HashSet
     , Hashable
     , Heap
@@ -126,6 +128,7 @@ library
     , IORef
     , Identity
     , IntMap
+    , IntPSQ
     , IntSet
     , Ix
     , Label
@@ -155,6 +158,7 @@ library
     , Number
     , Optparse
     , Ord
+    , OrdPSQ
     , Parallelism
     , Parser
     , Posix
