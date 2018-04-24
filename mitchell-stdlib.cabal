@@ -49,6 +49,7 @@ library
     , profunctors
     , promises
     , reflection
+    , regex-applicative
     , safe-exceptions
     , semigroups
     , stm >= 2.4.5 && < 2.5
@@ -177,6 +178,7 @@ library
     , Read
     , Reader
     , Reflection
+    , Regex
     , ST
     , Semigroup
     , Sequence

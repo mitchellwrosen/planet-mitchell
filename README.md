@@ -203,6 +203,10 @@ And some objectively good decisions, too:
 
   TODO
 
+- `regex-applicative`
+
+  TODO
+
 - `safe-exceptions`
 
   TODO
