@@ -1,9 +1,20 @@
 {-# language ExplicitNamespaces #-}
 
 module String
-  ( String
+  ( -- * String
+    String
+  , words
+  , unwords
+  , lines
+  , unlines
+  , lower
+  , upper
+  , trim
+  , trimStart
+  , trimEnd
   , showString
   , IsString(..)
+    -- * Symbol
   , Symbol
   , KnownSymbol
   , symbolVal
@@ -38,6 +49,8 @@ module String
   ) where
 
 import Data.Constraint.Symbol
+import Data.List
+import Data.List.Extra
 import Data.String
 import GHC.Show
 import GHC.TypeLits

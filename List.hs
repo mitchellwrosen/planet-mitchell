@@ -1,8 +1,22 @@
+{-| This module contains:
+
+    * List functions from @base@, originally exported from "Data.List".
+    * List functions from @extra@, originally exported from "Data.List.Extra".
+
+    The following functions are not re-exported:
+
+    * '!!' (partial)
+    * 'head' (partial)
+    * 'init' (partial)
+    * 'last' (partial)
+    * 'tail' (partial)
+
+-}
+
 {-# language CPP #-}
 
 module List
   ( (++)
-  , (!!)
   , (\\)
   , allSame
   , anySame
@@ -85,6 +99,7 @@ module List
   , split
   , splitAt
   , splitAtEnd
+  , splitOn
   , snoc
   , stripInfix
   , stripInfixEnd

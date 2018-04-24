@@ -132,6 +132,7 @@ library
     , LazyByteString
     , LazyText
     , List
+    , List.Partial
     , List1
     , ListT
     , Logic

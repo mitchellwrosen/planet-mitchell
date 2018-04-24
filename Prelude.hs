@@ -88,7 +88,6 @@ module Prelude
   , IO
     -- * List
   , (++)
-  , (!!)
   , (\\)
   , allSame
   , anySame
