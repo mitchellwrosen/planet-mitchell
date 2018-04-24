@@ -178,7 +178,6 @@ library
     , Reader
     , Reflection
     , ST
-    , STM
     , Semigroup
     , Sequence
     , Set

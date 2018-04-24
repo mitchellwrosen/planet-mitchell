@@ -4,6 +4,11 @@
     * Low-level types and functions from "Control.Concurrent" in @base@,
       generalized by @unliftio@.
     * Even lower-level types and functions from "GHC.Conc" in @base@.
+    * 'STM' monad machinery from @stm@, generalized by @unliftio@.
+
+    The following functions are not re-exported:
+
+    * 'Control.Concurrent.STM.orElse' (use 'Alternative.<|>' instead)
 -}
 
 {-# language CPP #-}
@@ -74,6 +79,13 @@ module Concurrency
   , ExceptionInLinkedThread(..)
   , AsyncCancelled(..)
 #endif
+    -- * STM
+  , STM
+  , atomically
+  , retry
+  , throwSTM
+  , catchSTM
+  , unsafeIOToSTM
     -- * Delay
   , threadDelay
   , registerDelay
@@ -101,8 +113,9 @@ import Control.Concurrent.Async
   (ExceptionInLinkedThread(..), AsyncCancelled(..), compareAsyncs)
 #endif
 import GHC.Conc
-  (BlockReason(..), ThreadStatus(..), closeFdWith, labelThread, threadStatus,
-    threadWaitReadSTM, threadWaitWriteSTM)
+  (BlockReason(..), ThreadStatus(..), catchSTM, closeFdWith, labelThread, retry,
+    threadStatus, threadWaitReadSTM, threadWaitWriteSTM, throwSTM,
+    unsafeIOToSTM)
 import UnliftIO.Concurrent
 import UnliftIO.Async
-import UnliftIO.STM (registerDelay)
+import UnliftIO.STM
