@@ -18,8 +18,6 @@ module MVar
   , modifyMVarMasked
   , tryReadMVar
   , mkWeakMVar
-  , BlockedIndefinitelyOnMVar(..)
   ) where
 
-import Control.Exception (BlockedIndefinitelyOnMVar(..))
 import UnliftIO.MVar
