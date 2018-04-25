@@ -10,6 +10,13 @@ module Reader
   , withReaderT
     -- * MonadReader
   , MonadReader(..)
+    -- * Optics
+  , view
+  , views
+  , review
+  , reviews
   ) where
 
+import Control.Lens.Getter
+import Control.Lens.Review
 import Control.Monad.Reader

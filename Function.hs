@@ -1,5 +1,6 @@
 module Function
-  ( const
+  ( -- * Function
+    const
   , flip
   , ($)
   , ($!)
@@ -11,8 +12,11 @@ module Function
   , Endo(..)
   , diff
   , Op(..)
+    -- * Optics
+  , flipped
   ) where
 
+import Control.Lens.Iso
 import Data.Function
 import Data.Functor.Contravariant
 import Data.Semigroup

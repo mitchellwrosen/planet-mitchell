@@ -12,8 +12,12 @@ module Maybe
   , option
   , First(..)
   , Last(..)
+    -- * Optics
+  , _Just
+  , _Nothing
   ) where
 
+import Control.Lens.Prism
 import Data.Maybe
 import Data.Monoid
 import Data.Semigroup (Option(..), option)

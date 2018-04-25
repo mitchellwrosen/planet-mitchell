@@ -17,10 +17,13 @@ module Coerce
   , trans
   , repr
   , TestCoercion(..)
+    -- * Optics
+  , coerced
     -- * unsafeCoerce
   , unsafeCoerce
   ) where
 
+import Control.Lens.Iso
 import Data.Coerce
 import Data.Type.Coercion
 import Unsafe.Coerce

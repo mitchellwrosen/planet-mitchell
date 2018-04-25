@@ -8,6 +8,10 @@ module Either
   , fromLeft
   , fromRight
   , partitionEithers
+    -- * Optics
+  , _Left
+  , _Right
   ) where
 
+import Control.Lens.Prism
 import Data.Either

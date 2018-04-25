@@ -11,6 +11,11 @@ module Contravariant
   , (>$<)
   , (>$$<)
   , ($<)
+    -- * Optics
+  , contramapping
+  , contramapped
   ) where
 
+import Control.Lens.Iso
+import Control.Lens.Setter
 import Data.Functor.Contravariant

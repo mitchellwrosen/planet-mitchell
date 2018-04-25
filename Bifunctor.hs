@@ -6,6 +6,11 @@
 module Bifunctor
   ( -- * Bifunctor
     Bifunctor(..)
+    -- * Optics
+  , bimapping
+  , firsting
+  , seconding
   ) where
 
+import Control.Lens.Iso
 import Data.Bifunctor
