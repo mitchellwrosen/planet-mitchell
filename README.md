@@ -85,6 +85,8 @@ The packages:
 
 - `contravariant`
 
+- `contravariant-extras`
+
 - `deepseq`
 
 - `distributive`
@@ -196,5 +198,10 @@ The packages:
 Here are some interesting packages that (currently) are not part of this
 standard library:
 
+- `adjunctions`
+- `discrimination`
+- `free`
+- `lens`
+- `semigroupoids`
 - `promises`
 - `vault`
