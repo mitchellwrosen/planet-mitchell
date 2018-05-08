@@ -1,3 +1,4 @@
+{-# language CPP                #-}
 {-# language ExplicitNamespaces #-}
 
 module String
@@ -24,6 +25,7 @@ module String
   , sameSymbol
   , AppendSymbol
   , CmpSymbol
+#ifdef CONSTRAINTS
   , type (++)
   , Take
   , Drop
@@ -46,9 +48,12 @@ module String
   , lengthDrop
   , dropDrop
   , takeTake
+#endif
   ) where
 
+#ifdef CONSTRAINTS
 import Data.Constraint.Symbol
+#endif
 import Data.List
 import Data.List.Extra
 import Data.String

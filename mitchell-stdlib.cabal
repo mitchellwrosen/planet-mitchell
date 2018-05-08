@@ -40,13 +40,17 @@ flag compact
   default: False
   manual: True
 
+flag constraints
+  description: constraints dependency
+  default: False
+  manual: True
+
 library
   hs-source-dirs: .
   ghc-options: -Wall
   build-depends:
       async >= 2.1.1 || ^>= 2.2
     , base >= 4.10 && < 5.0
-    , constraints ^>= 0.10
     , containers ^>= 0.5
     , contravariant ^>= 1.4
     , deepseq >= 1.4.3 && ^>= 1.4
@@ -116,6 +120,9 @@ library
   if flag(compact)
     build-depends: compact ^>= 0.1
     cpp-options: -DCOMPACT
+  if flag(constraints)
+    build-depends: constraints ^>= 0.10
+    cpp-options: -DCONSTRAINTS
   exposed-modules:
       Alternative
     , Applicative

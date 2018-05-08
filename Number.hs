@@ -113,11 +113,13 @@ module Number
   , type (*)
   , type (^)
   , type (-)
+#ifdef CONSTRAINTS
   , Min
   , Max
   , Lcm
   , Gcd
   , Divides
+#endif
 #if MIN_VERSION_base(4,11,0)
   , Div
   , Mod
@@ -125,6 +127,7 @@ module Number
 #endif
   , CmpNat
     -- * Constraints
+#ifdef CONSTRAINTS
   , plusNat
   , timesNat
   , powNat
@@ -209,10 +212,13 @@ module Number
   , leId
   , leTrans
   , zeroLe
+#endif
   ) where
 
 import Data.Complex
+#ifdef CONSTRAINTS
 import Data.Constraint.Nat
+#endif
 import Data.Fixed
 import Data.Monoid
 import Data.Number.Erf
