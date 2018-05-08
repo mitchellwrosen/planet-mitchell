@@ -1,3 +1,5 @@
+{-# language CPP #-}
+
 module RTS
   ( -- * Garbage collection
     performGC
@@ -46,13 +48,17 @@ module RTS
   , RtsTime
   , getRTSStats
   , getRTSStatsEnabled
+#ifdef ATOMIC_PRIMOPS
     -- * Memory barriers
   , storeLoadBarrier
   , loadLoadBarrier
   , writeBarrier
+#endif
   ) where
 
+#ifdef ATOMIC_PRIMOPS
 import Data.Atomics
+#endif
 import GHC.Conc
 import GHC.Event
 import GHC.Stats
