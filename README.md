@@ -1,38 +1,60 @@
+# WIP
+
 ### Summary
 
 A modern Haskell standard library.
 
-This package is meant to be a (somewhat) beginner-friendly, comprehensive
-standard library and entrypoint into the Haskell ecosystem.
+`mitchell-stdlib` is a terribly-named, comprehensive standard library and
+entrypoint into the Haskell ecosystem.
 
 It contains no new code, only re-exports from `base` and various well-known
-(or not-so-well-known) packages.
+packages, similar to [https://hackage.haskell.org/package/rebase](rebase).
+However, unlike `rebase`, the following subjective decisions have been made
+along the way:
 
-Some subjective decisions have been made along the way:
-
-- I've stripped `Control.`, `Data.`, `Foreign.`, etc. prefixes from modules. The
-  idea here is that, if a name such as `Applicative` is sufficiently unambiguous
-  in the Haskell world, it deserves as short a module name as possible.
+- `Control.`, `Data.`, `Foreign.`, etc. module prefixes are stripped. The idea
+  here is that, if a name such as `Applicative` is sufficiently unambiguous in
+  the Haskell ecosystem, it deserves as short a module name as possible.
 
   See the [elm standard library](http://package.elm-lang.org/packages/elm-lang/core/latest)
   for inspiration.
 
-- The module hierarchy is not perfectly faithful to the underlying packages, and
-  I've invented a few new modules along the way, such as `Concurrency`,
-  `Parallelism`, `Eval`, and `Debug`.
+- The module hierarchy is not faithful to the underlying packages. Many modules
+  contain related re-exports from multiple packages, and I've invented a few new
+  sin-bin modules such as `Concurrency`, `Parallelism`, `Eval`, and `Debug`.
 
-  I imagine this will be confusing to experienced Haskellers, but hopefully
-  helpful for beginners.
+- Redundant functions like `sequence` are not re-exported.
 
-And some objectively good decisions, too:
+- Odd, uncommon types and functions (like `WrappedApplicative`) are not
+  re-exported.
 
-- Many fewer partial functions :)
+- Partial functions are discouraged and mostly live in `.Partial` modules.
+
+- `String` is heavily discouraged, and many `String` IO functions are not
+  re-exported; `Text` and/or `ByteString` versions are re-exported instead.
+
+- `MonadIO` / `MonadUnliftIO` are used where possible.
+
+- Asynchronous exception handling is done right.
+
+- Relatively obscure packages that provide valuable functionality
+  (like `nf` and `writer-cps-mtl`) are included.
 
 ### Packages
 
-- `ansi-terminal`
+_(Currently in-progress)_ Every dependency of `mitchell-stdlib` except `base` is
+enabled by a Cabal flag that defaults to `False`. This allows you to use only
+the bits of `mitchell-stdlib` that you need. I recommend you:
 
-  TODO
+* Start with the most stripped-down version with no flags, using the haddocks
+  to ascertain what could be there (they were generated with every flag
+  enabled).
+* When you hit a build error due to a missing type or function, enable the
+  corresponding flag.
+
+The packages:
+
+- `ansi-terminal`
 
 - `async`
 
@@ -43,8 +65,6 @@ And some objectively good decisions, too:
 
 - `atomic-primops`
 
-  TODO
-
 - `bits`
 
   `bits` provides a few missing bits from `base` like `lsb`.
@@ -53,75 +73,37 @@ And some objectively good decisions, too:
 
 - `bytestring`
 
-  TODO
-
 - `bytestring-trie`
-
-  TODO
 
 - `comonad`
 
-  TODO
-
 - `compact`
-
-  TODO
 
 - `constraints`
 
-  TODO
-
 - `containers`
-
-  TODO
 
 - `contravariant`
 
-  TODO
-
 - `deepseq`
-
-  TODO
-
-- `directory`
-
-  TODO
 
 - `distributive`
 
-  TODO
-
 - `dlist`
-
-  TODO
 
 - `erf`
 
-  TODO
-
 - `extra`
-
-  TODO
 
 - `filepath`
 
-  TODO
-
 - `foldl`
-
-  TODO
 
 - `gauge`
 
-  TODO
-
 - `hashable`
 
-  TODO
-
 - `heaps`
-
-  TODO
 
 - `hedgehog`
 
@@ -138,15 +120,9 @@ And some objectively good decisions, too:
 
 - `logict`
 
-  TODO
-
 - `managed`
 
-  TODO
-
 - `megaparsec`
-
-  TODO
 
 - `mmorph`
 
@@ -157,127 +133,63 @@ And some objectively good decisions, too:
 
 - `monad-ste`
 
-  TODO
-
 - `mtl`
-
-  TODO
 
 - `multiset`
 
-  TODO
-
 - `mwc-random`
-
-  TODO
 
 - `network`
 
-  TODO
-
 - `nf`
-
-  TODO
 
 - `optparse-applicative`
 
-  TODO
-
 - `parallel`
-
-  TODO
 
 - `prettyprinter`
 
-  TODO
-
 - `primitive`
-
-  TODO
 
 - `profunctors`
 
-  TODO
-
 - `psqueues`
-
-  TODO
 
 - `reflection`
 
-  TODO
-
 - `regex-applicative`
-
-  TODO
-
-- `safe-exceptions`
-
-  TODO
 
 - `semigroups`
 
-  TODO
-
 - `stm`
-
-  TODO
 
 - `stm-containers`
 
-  TODO
-
 - `tagged`
-
-  TODO
 
 - `time`
 
-  TODO
-
 - `text`
-
-  TODO
 
 - `text-short`
 
-  TODO
-
 - `transformers`
-
-  TODO
 
 - `transformers-base`
 
-  TODO
-
 - `typed-process`
-
-  TODO
 
 - `unagi-chan`
 
-  TODO
-
 - `unliftio`
-
-  TODO
 
 - `unordered-containers`
 
-  TODO
-
 - `vector`
-
-  TODO
 
 - `weigh`
 
-  TODO
-
 - `writer-cps-mtl`
-
-  TODO
 
 # Packages to know
 

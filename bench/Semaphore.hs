@@ -5,7 +5,6 @@ import Concurrency
 import Eval
 import MVar
 import QSem
-import STM
 import TSem
 
 main :: IO ()
