@@ -2,12 +2,6 @@
 
     * The 'HashPSQ' type from @psqueues@, originally exported from
     "Data.HashPSQ".
-
-    The following functions are not re-exported:
-
-    * 'deleteMin' (uncommon)
-    * 'valid' (uncommon)
-
 -}
 
 module HashPSQ

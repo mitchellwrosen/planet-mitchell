@@ -1,12 +1,6 @@
 {-| This module contains:
 
     * The 'OrdPSQ' type from @psqueues@, originally exported from "Data.OrdPSQ".
-
-    The following functions are not re-exported:
-
-    * 'deleteMin' (uncommon)
-    * 'valid' (uncommon)
-
 -}
 
 module OrdPSQ

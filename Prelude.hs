@@ -57,7 +57,8 @@ module Prelude
   , traceShow
   , traceShowId
   , traceStack
-  , traceIO
+  , traceM
+  , traceShowM
     -- * Equality
   , Eq(..)
     -- * Error
@@ -140,7 +141,6 @@ module Prelude
 #if MIN_VERSION_base(4,11,0)
   , iterate'
 #endif
-  , lines
   , lookup
   , map
   , nub
@@ -186,16 +186,13 @@ module Prelude
   , unfoldr
   , union
   , unionBy
-  , unlines
   , unsnoc
-  , unwords
   , unzip
   , unzip3
   , unzip4
   , unzip5
   , unzip6
   , unzip7
-  , words
   , zip
   , zip3
   , zip4

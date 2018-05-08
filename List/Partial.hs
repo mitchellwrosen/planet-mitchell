@@ -1,7 +1,6 @@
 {-| This module contains:
 
-    * Partial list functions from @base@, originally exported from "Data.List".
-
+    * The partial functions exported by "Data.List" from @base@.
 -}
 
 module List.Partial

@@ -2,15 +2,6 @@
 
     * List functions from @base@, originally exported from "Data.List".
     * List functions from @extra@, originally exported from "Data.List.Extra".
-
-    The following functions are not re-exported:
-
-    * '!!' (partial)
-    * 'head' (partial)
-    * 'init' (partial)
-    * 'last' (partial)
-    * 'tail' (partial)
-
 -}
 
 {-# language CPP #-}
@@ -69,7 +60,6 @@ module List
 #if MIN_VERSION_base(4,11,0)
   , iterate'
 #endif
-  , lines
   , lookup
   , map
   , nub
@@ -116,16 +106,13 @@ module List
   , unfoldr
   , union
   , unionBy
-  , unlines
   , unsnoc
-  , unwords
   , unzip
   , unzip3
   , unzip4
   , unzip5
   , unzip6
   , unzip7
-  , words
   , zip
   , zip3
   , zip4

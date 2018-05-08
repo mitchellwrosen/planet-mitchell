@@ -2,15 +2,6 @@
 
     * The 'MultiSet' type and related functions from @multiset@, originally
       exported from the "Data.MultiSet" module.
-
-    The following types and functions are not re-exported:
-
-    * 'Occur' (unnecessary, it's just 'Int')
-    * '\\' (use 'difference' instead)
-    * 'showTree' (uncommon)
-    * 'showTreeWith' (uncommon)
-    * 'valid' (uncommon)
-
 -}
 
 module MultiSet

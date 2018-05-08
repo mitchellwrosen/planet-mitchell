@@ -3,11 +3,6 @@
     * The regular expression type and related functionality from the
       @regex-applicative@ package, originally exported from the
       "Text.Regex.Applicative" and "Text.Regex.Applicative.Common" modules.
-
-    The following functions are not re-exported:
-
-    * 'comap' (use 'Profunctor.lmap' instead)
-
 -}
 
 module Regex

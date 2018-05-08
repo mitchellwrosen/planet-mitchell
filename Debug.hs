@@ -3,12 +3,6 @@
     * The "Debug.Trace" module from @base@.
     * The "GHC.ExecutionStack" module from @base@.
     * The "GHC.Stack" module from @base@.
-
-    The following functions are not re-exported:
-
-    * 'putTraceMsg' (deprecated)
-    * 'traceM'
-    * 'traceShowM'
 -}
 
 {-# language PackageImports #-}
@@ -20,7 +14,8 @@ module Debug
   , traceShow
   , traceShowId
   , traceStack
-  , traceIO
+  , traceM
+  , traceShowM
   , traceEvent
   , traceEventIO
   , traceMarker
