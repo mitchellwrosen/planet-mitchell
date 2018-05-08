@@ -20,6 +20,11 @@ flag bits
   default: True
   manual: True
 
+flag bytestring-trie
+  description: bytestring-trie dependency
+  default: True
+  manual: True
+
 common deps
   ghc-options: -Wall
   default-language: Haskell2010
@@ -31,7 +36,6 @@ library
       async >= 2.1.1 || ^>= 2.2
     , base >= 4.10 && < 5.0
     , bytestring ^>= 0.10
-    , bytestring-trie ^>= 0.2
     , comonad ^>= 5.0
     , compact ^>= 0.1
     , constraints ^>= 0.10
@@ -94,6 +98,9 @@ library
   if flag(bits)
     build-depends: bits ^>= 0.5
     cpp-options: -DBITS
+  if flag(bytestring-trie)
+    build-depends: bytestring-trie ^>= 0.2
+    cpp-options: -DBYTESTRING_TRIE
   exposed-modules:
       Alternative
     , Applicative

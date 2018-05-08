@@ -1,3 +1,7 @@
+{-# language CPP #-}
+
+#ifdef BYTESTRING_TRIE
+
 module Trie
   ( module Data.Trie
   , module Data.Trie.Convenience
@@ -5,3 +9,9 @@ module Trie
 
 import Data.Trie
 import Data.Trie.Convenience
+
+#else
+
+module Trie where
+
+#endif
