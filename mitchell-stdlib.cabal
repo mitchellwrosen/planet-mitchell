@@ -5,12 +5,16 @@ version: 0.1.0
 build-type: Simple
 category: Prelude
 
+flag ansi-terminal
+  description: ansi-terminal dependency
+  default: True
+  manual: True
+
 library
   hs-source-dirs: .
   ghc-options: -Wall
   build-depends:
-      ansi-terminal
-    , async >= 2.1.1 || ^>= 2.2
+      async >= 2.1.1 || ^>= 2.2
     , atomic-primops ^>= 0.8
     , base >= 4.10 && < 5.0
     , bits ^>= 0.5
@@ -69,6 +73,9 @@ library
     , vector ^>= 0.12
     , weigh ^>= 0.0
     , writer-cps-mtl ^>= 0.1
+  if flag(ansi-terminal)
+    build-depends: ansi-terminal ^>= 0.8
+    cpp-options: -DANSI_TERMINAL
   exposed-modules:
       Alternative
     , Applicative
