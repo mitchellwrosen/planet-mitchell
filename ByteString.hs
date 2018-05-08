@@ -3,6 +3,10 @@
     * The 'ByteString' type and related functions from @bytestring@.
 -}
 
+{-# language CPP #-}
+
+#ifdef BYTESTRING
+
 module ByteString
   ( -- * ByteString
     ByteString
@@ -82,3 +86,9 @@ module ByteString
   ) where
 
 import Data.ByteString
+
+#else
+
+module ByteString where
+
+#endif

@@ -25,8 +25,10 @@ module Prelude
   , (||)
   , not
   , otherwise
+#ifdef BYTESTRING
     -- * ByteString
   , ByteString
+#endif
     -- * Category
   , module Category
   , Foldable(..)
@@ -290,7 +292,9 @@ module Prelude
 import Alternative
 import Applicative
 import Bool
+#ifdef BYTESTRING
 import ByteString (ByteString)
+#endif
 import Category
 import Debug
 import Equality (Eq(..))

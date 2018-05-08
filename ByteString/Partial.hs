@@ -3,6 +3,10 @@
     * The partial functions exported by "Data.ByteString" from @bytestring@.
 -}
 
+{-# language CPP #-}
+
+#ifdef BYTESTRING
+
 module ByteString.Partial
   ( foldl1'
   , foldr1
@@ -16,3 +20,9 @@ module ByteString.Partial
   ) where
 
 import Data.ByteString
+
+#else
+
+module ByteString.Partial where
+
+#endif

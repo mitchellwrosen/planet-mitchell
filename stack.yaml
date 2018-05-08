@@ -14,4 +14,5 @@ flags:
     ansi-terminal: true
     atomic-primops: true
     bits: true
+    bytestring: true
     bytestring-trie: true

@@ -7,4 +7,5 @@ package mitchell-stdlib
     +ansi-terminal
     +atomic-primops
     +bits
+    +bytestring
     +bytestring-trie

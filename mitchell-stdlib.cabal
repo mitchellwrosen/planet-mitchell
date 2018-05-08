@@ -20,6 +20,11 @@ flag bits
   default: False
   manual: True
 
+flag bytestring
+  description: bytestring dependency
+  default: False
+  manual: True
+
 flag bytestring-trie
   description: bytestring-trie dependency
   default: False
@@ -31,7 +36,6 @@ library
   build-depends:
       async >= 2.1.1 || ^>= 2.2
     , base >= 4.10 && < 5.0
-    , bytestring ^>= 0.10
     , comonad ^>= 5.0
     , compact ^>= 0.1
     , constraints ^>= 0.10
@@ -92,6 +96,9 @@ library
   if flag(bits)
     build-depends: bits ^>= 0.5
     cpp-options: -DBITS
+  if flag(bytestring)
+    build-depends: bytestring ^>= 0.10
+    cpp-options: -DBYTESTRING
   if flag(bytestring-trie)
     build-depends: bytestring-trie ^>= 0.2
     cpp-options: -DBYTESTRING_TRIE
