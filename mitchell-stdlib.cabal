@@ -7,22 +7,22 @@ category: Prelude
 
 flag ansi-terminal
   description: ansi-terminal dependency
-  default: True
+  default: False
   manual: True
 
 flag atomic-primops
   description: atomic-primops dependency
-  default: True
+  default: False
   manual: True
 
 flag bits
   description: bits dependency
-  default: True
+  default: False
   manual: True
 
 flag bytestring-trie
   description: bytestring-trie dependency
-  default: True
+  default: False
   manual: True
 
 library

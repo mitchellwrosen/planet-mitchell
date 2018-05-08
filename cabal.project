@@ -1,3 +1,10 @@
 packages: .
 
 with-compiler: ghc-8.2.2
+
+package mitchell-stdlib
+  flags:
+    +ansi-terminal
+    +atomic-primops
+    +bits
+    +bytestring-trie
