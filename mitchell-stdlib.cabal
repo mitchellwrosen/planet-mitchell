@@ -96,6 +96,7 @@ library
     , Contravariant
     , Counter
     , DList
+    , DList.Partial
     , Data
     , Debug
     , Decidable

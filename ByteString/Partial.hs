@@ -1,7 +1,6 @@
 {-| This module contains:
 
-    * Partial functions on 'ByteString'.
-
+    * The partial functions exported by "Data.ByteString" from @bytestring@.
 -}
 
 module ByteString.Partial

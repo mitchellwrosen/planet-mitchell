@@ -1,27 +1,8 @@
 {-| This module contains:
 
     * The 'ByteString' type and related functions from @bytestring@.
-
-    The following functions are not re-exported:
-
-    * 'breakByte' (deprecated)
-    * 'findSubstring' (deprecated)
-    * 'findSubstrings' (deprecated)
-    * 'foldl' (use 'foldl'' instead)
-    * 'foldl1' (partial)
-    * 'foldl1'' (partial)
-    * 'foldr1' (partial)
-    * 'foldr1'' (partial)
-    * 'head' (partial)
-    * 'hPutStrLn' (deprecated)
-    * 'init' (partial)
-    * 'last' (partial)
-    * 'maximum' (partial)
-    * 'minimum' (partial)
-    * 'putStrLn' (deprecated)
-    * 'tail' (partial)
-
 -}
+
 module ByteString
   ( -- * ByteString
     ByteString

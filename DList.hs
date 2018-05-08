@@ -1,11 +1,6 @@
 {-| This module contains:
 
     * The 'DList' type and related functionality from @dlist@.
-
-    The following functions are not exported:
-
-    * 'head' (partial)
-    * 'tail' (partial)
 -}
 
 module DList
