@@ -5,8 +5,12 @@
       "Control.Exception".
 -}
 
+{-# language CPP #-}
+
 module Compact
-  ( -- * Compact
+  (
+#ifdef COMPACT
+    -- * Compact
     Compact
   , compact
   , compactWithSharing
@@ -17,8 +21,12 @@ module Compact
   , inCompact
   , isCompact
   , compactSize
-  , CompactionFailed(..)
+  ,
+#endif
+    CompactionFailed(..)
   ) where
 
 import Control.Exception (CompactionFailed(..))
+#ifdef COMPACT
 import Data.Compact
+#endif

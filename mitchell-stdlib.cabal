@@ -25,13 +25,18 @@ flag bytestring
   default: False
   manual: True
 
+flag bytestring-trie
+  description: bytestring-trie dependency
+  default: False
+  manual: True
+
 flag comonad
   description: comonad dependency
   default: False
   manual: True
 
-flag bytestring-trie
-  description: bytestring-trie dependency
+flag compact
+  description: compact dependency
   default: False
   manual: True
 
@@ -41,7 +46,6 @@ library
   build-depends:
       async >= 2.1.1 || ^>= 2.2
     , base >= 4.10 && < 5.0
-    , compact ^>= 0.1
     , constraints ^>= 0.10
     , containers ^>= 0.5
     , contravariant ^>= 1.4
@@ -109,6 +113,9 @@ library
   if flag(comonad)
     build-depends: comonad ^>= 5.0
     cpp-options: -DCOMONAD
+  if flag(compact)
+    build-depends: compact ^>= 0.1
+    cpp-options: -DCOMPACT
   exposed-modules:
       Alternative
     , Applicative
