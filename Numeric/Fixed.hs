@@ -1,0 +1,21 @@
+module Numeric.Fixed
+  ( Fixed(..)
+  , HasResolution(..)
+  , showFixed
+  , E0
+  , Uni
+  , E1
+  , Deci
+  , E2
+  , Centi
+  , E3
+  , Milli
+  , E6
+  , Micro
+  , E9
+  , Nano
+  , E12
+  , Pico
+  ) where
+
+import Data.Fixed

@@ -224,7 +224,34 @@ library
     , MonadZip
     , Monoid
     , MultiSet
-    , Number
+    , Numeric.Complex
+    , Numeric.Double
+    , Numeric.Erf
+    , Numeric.Floating
+    , Numeric.Fractional
+    , Numeric.Int
+    , Numeric.Int8
+    , Numeric.Int16
+    , Numeric.Int32
+    , Numeric.Int64
+    , Numeric.Integer
+    , Numeric.Integral
+    , Numeric.InvErf
+    , Numeric.Float
+    , Numeric.Nat
+    , Numeric.Natural
+    , Numeric.Num
+    , Numeric.Product
+    , Numeric.Ratio
+    , Numeric.Real
+    , Numeric.RealFloat
+    , Numeric.RealFrac
+    , Numeric.Sum
+    , Numeric.Word
+    , Numeric.Word8
+    , Numeric.Word16
+    , Numeric.Word32
+    , Numeric.Word64
     , Optparse
     , Ord
     , OrdPSQ

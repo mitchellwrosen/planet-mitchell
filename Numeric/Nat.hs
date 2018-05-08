@@ -1,106 +1,9 @@
 {-# language CPP                #-}
 {-# language ExplicitNamespaces #-}
 
-module Number
-  ( -- * Numeric types
-    Int
-  , Int8
-  , Int16
-  , Int32
-  , Int64
-  , Integer
-  , Natural
-  , Fixed(..)
-  , HasResolution(..)
-  , showFixed
-  , E0
-  , Uni
-  , E1
-  , Deci
-  , E2
-  , Centi
-  , E3
-  , Milli
-  , E6
-  , Micro
-  , E9
-  , Nano
-  , E12
-  , Pico
-  , Ratio
-  , Rational
-  , (%)
-  , numerator
-  , denominator
-  , approxRational
-  , Word
-  , Word8
-  , Word16
-  , byteSwap16
-  , Word32
-  , byteSwap32
-  , Word64
-  , byteSwap64
-  , Float
-  , Double
-  , Complex
-  , realPart
-  , imagPart
-  , mkPolar
-  , cis
-  , polar
-  , magnitude
-  , phase
-  , conjugate
-  , Sum(..)
-  , Product(..)
-    -- * Numeric type classes
-  , Num(..)
-  , subtract
-  , fromIntegral
-  , Real(..)
-  , realToFrac
-  , div'
-  , mod'
-  , divMod'
-  , Integral(..)
-  , even
-  , odd
-  , gcd
-  , lcm
-  , Fractional(..)
-  , Floating(..)
-  , RealFrac(..)
-  , RealFloat(..)
-  , fromRat
-  , Erf(..)
-  , InvErf(..)
-    -- * Showing numbers
-  , showSigned
-  , showIntAtBase
-  , showInt
-  , showHex
-  , showOct
-  , showEFloat
-  , showFFloat
-  , showGFloat
-  , showFFloatAlt
-  , showGFloatAlt
-  , showFloat
-#if MIN_VERSION_base(4,11,0)
-  , showHFloat
-#endif
-  , floatToDigits
-    -- * Reading numbers
-  , readSigned
-  , readInt
-  , readDec
-  , readOct
-  , readHex
-  , readFloat
-  , lexDigits
-    -- * Type-level numbers
-  , Nat
+module Numeric.Nat
+  ( -- * Nat
+    Nat
   , KnownNat
   , natVal
   , natVal'
@@ -126,7 +29,7 @@ module Number
   , Log2
 #endif
   , CmpNat
-    -- * Constraints
+    -- ** Constraints
 #ifdef CONSTRAINTS
   , plusNat
   , timesNat
@@ -215,19 +118,7 @@ module Number
 #endif
   ) where
 
-import Data.Complex
 #ifdef CONSTRAINTS
 import Data.Constraint.Nat
 #endif
-import Data.Fixed
-import Data.Monoid
-import Data.Number.Erf
-import Data.Ratio
-import GHC.Int
-import GHC.Float
-import GHC.Num
-import GHC.Real
 import GHC.TypeLits
-import GHC.Word
-import Numeric
-import Numeric.Natural

@@ -1,6 +1,4 @@
-{-# language CPP                #-}
-{-# language ExplicitNamespaces #-}
-{-# language PackageImports     #-}
+{-# language CPP            #-}
 
 module Prelude
   ( -- * Alternative
@@ -236,54 +234,63 @@ module Prelude
     -- * Monoid
   , Monoid
   , mempty
-    -- * Number
-  , Int
-  , Int8
-  , Int16
-  , Int32
-  , Int64
-  , Integer
-  , Natural
-  , Ratio
-  , Rational
-  , numerator
-  , denominator
-  , Word
-  , Word8
-  , Word16
-  , Word32
-  , Word64
-  , Float
+    -- * Numeric.Double
   , Double
-  , Complex
-    -- ** Numeric type classes
-  , Num(..)
-  , subtract
-  , fromIntegral
-  , Real(..)
-  , realToFrac
-  , div'
-  , mod'
-  , divMod'
+    -- * Numeric.Float
+  , Float
+    -- * Numeric.Floating
+  , Floating(..)
+    -- * Numeric.Fractional
+  , Fractional(..)
+    -- * Numeric.Int
+  , Int
+    -- * Numeric.Int8
+  , Int8
+    -- * Numeric.Int16
+  , Int16
+    -- * Numeric.Int32
+  , Int32
+    -- * Numeric.Int64
+  , Int64
+    -- * Numeric.Integer
+  , Integer
+    -- * Numeric.Integral
   , Integral(..)
   , even
   , odd
   , gcd
   , lcm
-  , Fractional(..)
-  , Floating(..)
-  , RealFrac(..)
-  , RealFloat(..)
-  , fromRat
-  , Erf(..)
-  , InvErf(..)
+  , fromIntegral
+    -- * Numeric.Nat
   , Nat
   , KnownNat
   , natVal
   , natVal'
   , SomeNat(..)
   , someNatVal
-  , sameNat
+    -- * Numeric.Num
+  , Num(..)
+  , subtract
+    -- * Numeric.Real
+  , Real(..)
+  , div'
+  , mod'
+  , divMod'
+  , realToFrac
+    -- * Numeric.RealFloat
+  , RealFloat(..)
+    -- * Numeric.RealFrac
+  , RealFrac(..)
+    -- * Numeric.Word
+  , Word
+    -- * Numeric.Word8
+  , Word8
+    -- * Numeric.Word16
+  , Word16
+    -- * Numeric.Word32
+  , Word32
+    -- * Numeric.Word64
+  , Word64
     -- * Semigroup
   , Semigroup(..)
 #ifdef CONTAINERS
@@ -331,7 +338,27 @@ import Maybe
 import Monad
 import MonadIO
 import Monoid
-import Number
+import Numeric.Double (Double)
+import Numeric.Float (Float)
+import Numeric.Floating (Floating(..))
+import Numeric.Fractional (Fractional(..))
+import Numeric.Int (Int)
+import Numeric.Int8 (Int8)
+import Numeric.Int16 (Int16)
+import Numeric.Int32 (Int32)
+import Numeric.Int64 (Int64)
+import Numeric.Integer (Integer)
+import Numeric.Integral (Integral(..), even, fromIntegral, gcd, lcm, odd)
+import Numeric.Nat (KnownNat, SomeNat(..), Nat, natVal, natVal', someNatVal)
+import Numeric.Num (Num(..), subtract)
+import Numeric.Real (Real(..), div', divMod', mod', realToFrac)
+import Numeric.RealFloat (RealFloat(..))
+import Numeric.RealFrac (RealFrac(..))
+import Numeric.Word (Word)
+import Numeric.Word8 (Word8)
+import Numeric.Word16 (Word16)
+import Numeric.Word32 (Word32)
+import Numeric.Word64 (Word64)
 import Semigroup
 #ifdef CONTAINERS
 import Sequence (Seq)

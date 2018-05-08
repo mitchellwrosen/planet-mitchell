@@ -14,6 +14,7 @@ module String
   , trimStart
   , trimEnd
   , showString
+  , lexDigits
   , IsString(..)
     -- * Symbol
   , Symbol
@@ -59,3 +60,4 @@ import Data.List.Extra
 import Data.String
 import GHC.Show
 import GHC.TypeLits
+import Numeric (lexDigits)
