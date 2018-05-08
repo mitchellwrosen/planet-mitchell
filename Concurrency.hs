@@ -5,10 +5,6 @@
       generalized by @unliftio@.
     * Even lower-level types and functions from "GHC.Conc" in @base@.
     * 'STM' monad machinery from @stm@, generalized by @unliftio@.
-
-    The following functions are not re-exported:
-
-    * 'Control.Concurrent.STM.orElse' (use 'Alternative.<|>' instead)
 -}
 
 {-# language CPP #-}
