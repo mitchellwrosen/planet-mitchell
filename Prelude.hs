@@ -276,8 +276,10 @@ module Prelude
   , sameNat
     -- * Semigroup
   , Semigroup(..)
+#ifdef CONTAINERS
     -- * Set
   , Set
+#endif
     -- * Show
   , Show(..)
     -- * Text
@@ -312,7 +314,9 @@ import MonadIO
 import Monoid
 import Number
 import Semigroup
+#ifdef CONTAINERS
 import Set (Set)
+#endif
 import Show
 import Text (Text)
 import Tuple

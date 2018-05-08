@@ -16,3 +16,7 @@ flags:
     bits: true
     bytestring: true
     bytestring-trie: true
+    comonad: true
+    compact: true
+    constraints: true
+    containers: true

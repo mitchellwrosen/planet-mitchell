@@ -45,13 +45,17 @@ flag constraints
   default: False
   manual: True
 
+flag containers
+  description: containers dependency
+  default: False
+  manual: True
+
 library
   hs-source-dirs: .
   ghc-options: -Wall
   build-depends:
       async >= 2.1.1 || ^>= 2.2
     , base >= 4.10 && < 5.0
-    , containers ^>= 0.5
     , contravariant ^>= 1.4
     , deepseq >= 1.4.3 && ^>= 1.4
     , distributive ^>= 0.5
@@ -123,6 +127,9 @@ library
   if flag(constraints)
     build-depends: constraints ^>= 0.10
     cpp-options: -DCONSTRAINTS
+  if flag(containers)
+    build-depends: containers ^>= 0.5
+    cpp-options: -DCONTAINERS
   exposed-modules:
       Alternative
     , Applicative

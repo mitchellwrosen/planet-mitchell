@@ -9,3 +9,7 @@ package mitchell-stdlib
     +bits
     +bytestring
     +bytestring-trie
+    +comonad
+    +compact
+    +constraints
+    +containers
