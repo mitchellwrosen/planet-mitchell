@@ -20,5 +20,6 @@ install:
 - stack --no-terminal test --fast --only-dependencies
 
 script:
-- stack --no-terminal build --fast --test
+- stack --no-terminal build --fast --test --bench --no-run-benchmarks
 - stack --no-terminal build --fast --haddock --no-haddock-deps
+- curl -sL https://raw.github.com/ndmitchell/weeder/master/misc/travis.sh | sh -s .

@@ -1,9 +1,17 @@
 resolver: lts-11.8
+
 extra-deps:
-- foldl-1.4.0
-- list-transformer-1.0.4
-- megaparsec-6.5.0
-- monad-ste-0.1.0.0
-- network-2.7.0.0
-- nf-1.0.1.0
-- unagi-chan-0.4.1.0
+  - foldl-1.4.0
+  - list-transformer-1.0.4
+  - megaparsec-6.5.0
+  - monad-ste-0.1.0.0
+  - network-2.7.0.0
+  - nf-1.0.1.0
+  - unagi-chan-0.4.1.0
+
+flags:
+  mitchell-stdlib:
+    ansi-terminal: true
+    atomic-primops: true
+    bits: true
+    bytestring-trie: true

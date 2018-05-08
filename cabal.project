@@ -1,6 +1,6 @@
 packages: .
-
 with-compiler: ghc-8.2.2
+jobs: $ncpus
 
 package mitchell-stdlib
   flags:

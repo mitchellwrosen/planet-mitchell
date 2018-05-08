@@ -1,0 +1,7 @@
+- package:
+  - name: mitchell-stdlib
+  - section:
+    - name: library
+    - message:
+      - name: Redundant build-depends entry
+      - depends: async
