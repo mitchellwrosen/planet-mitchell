@@ -1,0 +1,24 @@
+sudo: false
+language: generic
+
+cache:
+  directories:
+  - $HOME/.stack
+
+addons:
+  apt:
+    packages:
+      - libgmp-dev
+
+before_install:
+- mkdir -p ~/.local/bin
+- export PATH=$HOME/.local/bin:$PATH
+- travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
+
+install:
+- stack --no-terminal setup
+- stack --no-terminal test --fast --only-dependencies
+
+script:
+- stack --no-terminal build --fast --test
+- stack --no-terminal build --fast --haddock --no-haddock-deps
