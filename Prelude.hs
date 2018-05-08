@@ -87,6 +87,12 @@ module Prelude
   , (<&>)
 #endif
   , void
+#ifdef CONTAINERS
+    -- * IntMap
+  , IntMap
+    -- * IntSet
+  , IntSet
+#endif
     -- * IO
   , IO
     -- * List
@@ -209,6 +215,10 @@ module Prelude
   , zipWith7
     -- * ListT
   , ListT
+#ifdef CONTAINERS
+    -- * Map
+  , Map
+#endif
     -- * Maybe
   , Maybe(..)
   , maybe
@@ -246,7 +256,7 @@ module Prelude
   , Float
   , Double
   , Complex
-    -- * Numeric type classes
+    -- ** Numeric type classes
   , Num(..)
   , subtract
   , fromIntegral
@@ -277,6 +287,8 @@ module Prelude
     -- * Semigroup
   , Semigroup(..)
 #ifdef CONTAINERS
+    -- * Sequence
+  , Seq
     -- * Set
   , Set
 #endif
@@ -305,9 +317,16 @@ import Foldl (Fold(..), FoldM(..))
 import Foldable
 import Function
 import Functor
+#ifdef CONTAINERS
+import IntMap (IntMap)
+import IntSet (IntSet)
+#endif
 import IO
 import List
 import ListT (ListT)
+#ifdef CONTAINERS
+import Map (Map)
+#endif
 import Maybe
 import Monad
 import MonadIO
@@ -315,6 +334,7 @@ import Monoid
 import Number
 import Semigroup
 #ifdef CONTAINERS
+import Sequence (Seq)
 import Set (Set)
 #endif
 import Show

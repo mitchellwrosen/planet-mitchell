@@ -199,6 +199,8 @@ library
     , Ix
     , Label
     , LazyByteString
+    , LazyIntMap
+    , LazyMap
     , LazyText
     , List
     , List.Partial
