@@ -73,6 +73,7 @@ library
     , Applicative
     , Benchmark
     , Bifoldable
+    , Bifoldable.Partial
     , Bifunctor
     , Bitraversable
     , Bits
