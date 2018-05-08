@@ -112,6 +112,8 @@ library
     , Exit
     , Field
     , File
+    , File.Binary
+    , File.Text
     , Foldable
     , Foldl
     , Function

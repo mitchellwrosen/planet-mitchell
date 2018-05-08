@@ -5,13 +5,6 @@
       "Control.Monad" (a historical accident).
     * The 'whenJust' function from @extra@.
 
-    The following types and functions are not re-exported:
-
-    * 'WrappedMonad' (uncommon)
-    * 'WrappedArrow' (uncommon)
-    * 'ZipList' (uncommon)
-    * 'liftA' (use 'fmap' instead)
-    * '<**>' (uncommon)
 -}
 module Applicative
   ( -- * Applicative

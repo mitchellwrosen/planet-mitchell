@@ -2,10 +2,6 @@
 
     * Partial functions on 'ByteString'.
 
-    The following functions are not re-exported:
-
-    * 'foldl' (use 'foldl'' instead)
-
 -}
 
 module ByteString.Partial

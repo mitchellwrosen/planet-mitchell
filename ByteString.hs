@@ -98,19 +98,6 @@ module ByteString
   , packCStringLen
   , useAsCString
   , useAsCStringLen
-  , getLine
-  , getContents
-  , putStr
-  , interact
-  , readFile
-  , writeFile
-  , appendFile
-  , hGetLine
-  , hGetContents
-  , hGet
-  , hGetSome
-  , hGetNonBlocking
-  , hPutStr
   ) where
 
 import Data.ByteString
