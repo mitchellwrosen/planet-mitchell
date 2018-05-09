@@ -69,9 +69,11 @@ module Prelude
   , assert
   , error
   , undefined
+#ifdef USE_FOLDL
     -- * Foldl
   , Fold(..)
   , FoldM(..)
+#endif
     -- * Function
   , const
   , flip
@@ -296,7 +298,9 @@ import Category
 import Debug
 import Equality (Eq(..))
 import Error
+#ifdef USE_FOLDL
 import Foldl (Fold(..), FoldM(..))
+#endif
 import Foldable
 import Function
 import Functor

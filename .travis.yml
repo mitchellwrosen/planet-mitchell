@@ -22,7 +22,8 @@ install:
 
 script:
 - stack --no-terminal build --fast
-- stack --no-terminal build --fast --test
 - stack --no-terminal build --fast --bench --no-run-benchmarks
 - stack --no-terminal build --fast --haddock --no-haddock-deps
 - curl -sL https://raw.github.com/ndmitchell/weeder/master/misc/travis.sh | sh -s .
+- sed -i 's/: true/: false/' stack.yaml
+- stack --no-terminal build --fast
