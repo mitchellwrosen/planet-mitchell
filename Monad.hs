@@ -8,7 +8,7 @@ module Monad
     (<=<),
     join,
     (<$!>),
-#ifdef EXTRA
+#ifdef USE_EXTRA
     maybeM,
     eitherM,
     whileM,
@@ -23,6 +23,6 @@ module Monad
 
 import Control.Arrow
 import Control.Monad
-#ifdef EXTRA
+#ifdef USE_EXTRA
 import Control.Monad.Extra
 #endif

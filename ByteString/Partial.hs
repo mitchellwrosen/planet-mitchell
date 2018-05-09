@@ -5,7 +5,7 @@
 
 {-# language CPP #-}
 
-#ifdef BYTESTRING
+#ifdef USE_BYTESTRING
 
 module ByteString.Partial
   ( foldl1'

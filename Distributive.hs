@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-#ifdef DISTRIBUTIVE
+#ifdef USE_DISTRIBUTIVE
 
 module Distributive
   ( Distributive(..)

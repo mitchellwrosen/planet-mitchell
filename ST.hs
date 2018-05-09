@@ -1,3 +1,5 @@
+{-# language CPP #-}
+
 module ST
   ( -- * ST
     ST
@@ -5,6 +7,7 @@ module ST
   , fixST
   , RealWorld
   , stToIO
+#ifdef USE_MONAD_STE
     -- * STE
   , STE
   , runSTE
@@ -14,6 +17,7 @@ module ST
   , unsafeInterleaveSTE
   , unsafeIOToSTE
   , unsafeSTEToIO
+#endif
     -- * STRef
   , STRef
   , newSTRef
@@ -24,5 +28,7 @@ module ST
   ) where
 
 import Control.Monad.ST
+#ifdef USE_MONAD_STE
 import Control.Monad.STE.Internal
+#endif
 import Data.STRef

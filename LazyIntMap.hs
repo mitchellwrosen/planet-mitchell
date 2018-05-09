@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-#ifdef CONTAINERS
+#ifdef USE_CONTAINERS
 
 module LazyIntMap
   ( module Data.IntMap.Lazy

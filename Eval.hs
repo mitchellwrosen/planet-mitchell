@@ -7,10 +7,12 @@ module Eval
     ($!),
     evaluate,
     -- * Normal form
+#ifdef USE_NF
     NF,
     makeNF,
     getNF,
-#ifdef DEEPSEQ
+#endif
+#ifdef USE_DEEPSEQ
     NFData(..),
     deepseq,
     force,
@@ -22,6 +24,7 @@ module Eval
     NFData2(..),
     rnf2,
 #endif
+#ifdef USE_PARALLEL
     -- * Evaluation strategies
     Eval,
     runEval,
@@ -41,12 +44,17 @@ module Eval
     evalTuple7,
     evalTuple8,
     evalTuple9,
+#endif
   ) where
 
-#ifdef DEEPSEQ
+#ifdef USE_DEEPSEQ
 import Control.DeepSeq
 #endif
 import Control.Exception
+#ifdef USE_PARALLEL
 import Control.Parallel.Strategies hiding (rwhnf)
+#endif
+#ifdef USE_NF
 import Data.NF
+#endif
 import GHC.Base

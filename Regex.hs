@@ -1,9 +1,6 @@
-{-| This module contains:
+{-# language CPP #-}
 
-    * The regular expression type and related functionality from the
-      @regex-applicative@ package, originally exported from the
-      "Text.Regex.Applicative" and "Text.Regex.Applicative.Common" modules.
--}
+#ifdef USE_REGEX_APPLICATIVE
 
 module Regex
   ( -- * Regex
@@ -41,3 +38,9 @@ module Regex
 
 import Text.Regex.Applicative
 import Text.Regex.Applicative.Common
+
+#else
+
+module Regex where
+
+#endif

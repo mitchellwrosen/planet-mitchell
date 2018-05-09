@@ -10,12 +10,12 @@
 module Bits
   ( -- * Bits
     Bits(..)
-#ifdef BITS
+#ifdef USE_BITS
   , srl
 #endif
   , toIntegralSized
   , FiniteBits(..)
-#ifdef BITS
+#ifdef USE_BITS
   , Ranked(..)
   , msb
 #endif
@@ -26,6 +26,6 @@ module Bits
   ) where
 
 import Data.Bits
-#ifdef BITS
+#ifdef USE_BITS
 import Data.Bits.Extras
 #endif

@@ -1,11 +1,6 @@
-{-| This module contains:
-
-    * The 'DList' type and related functionality from @dlist@.
--}
-
 {-# language CPP #-}
 
-#ifdef DLIST
+#ifdef USE_DLIST
 
 module DList
   ( -- * DList

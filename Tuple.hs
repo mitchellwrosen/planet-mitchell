@@ -6,12 +6,12 @@ module Tuple
   , curry
   , uncurry
   , swap
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , dupe
 #endif
   ) where
 
 import Data.Tuple
-#ifdef EXTRA
+#ifdef USE_EXTRA
 import Data.Tuple.Extra
 #endif

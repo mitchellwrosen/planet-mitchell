@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-#ifdef BYTESTRING
+#ifdef USE_BYTESTRING
 
 module LazyByteString
   ( module Data.ByteString.Lazy

@@ -1,7 +1,6 @@
-{-| This module contains:
+{-# language CPP #-}
 
-    * The "Control.Monad.Cont" module from @mtl@.
--}
+#ifdef USE_MTL
 
 module Cont
   ( -- * Cont
@@ -19,3 +18,9 @@ module Cont
   ) where
 
 import Control.Monad.Cont
+
+#else
+
+module Cont where
+
+#endif

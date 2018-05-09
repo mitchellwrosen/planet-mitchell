@@ -1,12 +1,6 @@
-{-| This module contains:
-
-    * The 'Contravariant' type class from @contravariant@.
-    * Functions on 'Contravariant' from @contravariant@.
--}
-
 {-# language CPP #-}
 
-#ifdef CONTRAVARIANT
+#ifdef USE_CONTRAVARIANT
 
 module Contravariant
   ( -- * Contravariant

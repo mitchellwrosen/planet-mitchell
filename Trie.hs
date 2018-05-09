@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-#ifdef BYTESTRING_TRIE
+#ifdef USE_BYTESTRING_TRIE
 
 module Trie
   ( module Data.Trie

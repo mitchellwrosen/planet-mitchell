@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-#ifdef CONTRAVARIANT
+#ifdef USE_CONTRAVARIANT
 
 module Predicate
   ( Predicate(..)

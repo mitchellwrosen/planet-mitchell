@@ -1,7 +1,7 @@
-{-| This module contains:
+{-# language CPP #-}
 
-    * A subset of the functionality provided by the @gauge@ package.
--}
+#ifdef USE_GAUGE
+
 module Benchmark
   ( -- * Running benchmarks
     defaultMain
@@ -25,3 +25,9 @@ module Benchmark
   ) where
 
 import Gauge
+
+#else
+
+module Benchmark where
+
+#endif

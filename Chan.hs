@@ -1,8 +1,6 @@
-{-| This module contains:
+{-# language CPP #-}
 
-    * The various channel types and related functionality from
-      "Control.Concurrent.Chan.Unagi.Bounded" in @unagi-chan@.
--}
+#ifdef USE_UNAGI_CHAN
 
 module Chan
   ( -- * Creating channels
@@ -23,3 +21,9 @@ module Chan
   ) where
 
 import Control.Concurrent.Chan.Unagi.Bounded
+
+#else
+
+module Chan where
+
+#endif

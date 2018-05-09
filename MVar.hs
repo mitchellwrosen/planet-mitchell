@@ -1,3 +1,5 @@
+{-# language CPP #-}
+
 module MVar
   ( -- * MVar
     MVar
@@ -20,4 +22,8 @@ module MVar
   , mkWeakMVar
   ) where
 
+#ifdef USE_UNLIFTIO
 import UnliftIO.MVar
+#else
+import Control.Concurrent.MVar
+#endif

@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-#ifdef ANSI_TERMINAL
+#ifdef USE_ANSI_TERMINAL
 
 module Terminal
   ( module System.Console.ANSI

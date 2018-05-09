@@ -45,17 +45,24 @@ module File
   , IOMode(..)
   , SeekMode(..)
     -- * Re-exports
-#ifdef FILEPATH
+#ifdef USE_FILEPATH
   , module System.FilePath
 #endif
+#ifdef USE_UNLIFTIO
   , module UnliftIO.Temporary
   , module UnliftIO.Directory
+#endif
   ) where
 
-#ifdef FILEPATH
+#ifdef USE_FILEPATH
 import System.FilePath hiding (FilePath)
 #endif
-import System.IO (FilePath, HandlePosn, SeekMode(..), hGetPosn, hSetPosn, hShow)
+import System.IO
+  (FilePath, HandlePosn, SeekMode(..), hGetPosn, hSetPosn, hShow)
+#ifdef USE_UNLIFTIO
 import UnliftIO.IO
 import UnliftIO.Temporary
 import UnliftIO.Directory
+#else
+import System.IO
+#endif

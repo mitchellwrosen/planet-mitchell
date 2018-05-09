@@ -1,7 +1,6 @@
-{-| This module contains:
+{-# language CPP #-}
 
-    * The 'IntPSQ' type from @psqueues@, originally exported from "Data.IntPSQ".
--}
+#ifdef USE_PSQUEUES
 
 module IntPSQ
   ( -- * IntPSQ
@@ -37,3 +36,9 @@ module IntPSQ
   ) where
 
 import Data.IntPSQ
+
+#else
+
+module IntPSQ where
+
+#endif

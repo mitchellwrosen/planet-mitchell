@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-#ifdef COMONAD
+#ifdef USE_COMONAD
 
 module Comonad
   ( Comonad(..)

@@ -1,10 +1,7 @@
 {-| This module contains:
 
-    * The 'Alternative' type class from @base@, originally exported from
-      "Control.Applicative".
-    * Functions on 'Alternative' from @base@, originally exported from
-      "Control.Monad" (a historical accident).
-    * The 'Alt' newtype from @base@, originally exported from "Data.Monoid".
+    * The 'Alternative' type class and functions from @base@.
+    * The 'Alt' newtype from @base@.
 -}
 module Alternative
   ( -- * Alternative

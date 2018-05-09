@@ -12,6 +12,7 @@ extra-deps:
 flags:
   mitchell-stdlib:
     ansi-terminal: true
+    async: true
     atomic-primops: true
     bits: true
     bytestring: true
@@ -28,3 +29,43 @@ flags:
     erf: true
     extra: true
     filepath: true
+    foldl: true
+    gauge: true
+    hashable: true
+    heaps: true
+    hedgehog: true
+    list-transformer: true
+    logict: true
+    managed: true
+    megaparsec: true
+    mmorph: true
+    monad-ste: true
+    mtl: true
+    multiset: true
+    mwc-random: true
+    network: true
+    nf: true
+    optparse-applicative: true
+    parallel: true
+    prettyprinter: true
+    primitive: true
+    profunctors: true
+    psqueues: true
+    reflection: true
+    regex-applicative: true
+    semigroups: true
+    stm: true
+    stm-containers: true
+    tagged: true
+    text: true
+    text-short: true
+    time: true
+    transformers: true
+    transformers-base: true
+    typed-process: true
+    unagi-chan: true
+    unliftio: true
+    unordered-containers: true
+    vector: true
+    weigh: true
+    writer-cps-mtl: true

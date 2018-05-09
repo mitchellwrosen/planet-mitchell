@@ -12,6 +12,11 @@ flag ansi-terminal
   default: False
   manual: True
 
+flag async
+  description: async dependency
+  default: False
+  manual: True
+
 flag atomic-primops
   description: atomic-primops dependency
   default: False
@@ -92,103 +97,384 @@ flag filepath
   default: False
   manual: True
 
+flag foldl
+  description: foldl dependency
+  default: False
+  manual: True
+
+flag gauge
+  description: gauge dependency
+  default: False
+  manual: True
+
+flag hashable
+  description: hashable dependency
+  default: False
+  manual: True
+
+flag hedgehog
+  description: hedgehog dependency
+  default: False
+  manual: True
+
+flag heaps
+  description: heaps dependency
+  default: False
+  manual: True
+
+flag list-transformer
+  description: list-transformer dependency
+  default: False
+  manual: True
+
+flag logict
+  description: logict dependency
+  default: False
+  manual: True
+
+flag managed
+  description: managed dependency
+  default: False
+  manual: True
+
+flag megaparsec
+  description: megaparsec dependency
+  default: False
+  manual: True
+
+flag mmorph
+  description: mmorph dependency
+  default: False
+  manual: True
+
+flag monad-ste
+  description: monad-ste dependency
+  default: False
+  manual: True
+
+flag mtl
+  description: mtl dependency
+  default: False
+  manual: True
+
+flag multiset
+  description: multiset dependency
+  default: False
+  manual: True
+
+flag mwc-random
+  description: mwc-random dependency
+  default: False
+  manual: True
+
+flag network
+  description: network dependency
+  default: False
+  manual: True
+
+flag nf
+  description: nf dependency
+  default: False
+  manual: True
+
+flag optparse-applicative
+  description: optparse-applicative dependency
+  default: False
+  manual: True
+
+flag parallel
+  description: parallel dependency
+  default: False
+  manual: True
+
+flag prettyprinter
+  description: prettyprinter dependency
+  default: False
+  manual: True
+
+flag primitive
+  description: primitive dependency
+  default: False
+  manual: True
+
+flag profunctors
+  description: profunctors dependency
+  default: False
+  manual: True
+
+flag psqueues
+  description: psqueues dependency
+  default: False
+  manual: True
+
+flag reflection
+  description: reflection dependency
+  default: False
+  manual: True
+
+flag regex-applicative
+  description: regex-applicative dependency
+  default: False
+  manual: True
+
+flag semigroups
+  description: semigroups dependency
+  default: False
+  manual: True
+
+flag stm
+  description: stm dependency
+  default: False
+  manual: True
+
+flag stm-containers
+  description: stm-containers dependency
+  default: False
+  manual: True
+
+flag tagged
+  description: tagged dependency
+  default: False
+  manual: True
+
+flag text
+  description: text dependency
+  default: False
+  manual: True
+
+flag text-short
+  description: text-short dependency
+  default: False
+  manual: True
+
+flag time
+  description: time dependency
+  default: False
+  manual: True
+
+flag transformers
+  description: transformers dependency
+  default: False
+  manual: True
+
+flag transformers-base
+  description: transformers-base dependency
+  default: False
+  manual: True
+
+flag typed-process
+  description: typed-process dependency
+  default: False
+  manual: True
+
+flag unagi-chan
+  description: unagi-chan dependency
+  default: False
+  manual: True
+
+flag unliftio
+  description: unliftio dependency
+  default: False
+  manual: True
+
+flag unordered-containers
+  description: unordered-containers dependency
+  default: False
+  manual: True
+
+flag vector
+  description: vector dependency
+  default: False
+  manual: True
+
+flag weigh
+  description: weigh dependency
+  default: False
+  manual: True
+
+flag writer-cps-mtl
+  description: writer-cps-mtl dependency
+  default: False
+  manual: True
+
 library
   hs-source-dirs: .
   ghc-options: -Wall
-  build-depends:
-      async >= 2.1.1 || ^>= 2.2
-    , base >= 4.10 && < 5.0
-    , foldl ^>= 1.4
-    , gauge ^>= 0.2
-    , hashable ^>= 1.2
-    , heaps ^>= 0.3
-    , hedgehog ^>= 0.5
-    , list-transformer >= 1.0.4 && ^>= 1.0
-    , logict ^>= 0.6
-    , managed ^>= 1.0
-    , megaparsec ^>= 6.5
-    , mmorph ^>= 1.1
-    , monad-ste ^>= 0.1
-    , mtl ^>= 2.2
-    , multiset ^>= 0.3
-    , mwc-random ^>= 0.13
-    , network ^>= 2.7
-    , nf ^>= 1.0
-    , optparse-applicative ^>= 0.14
-    , parallel ^>= 3.2
-    , prettyprinter ^>= 1.2
-    , primitive ^>= 0.6
-    , profunctors ^>= 5.2
-    , psqueues ^>= 0.2
-    , reflection ^>= 2.1
-    , regex-applicative ^>= 0.3
-    , semigroups ^>= 0.18
-    , stm >= 2.4.5 && ^>= 2.4
-    , stm-containers ^>= 0.2
-    , tagged ^>= 0.8
-    , text ^>= 1.2
-    , text-short ^>= 0.1
-    , time ^>= 1.8 || ^>= 1.9
-    , transformers ^>= 0.5
-    , transformers-base ^>= 0.4
-    , typed-process ^>= 0.2
-    , unagi-chan ^>= 0.4
-    , unliftio ^>= 0.2
-    , unordered-containers ^>= 0.2
-    , vector ^>= 0.12
-    , weigh ^>= 0.0
-    , writer-cps-mtl ^>= 0.1
+  build-depends: base >= 4.10 && < 5.0
   if flag(ansi-terminal)
     build-depends: ansi-terminal ^>= 0.8
-    cpp-options: -DANSI_TERMINAL
+    cpp-options: -DUSE_ANSI_TERMINAL
+  if flag(async)
+    build-depends: async >= 2.1.1 || ^>= 2.2
+    cpp-options: -DASYNC
   if flag(atomic-primops)
     build-depends: atomic-primops ^>= 0.8
-    cpp-options: -DATOMIC_PRIMOPS
+    cpp-options: -DUSE_ATOMIC_PRIMOPS
   if flag(bits)
     build-depends: bits ^>= 0.5
-    cpp-options: -DBITS
+    cpp-options: -DUSE_BITS
   if flag(bytestring)
     build-depends: bytestring ^>= 0.10
-    cpp-options: -DBYTESTRING
+    cpp-options: -DUSE_BYTESTRING
   if flag(bytestring-trie)
     build-depends: bytestring-trie ^>= 0.2
-    cpp-options: -DBYTESTRING_TRIE
+    cpp-options: -DUSE_BYTESTRING_TRIE
   if flag(comonad)
     build-depends: comonad ^>= 5.0
-    cpp-options: -DCOMONAD
+    cpp-options: -DUSE_COMONAD
   if flag(compact)
     build-depends: compact ^>= 0.1
-    cpp-options: -DCOMPACT
+    cpp-options: -DUSE_COMPACT
   if flag(constraints)
     build-depends: constraints ^>= 0.10
-    cpp-options: -DCONSTRAINTS
+    cpp-options: -DUSE_CONSTRAINTS
   if flag(containers)
     build-depends: containers ^>= 0.5
-    cpp-options: -DCONTAINERS
+    cpp-options: -DUSE_CONTAINERS
   if flag(contravariant)
     build-depends: contravariant ^>= 1.4
-    cpp-options: -DCONTRAVARIANT
+    cpp-options: -DUSE_CONTRAVARIANT
   if flag(contravariant-extras)
     build-depends: contravariant-extras ^>= 0.3
-    cpp-options: -DCONTRAVARIANT_EXTRAS
+    cpp-options: -DUSE_CONTRAVARIANT_EXTRAS
   if flag(deepseq)
-    build-depends: deepseq >= 1.4.3 && ^>= 1.4
-    cpp-options: -DDEEPSEQ
+    build-depends: deepseq ^>= 1.4.3
+    cpp-options: -DUSE_DEEPSEQ
   if flag(distributive)
     build-depends: distributive ^>= 0.5
-    cpp-options: -DDISTRIBUTIVE
+    cpp-options: -DUSE_DISTRIBUTIVE
   if flag(dlist)
     build-depends: dlist ^>= 0.8
-    cpp-options: -DDLIST
+    cpp-options: -DUSE_DLIST
   if flag(erf)
     build-depends: erf ^>= 2.0
-    cpp-options: -DERF
+    cpp-options: -DUSE_ERF
   if flag(extra)
     build-depends: extra ^>= 1.6
-    cpp-options: -DEXTRA
+    cpp-options: -DUSE_EXTRA
   if flag(filepath)
     build-depends: filepath ^>= 1.4
-    cpp-options: -DFILEPATH
+    cpp-options: -DUSE_FILEPATH
+  if flag(foldl)
+    build-depends: foldl ^>= 1.4
+    cpp-options: -DUSE_FOLDL
+  if flag(gauge)
+    build-depends: gauge ^>= 0.2
+    cpp-options: -DUSE_GAUGE
+  if flag(hashable)
+    build-depends: hashable ^>= 1.2
+    cpp-options: -DUSE_HASHABLE
+  if flag(heaps)
+    build-depends: heaps ^>= 0.3
+    cpp-options: -DUSE_HEAPS
+  if flag(hedgehog)
+    build-depends: hedgehog ^>= 0.5
+    cpp-options: -DUSE_HEDGEHOG
+  if flag(list-transformer)
+    build-depends: list-transformer ^>= 1.0.4
+    cpp-options: -DUSE_LIST_TRANSFORMER
+  if flag(logict)
+    build-depends: logict ^>= 0.6
+    cpp-options: -DUSE_LOGICT
+  if flag(managed)
+    build-depends: managed ^>= 1.0
+    cpp-options: -DUSE_MANAGED
+  if flag(megaparsec)
+    build-depends: megaparsec ^>= 6.5
+    cpp-options: -DUSE_MEGAPARSEC
+  if flag(mmorph)
+    build-depends: mmorph ^>= 1.1
+    cpp-options: -DUSE_MMORPH
+  if flag(monad-ste)
+    build-depends: monad-ste ^>= 0.1
+    cpp-options: -DUSE_MONAD_STE
+  if flag(mtl)
+    build-depends: mtl ^>= 2.2
+    cpp-options: -DUSE_MTL
+  if flag(multiset)
+    build-depends: multiset ^>= 0.3
+    cpp-options: -DUSE_MULTISET
+  if flag(mwc-random)
+    build-depends: mwc-random ^>= 0.13
+    cpp-options: -DUSE_MWC_RANDOM
+  if flag(network)
+    build-depends: network ^>= 2.7
+    cpp-options: -DUSE_NETWORK
+  if flag(nf)
+    build-depends: nf ^>= 1.0
+    cpp-options: -DUSE_NF
+  if flag(optparse-applicative)
+    build-depends: optparse-applicative ^>= 0.14
+    cpp-options: -DUSE_OPTPARSE_APPLICATIVE
+  if flag(parallel)
+    build-depends: parallel ^>= 3.2
+    cpp-options: -DUSE_PARALLEL
+  if flag(prettyprinter)
+    build-depends: prettyprinter ^>= 1.2
+    cpp-options: -DUSE_PRETTYPRINTER
+  if flag(primitive)
+    build-depends: primitive ^>= 0.6
+    cpp-options: -DUSE_PRIMITIVE
+  if flag(profunctors)
+    build-depends: profunctors ^>= 5.2
+    cpp-options: -DUSE_PROFUNCTORS
+  if flag(psqueues)
+    build-depends: psqueues ^>= 0.2
+    cpp-options: -DUSE_PSQUEUES
+  if flag(reflection)
+    build-depends: reflection ^>= 2.1
+    cpp-options: -DUSE_REFLECTION
+  if flag(regex-applicative)
+    build-depends: regex-applicative ^>= 0.3
+    cpp-options: -DUSE_REGEX_APPLICATIVE
+  if flag(semigroups)
+    build-depends: semigroups ^>= 0.18
+    cpp-options: -DUSE_SEMIGROUPS
+  if flag(stm)
+    build-depends: stm ^>= 2.4.5
+    cpp-options: -DUSE_STM
+  if flag(stm-containers)
+    build-depends: stm-containers ^>= 0.2
+    cpp-options: -DUSE_STM_CONTAINERS
+  if flag(tagged)
+    build-depends: tagged ^>= 0.8
+    cpp-options: -DUSE_TAGGED
+  if flag(text)
+    build-depends: text ^>= 1.2
+    cpp-options: -DUSE_TEXT
+  if flag(text-short)
+    build-depends: text-short ^>= 0.1
+    cpp-options: -DUSE_TEXT_SHORT
+  if flag(time)
+    build-depends: time ^>= 1.8 || ^>= 1.9
+    cpp-options: -DUSE_TIME
+  if flag(transformers)
+    build-depends: transformers ^>= 0.5
+    cpp-options: -DUSE_TRANSFORMERS
+  if flag(transformers-base)
+    build-depends: transformers-base ^>= 0.4
+    cpp-options: -DUSE_TRANSFORMERS_BASE
+  if flag(typed-process)
+    build-depends: typed-process ^>= 0.2
+    cpp-options: -DUSE_TYPED_PROCESS
+  if flag(unagi-chan)
+    build-depends: unagi-chan ^>= 0.4
+    cpp-options: -DUSE_UNAGI_CHAN
+  if flag(unliftio)
+    build-depends: unliftio ^>= 0.2.7.0
+    cpp-options: -DUSE_UNLIFTIO
+  if flag(unordered-containers)
+    build-depends: unordered-containers ^>= 0.2
+    cpp-options: -DUSE_UNORDERED_CONTAINERS
+  if flag(vector)
+    build-depends: vector ^>= 0.12
+    cpp-options: -DUSE_VECTOR
+  if flag(weigh)
+    build-depends: weigh ^>= 0.0
+    cpp-options: -DUSE_WEIGH
+  if flag(writer-cps-mtl)
+    build-depends: writer-cps-mtl ^>= 0.1
+    cpp-options: -DUSE_WRITER_CPS_MTL
   exposed-modules:
       Alternative
     , Applicative

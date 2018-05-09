@@ -5,7 +5,7 @@ module IORef
     newIORef,
     readIORef,
     writeIORef,
-#ifdef EXTRA
+#ifdef USE_EXTRA
     writeIORef',
 #endif
     modifyIORef,
@@ -13,12 +13,12 @@ module IORef
     atomicModifyIORef,
     atomicModifyIORef',
     atomicWriteIORef,
-#ifdef EXTRA
+#ifdef USE_EXTRA
     atomicWriteIORef',
 #endif
     mkWeakIORef,
     -- * Atomic check-and-set
-#ifdef ATOMIC_PRIMOPS
+#ifdef USE_ATOMIC_PRIMOPS
     Ticket,
     peekTicket,
     readForCAS,
@@ -29,10 +29,14 @@ module IORef
 #endif
   ) where
 
-#ifdef EXTRA
+#ifdef USE_EXTRA
 import Data.IORef.Extra (atomicWriteIORef', writeIORef')
 #endif
-#ifdef ATOMIC_PRIMOPS
+#ifdef USE_ATOMIC_PRIMOPS
 import Data.Atomics
 #endif
+#ifdef USE_UNLIFTIO
 import UnliftIO.IORef
+#else
+import Data.IORef
+#endif

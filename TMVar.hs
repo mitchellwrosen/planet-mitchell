@@ -1,19 +1,26 @@
+{-# language CPP #-}
 module TMVar
-  ( TMVar
-  , newTMVar
-  , newTMVarIO
-  , newEmptyTMVar
-  , newEmptyTMVarIO
-  , takeTMVar
-  , tryTakeTMVar
-  , putTMVar
-  , tryPutTMVar
-  , readTMVar
-  , tryReadTMVar
-  , swapTMVar
-  , isEmptyTMVar
-  , mkWeakTMVar
+  (
+#if defined(USE_STM) || defined(USE_UNLIFTIO)
+    TMVar,
+    newTMVar,
+    newTMVarIO,
+    newEmptyTMVar,
+    newEmptyTMVarIO,
+    takeTMVar,
+    tryTakeTMVar,
+    putTMVar,
+    tryPutTMVar,
+    readTMVar,
+    tryReadTMVar,
+    swapTMVar,
+    isEmptyTMVar,
+    mkWeakTMVar,
+#endif
   ) where
 
-import Control.Concurrent.STM.TMVar (tryPutTMVar)
+#ifdef USE_UNLIFTIO
 import UnliftIO.STM
+#elif defined(USE_STM)
+import Control.Concurrent.STM.TMVar
+#endif

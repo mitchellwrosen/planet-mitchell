@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-#ifdef ATOMIC_PRIMOPS
+#ifdef USE_ATOMIC_PRIMOPS
 
 module Counter
   ( -- * Counter

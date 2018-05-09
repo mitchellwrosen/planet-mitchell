@@ -7,7 +7,7 @@ module System
     targetByteOrder,
 #endif
     os,
-#ifdef EXTRA
+#ifdef USE_EXTRA
     isWindows,
     isMac,
 #endif
@@ -20,6 +20,6 @@ module System
 import GHC.ByteOrder
 #endif
 import System.Info
-#ifdef EXTRA
+#ifdef USE_EXTRA
 import System.Info.Extra
 #endif

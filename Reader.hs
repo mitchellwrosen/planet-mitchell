@@ -1,15 +1,27 @@
+{-# language CPP #-}
+
 module Reader
-  ( -- * Reader
-    Reader
-  , runReader
-  , mapReader
-  , withReader
+  (
+#ifdef USE_TRANSFORMERS
+    -- * Reader
+    Reader,
+    runReader,
+    mapReader,
+    withReader,
     -- * ReaderT
-  , ReaderT(..)
-  , mapReaderT
-  , withReaderT
+    ReaderT(..),
+    mapReaderT,
+    withReaderT,
+#endif
+#ifdef USE_MTL
     -- * MonadReader
-  , MonadReader(..)
+    MonadReader(..),
+#endif
   ) where
 
-import Control.Monad.Reader
+#ifdef USE_MTL
+import Control.Monad.Reader.Class
+#endif
+#ifdef USE_TRANSFORMERS
+import Control.Monad.Trans.Reader
+#endif

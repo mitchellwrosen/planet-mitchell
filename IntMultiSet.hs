@@ -1,8 +1,6 @@
-{-| This module contains:
+{-# language CPP #-}
 
-    * The 'IntMultiSet' type and related functions from @multiset@, originally
-      exported from the "Data.IntMultiSet" module.
--}
+#ifdef USE_MULTISET
 
 module IntMultiSet
   ( IntMultiSet
@@ -71,3 +69,9 @@ module IntMultiSet
   ) where
 
 import Data.IntMultiSet
+
+#else
+
+module IntMultiSet where
+
+#endif

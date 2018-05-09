@@ -14,7 +14,7 @@ module Prelude
   , replicateM_
   , unless
   , when
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , whenJust
 #endif
   , zipWithM
@@ -25,7 +25,7 @@ module Prelude
   , (||)
   , not
   , otherwise
-#ifdef BYTESTRING
+#ifdef USE_BYTESTRING
     -- * ByteString
   , ByteString
 #endif
@@ -51,8 +51,10 @@ module Prelude
   , find
   , foldM
   , foldM_
+#ifdef USE_REFLECTION
   , foldMapBy
   , foldBy
+#endif
     -- * Debug
   , trace
   , traceId
@@ -87,7 +89,7 @@ module Prelude
   , (<&>)
 #endif
   , void
-#ifdef CONTAINERS
+#ifdef USE_CONTAINERS
     -- * IntMap
   , IntMap
     -- * IntSet
@@ -98,7 +100,7 @@ module Prelude
     -- * List
   , (++)
   , break
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , breakOn
   , breakOnEnd
   , breakEnd
@@ -106,7 +108,7 @@ module Prelude
 #endif
   , cycle
   , drop
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , dropEnd
   , dropPrefix
   , dropSuffix
@@ -128,7 +130,7 @@ module Prelude
   , lookup
   , nub
   , nubBy
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , nubOn
   , nubOrd
   , nubOrdBy
@@ -151,27 +153,27 @@ module Prelude
   , sortBy
   , sortOn
   , span
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , spanEnd
   , split
 #endif
   , splitAt
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , splitAtEnd
   , stripInfix
   , stripInfixEnd
 #endif
   , stripPrefix
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , stripSuffix
 #endif
   , tails
   , take
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , takeEnd
 #endif
   , takeWhile
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , takeWhileEnd
 #endif
   , unfoldr
@@ -181,9 +183,11 @@ module Prelude
   , zip3
   , zipWith
   , zipWith3
+#ifdef USE_LIST_TRANSFORMER
     -- * ListT
   , ListT
-#ifdef CONTAINERS
+#endif
+#ifdef USE_CONTAINERS
     -- * Map
   , Map
 #endif
@@ -263,7 +267,7 @@ module Prelude
   , Word64
     -- * Semigroup
   , Semigroup(..)
-#ifdef CONTAINERS
+#ifdef USE_CONTAINERS
     -- * Sequence
   , Seq
     -- * Set
@@ -271,8 +275,10 @@ module Prelude
 #endif
     -- * Show
   , Show(..)
+#ifdef USE_TEXT
     -- * Text
   , Text
+#endif
     -- * Tuple
   , fst
   , snd
@@ -283,7 +289,7 @@ module Prelude
 import Alternative
 import Applicative
 import Bool
-#ifdef BYTESTRING
+#ifdef USE_BYTESTRING
 import ByteString (ByteString)
 #endif
 import Category
@@ -294,14 +300,16 @@ import Foldl (Fold(..), FoldM(..))
 import Foldable
 import Function
 import Functor
-#ifdef CONTAINERS
+#ifdef USE_CONTAINERS
 import IntMap (IntMap)
 import IntSet (IntSet)
 #endif
 import IO
 import List
+#ifdef USE_LIST_TRANSFORMER
 import ListT (ListT)
-#ifdef CONTAINERS
+#endif
+#ifdef USE_CONTAINERS
 import Map (Map)
 #endif
 import Maybe
@@ -330,10 +338,12 @@ import Numeric.Word16 (Word16)
 import Numeric.Word32 (Word32)
 import Numeric.Word64 (Word64)
 import Semigroup
-#ifdef CONTAINERS
+#ifdef USE_CONTAINERS
 import Sequence (Seq)
 import Set (Set)
 #endif
 import Show
+#ifdef USE_TEXT
 import Text (Text)
+#endif
 import Tuple

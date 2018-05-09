@@ -1,12 +1,11 @@
 {-| This module contains:
 
-    * The "Data.Constraint" module from @constraints@.
-    * The "Data.Constraint.Forall" module from @constraints@.
+    * Constraint types and functions from @constraints@.
 -}
 
 {-# language CPP #-}
 
-#ifdef CONSTRAINTS
+#ifdef USE_CONSTRAINTS
 
 module Constraint
   ( module Data.Constraint

@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-#ifdef ERF
+#ifdef USE_ERF
 
 module Numeric.InvErf
   ( InvErf(..)

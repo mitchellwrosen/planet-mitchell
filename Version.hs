@@ -1,5 +1,6 @@
 module Version
-  ( Version
+  ( -- * Version
+    Version
   , versionBranch
   , showVersion
   , parseVersion

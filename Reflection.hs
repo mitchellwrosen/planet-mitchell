@@ -1,3 +1,7 @@
+{-# language CPP #-}
+
+#ifdef USE_REFLECTION
+
 module Reflection
   ( Reifies(..)
   , reify
@@ -7,3 +11,9 @@ module Reflection
   ) where
 
 import Data.Reflection
+
+#else
+
+module Reflection where
+
+#endif

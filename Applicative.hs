@@ -1,12 +1,3 @@
-{-| This module contains:
-
-    * The 'Applicative' type class from @base@.
-    * Functions on 'Applicative' from @base@, originally exported from
-      "Control.Monad" (a historical accident).
-    * The 'whenJust' function from @extra@.
-
--}
-
 {-# language CPP #-}
 
 module Applicative
@@ -19,7 +10,7 @@ module Applicative
     replicateM_,
     unless,
     when,
-#ifdef EXTRA
+#ifdef USE_EXTRA
     whenJust,
 #endif
     zipWithM,
@@ -28,6 +19,6 @@ module Applicative
 
 import Control.Applicative
 import Control.Monad
-#ifdef EXTRA
+#ifdef USE_EXTRA
 import Control.Monad.Extra
 #endif

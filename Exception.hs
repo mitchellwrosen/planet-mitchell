@@ -1,8 +1,11 @@
+{-# language CPP #-}
+
 module Exception
   ( -- * Throwing exceptions
     throwIO
   , ioError
   , userError
+#ifdef USE_UNLIFTIO
     -- * Catching exceptions
   , catch
   , catches
@@ -18,12 +21,15 @@ module Exception
   , bracketOnError
   , finally
   , onException
+#endif
     -- * Masking exceptions
   , MaskingState(..)
+#ifdef USE_UNLIFTIO
   , mask
   , mask_
   , uninterruptibleMask
   , uninterruptibleMask_
+#endif
   , getMaskingState
   , interruptible
   , allowInterrupt
@@ -40,8 +46,14 @@ module Exception
   ) where
 
 import Control.Exception
-  (AsyncException(..), MaskingState(..), allowInterrupt,
+  (AsyncException(..), Exception(..), IOException, MaskingState(..),
+    SomeAsyncException(..), SomeException(..), allowInterrupt,
     asyncExceptionFromException, asyncExceptionToException, getMaskingState,
     interruptible, ioError, mapException)
 import System.IO.Error (userError)
-import UnliftIO.Exception
+#ifdef USE_UNLIFTIO
+import UnliftIO.Exception hiding
+  (Exception(..), IOException, SomeAsyncException(..), SomeException(..))
+#else
+import Control.Exception (throwIO)
+#endif

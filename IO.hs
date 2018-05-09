@@ -5,7 +5,7 @@ module IO
     IO,
     fixIO,
     timeout,
-#ifdef EXTRA
+#ifdef USE_EXTRA
     once,
     onceFork,
 #endif
@@ -18,10 +18,14 @@ module IO
     unsafeFixIO,
   ) where
 
-#ifdef EXTRA
+#ifdef USE_EXTRA
 import Control.Concurrent.Extra (once, onceFork)
 #endif
 import System.IO
 import System.IO.Error
 import System.IO.Unsafe
-import UnliftIO.Timeout
+#ifdef USE_UNLIFTIO
+import UnliftIO.Timeout (timeout)
+#else
+import System.Timeout (timeout)
+#endif

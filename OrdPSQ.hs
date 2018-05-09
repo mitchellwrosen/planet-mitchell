@@ -1,7 +1,6 @@
-{-| This module contains:
+{-# language CPP #-}
 
-    * The 'OrdPSQ' type from @psqueues@, originally exported from "Data.OrdPSQ".
--}
+#ifdef USE_PSQUEUES
 
 module OrdPSQ
   ( -- * OrdPSQ
@@ -38,3 +37,9 @@ module OrdPSQ
   ) where
 
 import Data.OrdPSQ
+
+#else
+
+module OrdPSQ where
+
+#endif

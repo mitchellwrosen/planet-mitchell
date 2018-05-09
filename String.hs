@@ -8,7 +8,7 @@ module String
   , unwords
   , lines
   , unlines
-#ifdef EXTRA
+#ifdef USE_EXTRA
   , lower
   , upper
   , trim
@@ -28,7 +28,7 @@ module String
   , sameSymbol
   , AppendSymbol
   , CmpSymbol
-#ifdef CONSTRAINTS
+#ifdef USE_CONSTRAINTS
   , type (++)
   , Take
   , Drop
@@ -54,11 +54,11 @@ module String
 #endif
   ) where
 
-#ifdef CONSTRAINTS
+#ifdef USE_CONSTRAINTS
 import Data.Constraint.Symbol
 #endif
 import Data.List
-#ifdef EXTRA
+#ifdef USE_EXTRA
 import Data.List.Extra
 #endif
 import Data.String

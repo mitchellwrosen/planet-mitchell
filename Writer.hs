@@ -1,3 +1,7 @@
+{-# language CPP #-}
+
+#ifdef USE_WRITER_CPS_MTL
+
 module Writer
   ( -- * Writer
     Writer
@@ -17,3 +21,9 @@ module Writer
   ) where
 
 import Control.Monad.Writer.CPS
+
+#else
+
+module Writer where
+
+#endif

@@ -1,3 +1,7 @@
+{-# language CPP #-}
+
+#ifdef USE_NETWORK
+
 module Socket
   ( Socket(..)
   , Family(..)
@@ -83,3 +87,9 @@ module Socket
 
 import Network.Socket hiding (recv, recvFrom, send, sendTo)
 import Network.Socket.ByteString
+
+#else
+
+module Socket where
+
+#endif

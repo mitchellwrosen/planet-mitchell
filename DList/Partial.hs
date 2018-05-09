@@ -1,11 +1,6 @@
-{-| This module contains:
-
-    * The partial functions exported by "Data.DList" from @dlist@.
--}
-
 {-# language CPP #-}
 
-#ifdef DLIST
+#ifdef USE_DLIST
 
 module DList.Partial
   ( head

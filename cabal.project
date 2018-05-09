@@ -21,3 +21,43 @@ package mitchell-stdlib
     +erf
     +extra
     +filepath
+    +foldl
+    +gauge
+    +hashable
+    +heaps
+    +hedgehog
+    +list-transformer
+    +logict
+    +managed
+    +megaparsec
+    +mmorph
+    +monad-ste
+    +mtl
+    +multiset
+    +mwc-random
+    +network
+    +nf
+    +optparse-applicative
+    +parallel
+    +prettyprinter
+    +primitive
+    +profunctors
+    +psqueues
+    +reflection
+    +regex-applicative
+    +semigroups
+    +stm
+    +stm-containers
+    +tagged
+    +text
+    +text-short
+    +time
+    +transformers
+    +transformers-base
+    +typed-process
+    +unagi-chan
+    +unliftio
+    +unordered-containers
+    +vector
+    +weigh
+    +writer-cps-mtl

@@ -9,7 +9,7 @@
 
 module Compact
   (
-#ifdef COMPACT
+#ifdef USE_COMPACT
     -- * Compact
     Compact
   , compact
@@ -27,6 +27,6 @@ module Compact
   ) where
 
 import Control.Exception (CompactionFailed(..))
-#ifdef COMPACT
+#ifdef USE_COMPACT
 import Data.Compact
 #endif

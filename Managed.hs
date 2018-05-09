@@ -1,3 +1,7 @@
+{-# language CPP #-}
+
+#ifdef USE_MANAGED
+
 module Managed
   ( -- * Managed
     Managed
@@ -10,3 +14,9 @@ module Managed
   ) where
 
 import Control.Monad.Managed
+
+#else
+
+module Managed where
+
+#endif

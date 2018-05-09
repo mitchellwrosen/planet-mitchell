@@ -1,8 +1,6 @@
-{-| This module contains:
+{-# language CPP #-}
 
-    * The 'HashPSQ' type from @psqueues@, originally exported from
-    "Data.HashPSQ".
--}
+#ifdef USE_PSQUEUES
 
 module HashPSQ
   ( -- * HashPSQ
@@ -38,3 +36,9 @@ module HashPSQ
   ) where
 
 import Data.HashPSQ
+
+#else
+
+module HashPSQ where
+
+#endif
