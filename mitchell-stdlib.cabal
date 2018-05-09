@@ -87,13 +87,17 @@ flag extra
   default: False
   manual: True
 
+flag filepath
+  description: filepath dependency
+  default: False
+  manual: True
+
 library
   hs-source-dirs: .
   ghc-options: -Wall
   build-depends:
       async >= 2.1.1 || ^>= 2.2
     , base >= 4.10 && < 5.0
-    , filepath ^>= 1.4
     , foldl ^>= 1.4
     , gauge ^>= 0.2
     , hashable ^>= 1.2
@@ -182,6 +186,9 @@ library
   if flag(extra)
     build-depends: extra ^>= 1.6
     cpp-options: -DEXTRA
+  if flag(filepath)
+    build-depends: filepath ^>= 1.4
+    cpp-options: -DFILEPATH
   exposed-modules:
       Alternative
     , Applicative

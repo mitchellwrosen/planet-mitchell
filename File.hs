@@ -1,12 +1,13 @@
 {-| This module contains:
 
-    * File handle operations from @base@, originally exported from the
-      "System.IO" module, but generalized by @unliftio@.
+    * File handle operations from @base@, generalized by @unliftio@.
     * The "System.FilePath" module from @filepath@.
     * The "UnliftIO.Temporary" module from @unliftio@.
     * The "UnliftIO.Directory" module from @unliftio@.
 
 -}
+
+{-# language CPP #-}
 
 module File
   ( -- * File path
@@ -44,12 +45,16 @@ module File
   , IOMode(..)
   , SeekMode(..)
     -- * Re-exports
+#ifdef FILEPATH
   , module System.FilePath
+#endif
   , module UnliftIO.Temporary
   , module UnliftIO.Directory
   ) where
 
+#ifdef FILEPATH
 import System.FilePath hiding (FilePath)
+#endif
 import System.IO (FilePath, HandlePosn, SeekMode(..), hGetPosn, hSetPosn, hShow)
 import UnliftIO.IO
 import UnliftIO.Temporary

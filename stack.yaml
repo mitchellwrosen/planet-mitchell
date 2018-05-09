@@ -27,3 +27,4 @@ flags:
     dlist: true
     erf: true
     extra: true
+    filepath: true

@@ -20,3 +20,4 @@ package mitchell-stdlib
     +dlist
     +erf
     +extra
+    +filepath
