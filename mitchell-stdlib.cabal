@@ -4,6 +4,8 @@ name: mitchell-stdlib
 version: 0.1.0
 build-type: Simple
 category: Prelude
+license: BSD-3-Clause
+license-file: LICENSE
 
 flag ansi-terminal
   description: ansi-terminal dependency
