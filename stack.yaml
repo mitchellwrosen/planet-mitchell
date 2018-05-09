@@ -20,3 +20,4 @@ flags:
     compact: true
     constraints: true
     containers: true
+    contravariant: true

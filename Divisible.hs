@@ -1,12 +1,20 @@
+{-# language CPP #-}
+
 module Divisible
-  ( Divisible(..)
+  (
+#ifdef CONTRAVARIANT
+    Divisible(..)
   , divided
   , conquered
-  , contrazip3
+  ,
+#endif
+    contrazip3
   , contrazip4
   , contrazip5
   , Supplied(..)
   ) where
 
 import Contravariant.Extras
+#ifdef CONTRAVARIANT
 import Data.Functor.Contravariant.Divisible
+#endif

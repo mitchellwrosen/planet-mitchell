@@ -1,9 +1,17 @@
+{-# language CPP #-}
+
 module Decidable
-  ( Decidable(..)
+  (
+#ifdef CONTRAVARIANT
+    Decidable(..)
   , chosen
   , lost
-  , contramany
+  ,
+#endif
+    contramany
   ) where
 
 import Contravariant.Extras
+#ifdef CONTRAVARIANT
 import Data.Functor.Contravariant.Divisible
+#endif
