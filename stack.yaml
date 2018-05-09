@@ -25,3 +25,4 @@ flags:
     deepseq: true
     distributive: true
     dlist: true
+    erf: true

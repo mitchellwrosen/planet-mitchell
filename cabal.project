@@ -16,4 +16,6 @@ package mitchell-stdlib
     +contravariant
     +contravariant-extras
     +deepseq
+    +distributive
     +dlist
+    +erf
