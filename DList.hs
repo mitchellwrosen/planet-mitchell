@@ -3,6 +3,10 @@
     * The 'DList' type and related functionality from @dlist@.
 -}
 
+{-# language CPP #-}
+
+#ifdef DLIST
+
 module DList
   ( -- * DList
     DList(Nil, Cons)
@@ -23,3 +27,9 @@ module DList
   ) where
 
 import Data.DList
+
+#else
+
+module DList where
+
+#endif

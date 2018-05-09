@@ -67,14 +67,22 @@ flag deepseq
   default: False
   manual: True
 
+flag distributive
+  description: distributive dependency
+  default: False
+  manual: True
+
+flag dlist
+  description: dlist dependency
+  default: False
+  manual: True
+
 library
   hs-source-dirs: .
   ghc-options: -Wall
   build-depends:
       async >= 2.1.1 || ^>= 2.2
     , base >= 4.10 && < 5.0
-    , distributive ^>= 0.5
-    , dlist ^>= 0.8
     , erf ^>= 2.0
     , extra ^>= 1.6
     , filepath ^>= 1.4
@@ -154,6 +162,12 @@ library
   if flag(deepseq)
     build-depends: deepseq >= 1.4.3 && ^>= 1.4
     cpp-options: -DDEEPSEQ
+  if flag(distributive)
+    build-depends: distributive ^>= 0.5
+    cpp-options: -DDISTRIBUTIVE
+  if flag(dlist)
+    build-depends: dlist ^>= 0.8
+    cpp-options: -DDLIST
   exposed-modules:
       Alternative
     , Applicative

@@ -23,3 +23,5 @@ flags:
     contravariant: true
     contravariant-extras: true
     deepseq: true
+    distributive: true
+    dlist: true

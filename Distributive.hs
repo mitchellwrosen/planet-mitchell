@@ -1,3 +1,7 @@
+{-# language CPP #-}
+
+#ifdef DISTRIBUTIVE
+
 module Distributive
   ( Distributive(..)
   , cotraverse
@@ -6,3 +10,9 @@ module Distributive
   ) where
 
 import Data.Distributive
+
+#else
+
+module Distributive where
+
+#endif
