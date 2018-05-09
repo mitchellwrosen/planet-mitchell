@@ -306,7 +306,7 @@ library
     cpp-options: -DUSE_ANSI_TERMINAL
   if flag(async)
     build-depends: async >= 2.1.1 || ^>= 2.2
-    cpp-options: -DASYNC
+    cpp-options: -DUSE_ASYNC
   if flag(atomic-primops)
     build-depends: atomic-primops ^>= 0.8
     cpp-options: -DUSE_ATOMIC_PRIMOPS
