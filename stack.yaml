@@ -22,3 +22,4 @@ flags:
     containers: true
     contravariant: true
     contravariant-extras: true
+    deepseq: true

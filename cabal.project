@@ -15,3 +15,4 @@ package mitchell-stdlib
     +containers
     +contravariant
     +contravariant-extras
+    +deepseq
