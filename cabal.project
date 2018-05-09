@@ -19,3 +19,4 @@ package mitchell-stdlib
     +distributive
     +dlist
     +erf
+    +extra

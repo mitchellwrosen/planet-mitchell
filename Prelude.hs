@@ -1,4 +1,4 @@
-{-# language CPP            #-}
+{-# language CPP #-}
 
 module Prelude
   ( -- * Alternative
@@ -14,7 +14,9 @@ module Prelude
   , replicateM_
   , unless
   , when
+#ifdef EXTRA
   , whenJust
+#endif
   , zipWithM
   , zipWithM_
     -- * Bool
@@ -95,49 +97,25 @@ module Prelude
   , IO
     -- * List
   , (++)
-  , (\\)
-  , allSame
-  , anySame
   , break
+#ifdef EXTRA
   , breakOn
   , breakOnEnd
   , breakEnd
   , chunksOf
-  , cons
+#endif
   , cycle
-  , delete
-  , deleteBy
-  , deleteFirstsBy
-  , disjoint
   , drop
+#ifdef EXTRA
   , dropEnd
   , dropPrefix
   , dropSuffix
+#endif
   , dropWhile
   , dropWhileEnd
-  , elemIndex
-  , elemIndices
   , filter
-  , findIndex
-  , findIndices
-  , genericDrop
-  , genericIndex
-  , genericLength
-  , genericReplicate
-  , genericSplitAt
-  , genericTake
-  , group
-  , groupBy
-  , groupOn
-  , groupSort
-  , groupSortBy
-  , groupSortOn
   , inits
-  , insert
-  , insertBy
   , intercalate
-  , intersect
-  , intersectBy
   , intersperse
   , isInfixOf
   , isPrefixOf
@@ -148,9 +126,9 @@ module Prelude
   , iterate'
 #endif
   , lookup
-  , map
   , nub
   , nubBy
+#ifdef EXTRA
   , nubOn
   , nubOrd
   , nubOrdBy
@@ -158,8 +136,9 @@ module Prelude
   , nubSort
   , nubSortBy
   , nubSortOn
+#endif
+  , map
   , partition
-  , permutations
   , repeat
   , replicate
   , reverse
@@ -172,45 +151,36 @@ module Prelude
   , sortBy
   , sortOn
   , span
+#ifdef EXTRA
   , spanEnd
   , split
+#endif
   , splitAt
+#ifdef EXTRA
   , splitAtEnd
-  , snoc
   , stripInfix
   , stripInfixEnd
+#endif
   , stripPrefix
+#ifdef EXTRA
   , stripSuffix
-  , subsequences
+#endif
   , tails
   , take
+#ifdef EXTRA
   , takeEnd
+#endif
   , takeWhile
+#ifdef EXTRA
   , takeWhileEnd
-  , transpose
-  , uncons
+#endif
   , unfoldr
-  , union
-  , unionBy
-  , unsnoc
   , unzip
   , unzip3
-  , unzip4
-  , unzip5
-  , unzip6
-  , unzip7
   , zip
   , zip3
-  , zip4
-  , zip5
-  , zip6
-  , zip7
   , zipWith
   , zipWith3
-  , zipWith4
-  , zipWith5
-  , zipWith6
-  , zipWith7
     -- * ListT
   , ListT
 #ifdef CONTAINERS

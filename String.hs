@@ -8,11 +8,13 @@ module String
   , unwords
   , lines
   , unlines
+#ifdef EXTRA
   , lower
   , upper
   , trim
   , trimStart
   , trimEnd
+#endif
   , showString
   , lexDigits
   , IsString(..)
@@ -56,7 +58,9 @@ module String
 import Data.Constraint.Symbol
 #endif
 import Data.List
+#ifdef EXTRA
 import Data.List.Extra
+#endif
 import Data.String
 import GHC.Show
 import GHC.TypeLits

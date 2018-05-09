@@ -6,21 +6,28 @@
     * The 'whenJust' function from @extra@.
 
 -}
+
+{-# language CPP #-}
+
 module Applicative
   ( -- * Applicative
-    Applicative(..)
-  , filterM
-  , forever
-  , liftA3
-  , replicateM
-  , replicateM_
-  , unless
-  , when
-  , whenJust
-  , zipWithM
-  , zipWithM_
+    Applicative(..),
+    filterM,
+    forever,
+    liftA3,
+    replicateM,
+    replicateM_,
+    unless,
+    when,
+#ifdef EXTRA
+    whenJust,
+#endif
+    zipWithM,
+    zipWithM_,
   ) where
 
 import Control.Applicative
 import Control.Monad
+#ifdef EXTRA
 import Control.Monad.Extra
+#endif
