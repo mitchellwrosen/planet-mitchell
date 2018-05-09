@@ -21,3 +21,4 @@ flags:
     constraints: true
     containers: true
     contravariant: true
+    contravariant-extras: true

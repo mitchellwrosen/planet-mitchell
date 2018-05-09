@@ -14,3 +14,4 @@ package mitchell-stdlib
     +constraints
     +containers
     +contravariant
+    +contravariant-extras

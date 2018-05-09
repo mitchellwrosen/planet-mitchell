@@ -3,18 +3,21 @@
 module Divisible
   (
 #ifdef CONTRAVARIANT
-    Divisible(..)
-  , divided
-  , conquered
-  ,
+    Divisible(..),
+    divided,
+    conquered,
 #endif
-    contrazip3
-  , contrazip4
-  , contrazip5
-  , Supplied(..)
+#ifdef CONTRAVARIANT_EXTRAS
+    contrazip3,
+    contrazip4,
+    contrazip5,
+    Supplied(..)
+#endif
   ) where
 
+#ifdef CONTRAVARIANT_EXTRAS
 import Contravariant.Extras
+#endif
 #ifdef CONTRAVARIANT
 import Data.Functor.Contravariant.Divisible
 #endif

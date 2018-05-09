@@ -3,15 +3,18 @@
 module Decidable
   (
 #ifdef CONTRAVARIANT
-    Decidable(..)
-  , chosen
-  , lost
-  ,
+    Decidable(..),
+    chosen,
+    lost,
 #endif
-    contramany
+#ifdef CONTRAVARIANT_EXTRAS
+    contramany,
+#endif
   ) where
 
+#ifdef CONTRAVARIANT_EXTRAS
 import Contravariant.Extras
+#endif
 #ifdef CONTRAVARIANT
 import Data.Functor.Contravariant.Divisible
 #endif
