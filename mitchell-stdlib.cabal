@@ -216,6 +216,11 @@ flag psqueues
   default: False
   manual: True
 
+flag reactive-banana
+  description: reactive-banana dependency
+  default: False
+  manual: False
+
 flag reflection
   description: reflection dependency
   default: False
@@ -487,6 +492,10 @@ library
   if flag(psqueues)
     build-depends: psqueues ^>= 0.2
     cpp-options: -DUSE_PSQUEUES
+
+  if flag(reactive-banana)
+    build-depends: reactive-banana ^>= 1.2
+    cpp-options: -DUSE_REACTIVE_BANANA
 
   if flag(reflection)
     build-depends: reflection ^>= 2.1
@@ -834,6 +843,10 @@ library
   if flag(profunctors)
     exposed-modules:
       Profunctor
+
+  if flag(reactive-banana)
+    exposed-modules:
+      FRP
 
   if flag(reflection)
     exposed-modules:

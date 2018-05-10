@@ -9,6 +9,7 @@ extra-deps:
   - monad-ste-0.1.0.0
   - network-2.7.0.0
   - nf-1.0.1.0
+  - reactive-banana-1.2.0.0
   - unagi-chan-0.4.1.0
 
 flags:
@@ -54,6 +55,7 @@ flags:
     primitive: true
     profunctors: true
     psqueues: true
+    reactive-banana: true
     reflection: true
     regex-applicative: true
     semigroups: true

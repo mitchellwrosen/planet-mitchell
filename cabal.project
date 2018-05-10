@@ -45,6 +45,7 @@ package mitchell-stdlib
     +primitive
     +profunctors
     +psqueues
+    +reactive-banana
     +reflection
     +regex-applicative
     +semigroups
