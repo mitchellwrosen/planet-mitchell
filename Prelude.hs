@@ -69,6 +69,11 @@ module Prelude
   , assert
   , error
   , undefined
+    -- * Exception
+  , Exception
+  , SomeException(..)
+  , SomeAsyncException(..)
+  , throwIO
 #ifdef USE_FOLDL
     -- * Foldl
   , Fold(..)
@@ -91,6 +96,14 @@ module Prelude
   , (<&>)
 #endif
   , void
+    -- * Generic
+  , Generic
+#ifdef USE_UNORDERED_CONTAINERS
+    -- * HashMap
+  , HashMap
+    -- * HashSet
+  , HashSet
+#endif
 #ifdef USE_CONTAINERS
     -- * IntMap
   , IntMap
@@ -99,6 +112,8 @@ module Prelude
 #endif
     -- * IO
   , IO
+    -- * IORef
+  , IORef
     -- * List
   , (++)
   , break
@@ -298,17 +313,24 @@ import Category
 import Debug
 import Equality (Eq(..))
 import Error
+import Exception (Exception, SomeAsyncException(..), SomeException(..), throwIO)
 #ifdef USE_FOLDL
 import Foldl (Fold(..), FoldM(..))
 #endif
 import Foldable
 import Function
 import Functor
+import Generic (Generic)
+#ifdef USE_UNORDERED_CONTAINERS
+import HashMap (HashMap)
+import HashSet (HashSet)
+#endif
 #ifdef USE_CONTAINERS
 import IntMap (IntMap)
 import IntSet (IntSet)
 #endif
 import IO
+import IORef (IORef)
 import List
 #ifdef USE_LIST_TRANSFORMER
 import ListT (ListT)
