@@ -1,26 +1,28 @@
 {-# language CPP #-}
 
-#ifdef USE_MTL
-
 module Cont
-  ( -- * Cont
-    Cont
-  , cont
-  , runCont
-  , mapCont
-  , withCont
+  (
+#ifdef USE_TRANSFORMERS
+    -- * Cont
+    Cont,
+    cont,
+    runCont,
+    mapCont,
+    withCont,
     -- * ContT
-  , ContT(..)
-  , mapContT
-  , withContT
+    ContT(..),
+    mapContT,
+    withContT,
+#endif
+#ifdef USE_MTL
     -- * MonadCont
-  , MonadCont(..)
+    MonadCont(..),
+#endif
   ) where
 
-import Control.Monad.Cont
-
-#else
-
-module Cont where
-
+#ifdef USE_MTL
+import Control.Monad.Cont.Class
+#endif
+#ifdef USE_TRANSFORMERS
+import Control.Monad.Trans.Cont
 #endif

@@ -1,9 +1,3 @@
-{-| This module contains:
-
-    * The 'Bifoldable' type class and related functionality from @base@,
-      originally exported from "Data.Bifoldable".
--}
-
 module Bifoldable
   ( -- * Bifoldable
     Bifoldable(bifold, bifoldMap, bifoldr)

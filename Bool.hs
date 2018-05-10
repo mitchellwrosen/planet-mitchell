@@ -1,12 +1,3 @@
-{-| This module contains:
-
-    * The "Data.Bool" module from @base@.
-    * The 'Any' and 'All' newtypes from @base@, originally exported from
-      "Data.Monoid".
-    * Boolean type-functions from @base@, originally exported from
-      "Data.Type.Bool".
--}
-
 {-# language ExplicitNamespaces #-}
 
 module Bool

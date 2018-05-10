@@ -1,10 +1,3 @@
-{-| This module contains:
-
-    * The "Debug.Trace" module from @base@.
-    * The "GHC.ExecutionStack" module from @base@.
-    * The "GHC.Stack" module from @base@.
--}
-
 {-# language PackageImports #-}
 
 module Debug

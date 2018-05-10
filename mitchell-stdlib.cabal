@@ -7,6 +7,10 @@ category: Prelude
 license: BSD-3-Clause
 license-file: LICENSE
 
+--------------------------------------------------------------------------------
+-- Flags
+--------------------------------------------------------------------------------
+
 flag aeson
   description: aeson dependency
   default: False
@@ -302,392 +306,620 @@ flag writer-cps-mtl
   default: False
   manual: True
 
+--------------------------------------------------------------------------------
+-- Library
+--------------------------------------------------------------------------------
+
 library
   hs-source-dirs: .
   ghc-options: -Wall
+  default-extensions: NoImplicitPrelude
+  default-language: Haskell2010
+  -- These keep ghci happy
+  reexported-modules: GHC.Base, System.Environment, System.IO
+
+  ------------------------------------------------------------------------------
+  -- Dependencies
+  ------------------------------------------------------------------------------
+
   build-depends: base >= 4.10 && < 5.0
+
   if flag(aeson)
     build-depends: aeson ^>= 1.3
     cpp-options: -DUSE_AESON
+
   if flag(ansi-terminal)
     build-depends: ansi-terminal ^>= 0.8
     cpp-options: -DUSE_ANSI_TERMINAL
+
   if flag(async)
     build-depends: async ^>= 2.2
     cpp-options: -DUSE_ASYNC
+
   if flag(atomic-primops)
     build-depends: atomic-primops ^>= 0.8
     cpp-options: -DUSE_ATOMIC_PRIMOPS
+
   if flag(bits)
     build-depends: bits ^>= 0.5
     cpp-options: -DUSE_BITS
+
   if flag(bytestring)
     build-depends: bytestring ^>= 0.10
     cpp-options: -DUSE_BYTESTRING
+
   if flag(bytestring-trie)
     build-depends: bytestring-trie ^>= 0.2
     cpp-options: -DUSE_BYTESTRING_TRIE
+
   if flag(comonad)
     build-depends: comonad ^>= 5.0
     cpp-options: -DUSE_COMONAD
+
   if flag(compact)
     build-depends: compact ^>= 0.1
     cpp-options: -DUSE_COMPACT
+
   if flag(constraints)
     build-depends: constraints ^>= 0.10
     cpp-options: -DUSE_CONSTRAINTS
+
   if flag(containers)
     build-depends: containers ^>= 0.5
     cpp-options: -DUSE_CONTAINERS
+
   if flag(contravariant)
     build-depends: contravariant ^>= 1.4
     cpp-options: -DUSE_CONTRAVARIANT
+
   if flag(contravariant-extras)
     build-depends: contravariant-extras ^>= 0.3
     cpp-options: -DUSE_CONTRAVARIANT_EXTRAS
+
   if flag(deepseq)
     build-depends: deepseq ^>= 1.4.3
     cpp-options: -DUSE_DEEPSEQ
+
   if flag(distributive)
     build-depends: distributive ^>= 0.5
     cpp-options: -DUSE_DISTRIBUTIVE
+
   if flag(dlist)
     build-depends: dlist ^>= 0.8
     cpp-options: -DUSE_DLIST
+
   if flag(erf)
     build-depends: erf ^>= 2.0
     cpp-options: -DUSE_ERF
+
   if flag(extra)
     build-depends: extra ^>= 1.6
     cpp-options: -DUSE_EXTRA
+
   if flag(filepath)
     build-depends: filepath ^>= 1.4
     cpp-options: -DUSE_FILEPATH
+
   if flag(foldl)
     build-depends: foldl ^>= 1.4
     cpp-options: -DUSE_FOLDL
+
   if flag(gauge)
     build-depends: gauge ^>= 0.2
     cpp-options: -DUSE_GAUGE
+
   if flag(hashable)
     build-depends: hashable ^>= 1.2
     cpp-options: -DUSE_HASHABLE
+
   if flag(heaps)
     build-depends: heaps ^>= 0.3
     cpp-options: -DUSE_HEAPS
+
   if flag(hedgehog)
     build-depends: hedgehog ^>= 0.5
     cpp-options: -DUSE_HEDGEHOG
+
   if flag(list-transformer)
     build-depends: list-transformer ^>= 1.0.4
     cpp-options: -DUSE_LIST_TRANSFORMER
+
   if flag(logict)
     build-depends: logict ^>= 0.6
     cpp-options: -DUSE_LOGICT
+
   if flag(managed)
     build-depends: managed ^>= 1.0
     cpp-options: -DUSE_MANAGED
+
   if flag(megaparsec)
     build-depends: megaparsec ^>= 6.5
     cpp-options: -DUSE_MEGAPARSEC
+
   if flag(mmorph)
     build-depends: mmorph ^>= 1.1
     cpp-options: -DUSE_MMORPH
+
   if flag(monad-ste)
     build-depends: monad-ste ^>= 0.1
     cpp-options: -DUSE_MONAD_STE
+
   if flag(mtl)
     build-depends: mtl ^>= 2.2
     cpp-options: -DUSE_MTL
+
   if flag(multiset)
     build-depends: multiset ^>= 0.3
     cpp-options: -DUSE_MULTISET
+
   if flag(mwc-random)
     build-depends: mwc-random ^>= 0.13
     cpp-options: -DUSE_MWC_RANDOM
+
   if flag(network)
     build-depends: network ^>= 2.7
     cpp-options: -DUSE_NETWORK
+
   if flag(nf)
     build-depends: nf ^>= 1.0
     cpp-options: -DUSE_NF
+
   if flag(optparse-applicative)
     build-depends: optparse-applicative ^>= 0.14
     cpp-options: -DUSE_OPTPARSE_APPLICATIVE
+
   if flag(parallel)
     build-depends: parallel ^>= 3.2
     cpp-options: -DUSE_PARALLEL
+
   if flag(prettyprinter)
     build-depends: prettyprinter ^>= 1.2
     cpp-options: -DUSE_PRETTYPRINTER
+
   if flag(primitive)
     build-depends: primitive ^>= 0.6
     cpp-options: -DUSE_PRIMITIVE
+
   if flag(profunctors)
     build-depends: profunctors ^>= 5.2
     cpp-options: -DUSE_PROFUNCTORS
+
   if flag(psqueues)
     build-depends: psqueues ^>= 0.2
     cpp-options: -DUSE_PSQUEUES
+
   if flag(reflection)
     build-depends: reflection ^>= 2.1
     cpp-options: -DUSE_REFLECTION
+
   if flag(regex-applicative)
     build-depends: regex-applicative ^>= 0.3
     cpp-options: -DUSE_REGEX_APPLICATIVE
+
   if flag(semigroups)
     build-depends: semigroups ^>= 0.18
     cpp-options: -DUSE_SEMIGROUPS
+
   if flag(stm)
     build-depends: stm ^>= 2.4.5
     cpp-options: -DUSE_STM
+
   if flag(stm-containers)
     build-depends: stm-containers ^>= 0.2
     cpp-options: -DUSE_STM_CONTAINERS
+
   if flag(tagged)
     build-depends: tagged ^>= 0.8
     cpp-options: -DUSE_TAGGED
+
   if flag(text)
     build-depends: text ^>= 1.2
     cpp-options: -DUSE_TEXT
+
   if flag(text-short)
     build-depends: text-short ^>= 0.1
     cpp-options: -DUSE_TEXT_SHORT
+
   if flag(time)
     build-depends: time ^>= 1.8 || ^>= 1.9
     cpp-options: -DUSE_TIME
+
   if flag(transformers)
     build-depends: transformers ^>= 0.5
     cpp-options: -DUSE_TRANSFORMERS
+
   if flag(transformers-base)
     build-depends: transformers-base ^>= 0.4
     cpp-options: -DUSE_TRANSFORMERS_BASE
+
   if flag(typed-process)
     build-depends: typed-process ^>= 0.2
     cpp-options: -DUSE_TYPED_PROCESS
+
   if flag(unagi-chan)
     build-depends: unagi-chan ^>= 0.4
     cpp-options: -DUSE_UNAGI_CHAN
+
   if flag(unliftio)
     build-depends: unliftio ^>= 0.2.7.0
     cpp-options: -DUSE_UNLIFTIO
+
   if flag(unordered-containers)
     build-depends: unordered-containers ^>= 0.2
     cpp-options: -DUSE_UNORDERED_CONTAINERS
+
   if flag(vector)
     build-depends: vector ^>= 0.12
     cpp-options: -DUSE_VECTOR
+
   if flag(weigh)
     build-depends: weigh ^>= 0.0
     cpp-options: -DUSE_WEIGH
+
   if flag(writer-cps-mtl)
     build-depends: writer-cps-mtl ^>= 0.1
     cpp-options: -DUSE_WRITER_CPS_MTL
+
+  ------------------------------------------------------------------------------
+  -- Exposed modules
+  ------------------------------------------------------------------------------
+
   exposed-modules:
-      Alternative
-    , Applicative
-    , Benchmark
-    , Bifoldable
-    , Bifoldable.Partial
-    , Bifunctor
-    , Bitraversable
-    , Bits
-    , Bool
-    , ByteString
-    , ByteString.Partial
-    , Category
-    , Chan
-    , Char
-    , Clock
-    , Coerce
-    , Comonad
-    , ComonadApply
-    , Compact
-    , Compose
-    , Concurrency
-    , Const
-    , Constraint
-    , Cont
-    , Contravariant
-    , Counter
-    , DList
-    , DList.Partial
-    , Data
-    , Debug
-    , Decidable
-    , Distributive
-    , Divisible
-    , Dynamic
-    , Either
-    , Enum
-    , Environment
-    , Equality
-    , Error
-    , Eval
-    , Except
-    , Exception
-    , Exit
-    , Field
-    , File
-    , File.Binary
-    , File.Text
-    , Foldable
-    , Foldl
-    , Function
-    , Functor
-    , Generic
-    , Graph
-    , HashMap
-    , HashPSQ
-    , HashSet
-    , Hashable
-    , Heap
-    , IO
-    , IORef
-    , Identity
-    , IntMap
-    , IntMultiSet
-    , IntPSQ
-    , IntSet
-    , Ix
-    , Json.Decode
-    , Json.Encode
-    , Label
-    , LazyByteString
-    , LazyIntMap
-    , LazyMap
-    , LazyText
-    , List
-    , List.Partial
-    , List1
-    , ListT
-    , Logic
-    , MFunctor
-    , MMonad
-    , MVar
-    , Managed
-    , Map
-    , Maybe
-    , MaybeT
-    , Monad
-    , MonadBase
-    , MonadFail
-    , MonadFix
-    , MonadIO
-    , MonadPlus
-    , MonadTrans
-    , MonadZip
-    , Monoid
-    , MultiSet
-    , Numeric.Complex
-    , Numeric.Double
-    , Numeric.Erf
-    , Numeric.Floating
-    , Numeric.Fractional
-    , Numeric.Int
-    , Numeric.Int8
-    , Numeric.Int16
-    , Numeric.Int32
-    , Numeric.Int64
-    , Numeric.Integer
-    , Numeric.Integral
-    , Numeric.InvErf
-    , Numeric.Float
-    , Numeric.Nat
-    , Numeric.Natural
-    , Numeric.Num
-    , Numeric.Product
-    , Numeric.Ratio
-    , Numeric.Real
-    , Numeric.RealFloat
-    , Numeric.RealFrac
-    , Numeric.Sum
-    , Numeric.Word
-    , Numeric.Word8
-    , Numeric.Word16
-    , Numeric.Word32
-    , Numeric.Word64
-    , Optparse
-    , Ord
-    , OrdPSQ
-    , Parallelism
-    , Parser
-    , Posix
-    , Predicate
-    , Prelude
-    , Pretty
-    , Prim
-    , Printf
-    , Process
-    , Product
-    , Profunctor
-    , Proxy
-    , Ptr
-    , Ptr.Foreign
-    , Ptr.Fun
-    , Ptr.Stable
-    , Ptr.Static
-    , Ptr.Weak
-    , QSem
-    , RTS
-    , Random
-    , Read
-    , Reader
-    , Reflection
-    , Regex
-    , ST
-    , Semigroup
-    , Sequence
-    , Set
-    , ShortByteString
-    , ShortText
-    , Show
-    , Socket
-    , StableName
-    , State
-    , Storable
-    , String
-    , Sum
-    , System
-    , TBQueue
-    , TBimap
-    , TChan
-    , TMVar
-    , TMap
-    , TMultimap
-    , TSem
-    , TSet
-    , TVar
-    , Tagged
-    , Terminal
-    , Test
-    , Test.Gen
-    , Test.Range
-    , Text
-    , Time
-    , Traversable
-    , Tree
-    , Trie
-    , Tuple
-    , Type
-    , Typeable
-    , Unique
-    , Vector
-    , Vector.Generic
-    , Vector.Mutable
-    , Vector.Primitive
-    , Vector.Storable
-    , Vector.Unboxed
-    , Version
-    , Void
-    , Weigh
-    , Writer
-  reexported-modules:
-      GHC.Base
-    , System.Environment
-    , System.IO
-  default-extensions: NoImplicitPrelude
-  default-language: Haskell2010
+    Alternative
+    Applicative
+    Bifoldable
+    Bifoldable.Partial
+    Bifunctor
+    Bitraversable
+    Bits
+    Bool
+    Category
+    Char
+    Clock
+    Coerce
+    Compose
+    Concurrency
+    Const
+    Data
+    Debug
+    Dynamic
+    Either
+    Enum
+    Environment
+    Equality
+    Error
+    Eval
+    Exception
+    Exit
+    Field
+    File
+    File.Text
+    Foldable
+    Function
+    Functor
+    Generic
+    IO
+    IORef
+    Identity
+    Ix
+    Label
+    List
+    List.Partial
+    List1
+    MVar
+    Maybe
+    Monad
+    MonadFail
+    MonadFix
+    MonadIO
+    MonadPlus
+    MonadZip
+    Monoid
+    Numeric.Complex
+    Numeric.Double
+    Numeric.Floating
+    Numeric.Fractional
+    Numeric.Int
+    Numeric.Int8
+    Numeric.Int16
+    Numeric.Int32
+    Numeric.Int64
+    Numeric.Integer
+    Numeric.Integral
+    Numeric.Float
+    Numeric.Nat
+    Numeric.Natural
+    Numeric.Num
+    Numeric.Product
+    Numeric.Ratio
+    Numeric.Real
+    Numeric.RealFloat
+    Numeric.RealFrac
+    Numeric.Sum
+    Numeric.Word
+    Numeric.Word8
+    Numeric.Word16
+    Numeric.Word32
+    Numeric.Word64
+    Ord
+    Parallelism
+    Posix
+    Prelude
+    Printf
+    Product
+    Proxy
+    Ptr
+    Ptr.Foreign
+    Ptr.Fun
+    Ptr.Stable
+    Ptr.Static
+    Ptr.Weak
+    QSem
+    RTS
+    Read
+    ST
+    Semigroup
+    Show
+    StableName
+    Storable
+    String
+    Sum
+    System
+    Traversable
+    Tuple
+    Type
+    Typeable
+    Unique
+    Version
+    Void
+
+  if flag(aeson)
+    exposed-modules:
+      Json.Decode
+      Json.Encode
+
+  if flag(ansi-terminal)
+    exposed-modules:
+      Terminal
+
+  if flag(atomic-primops)
+    exposed-modules:
+      Counter
+
+  if flag(bytestring)
+    exposed-modules:
+      ByteString
+      ByteString.Partial
+      LazyByteString
+      ShortByteString
+
+  if flag(bytestring) || flag(unliftio)
+    exposed-modules:
+      File.Binary
+
+  if flag(bytestring-trie)
+    exposed-modules:
+      Trie
+
+  if flag(comonad)
+    exposed-modules:
+      Comonad
+      ComonadApply
+
+  if flag(compact)
+    exposed-modules:
+      Compact
+
+  if flag(constraints)
+    exposed-modules:
+      Constraint
+
+  if flag(contravariant)
+    exposed-modules:
+      Contravariant
+      Predicate
+
+  if flag(contravariant) || flag(contravariant-extras)
+    exposed-modules:
+      Decidable
+      Divisible
+
+  if flag(containers)
+    exposed-modules:
+      Graph
+      IntMap
+      IntSet
+      LazyIntMap
+      LazyMap
+      Map
+      Sequence
+      Set
+      Tree
+
+  if flag(distributive)
+    exposed-modules:
+      Distributive
+
+  if flag(dlist)
+    exposed-modules:
+      DList
+      DList.Partial
+
+  if flag(erf)
+    exposed-modules:
+      Numeric.Erf
+      Numeric.InvErf
+
+  if flag(foldl)
+    exposed-modules:
+      Foldl
+
+  if flag(gauge)
+    exposed-modules:
+      Benchmark
+
+  if flag(hashable)
+    exposed-modules:
+      Hashable
+
+  if flag(heaps)
+    exposed-modules:
+      Heap
+
+  if flag(hedgehog)
+    exposed-modules:
+      Test
+      Test.Gen
+      Test.Range
+
+  if flag(list-transformer)
+    exposed-modules:
+      ListT
+
+  if flag(logict)
+    exposed-modules:
+      Logic
+
+  if flag(optparse-applicative)
+    exposed-modules:
+      Optparse
+
+  if flag(prettyprinter)
+    exposed-modules:
+      Pretty
+
+  if flag(primitive)
+    exposed-modules:
+      Prim
+
+  if flag(psqueues)
+    exposed-modules:
+      HashPSQ
+      IntPSQ
+      OrdPSQ
+
+  if flag(managed)
+    exposed-modules:
+      Managed
+
+  if flag(megaparsec)
+    exposed-modules:
+      Parser
+
+  if flag(mmorph)
+    exposed-modules:
+      MFunctor
+      MMonad
+
+  if flag(mtl) || flag(transformers)
+    exposed-modules:
+      Cont
+      Except
+      Reader
+      State
+
+  if flag(multiset)
+    exposed-modules:
+      IntMultiSet
+      MultiSet
+
+  if flag(mwc-random)
+    exposed-modules:
+      Random
+
+  if flag(network)
+    exposed-modules:
+      Socket
+
+  if flag(profunctors)
+    exposed-modules:
+      Profunctor
+
+  if flag(reflection)
+    exposed-modules:
+      Reflection
+
+  if flag(regex-applicative)
+    exposed-modules:
+      Regex
+
+  if flag(stm)
+    exposed-modules:
+      TSem
+
+  if flag(stm) || flag(unliftio)
+    exposed-modules:
+      TBQueue
+      TChan
+      TMVar
+      TVar
+
+  if flag(stm-containers)
+    exposed-modules:
+      TBimap
+      TMap
+      TMultimap
+      TSet
+
+  if flag(tagged)
+    exposed-modules:
+      Tagged
+
+  if flag(text)
+    exposed-modules:
+      LazyText
+      Text
+
+  if flag(text-short)
+    exposed-modules:
+      ShortText
+
+  if flag(time)
+    exposed-modules:
+      Time
+
+  if flag(transformers)
+    exposed-modules:
+      MaybeT
+      MonadTrans
+
+  if flag(transformers-base)
+    exposed-modules:
+      MonadBase
+
+  if flag(typed-process)
+    exposed-modules:
+      Process
+
+  if flag(unagi-chan)
+    exposed-modules:
+      Chan
+
+  if flag(unordered-containers)
+    exposed-modules:
+      HashMap
+      HashSet
+
+  if flag(vector)
+    exposed-modules:
+      Vector
+      Vector.Generic
+      Vector.Mutable
+      Vector.Primitive
+      Vector.Storable
+      Vector.Unboxed
+
+  if flag(weigh)
+    exposed-modules:
+      Weigh
+
+  if flag(writer-cps-mtl)
+    exposed-modules:
+      Writer
+
+--------------------------------------------------------------------------------
+-- Benchmarks
+--------------------------------------------------------------------------------
 
 benchmark semaphore
   hs-source-dirs: bench

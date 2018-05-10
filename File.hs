@@ -1,12 +1,3 @@
-{-| This module contains:
-
-    * File handle operations from @base@, generalized by @unliftio@.
-    * The "System.FilePath" module from @filepath@.
-    * The "UnliftIO.Temporary" module from @unliftio@.
-    * The "UnliftIO.Directory" module from @unliftio@.
-
--}
-
 {-# language CPP #-}
 
 module File

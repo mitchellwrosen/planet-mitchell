@@ -1,8 +1,3 @@
-{-| This module contains:
-
-    * The 'Alternative' type class and functions from @base@.
-    * The 'Alt' newtype from @base@.
--}
 module Alternative
   ( -- * Alternative
     Alternative(..)

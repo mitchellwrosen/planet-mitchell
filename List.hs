@@ -1,9 +1,3 @@
-{-| This module contains:
-
-    * List functions from @base@, originally exported from "Data.List".
-    * List functions from @extra@, originally exported from "Data.List.Extra".
--}
-
 {-# language CPP #-}
 
 module List

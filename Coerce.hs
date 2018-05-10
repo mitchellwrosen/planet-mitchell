@@ -1,10 +1,3 @@
-{-| This module contains:
-
-    * The "Data.Coerce" module from @base@.
-    * The "Data.Type.Coercion" module from @base@.
-    * The "Unsafe.Coerce" module from @base@.
--}
-
 module Coerce
   ( -- * Coercible
     Coercible

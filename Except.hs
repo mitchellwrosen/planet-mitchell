@@ -1,21 +1,23 @@
 {-# language CPP #-}
 
-#ifdef USE_MTL
-
 module Except
-  ( -- * ExceptT
+  (
+#ifdef USE_TRANSFORMERS
+    -- * ExceptT
     ExceptT(..)
   , runExceptT
   , mapExceptT
   , withExceptT
+#endif
+#ifdef USE_MTL
     -- * MonadError
   , MonadError(..)
+#endif
   ) where
 
-import Control.Monad.Except
-
-#else
-
-module Except where
-
+#ifdef USE_MTL
+import Control.Monad.Error.Class
+#endif
+#ifdef USE_TRANSFORMERS
+import Control.Monad.Trans.Except
 #endif

@@ -1,8 +1,3 @@
-{-| This module contains:
-
-    * Constraint types and functions from @constraints@.
--}
-
 {-# language CPP #-}
 
 #ifdef USE_CONSTRAINTS

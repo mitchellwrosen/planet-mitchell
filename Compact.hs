@@ -1,10 +1,3 @@
-{-| This module contains:
-
-    * The "Data.Compact" module from @compact@.
-    * The 'CompactionFailed' exception from @base@, originally exported from
-      "Control.Exception".
--}
-
 {-# language CPP #-}
 
 module Compact

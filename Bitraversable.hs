@@ -1,9 +1,3 @@
-{-| This module contains:
-
-    * The 'Bitraversable' type class and related functionality from @base@.
-
--}
-
 module Bitraversable
   ( -- * Bitraversable
     Bitraversable(..)

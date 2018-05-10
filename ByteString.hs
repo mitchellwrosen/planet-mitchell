@@ -1,8 +1,3 @@
-{-| This module contains:
-
-    * The 'ByteString' type and related functions from @bytestring@.
--}
-
 {-# language CPP #-}
 
 #ifdef USE_BYTESTRING
