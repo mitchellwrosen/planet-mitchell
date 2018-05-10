@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_PRIMITIVE
-
 module Prim
   ( -- * Re-exports
     module Control.Monad.Primitive,
@@ -24,9 +20,3 @@ import Data.Primitive.MutVar
 import Data.Primitive.SmallArray
 import Data.Primitive.Types
 import Data.Primitive.UnliftedArray
-
-#else
-
-module Prim where
-
-#endif

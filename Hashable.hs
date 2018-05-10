@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_HASHABLE
-
 module Hashable
  ( -- * Hashable
    Hashable(..)
@@ -18,9 +14,3 @@ module Hashable
  ) where
 
 import Data.Hashable
-
-#else
-
-module Hashable where
-
-#endif

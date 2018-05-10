@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_PSQUEUES
-
 module IntPSQ
   ( -- * IntPSQ
     IntPSQ
@@ -36,9 +32,3 @@ module IntPSQ
   ) where
 
 import Data.IntPSQ
-
-#else
-
-module IntPSQ where
-
-#endif

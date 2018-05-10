@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_ATOMIC_PRIMOPS
-
 module Counter
   ( -- * Counter
     AtomicCounter
@@ -13,9 +9,3 @@ module Counter
   ) where
 
 import Data.Atomics.Counter
-
-#else
-
-module Counter where
-
-#endif

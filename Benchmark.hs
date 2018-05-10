@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_GAUGE
-
 module Benchmark
   ( -- * Running benchmarks
     defaultMain
@@ -25,9 +21,3 @@ module Benchmark
   ) where
 
 import Gauge
-
-#else
-
-module Benchmark where
-
-#endif

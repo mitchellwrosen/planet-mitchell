@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_BYTESTRING
-
 module ByteString.Partial
   ( foldl1'
   , foldr1
@@ -13,11 +9,3 @@ module ByteString.Partial
   , minimum
   , tail
   ) where
-
-import Data.ByteString
-
-#else
-
-module ByteString.Partial where
-
-#endif

@@ -77,4 +77,7 @@ flags:
     weigh: true
     writer-cps-mtl: true
 
+  contravariant:
+    statevar: false
+
 allow-newer: true

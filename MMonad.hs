@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_MMONAD
-
 module MMonad
   ( MMonad(..)
   , squash
@@ -12,9 +8,3 @@ module MMonad
   ) where
 
 import Control.Monad.Morph
-
-#else
-
-module MMonad where
-
-#endif

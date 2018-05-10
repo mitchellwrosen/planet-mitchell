@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_BYTESTRING
-
 module ByteString
   ( -- * ByteString
     ByteString
@@ -81,9 +77,3 @@ module ByteString
   ) where
 
 import Data.ByteString
-
-#else
-
-module ByteString where
-
-#endif

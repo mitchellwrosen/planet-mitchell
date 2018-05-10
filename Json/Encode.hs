@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_AESON
-
 module Json.Encode
   (
     -- * Encoding
@@ -78,9 +74,3 @@ import Data.Aeson
 import Data.Aeson.Encoding
 import Data.Aeson.Text
 import Data.Aeson.Types
-
-#else
-
-module Json.Encode where
-
-#endif

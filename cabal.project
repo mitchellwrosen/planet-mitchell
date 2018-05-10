@@ -66,3 +66,6 @@ package mitchell-stdlib
     +vector
     +weigh
     +writer-cps-mtl
+
+package contravariant
+  flags: -statevar

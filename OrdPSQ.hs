@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_PSQUEUES
-
 module OrdPSQ
   ( -- * OrdPSQ
     OrdPSQ
@@ -37,9 +33,3 @@ module OrdPSQ
   ) where
 
 import Data.OrdPSQ
-
-#else
-
-module OrdPSQ where
-
-#endif

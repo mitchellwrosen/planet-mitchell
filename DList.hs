@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_DLIST
-
 module DList
   ( -- * DList
     DList(Nil, Cons)
@@ -22,9 +18,3 @@ module DList
   ) where
 
 import Data.DList
-
-#else
-
-module DList where
-
-#endif

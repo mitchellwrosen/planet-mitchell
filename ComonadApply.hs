@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_COMONAD
-
 module ComonadApply
   ( ComonadApply(..)
   , (<@@>)
@@ -10,9 +6,3 @@ module ComonadApply
   ) where
 
 import Control.Comonad
-
-#else
-
-module ComonadApply where
-
-#endif

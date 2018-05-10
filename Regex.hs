@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_REGEX_APPLICATIVE
-
 module Regex
   ( -- * Regex
     RE
@@ -38,9 +34,3 @@ module Regex
 
 import Text.Regex.Applicative
 import Text.Regex.Applicative.Common
-
-#else
-
-module Regex where
-
-#endif

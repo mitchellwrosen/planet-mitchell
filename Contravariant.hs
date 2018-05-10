@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_CONTRAVARIANT
-
 module Contravariant
   ( -- * Contravariant
     Contravariant(..)
@@ -12,9 +8,3 @@ module Contravariant
   ) where
 
 import Data.Functor.Contravariant
-
-#else
-
-module Contravariant where
-
-#endif

@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_UNAGI_CHAN
-
 module Chan
   ( -- * Creating channels
     newChan
@@ -21,9 +17,3 @@ module Chan
   ) where
 
 import Control.Concurrent.Chan.Unagi.Bounded
-
-#else
-
-module Chan where
-
-#endif

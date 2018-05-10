@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_STM
-
 module TSem
   ( TSem
   , newTSem
@@ -11,9 +7,3 @@ module TSem
   ) where
 
 import Control.Concurrent.STM.TSem
-
-#else
-
-module TSem where
-
-#endif

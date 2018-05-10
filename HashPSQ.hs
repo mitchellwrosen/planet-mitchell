@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_PSQUEUES
-
 module HashPSQ
   ( -- * HashPSQ
     HashPSQ
@@ -36,9 +32,3 @@ module HashPSQ
   ) where
 
 import Data.HashPSQ
-
-#else
-
-module HashPSQ where
-
-#endif

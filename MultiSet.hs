@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_MULTISET
-
 module MultiSet
   ( MultiSet
   , null
@@ -68,9 +64,3 @@ module MultiSet
   ) where
 
 import Data.MultiSet
-
-#else
-
-module MultiSet where
-
-#endif

@@ -1,7 +1,3 @@
-{-# language CPP #-}
-
-#ifdef USE_LIST_TRANSFORMER
-
 module ListT
   ( ListT(..)
   , runListT
@@ -16,9 +12,3 @@ module ListT
   ) where
 
 import List.Transformer
-
-#else
-
-module ListT where
-
-#endif
