@@ -672,6 +672,10 @@ library
     , Void
     , Weigh
     , Writer
+  reexported-modules:
+      GHC.Base
+    , System.Environment
+    , System.IO
   default-extensions: NoImplicitPrelude
   default-language: Haskell2010
 
