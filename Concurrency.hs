@@ -69,11 +69,9 @@ module Concurrency
     link2,
     asyncThreadId,
 #ifdef USE_ASYNC
-#if MIN_VERSION_async(2,2,0)
     compareAsyncs,
     ExceptionInLinkedThread(..),
     AsyncCancelled(..),
-#endif
 #endif
 #endif
     -- * STM
@@ -116,6 +114,10 @@ import GHC.Conc
 #endif
 #ifdef USE_UNLIFTIO
 import UnliftIO.Async
+#ifdef USE_ASYNC
+import Control.Concurrent.Async
+  (AsyncCancelled(..), ExceptionInLinkedThread(..), compareAsyncs)
+#endif
 #elif defined(USE_ASYNC)
 import Control.Concurrent.Async
 #endif

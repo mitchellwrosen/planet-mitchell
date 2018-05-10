@@ -4,7 +4,9 @@ jobs: $ncpus
 
 package mitchell-stdlib
   flags:
+    +aeson
     +ansi-terminal
+    +async
     +atomic-primops
     +bits
     +bytestring

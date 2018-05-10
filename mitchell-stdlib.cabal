@@ -7,6 +7,11 @@ category: Prelude
 license: BSD-3-Clause
 license-file: LICENSE
 
+flag aeson
+  description: aeson dependency
+  default: False
+  manual: True
+
 flag ansi-terminal
   description: ansi-terminal dependency
   default: False
@@ -301,11 +306,14 @@ library
   hs-source-dirs: .
   ghc-options: -Wall
   build-depends: base >= 4.10 && < 5.0
+  if flag(aeson)
+    build-depends: aeson ^>= 1.3
+    cpp-options: -DUSE_AESON
   if flag(ansi-terminal)
     build-depends: ansi-terminal ^>= 0.8
     cpp-options: -DUSE_ANSI_TERMINAL
   if flag(async)
-    build-depends: async >= 2.1.1 || ^>= 2.2
+    build-depends: async ^>= 2.2
     cpp-options: -DUSE_ASYNC
   if flag(atomic-primops)
     build-depends: atomic-primops ^>= 0.8
@@ -542,6 +550,8 @@ library
     , IntPSQ
     , IntSet
     , Ix
+    , Json.Decode
+    , Json.Encode
     , Label
     , LazyByteString
     , LazyIntMap
