@@ -582,6 +582,7 @@ library
     Bitraversable
     Bits
     Bool
+    Bounded
     Category
     Char
     Clock

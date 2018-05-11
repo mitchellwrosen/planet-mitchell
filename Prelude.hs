@@ -25,6 +25,8 @@ module Prelude
   , (||)
   , not
   , otherwise
+    -- * Bounded
+  , Bounded(..)
 #ifdef USE_BYTESTRING
     -- * ByteString
   , ByteString
@@ -55,6 +57,9 @@ module Prelude
   , foldMapBy
   , foldBy
 #endif
+    -- * Concurrency
+  , forkIO
+  , threadDelay
     -- * Debug
   , trace
   , traceId
@@ -282,6 +287,9 @@ module Prelude
   , Word32
     -- * Numeric.Word64
   , Word64
+    -- * Ord
+  , Ord(..)
+  , Ordering(..)
     -- * Semigroup
   , Semigroup(..)
 #ifdef USE_CONTAINERS
@@ -299,18 +307,19 @@ module Prelude
     -- * Tuple
   , fst
   , snd
-  , curry
-  , uncurry
   ) where
 
-import Alternative
+import Alternative (Alternative(..), guard, optional)
 import Applicative
-import Bool
+import Bool (Bool(..), (&&), (||), otherwise, not)
+import Bounded (Bounded(..))
 #ifdef USE_BYTESTRING
 import ByteString (ByteString)
 #endif
-import Category
+import Category (Category(..), (<<<), (>>>))
+import Concurrency (forkIO, threadDelay)
 import Debug
+  (trace, traceId, traceM, traceShow, traceShowId, traceShowM, traceStack)
 import Equality (Eq(..))
 import Error
 import Exception (Exception, SomeAsyncException(..), SomeException(..), throwIO)
@@ -363,6 +372,7 @@ import Numeric.Word8 (Word8)
 import Numeric.Word16 (Word16)
 import Numeric.Word32 (Word32)
 import Numeric.Word64 (Word64)
+import Ord (Ord(..), Ordering(..))
 import Semigroup
 #ifdef USE_CONTAINERS
 import Sequence (Seq)
