@@ -79,6 +79,10 @@ module Prelude
   , SomeException(..)
   , SomeAsyncException(..)
   , throwIO
+#ifdef USE_TEXT
+    -- * File.Text
+  , putStrLn
+#endif
 #ifdef USE_FOLDL
     -- * Foldl
   , Fold(..)
@@ -227,6 +231,8 @@ module Prelude
   , module Monad
     -- * MonadIO
   , module MonadIO
+    -- * MonadTrans
+  , MonadTrans(..)
     -- * Monoid
   , Monoid
   , mempty
@@ -304,6 +310,11 @@ module Prelude
     -- * Text
   , Text
 #endif
+    -- * Traversable
+  , Traversable
+  , traverse
+  , sequenceA
+  , for
     -- * Tuple
   , fst
   , snd
@@ -323,6 +334,9 @@ import Debug
 import Equality (Eq(..))
 import Error
 import Exception (Exception, SomeAsyncException(..), SomeException(..), throwIO)
+#ifdef USE_TEXT
+import File.Text (putStrLn)
+#endif
 #ifdef USE_FOLDL
 import Foldl (Fold(..), FoldM(..))
 #endif
@@ -350,6 +364,7 @@ import Map (Map)
 import Maybe
 import Monad
 import MonadIO
+import MonadTrans (MonadTrans(..))
 import Monoid
 import Numeric.Double (Double)
 import Numeric.Float (Float)
@@ -382,4 +397,5 @@ import Show
 #ifdef USE_TEXT
 import Text (Text)
 #endif
+import Traversable (Traversable, for, sequenceA, traverse)
 import Tuple

@@ -2,9 +2,10 @@
 
 module Traversable
   (
-    Traversable(..),
+    Traversable,
+    traverse,
+    sequenceA,
     for,
-    forM,
     mapAccumL,
     mapAccumR,
     fmapDefault,

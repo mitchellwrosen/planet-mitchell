@@ -16,6 +16,10 @@ module Reader
 #ifdef USE_MTL
     -- * MonadReader
     MonadReader(..),
+#elif defined(USE_TRANSFORMERS)
+    ask,
+    local,
+    reader,
 #endif
   ) where
 

@@ -4,14 +4,17 @@ module Except
   (
 #ifdef USE_TRANSFORMERS
     -- * ExceptT
-    ExceptT(..)
-  , runExceptT
-  , mapExceptT
-  , withExceptT
+    ExceptT(..),
+    runExceptT,
+    mapExceptT,
+    withExceptT,
 #endif
 #ifdef USE_MTL
     -- * MonadError
-  , MonadError(..)
+    MonadError(..),
+#elif defined(USE_TRANSFORMERS)
+    throwE,
+    catchE,
 #endif
   ) where
 
