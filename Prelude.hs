@@ -57,6 +57,8 @@ module Prelude
   , foldMapBy
   , foldBy
 #endif
+    -- * Char
+  , Char
     -- * Concurrency
   , forkIO
   , threadDelay
@@ -328,6 +330,7 @@ import Bounded (Bounded(..))
 import ByteString (ByteString)
 #endif
 import Category (Category(..), (<<<), (>>>))
+import Char (Char)
 import Concurrency (forkIO, threadDelay)
 import Debug
   (trace, traceId, traceM, traceShow, traceShowId, traceShowM, traceStack)
