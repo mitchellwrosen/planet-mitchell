@@ -4,7 +4,7 @@ name: mitchell-stdlib
 version: 0.1.0
 build-type: Simple
 category: Prelude
-license: BSD-3-Clause
+license: BSD3
 license-file: LICENSE
 
 --------------------------------------------------------------------------------
@@ -233,6 +233,11 @@ flag reflection
 
 flag regex-applicative
   description: regex-applicative dependency
+  default: False
+  manual: True
+
+flag scientific
+  description: scientific dependency
   default: False
   manual: True
 
@@ -513,6 +518,10 @@ library
   if flag(regex-applicative)
     build-depends: regex-applicative ^>= 0.3
     cpp-options: -DUSE_REGEX_APPLICATIVE
+
+  if flag(scientific)
+    build-depends: scientific ^>= 0.3
+    cpp-options: -DUSE_SCIENTIFIC
 
   if flag(semigroups)
     build-depends: semigroups ^>= 0.18
@@ -871,6 +880,10 @@ library
   if flag(regex-applicative)
     exposed-modules:
       Regex
+
+  if flag(scientific)
+    exposed-modules:
+      Numeric.Scientific
 
   if flag(stm)
     exposed-modules:

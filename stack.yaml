@@ -59,6 +59,7 @@ flags:
     reactive-banana: true
     reflection: true
     regex-applicative: true
+    scientific: true
     semigroups: true
     stm: true
     stm-containers: true

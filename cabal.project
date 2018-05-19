@@ -49,6 +49,7 @@ package mitchell-stdlib
     +reactive-banana
     +reflection
     +regex-applicative
+    +scientific
     +semigroups
     +stm
     +stm-containers
