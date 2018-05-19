@@ -1,8 +1,3 @@
-{-| This module contains:
-
-    * The partial functions exported by "Data.ByteString" from @bytestring@.
--}
-
 {-# language CPP #-}
 
 #ifdef USE_BYTESTRING

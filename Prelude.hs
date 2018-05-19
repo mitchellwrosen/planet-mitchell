@@ -233,8 +233,10 @@ module Prelude
   , module Monad
     -- * MonadIO
   , module MonadIO
+#ifdef USE_TRANSFORMERS
     -- * MonadTrans
   , MonadTrans(..)
+#endif
     -- * Monoid
   , Monoid
   , mempty
