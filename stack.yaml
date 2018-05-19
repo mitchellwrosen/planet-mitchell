@@ -38,6 +38,7 @@ flags:
     hashable: true
     heaps: true
     hedgehog: true
+    lens: true
     list-transformer: true
     logict: true
     managed: true

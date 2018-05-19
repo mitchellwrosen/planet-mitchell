@@ -131,6 +131,11 @@ flag heaps
   default: False
   manual: True
 
+flag lens
+  description: lens dependency
+  default: False
+  manual: True
+
 flag list-transformer
   description: list-transformer dependency
   default: False
@@ -424,6 +429,10 @@ library
   if flag(hedgehog)
     build-depends: hedgehog ^>= 0.5
     cpp-options: -DUSE_HEDGEHOG
+
+  if flag(lens)
+    build-depends: lens ^>= 4.16
+    cpp-options: -DUSE_LENS
 
   if flag(list-transformer)
     build-depends: list-transformer ^>= 1.0.4
@@ -781,6 +790,12 @@ library
       Test
       Test.Gen
       Test.Range
+
+  if flag(lens)
+    exposed-modules:
+      Optic.Iso
+      Optic.Lens
+      Optic.Traversal
 
   if flag(list-transformer)
     exposed-modules:

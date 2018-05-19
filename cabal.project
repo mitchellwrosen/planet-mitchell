@@ -28,6 +28,7 @@ package mitchell-stdlib
     +hashable
     +heaps
     +hedgehog
+    +lens
     +list-transformer
     +logict
     +managed
