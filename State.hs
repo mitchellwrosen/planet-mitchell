@@ -20,25 +20,26 @@ module State
 #ifdef USE_MTL
     -- * MonadState
     MonadState(..),
+    gets,
     modify,
     modify',
-    gets,
 #elif defined(USE_TRANSFORMERS)
     get,
+    gets,
     put,
     state,
     modify,
     modify',
-    gets,
 #endif
   ) where
 
 #ifdef USE_MTL
 import Control.Monad.State.Class (MonadState(..), modify, modify', gets)
+#elif defined(USE_TRANSFORMERS)
+import Control.Monad.Trans.State.Strict (get, gets, modify, modify', put, state)
 #endif
 #ifdef USE_TRANSFORMERS
 import Control.Monad.Trans.State.Strict
-  (State, StateT(..), evalState, evalStateT, execState, execStateT, get, gets,
-    mapState, mapStateT, modify, modify', put, runState, state, withState,
-    withStateT)
+  (State, StateT(..), evalState, evalStateT, execState, execStateT, mapState,
+    mapStateT, runState, withState, withStateT)
 #endif
