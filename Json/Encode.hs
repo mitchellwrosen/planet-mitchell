@@ -10,7 +10,7 @@ module Json.Encode
     emptyArray,
     Object,
     emptyObject,
-    ToJSON,
+    ToJSON(..),
     ToJSONKey(..),
     ToJSONKeyFunction(..),
     encode,
