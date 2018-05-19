@@ -4,6 +4,7 @@ language: generic
 cache:
   directories:
   - $HOME/.stack
+  - $TRAVIS_BUILD_DIR/.stack-work/install
 
 addons:
   apt:
