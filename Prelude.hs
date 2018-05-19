@@ -369,7 +369,9 @@ import Map (Map)
 import Maybe
 import Monad
 import MonadIO
+#ifdef USE_TRANSFORMERS
 import MonadTrans (MonadTrans(..))
+#endif
 import Monoid
 import Numeric.Double (Double)
 import Numeric.Float (Float)
