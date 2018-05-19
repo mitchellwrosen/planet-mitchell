@@ -804,6 +804,7 @@ library
     exposed-modules:
       Optic.Iso
       Optic.Lens
+      Optic.Prism
       Optic.Traversal
 
   if flag(list-transformer)
