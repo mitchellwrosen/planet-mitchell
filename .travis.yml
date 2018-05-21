@@ -4,7 +4,9 @@ language: generic
 cache:
   directories:
   - $HOME/.stack
-  - $TRAVIS_BUILD_DIR/.stack-work/install
+  - $TRAVIS_BUILD_DIR/.stack-work/installl/x86_64-linux/lts-11.8/8.2.2/flag-cache
+  - $TRAVIS_BUILD_DIR/.stack-work/installl/x86_64-linux/lts-11.8/8.2.2/lib
+  - $TRAVIS_BUILD_DIR/.stack-work/installl/x86_64-linux/lts-11.8/8.2.2/pkgdb
 
 addons:
   apt:
@@ -12,19 +14,20 @@ addons:
       - libgmp-dev
 
 before_install:
-- mkdir -p ~/.local/bin
-- export PATH=$HOME/.local/bin:$PATH
-- travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
+  - mkdir -p ~/.local/bin
+  - export PATH=$HOME/.local/bin:$PATH
+  - travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
 
 install:
-- stack --no-terminal setup
-- stack --no-terminal build --fast --only-dependencies
-- stack --no-terminal build --fast --test --only-dependencies
+  - mv .stack.all.yaml stack.yaml
+  - stack --no-terminal setup
+  - stack --no-terminal build --fast --only-dependencies
+  - stack --no-terminal build --fast --test --only-dependencies
 
 script:
-- stack --no-terminal build --fast
-- stack --no-terminal build --fast --bench --no-run-benchmarks
-- stack --no-terminal build --fast --haddock --no-haddock-deps
-- curl -sL https://raw.github.com/ndmitchell/weeder/master/misc/travis.sh | sh -s .
-- "sed -i \"s/: true/: false/\" stack.yaml"
-- stack --no-terminal build --fast
+  - stack --no-terminal build --fast
+  - stack --no-terminal build --fast --bench --no-run-benchmarks
+  - stack --no-terminal build --fast --haddock --no-haddock-deps
+  - curl -sL https://raw.github.com/ndmitchell/weeder/master/misc/travis.sh | sh -s .
+  - mv .stack.none.yaml stack.yaml
+  - stack --no-terminal build --fast --haddock --no-haddock-deps

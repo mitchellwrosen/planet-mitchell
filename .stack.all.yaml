@@ -1,3 +1,4 @@
+# When updating resover, also update .travis.yml
 resolver: lts-11.8
 
 extra-deps:
@@ -13,18 +14,19 @@ extra-deps:
   - unagi-chan-0.4.1.0
 
 flags:
+  contravariant:
+    statevar: false
+
   mitchell-stdlib:
     aeson: true
     ansi-terminal: true
     async: true
     atomic-primops: true
     bits: true
-    bytestring: true
     bytestring-trie: true
     comonad: true
     compact: true
     constraints: true
-    containers: true
     contravariant: true
     contravariant-extras: true
     deepseq: true
@@ -36,8 +38,8 @@ flags:
     foldl: true
     gauge: true
     hashable: true
-    heaps: true
     hedgehog: true
+    heaps: true
     lens: true
     list-transformer: true
     logict: true
@@ -64,7 +66,6 @@ flags:
     stm: true
     stm-containers: true
     tagged: true
-    text: true
     text-short: true
     time: true
     transformers: true
@@ -76,8 +77,5 @@ flags:
     vector: true
     weigh: true
     writer-cps-mtl: true
-
-  contravariant:
-    statevar: false
 
 allow-newer: true

@@ -11,6 +11,31 @@ license-file: LICENSE
 -- Flags
 --------------------------------------------------------------------------------
 
+----------------
+-- Flags
+-- default: True
+----------------
+
+flag bytestring
+  description: bytestring dependency
+  default: True
+  manual: True
+
+flag containers
+  description: containers dependency
+  default: True
+  manual: True
+
+flag text
+  description: text dependency
+  default: True
+  manual: True
+
+-----------------
+-- Flags
+-- default: False
+-----------------
+
 flag aeson
   description: aeson dependency
   default: False
@@ -36,11 +61,6 @@ flag bits
   default: False
   manual: True
 
-flag bytestring
-  description: bytestring dependency
-  default: False
-  manual: True
-
 flag bytestring-trie
   description: bytestring-trie dependency
   default: False
@@ -58,11 +78,6 @@ flag compact
 
 flag constraints
   description: constraints dependency
-  default: False
-  manual: True
-
-flag containers
-  description: containers dependency
   default: False
   manual: True
 
@@ -258,11 +273,6 @@ flag stm-containers
 
 flag tagged
   description: tagged dependency
-  default: False
-  manual: True
-
-flag text
-  description: text dependency
   default: False
   manual: True
 

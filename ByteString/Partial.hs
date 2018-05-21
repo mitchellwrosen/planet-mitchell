@@ -9,3 +9,5 @@ module ByteString.Partial
   , minimum
   , tail
   ) where
+
+import Data.ByteString
