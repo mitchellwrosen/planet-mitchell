@@ -11,6 +11,11 @@ license-file: LICENSE
 -- Flags
 --------------------------------------------------------------------------------
 
+flag implicit-prelude
+  description: Re-export 'Mitchell' as 'Prelude'
+  default: False
+  manual: True
+
 ----------------
 -- Flags
 -- default: True
@@ -340,8 +345,15 @@ library
   ghc-options: -Wall
   default-extensions: NoImplicitPrelude
   default-language: Haskell2010
+
   -- These keep ghci happy
-  reexported-modules: GHC.Base, System.Environment, System.IO
+  reexported-modules:
+      GHC.Base
+    , System.Environment
+    , System.IO
+  if flag(implicit-prelude)
+    reexported-modules:
+      Mitchell as Prelude
 
   ------------------------------------------------------------------------------
   -- Dependencies
@@ -647,6 +659,7 @@ library
     List1
     MVar
     Maybe
+    Mitchell
     Monad
     MonadFail
     MonadFix
@@ -683,7 +696,6 @@ library
     Ord
     Parallelism
     Posix
-    Prelude
     Printf
     Product
     Proxy

@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-module Prelude
+module Mitchell
   ( -- * Alternative
     Alternative(..)
   , guard
