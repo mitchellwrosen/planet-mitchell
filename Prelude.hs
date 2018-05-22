@@ -81,10 +81,24 @@ module Prelude
   , SomeException(..)
   , SomeAsyncException(..)
   , throwIO
-#ifdef USE_TEXT
+    -- * File
+  , stdin
+  , stdout
+  , stderr
     -- * File.Text
+  , hGetChar
+#ifdef USE_TEXT
+  , hGetLine
+  , hGetContents
+  , putStr
   , putStrLn
 #endif
+  , print
+#ifdef USE_TEXT
+  , hPutStr
+  , hPutStrLn
+#endif
+  , hPrint
 #ifdef USE_FOLDL
     -- * Foldl
   , Fold(..)
@@ -339,8 +353,10 @@ import Debug
 import Equality (Eq(..))
 import Error
 import Exception (Exception, SomeAsyncException(..), SomeException(..), throwIO)
+import File (stderr, stdin, stdout)
+import File.Text (hGetChar, hPrint, print)
 #ifdef USE_TEXT
-import File.Text (putStrLn)
+import File.Text (hGetContents, hGetLine, hPutStr, hPutStrLn, putStr, putStrLn)
 #endif
 #ifdef USE_FOLDL
 import Foldl (Fold(..), FoldM(..))
