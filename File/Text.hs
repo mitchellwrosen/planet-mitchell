@@ -13,19 +13,31 @@ module File.Text
     -- ** Writing
     writeFile,
     appendFile,
+#endif
     -- * File handle operations
     -- ** Reading
-    getContents,
+    getChar,
+#ifdef USE_TEXT
     getLine,
-    hGetContents,
-    hGetChunk,
+    getContents,
+#endif
+    hGetChar,
+#ifdef USE_TEXT
     hGetLine,
+    hGetChunk,
+    hGetContents,
+#endif
     -- ** Writing
+#ifdef USE_TEXT
     putStr,
     putStrLn,
+#endif
+    print,
+#ifdef USE_TEXT
     hPutStr,
     hPutStrLn,
 #endif
+    hPrint,
     -- * File encoding
     TextEncoding,
     hSetEncoding,
@@ -45,8 +57,8 @@ module File.Text
 import Data.Text.IO
 #endif
 import System.IO
-  (TextEncoding, hSetEncoding, hGetEncoding, latin1, utf8, utf8_bom, utf16,
-    utf16be, utf16le, utf32, utf32be, utf32le)
+  (TextEncoding, getChar, hGetChar, hPrint, hSetEncoding, hGetEncoding, latin1,
+    print, utf8, utf8_bom, utf16, utf16be, utf16le, utf32, utf32be, utf32le)
 #ifdef USE_UNLIFTIO
 import UnliftIO.IO (withFile)
 #else
