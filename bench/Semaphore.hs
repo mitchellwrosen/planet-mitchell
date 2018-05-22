@@ -1,4 +1,7 @@
+{-# language NoImplicitPrelude   #-}
 {-# language ScopedTypeVariables #-}
+
+import Mitchell
 
 import Benchmark
 import Concurrency

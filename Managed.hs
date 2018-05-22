@@ -4,7 +4,7 @@ module Managed
     managed,
     managed_,
     with,
-    runManaged
+    runManaged,
     -- * MonadManaged
     MonadManaged(..),
   ) where
