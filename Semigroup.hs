@@ -2,15 +2,15 @@
 
 module Semigroup
   ( -- * Semigroup
-    Semigroup(..)
+    Semigroup(..),
 #ifdef USE_SEMIGROUPS
-  , gmappend
+    gmappend,
 #endif
     -- * Newtypes
-  , First(..)
-  , Last(..)
-  , Dual(..)
-  , cycle1
+    First(..),
+    Last(..),
+    Dual(..),
+    cycle1,
   ) where
 
 import Data.Semigroup

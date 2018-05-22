@@ -1,5 +1,6 @@
 module Maybe
-  ( Maybe(..)
+  ( -- * Maybe
+    Maybe(..)
   , maybe
   , isJust
   , isNothing
@@ -8,6 +9,7 @@ module Maybe
   , maybeToList
   , catMaybes
   , mapMaybe
+    -- * Newtypes
   , Option(..)
   , option
   , First(..)

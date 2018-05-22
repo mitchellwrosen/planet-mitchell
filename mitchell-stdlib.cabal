@@ -633,6 +633,7 @@ library
     File
     File.Text
     Foldable
+    Foldable.Partial
     Function
     Functor
     Generic

@@ -40,11 +40,7 @@ module Prelude
   , for_
   , sequenceA_
   , asum
-  , mapM_
-  , forM_
-  , sequence_
   , msum
-  , concat
   , concatMap
   , and
   , or
@@ -246,7 +242,7 @@ module Prelude
     -- * Monad
   , module Monad
     -- * MonadIO
-  , module MonadIO
+  , MonadIO(..)
 #ifdef USE_TRANSFORMERS
     -- * MonadTrans
   , MonadTrans(..)
@@ -384,7 +380,7 @@ import Map (Map)
 #endif
 import Maybe
 import Monad
-import MonadIO
+import MonadIO (MonadIO(..))
 #ifdef USE_TRANSFORMERS
 import MonadTrans (MonadTrans(..))
 #endif

@@ -2,9 +2,9 @@
 
 module Monoid
   ( -- * Monoid
-    Monoid(mempty)
+    Monoid(mempty),
 #ifdef USE_SEMIGROUPS
-  , gmempty
+    gmempty,
 #endif
   ) where
 

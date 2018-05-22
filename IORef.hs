@@ -1,7 +1,8 @@
 {-# language CPP #-}
 
 module IORef
-  ( IORef,
+  ( -- * IORef
+    IORef,
     newIORef,
     readIORef,
     writeIORef,
@@ -17,8 +18,8 @@ module IORef
     atomicWriteIORef',
 #endif
     mkWeakIORef,
-    -- * Atomic check-and-set
 #ifdef USE_ATOMIC_PRIMOPS
+    -- * Atomic check-and-set
     Ticket,
     peekTicket,
     readForCAS,

@@ -1,13 +1,13 @@
 {-# language CPP #-}
 
 module Identity
-  ( Identity(..)
+  ( Identity(..),
 #ifdef USE_TRANSFORMERS
-  , IdentityT(..)
-  , mapIdentityT
+    IdentityT(..),
+    mapIdentityT,
 #endif
 #ifdef USE_MMORPH
-  , generalize
+    generalize,
 #endif
   ) where
 

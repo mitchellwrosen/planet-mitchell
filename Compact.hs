@@ -1,9 +1,5 @@
-{-# language CPP #-}
-
 module Compact
-  (
-#ifdef USE_COMPACT
-    -- * Compact
+  ( -- * Compact
     Compact
   , compact
   , compactWithSharing
@@ -14,12 +10,8 @@ module Compact
   , inCompact
   , isCompact
   , compactSize
-  ,
-#endif
-    CompactionFailed(..)
+  , CompactionFailed(..)
   ) where
 
 import Control.Exception (CompactionFailed(..))
-#ifdef USE_COMPACT
 import Data.Compact
-#endif

@@ -1,11 +1,11 @@
 module Counter
   ( -- * Counter
-    AtomicCounter
-  , newCounter
-  , incrCounter
-  , incrCounter_
-  , readCounter
-  , casCounter
+    AtomicCounter,
+    newCounter,
+    incrCounter,
+    incrCounter_,
+    readCounter,
+    casCounter
   ) where
 
 import Data.Atomics.Counter

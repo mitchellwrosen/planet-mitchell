@@ -4,13 +4,12 @@ module Clock
   (
 #if MIN_VERSION_base(4,11,0)
     -- * Monotonic time
-    getMonotonicTime
-  , getMonotonicTimeNSec
-  ,
+    getMonotonicTime,
+    getMonotonicTimeNSec,
 #endif
     -- * CPU time
-    getCPUTime
-  , cpuTimePrecision
+    getCPUTime,
+    cpuTimePrecision,
   ) where
 
 #if MIN_VERSION_base(4,11,0)

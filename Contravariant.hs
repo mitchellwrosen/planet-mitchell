@@ -1,10 +1,10 @@
 module Contravariant
   ( -- * Contravariant
-    Contravariant(..)
-  , phantom
-  , (>$<)
-  , (>$$<)
-  , ($<)
+    Contravariant(..),
+    phantom,
+    (>$<),
+    (>$$<),
+    ($<),
   ) where
 
 import Data.Functor.Contravariant

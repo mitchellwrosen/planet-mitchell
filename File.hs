@@ -2,46 +2,46 @@
 
 module File
   ( -- * File path
-    FilePath
+    FilePath,
     -- * File handle
-  , Handle
+    Handle,
     -- ** Standard file handles
-  , stdin
-  , stdout
-  , stderr
+    stdin,
+    stdout,
+    stderr,
     -- ** File handle queries
-  , hFileSize
-  , hGetEcho
-  , hGetPosn
-  , hIsClosed
-  , hIsEOF
-  , hIsOpen
-  , hIsReadable
-  , hIsSeekable
-  , hIsTerminalDevice
-  , hIsWritable
-  , hShow
-  , hTell
+    hFileSize,
+    hGetEcho,
+    hGetPosn,
+    hIsClosed,
+    hIsEOF,
+    hIsOpen,
+    hIsReadable,
+    hIsSeekable,
+    hIsTerminalDevice,
+    hIsWritable,
+    hShow,
+    hTell,
     -- ** File handle operations
-  , hClose
-  , hFlush
-  , hSeek
-  , hSetBuffering
-  , hSetEcho
-  , hSetFileSize
-  , hSetPosn
+    hClose,
+    hFlush,
+    hSeek,
+    hSetBuffering,
+    hSetEcho,
+    hSetFileSize,
+    hSetPosn,
     -- ** File handle types
-  , BufferMode(..)
-  , HandlePosn
-  , IOMode(..)
-  , SeekMode(..)
+    BufferMode(..),
+    HandlePosn,
+    IOMode(..),
+    SeekMode(..),
     -- * Re-exports
 #ifdef USE_FILEPATH
-  , module System.FilePath
+    module System.FilePath,
 #endif
 #ifdef USE_UNLIFTIO
-  , module UnliftIO.Temporary
-  , module UnliftIO.Directory
+    module UnliftIO.Temporary,
+    module UnliftIO.Directory,
 #endif
   ) where
 

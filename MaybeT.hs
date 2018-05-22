@@ -1,5 +1,6 @@
 module MaybeT
-  ( MaybeT(..)
+  ( -- * MaybeT
+    MaybeT(..)
   , mapMaybeT
   ) where
 
