@@ -72,6 +72,7 @@ flags:
     transformers-base: true
     typed-process: true
     unagi-chan: true
+    unix: true
     unliftio: true
     unordered-containers: true
     vector: true

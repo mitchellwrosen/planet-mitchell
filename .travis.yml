@@ -4,9 +4,7 @@ language: generic
 cache:
   directories:
   - $HOME/.stack
-  - $TRAVIS_BUILD_DIR/.stack-work/installl/x86_64-linux/lts-11.8/8.2.2/flag-cache
-  - $TRAVIS_BUILD_DIR/.stack-work/installl/x86_64-linux/lts-11.8/8.2.2/lib
-  - $TRAVIS_BUILD_DIR/.stack-work/installl/x86_64-linux/lts-11.8/8.2.2/pkgdb
+  - $TRAVIS_BUILD_DIR/.stack-work/install
 
 addons:
   apt:
@@ -22,12 +20,9 @@ install:
   - mv .stack.all.yaml stack.yaml
   - stack --no-terminal setup
   - stack --no-terminal build --fast --only-dependencies
-  - stack --no-terminal build --fast --test --only-dependencies
 
 script:
-  - stack --no-terminal build --fast
   - stack --no-terminal build --fast --bench --no-run-benchmarks
-  - stack --no-terminal build --fast --haddock --no-haddock-deps
   - curl -sL https://raw.github.com/ndmitchell/weeder/master/misc/travis.sh | sh -s .
   - mv .stack.none.yaml stack.yaml
-  - stack --no-terminal build --fast --haddock --no-haddock-deps
+  - stack --no-terminal build --fast

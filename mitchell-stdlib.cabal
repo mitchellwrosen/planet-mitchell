@@ -596,7 +596,7 @@ library
 
   if flag(unix)
     build-depends: unix ^>= 2.7
-    cpp-options: -DUSE_UNiX
+    cpp-options: -DUSE_UNIX
 
   if flag(unliftio)
     build-depends: unliftio ^>= 0.2.7.0
