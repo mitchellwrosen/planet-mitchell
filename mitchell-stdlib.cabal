@@ -311,6 +311,11 @@ flag unagi-chan
   default: False
   manual: True
 
+flag unix
+  description: unix dependency
+  default: False
+  manual: True
+
 flag unliftio
   description: unliftio dependency
   default: False
@@ -588,6 +593,10 @@ library
   if flag(unagi-chan)
     build-depends: unagi-chan ^>= 0.4
     cpp-options: -DUSE_UNAGI_CHAN
+
+  if flag(unix)
+    build-depends: unix ^>= 2.7
+    cpp-options: -DUSE_UNiX
 
   if flag(unliftio)
     build-depends: unliftio ^>= 0.2.7.0
