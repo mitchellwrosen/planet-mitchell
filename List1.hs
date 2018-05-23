@@ -1,5 +1,46 @@
 module List1
-  ( module Data.List.NonEmpty
+  ( NonEmpty(..)
+  , break
+  , cons
+  , cycle
+  , drop
+  , dropWhile
+  , filter
+  , group1
+  , groupAllWith1
+  , groupBy1
+  , groupWith1
+  , head
+  , init
+  , intersperse
+  , isPrefixOf
+  , iterate
+  , last
+  , map
+  , nonEmpty
+  , nub
+  , nubBy
+  , partition
+  , repeat
+  , reverse
+  , scanl
+  , scanl1
+  , scanr
+  , scanr1
+  , sort
+  , sortBy
+  , sortWith
+  , span
+  , splitAt
+  , tail
+  , take
+  , takeWhile
+  , transpose
+  , uncons
+  , unfoldr
+  , xor
+  , zip
+  , zipWith
   ) where
 
 import Data.List.NonEmpty

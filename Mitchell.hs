@@ -137,90 +137,20 @@ module Mitchell
   , IORef
     -- * List
   , (++)
-  , break
-#ifdef USE_EXTRA
-  , breakOn
-  , breakOnEnd
-  , breakEnd
-  , chunksOf
-#endif
   , cycle
-  , drop
-#ifdef USE_EXTRA
-  , dropEnd
-  , dropPrefix
-  , dropSuffix
-#endif
-  , dropWhile
-  , dropWhileEnd
-  , filter
-  , inits
-  , intercalate
-  , intersperse
-  , isInfixOf
-  , isPrefixOf
-  , isSubsequenceOf
-  , isSuffixOf
   , iterate
 #if MIN_VERSION_base(4,11,0)
   , iterate'
 #endif
-  , lookup
-  , nub
-  , nubBy
-#ifdef USE_EXTRA
-  , nubOn
-  , nubOrd
-  , nubOrdBy
-  , nubOrdOn
-  , nubSort
-  , nubSortBy
-  , nubSortOn
-#endif
   , map
-  , partition
   , repeat
   , replicate
-  , reverse
   , scanl
   , scanl'
   , scanl1
   , scanr
   , scanr1
-  , sort
-  , sortBy
-  , sortOn
-  , span
-#ifdef USE_EXTRA
-  , spanEnd
-  , split
-#endif
-  , splitAt
-#ifdef USE_EXTRA
-  , splitAtEnd
-  , stripInfix
-  , stripInfixEnd
-#endif
-  , stripPrefix
-#ifdef USE_EXTRA
-  , stripSuffix
-#endif
-  , tails
-  , take
-#ifdef USE_EXTRA
-  , takeEnd
-#endif
-  , takeWhile
-#ifdef USE_EXTRA
-  , takeWhileEnd
-#endif
   , unfoldr
-  , unzip
-  , unzip3
-  , zip
-  , zip3
-  , zipWith
-  , zipWith3
 #ifdef USE_LIST_TRANSFORMER
     -- * ListT
   , ListT

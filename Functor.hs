@@ -8,6 +8,8 @@ module Functor
   , (<&>)
 #endif
   , void
+  , unzip
   ) where
 
 import Data.Functor
+import Data.List.NonEmpty (unzip)

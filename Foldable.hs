@@ -23,10 +23,19 @@ module Foldable
     foldMapBy,
     foldBy,
 #endif
+    inits,
+    tails,
+    insert,
+    group,
+    groupBy,
+    groupWith,
+    groupAllWith,
   ) where
 
 import Control.Monad
 import Data.Foldable
+import Data.List.NonEmpty
+  (group, groupAllWith, groupBy, groupWith, inits, insert, tails)
 #ifdef USE_REFLECTION
 import Data.Reflection
 #endif

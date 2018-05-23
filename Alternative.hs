@@ -1,6 +1,7 @@
 module Alternative
   ( -- * Alternative
     Alternative(..)
+  , some1
   , optional
   , guard
   , Alt(..)
@@ -8,4 +9,5 @@ module Alternative
 
 import Control.Applicative
 import Control.Monad
-import Data.Monoid
+import Data.List.NonEmpty (some1)
+import Data.Monoid (Alt(..))
