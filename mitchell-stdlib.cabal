@@ -351,11 +351,13 @@ library
   default-extensions: NoImplicitPrelude
   default-language: Haskell2010
 
-  -- These keep ghci happy
   reexported-modules:
+    -- These keep ghci happy
       GHC.Base
     , System.Environment
     , System.IO
+    -- Another weird blip, can't run ':main' in ghci without this
+    , Control.Monad
   if flag(implicit-prelude)
     reexported-modules:
       Mitchell as Prelude
