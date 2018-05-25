@@ -1,3 +1,10 @@
 - Grab more from `lens`
 - Spread `Posix` across other modules
 - More `.Partial` modules (what to do about "unsafe" functions?)
+- `adjunctions`
+- `discrimination`
+- `free`
+- `lens`
+- `semigroupoids`
+- `promises`
+- `vault`
