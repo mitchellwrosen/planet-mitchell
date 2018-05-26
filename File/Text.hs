@@ -7,6 +7,7 @@ module File.Text
   (
     -- * File path operations
     withFile,
+    openFileBlocking,
 #ifdef USE_TEXT
     -- ** Reading
     readFile,
@@ -56,6 +57,7 @@ module File.Text
 #ifdef USE_TEXT
 import Data.Text.IO
 #endif
+import GHC.IO.Handle.FD (openFileBlocking)
 import System.IO
   (TextEncoding, getChar, hGetChar, hPrint, hSetEncoding, hGetEncoding, latin1,
     print, utf8, utf8_bom, utf16, utf16be, utf16le, utf32, utf32be, utf32le)
