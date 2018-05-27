@@ -2,7 +2,7 @@
 
 module Monoid
   ( -- * Monoid
-    Monoid(mempty),
+    Monoid(mconcat, mempty),
 #ifdef USE_SEMIGROUPS
     gmempty,
 #endif

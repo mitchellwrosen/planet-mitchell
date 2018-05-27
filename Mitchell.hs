@@ -184,6 +184,7 @@ module Mitchell
 #endif
     -- * Monoid
     Monoid,
+    mconcat,
     mempty,
     -- * Numeric.Double
     Double,
@@ -319,7 +320,7 @@ import MonadIO (MonadIO(..))
 #ifdef USE_TRANSFORMERS
 import MonadTrans (MonadTrans(..))
 #endif
-import Monoid
+import Monoid (Monoid, mconcat, mempty)
 import Numeric.Double (Double)
 import Numeric.Float (Float)
 import Numeric.Floating (Floating(..))
