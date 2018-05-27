@@ -20,12 +20,15 @@ module File
     hIsSeekable,
     hIsTerminalDevice,
     hIsWritable,
+    hReady,
     hShow,
     hTell,
+    hWaitForInput,
     -- ** File handle operations
     hClose,
     hFlush,
     hSeek,
+    hSetBinaryMode,
     hSetBuffering,
     hSetEcho,
     hSetFileSize,
@@ -49,7 +52,8 @@ module File
 import System.FilePath hiding (FilePath)
 #endif
 import System.IO
-  (FilePath, HandlePosn, SeekMode(..), hGetPosn, hSetPosn, hShow)
+  (FilePath, HandlePosn, SeekMode(..), hGetPosn, hSetBinaryMode, hSetPosn,
+    hShow)
 #ifdef USE_UNLIFTIO
 import UnliftIO.IO
 import UnliftIO.Temporary
