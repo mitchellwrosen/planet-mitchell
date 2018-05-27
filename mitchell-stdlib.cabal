@@ -719,6 +719,7 @@ library
     QSem
     RTS
     Read
+    Read.Partial
     ST
     Semigroup
     Show
