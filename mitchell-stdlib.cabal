@@ -874,7 +874,8 @@ library
 
   if flag(megaparsec)
     exposed-modules:
-      Parser
+      Parser.Text
+      Parser.Binary
 
   if flag(mmorph)
     exposed-modules:
