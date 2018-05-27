@@ -651,7 +651,6 @@ library
     Error
     Eval
     Exception
-    Exit
     Field
     File
     File.Text
@@ -965,7 +964,7 @@ library
     exposed-modules:
       MonadBase
 
-  if flag(typed-process)
+  if flag(typed-process) || flag(unix)
     exposed-modules:
       Process
 

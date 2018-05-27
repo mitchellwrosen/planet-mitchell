@@ -1,5 +1,41 @@
+{-# language CPP #-}
+
 module Process
-  ( module System.Process.Typed
+  (
+#ifdef USE_UNIX
+    -- * Exiting the current process
+    exitImmediately,
+    -- * Replacing the current process
+    executeFile,
+    -- * Process info
+    getProcessID,
+    getParentProcessID,
+    -- ** Process groups
+    getProcessGroupID,
+    getProcessGroupIDOf,
+    createProcessGroupFor,
+    joinProcessGroup,
+    setProcessGroupIDOf,
+    createSession,
+#endif
+    -- * Spawning processes
+#ifdef USE_TYPED_PROCESS
+    module System.Process.Typed,
+#endif
+#ifdef USE_UNIX
+    forkProcess,
+    forkProcessWithUnmask,
+    -- ** Waiting
+    getProcessStatus,
+    getAnyProcessStatus,
+    getGroupProcessStatus,
+#endif
   ) where
 
+#ifdef USE_UNIX
+import System.Posix.Process
+  (executeFile, exitImmediately, forkProcess, forkProcessWithUnmask)
+#endif
+#ifdef USE_TYPED_PROCESS
 import System.Process.Typed
+#endif

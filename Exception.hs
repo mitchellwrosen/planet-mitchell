@@ -2,47 +2,53 @@
 
 module Exception
   ( -- * Throwing exceptions
-    throwIO
-  , ioError
-  , userError
+    throwIO,
+    -- ** Specific exceptions
+    ioError,
+    userError,
+    exitWith,
+    exitFailure,
+    exitSuccess,
+    die,
 #ifdef USE_UNLIFTIO
     -- * Catching exceptions
-  , catch
-  , catches
-  , Handler(..)
-  , catchJust
-  , handle
-  , handleJust
-  , try
-  , tryJust
+    catch,
+    catches,
+    Handler(..),
+    catchJust,
+    handle,
+    handleJust,
+    try,
+    tryJust,
     -- * Cleanup
-  , bracket
-  , bracket_
-  , bracketOnError
-  , finally
-  , onException
+    bracket,
+    bracket_,
+    bracketOnError,
+    finally,
+    onException,
 #endif
     -- * Masking exceptions
-  , MaskingState(..)
+    MaskingState(..),
 #ifdef USE_UNLIFTIO
-  , mask
-  , mask_
-  , uninterruptibleMask
-  , uninterruptibleMask_
+    mask,
+    mask_,
+    uninterruptibleMask,
+    uninterruptibleMask_,
 #endif
-  , getMaskingState
-  , interruptible
-  , allowInterrupt
+    getMaskingState,
+    interruptible,
+    allowInterrupt,
     -- * Exception types
-  , SomeException(..)
-  , Exception(..)
-  , mapException
-  , IOException
+    SomeException(..),
+    Exception(..),
+    mapException,
+    ExitCode(..),
+    IOException,
     -- ** Asynchronous exceptions
-  , SomeAsyncException(..)
-  , AsyncException(..)
-  , asyncExceptionToException
-  , asyncExceptionFromException
+    SomeAsyncException(..),
+    AsyncException(..),
+    asyncExceptionToException,
+    asyncExceptionFromException,
   ) where
 
 import Control.Exception
@@ -57,3 +63,4 @@ import UnliftIO.Exception hiding
 #else
 import Control.Exception (throwIO)
 #endif
+import System.Exit (ExitCode(..), die, exitFailure, exitSuccess, exitWith)
