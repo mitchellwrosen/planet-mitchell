@@ -34,7 +34,11 @@ module Process
 
 #ifdef USE_UNIX
 import System.Posix.Process
-  (executeFile, exitImmediately, forkProcess, forkProcessWithUnmask)
+  (createProcessGroupFor, createSession, executeFile, exitImmediately,
+    forkProcess, forkProcessWithUnmask, getAnyProcessStatus,
+    getGroupProcessStatus, getParentProcessID, getProcessGroupID,
+    getProcessGroupIDOf, getProcessID, getProcessStatus, joinProcessGroup,
+    setProcessGroupIDOf)
 #endif
 #ifdef USE_TYPED_PROCESS
 import System.Process.Typed

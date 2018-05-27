@@ -2,266 +2,271 @@
 
 module Mitchell
   ( -- * Alternative
-    Alternative(..)
-  , guard
-  , optional
+    Alternative(..),
+    guard,
+    optional,
     -- * Applicative
-  , Applicative(..)
-  , filterM
-  , forever
-  , liftA3
-  , replicateM
-  , replicateM_
-  , unless
-  , when
+    Applicative(..),
+    filterM,
+    forever,
+    liftA3,
+    replicateM,
+    replicateM_,
+    unless,
+    when,
 #ifdef USE_EXTRA
-  , whenJust
+    whenJust,
 #endif
-  , zipWithM
-  , zipWithM_
+    zipWithM,
+    zipWithM_,
     -- * Bool
-  , Bool(..)
-  , (&&)
-  , (||)
-  , not
-  , otherwise
+    Bool(..),
+    (&&),
+    (||),
+    not,
+    otherwise,
     -- * Bounded
-  , Bounded(..)
+    Bounded(..),
 #ifdef USE_BYTESTRING
     -- * ByteString
-  , ByteString
+    ByteString,
 #endif
     -- * Category
-  , module Category
-  , Foldable(..)
-  , foldrM
-  , foldlM
-  , traverse_
-  , for_
-  , sequenceA_
-  , asum
-  , msum
-  , concatMap
-  , and
-  , or
-  , all
-  , notElem
-  , find
-  , foldM
-  , foldM_
+    module Category,
 #ifdef USE_REFLECTION
-  , foldMapBy
-  , foldBy
+    foldMapBy,
+    foldBy,
 #endif
     -- * Char
-  , Char
+    Char,
     -- * Concurrency
-  , forkIO
-  , threadDelay
+    forkIO,
+    threadDelay,
+    STM,
+    atomically,
+    ThreadId,
+    myThreadId,
     -- * Debug
-  , trace
-  , traceId
-  , traceShow
-  , traceShowId
-  , traceStack
-  , traceM
-  , traceShowM
+    trace,
+    traceId,
+    traceShow,
+    traceShowId,
+    traceStack,
+    traceM,
+    traceShowM,
     -- * Equality
-  , Eq(..)
+    Eq(..),
     -- * Error
-  , assert
-  , error
-  , undefined
+    assert,
+    error,
+    undefined,
     -- * Exception
-  , Exception
-  , SomeException(..)
-  , SomeAsyncException(..)
-  , throwIO
+    Exception,
+    SomeException(..),
+    SomeAsyncException(..),
+    throwIO,
     -- * File
-  , stdin
-  , stdout
-  , stderr
+    stdin,
+    stdout,
+    stderr,
     -- * File.Text
-  , hGetChar
+    hGetChar,
 #ifdef USE_TEXT
-  , hGetLine
-  , hGetContents
-  , putStr
-  , putStrLn
+    hGetLine,
+    hGetContents,
+    putStr,
+    putStrLn,
 #endif
-  , print
+    print,
 #ifdef USE_TEXT
-  , hPutStr
-  , hPutStrLn
+    hPutStr,
+    hPutStrLn,
 #endif
-  , hPrint
+    hPrint,
+    -- * Foldable
+    Foldable(..),
+    foldrM,
+    foldlM,
+    traverse_,
+    for_,
+    sequenceA_,
+    asum,
+    msum,
+    concatMap,
+    and,
+    or,
+    all,
+    notElem,
+    find,
+    foldM,
+    foldM_,
 #ifdef USE_FOLDL
     -- * Foldl
-  , Fold(..)
-  , FoldM(..)
+    Fold(..),
+    FoldM(..),
 #endif
     -- * Function
-  , const
-  , flip
-  , ($)
-  , ($!)
-  , (&)
-  , until
-  , fix
-  , Endo(..)
+    const,
+    flip,
+    ($),
+    ($!),
+    (&),
+    until,
+    fix,
+    Endo(..),
     -- * Functor
-  , Functor(..)
-  , (<$>)
-  , ($>)
+    Functor(..),
+    (<$>),
+    ($>),
 #if MIN_VERSION_base(4,11,0)
-  , (<&>)
+    (<&>),
 #endif
-  , void
+    void,
     -- * Generic
-  , Generic
+    Generic,
 #ifdef USE_UNORDERED_CONTAINERS
     -- * HashMap
-  , HashMap
+    HashMap,
     -- * HashSet
-  , HashSet
+    HashSet,
 #endif
 #ifdef USE_CONTAINERS
     -- * IntMap
-  , IntMap
+    IntMap,
     -- * IntSet
-  , IntSet
+    IntSet,
 #endif
     -- * IO
-  , IO
+    IO,
     -- * IORef
-  , IORef
+    IORef,
     -- * List
-  , (++)
-  , cycle
-  , iterate
+    (++),
+    cycle,
+    iterate,
 #if MIN_VERSION_base(4,11,0)
-  , iterate'
+    iterate',
 #endif
-  , map
-  , repeat
-  , replicate
-  , scanl
-  , scanl'
-  , scanl1
-  , scanr
-  , scanr1
-  , unfoldr
+    map,
+    repeat,
+    replicate,
+    scanl,
+    scanl',
+    scanl1,
+    scanr,
+    scanr1,
+    unfoldr,
 #ifdef USE_LIST_TRANSFORMER
     -- * ListT
-  , ListT
+    ListT,
 #endif
 #ifdef USE_CONTAINERS
     -- * Map
-  , Map
+    Map,
 #endif
     -- * Maybe
-  , Maybe(..)
-  , maybe
-  , isJust
-  , isNothing
-  , fromMaybe
-  , listToMaybe
-  , maybeToList
-  , catMaybes
-  , mapMaybe
+    Maybe(..),
+    maybe,
+    isJust,
+    isNothing,
+    fromMaybe,
+    listToMaybe,
+    maybeToList,
+    catMaybes,
+    mapMaybe,
     -- * Monad
-  , module Monad
+    module Monad,
     -- * MonadIO
-  , MonadIO(..)
+    MonadIO(..),
 #ifdef USE_TRANSFORMERS
     -- * MonadTrans
-  , MonadTrans(..)
+    MonadTrans(..),
 #endif
     -- * Monoid
-  , Monoid
-  , mempty
+    Monoid,
+    mempty,
     -- * Numeric.Double
-  , Double
+    Double,
     -- * Numeric.Float
-  , Float
+    Float,
     -- * Numeric.Floating
-  , Floating(..)
+    Floating(..),
     -- * Numeric.Fractional
-  , Fractional(..)
+    Fractional(..),
     -- * Numeric.Int
-  , Int
+    Int,
     -- * Numeric.Int8
-  , Int8
+    Int8,
     -- * Numeric.Int16
-  , Int16
+    Int16,
     -- * Numeric.Int32
-  , Int32
+    Int32,
     -- * Numeric.Int64
-  , Int64
+    Int64,
     -- * Numeric.Integer
-  , Integer
+    Integer,
     -- * Numeric.Integral
-  , Integral(..)
-  , even
-  , odd
-  , gcd
-  , lcm
-  , fromIntegral
+    Integral(..),
+    even,
+    odd,
+    gcd,
+    lcm,
+    fromIntegral,
     -- * Numeric.Nat
-  , Nat
-  , KnownNat
-  , natVal
-  , natVal'
-  , SomeNat(..)
-  , someNatVal
+    Nat,
+    KnownNat,
+    natVal,
+    natVal',
+    SomeNat(..),
+    someNatVal,
     -- * Numeric.Num
-  , Num(..)
-  , subtract
+    Num(..),
+    subtract,
     -- * Numeric.Real
-  , Real(..)
-  , div'
-  , mod'
-  , divMod'
-  , realToFrac
+    Real(..),
+    div',
+    mod',
+    divMod',
+    realToFrac,
     -- * Numeric.RealFloat
-  , RealFloat(..)
+    RealFloat(..),
     -- * Numeric.RealFrac
-  , RealFrac(..)
+    RealFrac(..),
     -- * Numeric.Word
-  , Word
+    Word,
     -- * Numeric.Word8
-  , Word8
+    Word8,
     -- * Numeric.Word16
-  , Word16
+    Word16,
     -- * Numeric.Word32
-  , Word32
+    Word32,
     -- * Numeric.Word64
-  , Word64
+    Word64,
     -- * Ord
-  , Ord(..)
-  , Ordering(..)
+    Ord(..),
+    Ordering(..),
     -- * Semigroup
-  , Semigroup(..)
+    Semigroup(..),
 #ifdef USE_CONTAINERS
     -- * Sequence
-  , Seq
+    Seq,
     -- * Set
-  , Set
+    Set,
 #endif
     -- * Show
-  , Show(..)
+    Show(..),
 #ifdef USE_TEXT
     -- * Text
-  , Text
+    Text,
 #endif
     -- * Traversable
-  , Traversable
-  , traverse
-  , sequenceA
-  , for
+    Traversable,
+    traverse,
+    for,
+    sequenceA,
     -- * Tuple
-  , fst
-  , snd
+    fst,
+    snd,
   ) where
 
 import Alternative (Alternative(..), guard, optional)
@@ -273,7 +278,7 @@ import ByteString (ByteString)
 #endif
 import Category (Category(..), (<<<), (>>>))
 import Char (Char)
-import Concurrency (forkIO, threadDelay)
+import Concurrency (STM, ThreadId, atomically, forkIO, myThreadId, threadDelay)
 import Debug
   (trace, traceId, traceM, traceShow, traceShowId, traceShowM, traceStack)
 import Equality (Eq(..))
