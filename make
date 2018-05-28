@@ -9,10 +9,8 @@ case "$1" in
     cabal new-haddock -O0
     ;;
   "freeze")
-    TIMESTAMP=$(cabal new-update | grep , | cut -d, -f2 | sed 's/.$//')
     rm -f cabal.project.freeze
     cabal new-freeze
-    echo "index-state: $TIMESTAMP" >> cabal.project.freeze
     ;;
   "repl")
     cabal new-repl -O0

@@ -11,11 +11,6 @@ license-file: LICENSE
 -- Flags
 --------------------------------------------------------------------------------
 
-flag implicit-prelude
-  description: Re-export 'Mitchell' as 'Prelude'
-  default: False
-  manual: True
-
 ----------------
 -- Flags
 -- default: True
@@ -356,11 +351,12 @@ library
       GHC.Base
     , System.Environment
     , System.IO
-    -- Another weird blip, can't run ':main' in ghci without this
+    --Can't run ':main' in ghci without this
     , Control.Monad
-  if flag(implicit-prelude)
-    reexported-modules:
-      Mitchell as Prelude
+    -- Can't use auto-generated Paths_pkgname module without these
+    , Control.Exception
+    , Data.Version
+    , Prelude
 
   ------------------------------------------------------------------------------
   -- Dependencies
