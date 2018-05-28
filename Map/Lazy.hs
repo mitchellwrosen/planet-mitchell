@@ -1,4 +1,4 @@
-module LazyMap
+module Map.Lazy
   ( module Data.Map.Lazy
   ) where
 

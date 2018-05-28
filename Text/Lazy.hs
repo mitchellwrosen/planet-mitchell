@@ -1,4 +1,4 @@
-module LazyText
+module Text.Lazy
   ( module Data.Text.Lazy
   , module Data.Text.Lazy.Encoding
   ) where

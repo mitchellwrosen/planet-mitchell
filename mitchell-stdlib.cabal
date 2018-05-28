@@ -955,9 +955,9 @@ library
   if flag(bytestring)
     exposed-modules:
       ByteString
+      ByteString.Lazy
       ByteString.Partial
-      LazyByteString
-      ShortByteString
+      ByteString.Short
 
   if flag(bytestring) || flag(unliftio)
     exposed-modules:
@@ -994,10 +994,10 @@ library
     exposed-modules:
       Graph
       IntMap
+      IntMap.Lazy
       IntSet
-      LazyIntMap
-      LazyMap
       Map
+      Map.Lazy
       Sequence
       Set
       Tree
@@ -1149,12 +1149,14 @@ library
 
   if flag(text)
     exposed-modules:
-      LazyText
       Text
+      Text.Lazy
 
   if flag(text-short)
     exposed-modules:
-      ShortText
+      Text.Short
+      Text.Short.Partial
+      Text.Short.Unsafe
 
   if flag(time)
     exposed-modules:
