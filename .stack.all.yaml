@@ -30,6 +30,7 @@ flags:
     contravariant: true
     contravariant-extras: true
     deepseq: true
+    directory: true
     distributive: true
     dlist: true
     erf: true
@@ -61,6 +62,7 @@ flags:
     reactive-banana: true
     reflection: true
     regex-applicative: true
+    safe-exceptions: true
     scientific: true
     semigroups: true
     stm: true

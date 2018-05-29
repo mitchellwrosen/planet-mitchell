@@ -10,7 +10,7 @@ module Exception
     exitFailure,
     exitSuccess,
     die,
-#ifdef USE_UNLIFTIO
+#if defined(USE_UNLIFTIO) || defined(USE_SAFE_EXCEPTIONS)
     -- * Catching exceptions
     catch,
     catches,
@@ -29,7 +29,7 @@ module Exception
 #endif
     -- * Masking exceptions
     MaskingState(..),
-#ifdef USE_UNLIFTIO
+#if defined(USE_UNLIFTIO) || defined(USE_SAFE_EXCEPTIONS)
     mask,
     mask_,
     uninterruptibleMask,
@@ -60,6 +60,11 @@ import System.IO.Error (userError)
 #ifdef USE_UNLIFTIO
 import UnliftIO.Exception hiding
   (Exception(..), IOException, SomeAsyncException(..), SomeException(..))
+#elif defined(USE_SAFE_EXCEPTIONS)
+import Control.Exception.Safe
+  (Handler(..), bracket, bracket_, bracketOnError, catch, catches, catchJust,
+    finally, handle, handleJust, mask, mask_, onException, throwIO, try,
+    tryJust, uninterruptibleMask, uninterruptibleMask_)
 #else
 import Control.Exception (throwIO)
 #endif

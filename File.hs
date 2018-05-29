@@ -44,7 +44,11 @@ module File
 #endif
 #ifdef USE_UNLIFTIO
     module UnliftIO.Temporary,
+#endif
+#ifdef USE_UNLIFTIO
     module UnliftIO.Directory,
+#elif defined(USE_DIRECTORY)
+    module System.Directory,
 #endif
   ) where
 
@@ -56,8 +60,14 @@ import System.IO
     hShow)
 #ifdef USE_UNLIFTIO
 import UnliftIO.IO
-import UnliftIO.Temporary
-import UnliftIO.Directory
 #else
 import System.IO
+#endif
+#ifdef USE_UNLIFTIO
+import UnliftIO.Temporary
+#endif
+#ifdef USE_UNLIFTIO
+import UnliftIO.Directory
+#elif defined(USE_DIRECTORY)
+import System.Directory
 #endif

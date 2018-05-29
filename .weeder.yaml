@@ -1,0 +1,11 @@
+- package:
+  - name: mitchell-stdlib
+  - section:
+    - name: library
+    - message:
+      - name: Redundant build-depends entry
+      - depends:
+        # These packages are actually unnecessary when unliftio is on, so we get
+        # a bit of a false positive here.
+        - directory
+        - safe-exceptions
