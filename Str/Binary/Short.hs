@@ -1,7 +1,11 @@
 {-# language CPP #-}
 
 module Str.Binary.Short
-  ( module Data.ByteString.Short
+  (
+#ifdef MITCHELL
+    Binary,
+#endif
+    module Data.ByteString.Short,
   ) where
 
 import Data.ByteString.Short

@@ -1,8 +1,12 @@
 {-# language CPP #-}
 
 module Str.Utf16
-  ( module Data.Text
-  , module Data.Text.Encoding
+  (
+#ifdef MITCHELL
+    Utf16,
+#endif
+    module Data.Text,
+    module Data.Text.Encoding,
   ) where
 
 import Data.Text

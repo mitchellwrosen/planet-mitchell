@@ -1,8 +1,12 @@
 {-# language CPP #-}
 
 module Str.Lazy.Utf16
-  ( module Data.Text.Lazy
-  , module Data.Text.Lazy.Encoding
+  (
+#ifdef MITCHELL
+    Utf16,
+#endif
+    module Data.Text.Lazy,
+    module Data.Text.Lazy.Encoding,
   ) where
 
 import Data.Text.Lazy

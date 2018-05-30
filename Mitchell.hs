@@ -252,14 +252,6 @@ module Mitchell
 #endif
     -- * Show
     Show(..),
-#ifdef DEP_BYTESTRING
-    -- * ByteString
-    ByteString,
-#endif
-#ifdef DEP_TEXT
-    -- * Str.Utf16
-    Text,
-#endif
     -- * Traversable
     Traversable,
     traverse,
@@ -346,11 +338,5 @@ import Sequence (Seq)
 import Set (Set)
 #endif
 import Show
-#ifdef DEP_BYTESTRING
-import Str.Binary (ByteString)
-#endif
-#ifdef DEP_TEXT
-import Str.Utf16 (Text)
-#endif
 import Traversable (Traversable, for, sequenceA, traverse)
 import Tuple

@@ -1,8 +1,12 @@
 {-# language CPP #-}
 
 module Str.Binary
-  ( -- * ByteString
+  (
+#ifdef MITCHELL
+    Binary,
+#else
     ByteString,
+#endif
     all,
     any,
     append,

@@ -1,7 +1,11 @@
 {-# language CPP #-}
 
 module Str.Lazy.Binary
-  ( module Data.ByteString.Lazy
+  (
+#ifdef MITCHELL
+    Binary,
+#endif
+    module Data.ByteString.Lazy,
   ) where
 
 import Data.ByteString.Lazy
