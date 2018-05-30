@@ -12,11 +12,14 @@ case "$1" in
     rm -f cabal.project.freeze
     cabal new-freeze
     ;;
+  "ghcid")
+    ghcid -c 'cabal new-repl -O0' --restart mitchell-stdlib.cabal
+    ;;
   "repl")
     cabal new-repl -O0
     ;;
   *)
-    echo "make {build, docs, freeze, repl}" >&2
+    echo "make {build, docs, freeze, ghcid, repl}" >&2
     exit 1
     ;;
 esac

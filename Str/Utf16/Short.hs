@@ -1,4 +1,4 @@
-module Text.Short
+module Str.Utf16.Short
   ( module Data.Text.Short
   ) where
 

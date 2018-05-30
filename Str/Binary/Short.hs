@@ -1,4 +1,4 @@
-module ByteString.Short
+module Str.Binary.Short
   ( module Data.ByteString.Short
   ) where
 

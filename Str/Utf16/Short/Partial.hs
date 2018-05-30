@@ -1,4 +1,4 @@
-module Text.Short.Partial
+module Str.Utf16.Short.Partial
   ( module Data.Text.Short.Partial
   ) where
 

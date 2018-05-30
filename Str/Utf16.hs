@@ -1,4 +1,4 @@
-module Text
+module Str.Utf16
   ( module Data.Text
   , module Data.Text.Encoding
   ) where

@@ -143,9 +143,28 @@ module List
     zipWith5,
     zipWith6,
     zipWith7,
+    -- * String
+    String,
+    words,
+    unwords,
+    lines,
+    unlines,
+#ifdef USE_EXTRA
+    lower,
+    upper,
+    trim,
+    trimStart,
+    trimEnd,
+#endif
+    showString,
+    lexDigits,
+    IsString(..),
   ) where
 
 import Data.List
 #ifdef USE_EXTRA
 import Data.List.Extra
 #endif
+import Data.String (IsString(..), String)
+import GHC.Show (showString)
+import Numeric (lexDigits)

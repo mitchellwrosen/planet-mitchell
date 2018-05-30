@@ -56,6 +56,11 @@ flag atomic-primops
   default: False
   manual: True
 
+flag base16-bytestring
+  description: base16-bytestring dependency
+  default: False
+  manual: True
+
 flag bits
   description: bits dependency
   default: False
@@ -597,6 +602,10 @@ library
     build-depends: atomic-primops ^>= 0.8
     cpp-options: -DUSE_ATOMIC_PRIMOPS
 
+  if flag(base16-bytestring)
+    build-depends: base16-bytestring ^>= 0.1
+    cpp-options: -DUSE_BASE16_BYTESTRING
+
   if flag(bits)
     build-depends: bits ^>= 0.5
     cpp-options: -DUSE_BITS
@@ -946,8 +955,8 @@ library
     Show
     StableName
     Storable
-    String
     Sum
+    Symbol
     System
     Traversable
     Tuple
@@ -970,12 +979,17 @@ library
     exposed-modules:
       Counter
 
+  if flag(base16-bytestring)
+    exposed-modules:
+      Str.Base16
+      Str.Base16.Lazy
+
   if flag(bytestring)
     exposed-modules:
-      ByteString
-      ByteString.Lazy
-      ByteString.Partial
-      ByteString.Short
+      Str.Binary
+      Str.Binary.Lazy
+      Str.Binary.Partial
+      Str.Binary.Short
 
   if flag(bytestring) || flag(unliftio)
     exposed-modules:
@@ -1167,14 +1181,14 @@ library
 
   if flag(text)
     exposed-modules:
-      Text
-      Text.Lazy
+      Str.Utf16
+      Str.Utf16.Lazy
 
   if flag(text-short)
     exposed-modules:
-      Text.Short
-      Text.Short.Partial
-      Text.Short.Unsafe
+      Str.Utf16.Short
+      Str.Utf16.Short.Partial
+      Str.Utf16.Short.Unsafe
 
   if flag(time)
     exposed-modules:

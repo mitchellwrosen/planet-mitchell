@@ -27,10 +27,6 @@ module Mitchell
     otherwise,
     -- * Bounded
     Bounded(..),
-#ifdef USE_BYTESTRING
-    -- * ByteString
-    ByteString,
-#endif
     -- * Category
     module Category,
 #ifdef USE_REFLECTION
@@ -256,8 +252,12 @@ module Mitchell
 #endif
     -- * Show
     Show(..),
+#ifdef USE_BYTESTRING
+    -- * ByteString
+    ByteString,
+#endif
 #ifdef USE_TEXT
-    -- * Text
+    -- * Str.Utf16
     Text,
 #endif
     -- * Traversable
@@ -274,9 +274,6 @@ import Alternative (Alternative(..), guard, optional)
 import Applicative
 import Bool (Bool(..), (&&), (||), otherwise, not)
 import Bounded (Bounded(..))
-#ifdef USE_BYTESTRING
-import ByteString (ByteString)
-#endif
 import Category (Category(..), (<<<), (>>>))
 import Char (Char)
 import Concurrency (STM, ThreadId, atomically, forkIO, myThreadId, threadDelay)
@@ -349,8 +346,11 @@ import Sequence (Seq)
 import Set (Set)
 #endif
 import Show
+#ifdef USE_BYTESTRING
+import Str.Binary (ByteString)
+#endif
 #ifdef USE_TEXT
-import Text (Text)
+import Str.Utf16 (Text)
 #endif
 import Traversable (Traversable, for, sequenceA, traverse)
 import Tuple
