@@ -998,6 +998,8 @@ library
       Str.Binary.Partial
       Str.Binary.Short
       Str.Lazy.Binary
+      Str.Lazy.Latin1
+      Str.Latin1
 
   if flag(dep-bytestring) || flag(dep-unliftio)
     exposed-modules:
