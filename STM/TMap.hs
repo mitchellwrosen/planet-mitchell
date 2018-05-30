@@ -1,4 +1,4 @@
-module TMap
+module STM.TMap
   ( module STMContainers.Map
   ) where
 

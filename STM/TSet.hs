@@ -1,4 +1,4 @@
-module TSet
+module STM.TSet
   ( module STMContainers.Set
   ) where
 

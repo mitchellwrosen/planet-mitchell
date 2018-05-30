@@ -1,8 +1,9 @@
 {-# language CPP #-}
 
-module TChan
+module STM.TChan
   (
 #if defined(USE_STM) || defined(USE_UNLIFTIO)
+    -- * TChan
     TChan,
     newTChan,
     newTChanIO,

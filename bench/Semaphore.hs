@@ -8,7 +8,7 @@ import Concurrency
 import Eval
 import MVar
 import QSem
-import TSem
+import STM.TSem
 
 main :: IO ()
 main =

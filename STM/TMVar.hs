@@ -1,7 +1,8 @@
 {-# language CPP #-}
 
-module TMVar
+module STM.TMVar
   (
+    -- * TMVar
     TMVar,
     newTMVar,
     newTMVarIO,

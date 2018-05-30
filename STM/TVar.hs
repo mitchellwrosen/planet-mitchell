@@ -1,7 +1,7 @@
 {-# language CPP #-}
 
-module TVar
-  (
+module STM.TVar
+  ( -- * TVar
     TVar,
     newTVar,
     newTVarIO,

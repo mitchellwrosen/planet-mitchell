@@ -1,4 +1,4 @@
-module TMultimap
+module STM.TMultimap
   ( module STMContainers.Multimap
   ) where
 

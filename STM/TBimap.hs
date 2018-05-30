@@ -1,4 +1,4 @@
-module TBimap
+module STM.TBimap
   ( module STMContainers.Bimap
   ) where
 

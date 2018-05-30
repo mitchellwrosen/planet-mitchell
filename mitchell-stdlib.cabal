@@ -1159,21 +1159,21 @@ library
 
   if flag(stm)
     exposed-modules:
-      TSem
+      STM.TSem
 
   if flag(stm) || flag(unliftio)
     exposed-modules:
-      TBQueue
-      TChan
-      TMVar
-      TVar
+      STM.TBQueue
+      STM.TChan
+      STM.TMVar
+      STM.TVar
 
   if flag(stm-containers)
     exposed-modules:
-      TBimap
-      TMap
-      TMultimap
-      TSet
+      STM.TBimap
+      STM.TMap
+      STM.TMultimap
+      STM.TSet
 
   if flag(tagged)
     exposed-modules:

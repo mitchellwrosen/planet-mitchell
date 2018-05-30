@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-module TBQueue
+module STM.TBQueue
   (
 #if defined(USE_STM) || defined(USE_UNLIFTIO)
     TBQueue
