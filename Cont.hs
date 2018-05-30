@@ -2,7 +2,7 @@
 
 module Cont
   (
-#ifdef USE_TRANSFORMERS
+#ifdef DEP_TRANSFORMERS
     -- * Cont
     Cont,
     cont,
@@ -14,15 +14,15 @@ module Cont
     mapContT,
     withContT,
 #endif
-#ifdef USE_MTL
+#ifdef DEP_MTL
     -- * MonadCont
     MonadCont(..),
 #endif
   ) where
 
-#ifdef USE_MTL
+#ifdef DEP_MTL
 import Control.Monad.Cont.Class
 #endif
-#ifdef USE_TRANSFORMERS
+#ifdef DEP_TRANSFORMERS
 import Control.Monad.Trans.Cont
 #endif

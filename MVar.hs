@@ -22,7 +22,7 @@ module MVar
   , mkWeakMVar
   ) where
 
-#ifdef USE_UNLIFTIO
+#ifdef DEP_UNLIFTIO
 import UnliftIO.MVar
 #else
 import Control.Concurrent.MVar

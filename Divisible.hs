@@ -2,12 +2,12 @@
 
 module Divisible
   (
-#ifdef USE_CONTRAVARIANT
+#ifdef DEP_CONTRAVARIANT
     Divisible(..),
     divided,
     conquered,
 #endif
-#ifdef USE_CONTRAVARIANT_EXTRAS
+#ifdef DEP_CONTRAVARIANT_EXTRAS
     contrazip3,
     contrazip4,
     contrazip5,
@@ -15,9 +15,9 @@ module Divisible
 #endif
   ) where
 
-#ifdef USE_CONTRAVARIANT_EXTRAS
+#ifdef DEP_CONTRAVARIANT_EXTRAS
 import Contravariant.Extras
 #endif
-#ifdef USE_CONTRAVARIANT
+#ifdef DEP_CONTRAVARIANT
 import Data.Functor.Contravariant.Divisible
 #endif

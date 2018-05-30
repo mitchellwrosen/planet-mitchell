@@ -13,13 +13,13 @@ module Function
     on,
     Endo(..),
     diff,
-#ifdef USE_CONTRAVARIANT
+#ifdef DEP_CONTRAVARIANT
     Op(..),
 #endif
   ) where
 
 import Data.Function
-#ifdef USE_CONTRAVARIANT
+#ifdef DEP_CONTRAVARIANT
 import Data.Functor.Contravariant
 #endif
 import Data.Semigroup

@@ -19,7 +19,7 @@ module Foldable
     find,
     foldM,
     foldM_,
-#ifdef USE_REFLECTION
+#ifdef DEP_REFLECTION
     foldMapBy,
     foldBy,
 #endif
@@ -36,6 +36,6 @@ import Control.Monad
 import Data.Foldable
 import Data.List.NonEmpty
   (group, groupAllWith, groupBy, groupWith, inits, insert, tails)
-#ifdef USE_REFLECTION
+#ifdef DEP_REFLECTION
 import Data.Reflection
 #endif

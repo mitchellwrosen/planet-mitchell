@@ -12,7 +12,7 @@ module Symbol
     sameSymbol,
     AppendSymbol,
     CmpSymbol,
-#ifdef USE_CONSTRAINTS
+#ifdef DEP_CONSTRAINTS
     type (++),
     Take,
     Drop,
@@ -38,7 +38,7 @@ module Symbol
 #endif
   ) where
 
-#ifdef USE_CONSTRAINTS
+#ifdef DEP_CONSTRAINTS
 import Data.Constraint.Symbol
 #endif
 import GHC.TypeLits

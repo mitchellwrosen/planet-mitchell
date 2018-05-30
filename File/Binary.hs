@@ -6,7 +6,7 @@
 module File.Binary
   ( -- * File path operations
     withBinaryFile
-#ifdef USE_BYTESTRING
+#ifdef DEP_BYTESTRING
     -- ** Reading
   , readFile
     -- ** Writing
@@ -26,10 +26,10 @@ module File.Binary
 #endif
   ) where
 
-#ifdef USE_BYTESTRING
+#ifdef DEP_BYTESTRING
 import Data.ByteString
 #endif
-#ifdef USE_UNLIFTIO
+#ifdef DEP_UNLIFTIO
 import UnliftIO.IO (withBinaryFile)
 #else
 import System.IO (withBinaryFile)

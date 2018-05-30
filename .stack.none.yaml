@@ -18,8 +18,8 @@ flags:
     statevar: false
 
   mitchell-stdlib:
-    bytestring: false
-    containers: false
-    text: false
+    dep-bytestring: false
+    dep-containers: false
+    dep-text: false
 
 allow-newer: true

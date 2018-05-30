@@ -16,7 +16,7 @@ module Numeric.Nat
   , type (*)
   , type (^)
   , type (-)
-#ifdef USE_CONSTRAINTS
+#ifdef DEP_CONSTRAINTS
   , Min
   , Max
   , Lcm
@@ -30,7 +30,7 @@ module Numeric.Nat
 #endif
   , CmpNat
     -- ** Constraints
-#ifdef USE_CONSTRAINTS
+#ifdef DEP_CONSTRAINTS
   , plusNat
   , timesNat
   , powNat
@@ -118,7 +118,7 @@ module Numeric.Nat
 #endif
   ) where
 
-#ifdef USE_CONSTRAINTS
+#ifdef DEP_CONSTRAINTS
 import Data.Constraint.Nat
 #endif
 import GHC.TypeLits

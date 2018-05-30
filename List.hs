@@ -3,12 +3,12 @@
 module List
   ( (++),
     (\\),
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     allSame,
     anySame,
 #endif
     break,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     breakOn,
     breakOnEnd,
     breakEnd,
@@ -19,11 +19,11 @@ module List
     delete,
     deleteBy,
     deleteFirstsBy,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     disjoint,
 #endif
     drop,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     dropEnd,
     dropPrefix,
     dropSuffix,
@@ -43,7 +43,7 @@ module List
     genericTake,
     group,
     groupBy,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     groupOn,
     groupSort,
     groupSortBy,
@@ -68,7 +68,7 @@ module List
     map,
     nub,
     nubBy,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     nubOn,
     nubOrd,
     nubOrdBy,
@@ -91,12 +91,12 @@ module List
     sortBy,
     sortOn,
     span,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     spanEnd,
     split,
 #endif
     splitAt,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     splitAtEnd,
     splitOn,
     snoc,
@@ -104,17 +104,17 @@ module List
     stripInfixEnd,
 #endif
     stripPrefix,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     stripSuffix,
 #endif
     subsequences,
     tails,
     take,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     takeEnd,
 #endif
     takeWhile,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     takeWhileEnd,
 #endif
     transpose,
@@ -122,7 +122,7 @@ module List
     unfoldr,
     union,
     unionBy,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     unsnoc,
 #endif
     unzip,
@@ -149,7 +149,7 @@ module List
     unwords,
     lines,
     unlines,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     lower,
     upper,
     trim,
@@ -162,7 +162,7 @@ module List
   ) where
 
 import Data.List
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
 import Data.List.Extra
 #endif
 import Data.String (IsString(..), String)

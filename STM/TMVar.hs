@@ -19,7 +19,7 @@ module STM.TMVar
     mkWeakTMVar,
   ) where
 
-#ifdef USE_UNLIFTIO
+#ifdef DEP_UNLIFTIO
 import UnliftIO.STM
 #else
 import Control.Concurrent.STM.TMVar

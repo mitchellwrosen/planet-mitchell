@@ -4,7 +4,7 @@ module Ord
   (
     Ord(..),
     Ordering(..),
-#ifdef USE_CONTRAVARIANT
+#ifdef DEP_CONTRAVARIANT
     Comparison(..),
     defaultComparison,
 #endif
@@ -22,7 +22,7 @@ module Ord
   ) where
 
 import Data.Functor.Classes
-#ifdef USE_CONTRAVARIANT
+#ifdef DEP_CONTRAVARIANT
 import Data.Functor.Contravariant
 #endif
 import Data.Ord

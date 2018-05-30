@@ -10,7 +10,7 @@ module Applicative
     replicateM_,
     unless,
     when,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     whenJust,
 #endif
     zipWithM,
@@ -19,6 +19,6 @@ module Applicative
 
 import Control.Applicative
 import Control.Monad
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
 import Control.Monad.Extra
 #endif

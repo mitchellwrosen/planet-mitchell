@@ -48,7 +48,7 @@ module RTS
   , RtsTime
   , getRTSStats
   , getRTSStatsEnabled
-#ifdef USE_ATOMIC_PRIMOPS
+#ifdef DEP_ATOMIC_PRIMOPS
     -- * Memory barriers
   , storeLoadBarrier
   , loadLoadBarrier
@@ -56,7 +56,7 @@ module RTS
 #endif
   ) where
 
-#ifdef USE_ATOMIC_PRIMOPS
+#ifdef DEP_ATOMIC_PRIMOPS
 import Data.Atomics
 #endif
 import GHC.Conc

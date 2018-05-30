@@ -2,13 +2,13 @@
 
 module STM.TBQueue
   (
-#if defined(USE_STM) || defined(USE_UNLIFTIO)
+#if defined(DEP_STM) || defined(DEP_UNLIFTIO)
     TBQueue
   , newTBQueue
   , newTBQueueIO
   , readTBQueue
   , tryReadTBQueue
-#ifdef USE_STM
+#ifdef DEP_STM
   , flushTBQueue
 #endif
   , peekTBQueue
@@ -20,14 +20,14 @@ module STM.TBQueue
 #endif
   ) where
 
-#ifdef USE_STM
+#ifdef DEP_STM
 import Control.Concurrent.STM.TBQueue (flushTBQueue)
 #endif
-#ifdef USE_UNLIFTIO
+#ifdef DEP_UNLIFTIO
 import UnliftIO.STM
   (TBQueue, isEmptyTBQueue, isFullTBQueue, newTBQueue, newTBQueueIO,
     peekTBQueue, readTBQueue, tryPeekTBQueue, tryReadTBQueue, unGetTBQueue,
     writeTBQueue)
-#elif defined(USE_STM)
+#elif defined(DEP_STM)
 import Control.Concurrent.STM.TBQueue
 #endif

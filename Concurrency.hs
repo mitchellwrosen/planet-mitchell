@@ -2,7 +2,7 @@
 
 module Concurrency
   ( -- * Concurrency
-#if defined(USE_ASYNC) || defined(USE_UNLIFTIO)
+#if defined(DEP_ASYNC) || defined(DEP_UNLIFTIO)
     -- ** High-level concurrency
     concurrently,
     concurrently_,
@@ -18,7 +18,7 @@ module Concurrency
 #endif
     -- ** Low-level concurrency using @forkIO@
     forkIO,
-#if USE_UNLIFTIO
+#if DEP_UNLIFTIO
     forkWithUnmask,
 #else
     forkIOWithUnmask,
@@ -27,7 +27,7 @@ module Concurrency
     forkOnWithUnmask,
     throwTo,
     killThread,
-#if defined(USE_ASYNC) || defined(USE_UNLIFTIO)
+#if defined(DEP_ASYNC) || defined(DEP_UNLIFTIO)
     -- ** Low-level concurrency using @async@
     Async,
     async,
@@ -68,7 +68,7 @@ module Concurrency
     link,
     link2,
     asyncThreadId,
-#ifdef USE_ASYNC
+#ifdef DEP_ASYNC
     compareAsyncs,
     ExceptionInLinkedThread(..),
     AsyncCancelled(..),
@@ -107,20 +107,20 @@ import GHC.Conc
   (BlockReason(..), ThreadStatus(..), catchSTM, closeFdWith, labelThread, retry,
     threadStatus, threadWaitReadSTM, threadWaitWriteSTM, throwSTM,
     unsafeIOToSTM)
-#ifdef USE_UNLIFTIO
+#ifdef DEP_UNLIFTIO
 import UnliftIO.Concurrent
 #else
 import GHC.Conc
 #endif
-#ifdef USE_UNLIFTIO
+#ifdef DEP_UNLIFTIO
 import UnliftIO.Async
-#ifdef USE_ASYNC
+#ifdef DEP_ASYNC
 import Control.Concurrent.Async
   (AsyncCancelled(..), ExceptionInLinkedThread(..), compareAsyncs)
 #endif
-#elif defined(USE_ASYNC)
+#elif defined(DEP_ASYNC)
 import Control.Concurrent.Async
 #endif
-#ifdef USE_UNLIFTIO
+#ifdef DEP_UNLIFTIO
 import UnliftIO.STM
 #endif

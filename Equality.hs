@@ -4,7 +4,7 @@
 module Equality
   (
     Eq(..),
-#ifdef USE_CONTRAVARIANT
+#ifdef DEP_CONTRAVARIANT
     Equivalence(..),
     defaultEquivalence,
     comparisonEquivalence,
@@ -29,7 +29,7 @@ module Equality
 
 import Data.Eq
 import Data.Functor.Classes
-#ifdef USE_CONTRAVARIANT
+#ifdef DEP_CONTRAVARIANT
 import Data.Functor.Contravariant
 #endif
 import Data.Type.Equality

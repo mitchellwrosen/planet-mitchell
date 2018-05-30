@@ -1,3 +1,5 @@
+{-# language CPP #-}
+
 module Str.Binary
   ( -- * ByteString
     ByteString,
@@ -77,3 +79,8 @@ module Str.Binary
   ) where
 
 import Data.ByteString
+
+#ifdef MITCHELL
+type Binary
+  = ByteString
+#endif

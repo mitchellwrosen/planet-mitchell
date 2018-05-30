@@ -10,13 +10,13 @@ module Traversable
     mapAccumR,
     fmapDefault,
     foldMapDefault,
-#ifdef USE_REFLECTION
+#ifdef DEP_REFLECTION
     traverseBy,
     sequenceBy,
 #endif
   ) where
 
-#ifdef USE_REFLECTION
+#ifdef DEP_REFLECTION
 import Data.Reflection
 #endif
 import Data.Traversable

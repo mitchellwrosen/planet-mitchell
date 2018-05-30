@@ -2,7 +2,7 @@
 
 module Process
   (
-#ifdef USE_UNIX
+#ifdef DEP_UNIX
     -- * Exiting the current process
     exitImmediately,
     -- * Replacing the current process
@@ -19,10 +19,10 @@ module Process
     createSession,
 #endif
     -- * Spawning processes
-#ifdef USE_TYPED_PROCESS
+#ifdef DEP_TYPED_PROCESS
     module System.Process.Typed,
 #endif
-#ifdef USE_UNIX
+#ifdef DEP_UNIX
     forkProcess,
     forkProcessWithUnmask,
     -- ** Waiting
@@ -32,7 +32,7 @@ module Process
 #endif
   ) where
 
-#ifdef USE_UNIX
+#ifdef DEP_UNIX
 import System.Posix.Process
   (createProcessGroupFor, createSession, executeFile, exitImmediately,
     forkProcess, forkProcessWithUnmask, getAnyProcessStatus,
@@ -40,6 +40,6 @@ import System.Posix.Process
     getProcessGroupIDOf, getProcessID, getProcessStatus, joinProcessGroup,
     setProcessGroupIDOf)
 #endif
-#ifdef USE_TYPED_PROCESS
+#ifdef DEP_TYPED_PROCESS
 import System.Process.Typed
 #endif

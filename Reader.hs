@@ -2,7 +2,7 @@
 
 module Reader
   (
-#ifdef USE_TRANSFORMERS
+#ifdef DEP_TRANSFORMERS
     -- * Reader
     Reader,
     runReader,
@@ -13,19 +13,19 @@ module Reader
     mapReaderT,
     withReaderT,
 #endif
-#ifdef USE_MTL
+#ifdef DEP_MTL
     -- * MonadReader
     MonadReader(..),
-#elif defined(USE_TRANSFORMERS)
+#elif defined(DEP_TRANSFORMERS)
     ask,
     local,
     reader,
 #endif
   ) where
 
-#ifdef USE_MTL
+#ifdef DEP_MTL
 import Control.Monad.Reader.Class
 #endif
-#ifdef USE_TRANSFORMERS
+#ifdef DEP_TRANSFORMERS
 import Control.Monad.Trans.Reader
 #endif

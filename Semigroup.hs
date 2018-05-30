@@ -3,7 +3,7 @@
 module Semigroup
   ( -- * Semigroup
     Semigroup(..),
-#ifdef USE_SEMIGROUPS
+#ifdef DEP_SEMIGROUPS
     gmappend,
 #endif
     -- * Newtypes
@@ -14,6 +14,6 @@ module Semigroup
   ) where
 
 import Data.Semigroup
-#ifdef USE_SEMIGROUPS
+#ifdef DEP_SEMIGROUPS
 import Data.Semigroup.Generic
 #endif

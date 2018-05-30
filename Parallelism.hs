@@ -4,7 +4,7 @@ module Parallelism
   (
     par,
     pseq,
-#ifdef USE_PARALLEL
+#ifdef DEP_PARALLEL
     rpar,
     rparWith,
     parTraversable,
@@ -24,7 +24,7 @@ module Parallelism
   ) where
 
 import GHC.Conc
-#ifdef USE_PARALLEL
+#ifdef DEP_PARALLEL
 import Control.Parallel.Strategies
 #endif
 import Eval

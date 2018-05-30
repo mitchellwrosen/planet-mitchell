@@ -2,7 +2,7 @@
 
 module STM.TChan
   (
-#if defined(USE_STM) || defined(USE_UNLIFTIO)
+#if defined(DEP_STM) || defined(DEP_UNLIFTIO)
     -- * TChan
     TChan,
     newTChan,
@@ -21,8 +21,8 @@ module STM.TChan
 #endif
   ) where
 
-#ifdef USE_UNLIFTIO
+#ifdef DEP_UNLIFTIO
 import UnliftIO.STM
-#elif defined(USE_STM)
+#elif defined(DEP_STM)
 import Control.Concurrent.STM.TChan
 #endif

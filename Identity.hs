@@ -2,19 +2,19 @@
 
 module Identity
   ( Identity(..),
-#ifdef USE_TRANSFORMERS
+#ifdef DEP_TRANSFORMERS
     IdentityT(..),
     mapIdentityT,
 #endif
-#ifdef USE_MMORPH
+#ifdef DEP_MMORPH
     generalize,
 #endif
   ) where
 
 import Data.Functor.Identity
-#ifdef USE_MMORPH
+#ifdef DEP_MMORPH
 import Control.Monad.Morph
 #endif
-#ifdef USE_TRANSFORMERS
+#ifdef DEP_TRANSFORMERS
 import Control.Monad.Trans.Identity
 #endif

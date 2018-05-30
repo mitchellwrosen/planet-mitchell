@@ -14,7 +14,7 @@ module Mitchell
     replicateM_,
     unless,
     when,
-#ifdef USE_EXTRA
+#ifdef DEP_EXTRA
     whenJust,
 #endif
     zipWithM,
@@ -29,7 +29,7 @@ module Mitchell
     Bounded(..),
     -- * Category
     module Category,
-#ifdef USE_REFLECTION
+#ifdef DEP_REFLECTION
     foldMapBy,
     foldBy,
 #endif
@@ -67,14 +67,14 @@ module Mitchell
     stderr,
     -- * File.Text
     hGetChar,
-#ifdef USE_TEXT
+#ifdef DEP_TEXT
     hGetLine,
     hGetContents,
     putStr,
     putStrLn,
 #endif
     print,
-#ifdef USE_TEXT
+#ifdef DEP_TEXT
     hPutStr,
     hPutStrLn,
 #endif
@@ -96,7 +96,7 @@ module Mitchell
     find,
     foldM,
     foldM_,
-#ifdef USE_FOLDL
+#ifdef DEP_FOLDL
     -- * Foldl
     Fold(..),
     FoldM(..),
@@ -120,13 +120,13 @@ module Mitchell
     void,
     -- * Generic
     Generic,
-#ifdef USE_UNORDERED_CONTAINERS
+#ifdef DEP_UNORDERED_CONTAINERS
     -- * HashMap
     HashMap,
     -- * HashSet
     HashSet,
 #endif
-#ifdef USE_CONTAINERS
+#ifdef DEP_CONTAINERS
     -- * IntMap
     IntMap,
     -- * IntSet
@@ -152,11 +152,11 @@ module Mitchell
     scanr,
     scanr1,
     unfoldr,
-#ifdef USE_LIST_TRANSFORMER
+#ifdef DEP_LIST_TRANSFORMER
     -- * ListT
     ListT,
 #endif
-#ifdef USE_CONTAINERS
+#ifdef DEP_CONTAINERS
     -- * Map
     Map,
 #endif
@@ -174,7 +174,7 @@ module Mitchell
     module Monad,
     -- * MonadIO
     MonadIO(..),
-#ifdef USE_TRANSFORMERS
+#ifdef DEP_TRANSFORMERS
     -- * MonadTrans
     MonadTrans(..),
 #endif
@@ -244,7 +244,7 @@ module Mitchell
     Ordering(..),
     -- * Semigroup
     Semigroup(..),
-#ifdef USE_CONTAINERS
+#ifdef DEP_CONTAINERS
     -- * Sequence
     Seq,
     -- * Set
@@ -252,11 +252,11 @@ module Mitchell
 #endif
     -- * Show
     Show(..),
-#ifdef USE_BYTESTRING
+#ifdef DEP_BYTESTRING
     -- * ByteString
     ByteString,
 #endif
-#ifdef USE_TEXT
+#ifdef DEP_TEXT
     -- * Str.Utf16
     Text,
 #endif
@@ -284,37 +284,37 @@ import Error
 import Exception (Exception, SomeAsyncException(..), SomeException(..), throwIO)
 import File (stderr, stdin, stdout)
 import File.Text (hGetChar, hPrint, print)
-#ifdef USE_TEXT
+#ifdef DEP_TEXT
 import File.Text (hGetContents, hGetLine, hPutStr, hPutStrLn, putStr, putStrLn)
 #endif
-#ifdef USE_FOLDL
+#ifdef DEP_FOLDL
 import Foldl (Fold(..), FoldM(..))
 #endif
 import Foldable
 import Function
 import Functor
 import Generic (Generic)
-#ifdef USE_UNORDERED_CONTAINERS
+#ifdef DEP_UNORDERED_CONTAINERS
 import HashMap (HashMap)
 import HashSet (HashSet)
 #endif
-#ifdef USE_CONTAINERS
+#ifdef DEP_CONTAINERS
 import IntMap (IntMap)
 import IntSet (IntSet)
 #endif
 import IO
 import IORef (IORef)
 import List
-#ifdef USE_LIST_TRANSFORMER
+#ifdef DEP_LIST_TRANSFORMER
 import ListT (ListT)
 #endif
-#ifdef USE_CONTAINERS
+#ifdef DEP_CONTAINERS
 import Map (Map)
 #endif
 import Maybe
 import Monad
 import MonadIO (MonadIO(..))
-#ifdef USE_TRANSFORMERS
+#ifdef DEP_TRANSFORMERS
 import MonadTrans (MonadTrans(..))
 #endif
 import Monoid (Monoid, mconcat, mempty)
@@ -341,15 +341,15 @@ import Numeric.Word32 (Word32)
 import Numeric.Word64 (Word64)
 import Ord (Ord(..), Ordering(..))
 import Semigroup
-#ifdef USE_CONTAINERS
+#ifdef DEP_CONTAINERS
 import Sequence (Seq)
 import Set (Set)
 #endif
 import Show
-#ifdef USE_BYTESTRING
+#ifdef DEP_BYTESTRING
 import Str.Binary (ByteString)
 #endif
-#ifdef USE_TEXT
+#ifdef DEP_TEXT
 import Str.Utf16 (Text)
 #endif
 import Traversable (Traversable, for, sequenceA, traverse)
