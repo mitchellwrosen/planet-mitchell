@@ -990,14 +990,14 @@ library
   if flag(dep-base16-bytestring)
     exposed-modules:
       Str.Base16
-      Str.Base16.Lazy
+      Str.Lazy.Base16
 
   if flag(dep-bytestring)
     exposed-modules:
       Str.Binary
-      Str.Binary.Lazy
       Str.Binary.Partial
       Str.Binary.Short
+      Str.Lazy.Binary
 
   if flag(dep-bytestring) || flag(dep-unliftio)
     exposed-modules:
@@ -1190,7 +1190,7 @@ library
   if flag(dep-text)
     exposed-modules:
       Str.Utf16
-      Str.Utf16.Lazy
+      Str.Lazy.Utf16
 
   if flag(dep-text-short)
     exposed-modules:

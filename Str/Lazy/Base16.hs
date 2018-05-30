@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-module Str.Base16.Lazy
+module Str.Lazy.Base16
   ( encode
   , decode
   ) where

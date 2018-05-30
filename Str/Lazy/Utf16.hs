@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-module Str.Utf16.Lazy
+module Str.Lazy.Utf16
   ( module Data.Text.Lazy
   , module Data.Text.Lazy.Encoding
   ) where

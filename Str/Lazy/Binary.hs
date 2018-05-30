@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-module Str.Binary.Lazy
+module Str.Lazy.Binary
   ( module Data.ByteString.Lazy
   ) where
 
