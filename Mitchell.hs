@@ -50,6 +50,8 @@ module Mitchell
     traceStack,
     traceM,
     traceShowM,
+    -- * Either
+    Either(..),
     -- * Equality
     Eq(..),
     -- * Error
@@ -271,6 +273,7 @@ import Char (Char)
 import Concurrency (STM, ThreadId, atomically, forkIO, myThreadId, threadDelay)
 import Debug
   (trace, traceId, traceM, traceShow, traceShowId, traceShowM, traceStack)
+import Either (Either(..))
 import Equality (Eq(..))
 import Error
 import Exception (Exception, SomeAsyncException(..), SomeException(..), throwIO)
