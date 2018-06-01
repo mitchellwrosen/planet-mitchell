@@ -1,4 +1,4 @@
-module Const
+module Ala.Const
   ( Const(..)
   ) where
 

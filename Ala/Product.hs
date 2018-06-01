@@ -1,4 +1,4 @@
-module Product
+module Ala.Product
   ( Product(..)
   ) where
 

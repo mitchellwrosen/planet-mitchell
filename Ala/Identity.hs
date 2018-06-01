@@ -1,6 +1,6 @@
 {-# language CPP #-}
 
-module Identity
+module Ala.Identity
   ( Identity(..),
 #ifdef DEP_TRANSFORMERS
     IdentityT(..),

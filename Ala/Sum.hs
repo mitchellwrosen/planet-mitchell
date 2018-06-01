@@ -1,4 +1,4 @@
-module Sum
+module Ala.Sum
   ( Sum(..)
   ) where
 

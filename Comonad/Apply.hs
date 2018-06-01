@@ -1,0 +1,9 @@
+module Comonad.Apply
+  ( -- * ComonadApply
+    ComonadApply(..),
+    (<@@>),
+    liftW2,
+    liftW3
+  ) where
+
+import Control.Comonad (ComonadApply(..), (<@@>), liftW2, liftW3)

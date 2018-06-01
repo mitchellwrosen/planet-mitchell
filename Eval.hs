@@ -6,6 +6,7 @@ module Eval
     lazy,
     ($!),
     evaluate,
+#if defined(DEP_NF) || defined(DEP_DEEPSEQ) || defined(DEP_PARALLEL)
     -- * Normal form
 #ifdef DEP_NF
     NF,
@@ -44,6 +45,7 @@ module Eval
     evalTuple7,
     evalTuple8,
     evalTuple9,
+#endif
 #endif
   ) where
 

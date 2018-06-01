@@ -9,7 +9,7 @@ module Maybe
   , maybeToList
   , catMaybes
   , mapMaybe
-    -- * Newtypes
+    -- ** Newtypes
   , Option(..)
   , option
   , First(..)

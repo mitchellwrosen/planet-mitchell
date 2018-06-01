@@ -1,4 +1,3 @@
-# When updating resover, also update .travis.yml
 resolver: lts-11.8
 
 extra-deps:

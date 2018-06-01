@@ -3,7 +3,7 @@
 module Exception
   ( -- * Throwing exceptions
     throwIO,
-    -- ** Specific exceptions
+    -- ** Throwing specific exceptions
     ioError,
     userError,
     exitWith,

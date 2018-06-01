@@ -10,10 +10,7 @@ module Coerce
   , trans
   , repr
   , TestCoercion(..)
-    -- * unsafeCoerce
-  , unsafeCoerce
   ) where
 
 import Data.Coerce
 import Data.Type.Coercion
-import Unsafe.Coerce

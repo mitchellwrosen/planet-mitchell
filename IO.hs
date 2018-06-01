@@ -3,6 +3,7 @@
 module IO
   ( -- * IO
     IO,
+    MonadIO(..),
     fixIO,
     timeout,
 #ifdef DEP_EXTRA
@@ -11,19 +12,14 @@ module IO
 #endif
     -- * IO exceptions
     module System.IO.Error,
-    -- * Unsafe functions
-    unsafePerformIO,
-    unsafeDupablePerformIO,
-    unsafeInterleaveIO,
-    unsafeFixIO,
   ) where
 
 #ifdef DEP_EXTRA
 import Control.Concurrent.Extra (once, onceFork)
 #endif
+import Control.Monad.IO.Class (MonadIO(..))
 import System.IO
 import System.IO.Error
-import System.IO.Unsafe
 #ifdef DEP_UNLIFTIO
 import UnliftIO.Timeout (timeout)
 #else

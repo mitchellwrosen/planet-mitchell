@@ -136,6 +136,7 @@ module Mitchell
 #endif
     -- * IO
     IO,
+    MonadIO(..),
     -- * IORef
     IORef,
     -- * List
@@ -174,10 +175,8 @@ module Mitchell
     mapMaybe,
     -- * Monad
     module Monad,
-    -- * MonadIO
-    MonadIO(..),
 #ifdef DEP_TRANSFORMERS
-    -- * MonadTrans
+    -- * Monad.Trans
     MonadTrans(..),
 #endif
     -- * Monoid
@@ -308,9 +307,8 @@ import Map (Map)
 #endif
 import Maybe
 import Monad
-import MonadIO (MonadIO(..))
 #ifdef DEP_TRANSFORMERS
-import MonadTrans (MonadTrans(..))
+import Monad.Trans (MonadTrans(..))
 #endif
 import Monoid (Monoid, mconcat, mempty)
 import Numeric.Double (Double)

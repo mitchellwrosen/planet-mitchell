@@ -863,6 +863,10 @@ library
   ------------------------------------------------------------------------------
 
   exposed-modules:
+    Ala.Const
+    Ala.Identity
+    Ala.Product
+    Ala.Sum
     Alternative
     Applicative
     Bifoldable
@@ -874,11 +878,12 @@ library
     Bounded
     Category
     Char
+    Char.Partial
     Clock
     Coerce
+    Coerce.Unsafe
     Compose
     Concurrency
-    Const
     Data
     Debug
     Dynamic
@@ -898,8 +903,8 @@ library
     Functor
     Generic
     IO
+    IO.Unsafe
     IORef
-    Identity
     Ix
     Label
     List
@@ -908,13 +913,13 @@ library
     List1.Partial
     MVar
     Maybe
+    Maybe.Partial
     Mitchell
     Monad
-    MonadFail
-    MonadFix
-    MonadIO
-    MonadPlus
-    MonadZip
+    Monad.Fail
+    Monad.Fix
+    Monad.Plus
+    Monad.Zip
     Monoid
     Numeric.Complex
     Numeric.Double
@@ -946,7 +951,6 @@ library
     Parallelism
     Posix
     Printf
-    Product
     Proxy
     Ptr
     Ptr.Foreign
@@ -963,7 +967,6 @@ library
     Show
     StableName
     Storable
-    Sum
     Symbol
     System
     Traversable
@@ -1012,7 +1015,7 @@ library
   if flag(dep-comonad)
     exposed-modules:
       Comonad
-      ComonadApply
+      Comonad.Apply
 
   if flag(dep-compact)
     exposed-modules:
@@ -1207,11 +1210,11 @@ library
   if flag(dep-transformers)
     exposed-modules:
       MaybeT
-      MonadTrans
+      Monad.Trans
 
   if flag(dep-transformers-base)
     exposed-modules:
-      MonadBase
+      Monad.Base
 
   if flag(dep-typed-process) || flag(dep-unix)
     exposed-modules:
