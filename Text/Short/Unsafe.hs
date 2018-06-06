@@ -1,4 +1,4 @@
-module Str.Utf16.Short.Unsafe
+module Text.Short.Unsafe
   ( module Data.Text.Short.Unsafe
   ) where
 

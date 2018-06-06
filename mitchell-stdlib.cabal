@@ -11,11 +11,6 @@ license-file: LICENSE
 -- Flags
 --------------------------------------------------------------------------------
 
-flag mitchell
-  description: Flag for Mitchell. Enables new code.
-  default: False
-  manual: True
-
 ----------------
 -- Flags
 -- default: True
@@ -591,9 +586,6 @@ library
 
   build-depends: base >= 4.10 && < 4.12
 
-  if flag(mitchell)
-    cpp-options: -DMITCHELL
-
   if flag(dep-aeson)
     build-depends: aeson ^>= 1.3
     cpp-options: -DDEP_AESON
@@ -992,17 +984,17 @@ library
 
   if flag(dep-base16-bytestring)
     exposed-modules:
-      Str.Base16
-      Str.Lazy.Base16
+      ByteString.Base16
+      ByteString.Lazy.Base16
 
   if flag(dep-bytestring)
     exposed-modules:
-      Str.Binary
-      Str.Binary.Partial
-      Str.Binary.Short
-      Str.Lazy.Binary
-      Str.Lazy.Latin1
-      Str.Latin1
+      ByteString
+      ByteString.Partial
+      ByteString.Short
+      ByteString.Lazy
+      ByteString.Lazy.Latin1
+      ByteString.Latin1
 
   if flag(dep-bytestring) || flag(dep-unliftio)
     exposed-modules:
@@ -1194,14 +1186,14 @@ library
 
   if flag(dep-text)
     exposed-modules:
-      Str.Utf16
-      Str.Lazy.Utf16
+      Text
+      Text.Lazy
 
   if flag(dep-text-short)
     exposed-modules:
-      Str.Utf16.Short
-      Str.Utf16.Short.Partial
-      Str.Utf16.Short.Unsafe
+      Text.Short
+      Text.Short.Partial
+      Text.Short.Unsafe
 
   if flag(dep-time)
     exposed-modules:

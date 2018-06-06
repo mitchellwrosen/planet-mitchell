@@ -1,6 +1,5 @@
-module Str.Binary.Partial
-  (
-    foldl1',
+module ByteString.Partial
+  ( foldl1',
     foldr1,
     foldr1',
     head,
