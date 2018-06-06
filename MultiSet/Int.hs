@@ -1,4 +1,4 @@
-module IntMultiSet
+module MultiSet.Int
   ( IntMultiSet
   , Key
   , null

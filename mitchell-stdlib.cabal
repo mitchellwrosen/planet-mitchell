@@ -1030,13 +1030,13 @@ library
   if flag(dep-containers)
     exposed-modules:
       Graph
-      IntMap
-      IntMap.Lazy
-      IntSet
       Map
+      Map.Int
+      Map.Int.Lazy
       Map.Lazy
       Sequence
       Set
+      Set.Int
       Tree
 
   if flag(dep-distributive)
@@ -1104,9 +1104,9 @@ library
 
   if flag(dep-psqueues)
     exposed-modules:
-      HashPSQ
-      IntPSQ
-      OrdPSQ
+      PSQ.Hash
+      PSQ.Int
+      PSQ.Ord
 
   if flag(dep-managed)
     exposed-modules:
@@ -1131,8 +1131,8 @@ library
 
   if flag(dep-multiset)
     exposed-modules:
-      IntMultiSet
       MultiSet
+      MultiSet.Int
 
   if flag(dep-mwc-random)
     exposed-modules:
@@ -1218,8 +1218,8 @@ library
 
   if flag(dep-unordered-containers)
     exposed-modules:
-      HashMap
-      HashSet
+      Map.Hash
+      Set.Hash
 
   if flag(dep-vector)
     exposed-modules:

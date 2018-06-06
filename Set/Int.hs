@@ -1,4 +1,4 @@
-module IntSet
+module Set.Int
   ( module Data.IntSet
   ) where
 

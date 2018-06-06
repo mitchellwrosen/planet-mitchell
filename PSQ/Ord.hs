@@ -1,6 +1,6 @@
-module HashPSQ
-  ( -- * HashPSQ
-    HashPSQ,
+module PSQ.Ord
+  ( -- * OrdPSQ
+    OrdPSQ,
     -- * Construction
     empty,
     singleton,
@@ -27,8 +27,9 @@ module HashPSQ
     unsafeMapMonotonic,
     -- * Folding
     toList,
+    toAscList,
     keys,
     fold',
   ) where
 
-import Data.HashPSQ
+import Data.OrdPSQ

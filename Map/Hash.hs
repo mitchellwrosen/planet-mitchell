@@ -1,4 +1,4 @@
-module HashMap
+module Map.Hash
   ( module Data.HashMap.Strict
   ) where
 

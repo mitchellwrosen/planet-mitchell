@@ -1,4 +1,4 @@
-module IntMap
+module Map.Int
   ( module Data.IntMap.Strict
   ) where
 

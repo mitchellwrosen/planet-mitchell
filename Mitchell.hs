@@ -122,18 +122,6 @@ module Mitchell
     void,
     -- * Generic
     Generic,
-#ifdef DEP_UNORDERED_CONTAINERS
-    -- * HashMap
-    HashMap,
-    -- * HashSet
-    HashSet,
-#endif
-#ifdef DEP_CONTAINERS
-    -- * IntMap
-    IntMap,
-    -- * IntSet
-    IntSet,
-#endif
     -- * IO
     IO,
     MonadIO(..),
@@ -162,6 +150,14 @@ module Mitchell
 #ifdef DEP_CONTAINERS
     -- * Map
     Map,
+#endif
+#ifdef DEP_UNORDERED_CONTAINERS
+    -- * Map.Hash
+    HashMap,
+#endif
+#ifdef DEP_CONTAINERS
+    -- * Map.Int
+    IntMap,
 #endif
     -- * Maybe
     Maybe(..),
@@ -250,6 +246,12 @@ module Mitchell
     Seq,
     -- * Set
     Set,
+    -- * Set.Int
+    IntSet,
+#endif
+#ifdef DEP_UNORDERED_CONTAINERS
+    -- * Set.Hash
+    HashSet,
 #endif
     -- * Show
     Show(..),
@@ -288,14 +290,6 @@ import Foldable
 import Function
 import Functor
 import Generic (Generic)
-#ifdef DEP_UNORDERED_CONTAINERS
-import HashMap (HashMap)
-import HashSet (HashSet)
-#endif
-#ifdef DEP_CONTAINERS
-import IntMap (IntMap)
-import IntSet (IntSet)
-#endif
 import IO
 import IORef (IORef)
 import List
@@ -304,6 +298,12 @@ import ListT (ListT)
 #endif
 #ifdef DEP_CONTAINERS
 import Map (Map)
+#endif
+#ifdef DEP_UNORDERED_CONTAINERS
+import Map.Hash (HashMap)
+#endif
+#ifdef DEP_CONTAINERS
+import Map.Int (IntMap)
 #endif
 import Maybe
 import Monad
@@ -337,6 +337,10 @@ import Semigroup
 #ifdef DEP_CONTAINERS
 import Sequence (Seq)
 import Set (Set)
+import Set.Int (IntSet)
+#endif
+#ifdef DEP_UNORDERED_CONTAINERS
+import Set.Hash (HashSet)
 #endif
 import Show
 import Traversable (Traversable, for, sequenceA, traverse)

@@ -1,4 +1,4 @@
-module HashSet
+module Set.Hash
   ( module Data.HashSet
   ) where
 
