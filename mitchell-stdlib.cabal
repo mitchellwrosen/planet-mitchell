@@ -1007,7 +1007,6 @@ library
   if flag(dep-comonad)
     exposed-modules:
       Comonad
-      Comonad.Apply
 
   if flag(dep-compact)
     exposed-modules:
