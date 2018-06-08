@@ -3,7 +3,7 @@ set -e
 
 case "$1" in
   "build")
-    cabal new-build -O0
+    cabal new-build -O0 "${@:2}"
     ;;
   "docs")
     cabal new-haddock -O0
@@ -16,7 +16,7 @@ case "$1" in
     ghcid -c 'cabal new-repl -O0' --restart mitchell-stdlib.cabal
     ;;
   "repl")
-    cabal new-repl -O0
+    cabal new-repl -O0 "${@:2}"
     ;;
   *)
     echo "make {build, docs, freeze, ghcid, repl}" >&2

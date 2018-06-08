@@ -27,6 +27,9 @@ module Mitchell
     otherwise,
     -- * Bounded
     Bounded(..),
+#ifdef DEP_BYTESTRING
+    ByteString,
+#endif
     -- * Category
     module Category,
 #ifdef DEP_REFLECTION
@@ -255,6 +258,10 @@ module Mitchell
 #endif
     -- * Show
     Show(..),
+#ifdef DEP_TEXT
+    -- * Text
+    Text,
+#endif
     -- * Traversable
     Traversable,
     traverse,
@@ -269,6 +276,9 @@ import Alternative (Alternative(..), guard, optional)
 import Applicative
 import Bool (Bool(..), (&&), (||), otherwise, not)
 import Bounded (Bounded(..))
+#ifdef DEP_BYTESTRING
+import ByteString (ByteString)
+#endif
 import Category (Category(..), (<<<), (>>>))
 import Char (Char)
 import Concurrency (STM, ThreadId, atomically, forkIO, myThreadId, threadDelay)
@@ -343,5 +353,8 @@ import Set.Int (IntSet)
 import Set.Hash (HashSet)
 #endif
 import Show
+#ifdef DEP_TEXT
+import Text (Text)
+#endif
 import Traversable (Traversable, for, sequenceA, traverse)
 import Tuple
