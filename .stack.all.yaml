@@ -67,6 +67,7 @@ flags:
     dep-scientific: true
     dep-semigroups: true
     dep-stm: true
+    dep-stm-chans: true
     dep-stm-containers: true
     dep-tagged: true
     dep-text-short: true

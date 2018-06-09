@@ -286,6 +286,11 @@ flag dep-stm
   default: False
   manual: True
 
+flag dep-stm-chans
+  description: stm-chans dependency
+  default: False
+  manual: True
+
 flag dep-stm-containers
   description: stm-containers dependency
   default: False
@@ -799,6 +804,10 @@ library
     build-depends: stm ^>= 2.4.5
     cpp-options: -DDEP_STM
 
+  if flag(dep-stm-chans)
+    build-depends: stm-chans ^>= 3.0
+    cpp-options: -DDEP_STM_CHANS
+
   if flag(dep-stm-containers)
     build-depends: stm-containers ^>= 0.2
     cpp-options: -DDEP_STM_CONTAINERS
@@ -1185,6 +1194,14 @@ library
       STM.TChan
       STM.TMVar
       STM.TVar
+
+  if flag(dep-stm-chans)
+    exposed-modules:
+      STM.TBChan
+      STM.TBMChan
+      STM.TBMQueue
+      STM.TMChan
+      STM.TMQueue
 
   if flag(dep-stm-containers)
     exposed-modules:
