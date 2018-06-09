@@ -46,6 +46,11 @@ flag dep-ansi-terminal
   default: False
   manual: True
 
+flag dep-approximate
+  description: dep-approximate dependency
+  default: False
+  manual: True
+
 flag dep-async
   description: async dependency
   default: False
@@ -594,6 +599,10 @@ library
     build-depends: ansi-terminal ^>= 0.8
     cpp-options: -DDEP_ANSI_TERMINAL
 
+  if flag(dep-approximate)
+    build-depends: approximate ^>= 0.3
+    cpp-options: -DDEP_APPROXIMATE
+
   if flag(dep-async)
     build-depends: async ^>= 2.2
     cpp-options: -DDEP_ASYNC
@@ -977,6 +986,11 @@ library
   if flag(dep-ansi-terminal)
     exposed-modules:
       Terminal
+
+  if flag(dep-approximate)
+    exposed-modules:
+      Numeric.Approximate
+      Numeric.Fast
 
   if flag(dep-atomic-primops)
     exposed-modules:

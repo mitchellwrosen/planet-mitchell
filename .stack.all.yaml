@@ -19,6 +19,7 @@ flags:
   mitchell-stdlib:
     dep-aeson: true
     dep-ansi-terminal: true
+    dep-approximate: true
     dep-async: true
     dep-atomic-primops: true
     dep-base16-bytestring: true
