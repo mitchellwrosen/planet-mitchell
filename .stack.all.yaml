@@ -24,6 +24,7 @@ flags:
     dep-atomic-primops: true
     dep-base16-bytestring: true
     dep-bits: true
+    dep-bytestring-lexing: true
     dep-bytestring-trie: true
     dep-comonad: true
     dep-compact: true

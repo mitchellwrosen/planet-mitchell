@@ -17,6 +17,7 @@ package mitchell-stdlib
     -dep-atomic-primops
     -dep-base16-bytestring
     -dep-bits
+    -dep-bytestring-lexing
     -dep-bytestring-trie
     -dep-comonad
     -dep-compact

@@ -71,6 +71,11 @@ flag dep-bits
   default: False
   manual: True
 
+flag dep-bytestring-lexing
+  description: bytestring-lexing dependency
+  default: False
+  manual: True
+
 flag dep-bytestring-trie
   description: bytestring-trie dependency
   default: False
@@ -627,6 +632,10 @@ library
   if flag(dep-bytestring)
     build-depends: bytestring ^>= 0.10
     cpp-options: -DDEP_BYTESTRING
+
+  if flag(dep-bytestring-lexing)
+    build-depends: bytestring-lexing ^>= 0.5
+    cpp-options: -DDEP_BYTESTRING_LEXING
 
   if flag(dep-bytestring-trie)
     build-depends: bytestring-trie ^>= 0.2
