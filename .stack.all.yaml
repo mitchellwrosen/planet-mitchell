@@ -20,12 +20,14 @@ flags:
     dep-aeson: true
     dep-ansi-terminal: true
     dep-approximate: true
+    dep-array: true
     dep-async: true
     dep-atomic-primops: true
     dep-base16-bytestring: true
     dep-bits: true
     dep-bytestring-lexing: true
     dep-bytestring-trie: true
+    dep-case-insensitive: true
     dep-comonad: true
     dep-compact: true
     dep-constraints: true
@@ -38,6 +40,7 @@ flags:
     dep-erf: true
     dep-extra: true
     dep-filepath: true
+    dep-fgl: true
     dep-foldl: true
     dep-gauge: true
     dep-hashable: true

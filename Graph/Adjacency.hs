@@ -1,4 +1,4 @@
-module Graph
+module Graph.Adjacency
   ( module Data.Graph
   ) where
 
