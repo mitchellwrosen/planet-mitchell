@@ -172,6 +172,11 @@ flag dep-gauge
   default: False
   manual: True
 
+flag dep-half
+  description: half dependency
+  default: False
+  manual: True
+
 flag dep-hashable
   description: hashable dependency
   default: False
@@ -738,6 +743,10 @@ library
     build-depends: gauge ^>= 0.2
     cpp-options: -DDEP_GAUGE
 
+  if flag(dep-half)
+    build-depends: half ^>= 0.3
+    cpp-options: -DDEP_HALF
+
   if flag(dep-hashable)
     build-depends: hashable ^>= 1.2
     cpp-options: -DDEP_HASHABLE
@@ -1145,6 +1154,10 @@ library
   if flag(dep-gauge)
     exposed-modules:
       Benchmark
+
+  if flag(dep-half)
+    exposed-modules:
+      Numeric.Half
 
   if flag(dep-hashable)
     exposed-modules:

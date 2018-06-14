@@ -37,6 +37,7 @@ package mitchell-stdlib
     -dep-fgl
     -dep-foldl
     -dep-gauge
+    -dep-half
     -dep-hashable
     -dep-heaps
     -dep-hedgehog

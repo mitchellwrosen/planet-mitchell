@@ -44,6 +44,7 @@ flags:
     dep-fgl: true
     dep-foldl: true
     dep-gauge: true
+    dep-half: true
     dep-hashable: true
     dep-hedgehog: true
     dep-heaps: true
