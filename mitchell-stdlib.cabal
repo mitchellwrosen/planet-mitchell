@@ -1197,6 +1197,13 @@ library
 
   if flag(dep-lens)
     exposed-modules:
+      At
+      Cons
+      Each
+      Empty
+      Optic.Fold
+      Optic.Getter
+      Optic.Getting
       Optic.Iso
       Optic.Lens
       Optic.Prism

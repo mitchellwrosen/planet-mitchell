@@ -1,5 +1,6 @@
 module Optic.Prism
-  ( Prism,
+  ( -- * Prism
+    Prism,
     Prism',
     APrism,
     APrism',
@@ -9,6 +10,8 @@ module Optic.Prism
     _Right,
     _Just,
     _Nothing,
+    is,
   ) where
 
+import Control.Lens.Extras (is)
 import Control.Lens.Prism

@@ -34,7 +34,9 @@ module Graph.Inductive
     hasLoop,
     isSimple,
     newNodes,
+    -- ** Articulation points
     ap,
+    -- ** Breadth-first search
     bfs,
     bfsn,
     bfsWith,
@@ -47,6 +49,75 @@ module Graph.Inductive
     lbft,
     esp,
     lesp,
+    -- ** Depth-first search
+    CFun,
+    dfs,
+    dfs',
+    dfsWith,
+    dfsWith',
+    dff,
+    dff',
+    dffWith,
+    dffWith',
+    xdfsWith,
+    xdfWith,
+    xdffWith,
+    udfs,
+    udfs',
+    udff,
+    udff',
+    udffWith,
+    udffWith',
+    rdff,
+    rdff',
+    rdfs',
+    rdffWith,
+    rdffWith',
+    topsort,
+    topsort',
+    scc,
+    reachable,
+    components,
+    noComponents,
+    isConnected,
+    condensation,
+    -- ** Dominators
+    dom,
+    iDom,
+    -- ** Voronoi diagrams
+    Voronoi,
+    gvdIn,
+    gvdOut,
+    voronoiSet,
+    nearestNode,
+    nearestDist,
+    nearestPath,
+    -- ** Independent node sets
+    indep,
+    indepSize,
+    -- ** Minimum spanning trees
+    msTreeAt,
+    msTree,
+    msPath,
+    -- ** Max flow
+    getRevEdges,
+    augmentGraph,
+    updAdjList,
+    updateFlow,
+    mfmg,
+    mf,
+    maxFlowgraph,
+    maxFlow,
+    Network,
+    ekSimple,
+    ekFused,
+    ekList,
+    -- ** Shortest path
+    Heap,
+    spTree,
+    sp,
+    spLength,
+    dijkstra,
     -- * Dynamic graphs
     DynGraph(..),
     buildGr,
@@ -74,9 +145,15 @@ module Graph.Inductive
     unlab,
     efilter,
     elfilter,
+    -- ** Bi-connected components
     bcc,
+    -- ** Pretty-printing
     prettify,
     prettyPrint,
+    -- ** Transitive/reflexive closure
+    trc,
+    rc,
+    tc,
     -- * Misc. types
     -- ** Node
     Node,
@@ -115,8 +192,9 @@ module Graph.Inductive
     Path,
     LPath(..),
     UPath,
-    -- ** RTree
+    -- ** Tree
     RTree,
+    LRTree,
     -- ** Adj
     Adj,
     -- ** OrdGr
