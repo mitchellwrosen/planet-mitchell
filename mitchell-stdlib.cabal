@@ -247,6 +247,11 @@ flag dep-network
   default: False
   manual: True
 
+flag dep-network-uri
+  description: network-uri dependency
+  default: False
+  manual: True
+
 flag dep-nf
   description: nf dependency
   default: False
@@ -803,6 +808,10 @@ library
     build-depends: network ^>= 2.7
     cpp-options: -DDEP_NETWORK
 
+  if flag(dep-network-uri)
+    build-depends: network-uri ^>= 2.6
+    cpp-options: -DDEP_NETWORK_URI
+
   if flag(dep-nf)
     build-depends: nf ^>= 1.0
     cpp-options: -DDEP_NF
@@ -1239,6 +1248,10 @@ library
   if flag(dep-network)
     exposed-modules:
       Socket
+
+  if flag(dep-network-uri)
+    exposed-modules:
+      URI
 
   if flag(dep-profunctors)
     exposed-modules:

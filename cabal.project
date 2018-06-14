@@ -52,6 +52,7 @@ package mitchell-stdlib
     -dep-multiset
     -dep-mwc-random
     -dep-network
+    -dep-network-uri
     -dep-nf
     -dep-optparse-applicative
     -dep-parallel

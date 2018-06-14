@@ -59,6 +59,7 @@ flags:
     dep-multiset: true
     dep-mwc-random: true
     dep-network: true
+    dep-network-uri: true
     dep-nf: true
     dep-optparse-applicative: true
     dep-parallel: true
