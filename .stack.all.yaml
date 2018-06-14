@@ -37,6 +37,7 @@ flags:
     dep-directory: true
     dep-distributive: true
     dep-dlist: true
+    dep-Earley: true
     dep-envparse: true
     dep-erf: true
     dep-extra: true

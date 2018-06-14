@@ -30,6 +30,7 @@ package mitchell-stdlib
     -dep-directory
     -dep-distributive
     -dep-dlist
+    -dep-Earley
     -dep-envparse
     -dep-erf
     -dep-extra

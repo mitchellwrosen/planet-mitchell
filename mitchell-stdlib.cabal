@@ -137,6 +137,11 @@ flag dep-dlist
   default: False
   manual: True
 
+flag dep-Earley
+  description: Earley dependency
+  default: False
+  manual: True
+
 flag dep-envparse
   description: envparse dependency
   default: False
@@ -720,6 +725,10 @@ library
     build-depends: dlist ^>= 0.8
     cpp-options: -DDEP_DLIST
 
+  if flag(dep-Earley)
+    build-depends: Earley ^>= 0.12
+    cpp-options: -DDEP_EARLEY
+
   if flag(dep-envparse)
     build-depends: envparse ^>= 0.4
     cpp-options: -DDEP_ENVPARSE
@@ -1142,6 +1151,10 @@ library
     exposed-modules:
       DList
       DList.Partial
+
+  if flag(dep-Earley)
+    exposed-modules:
+      Parser.Earley
 
   if flag(dep-envparse)
     exposed-modules:
