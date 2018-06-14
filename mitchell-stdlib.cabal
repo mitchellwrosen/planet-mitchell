@@ -137,7 +137,7 @@ flag dep-dlist
   default: False
   manual: True
 
-flag dep-Earley
+flag dep-earley
   description: Earley dependency
   default: False
   manual: True
@@ -638,23 +638,23 @@ library
   build-depends: base >= 4.10 && < 4.12
 
   if flag(dep-aeson)
-    build-depends: aeson ^>= 1.3
+    build-depends: aeson ^>= 1.3.1 || ^>= 1.4.0
     cpp-options: -DDEP_AESON
 
   if flag(dep-ansi-terminal)
-    build-depends: ansi-terminal ^>= 0.8
+    build-depends: ansi-terminal ^>= 0.8.0
     cpp-options: -DDEP_ANSI_TERMINAL
 
   if flag(dep-approximate)
-    build-depends: approximate ^>= 0.3
+    build-depends: approximate ^>= 0.3.1
     cpp-options: -DDEP_APPROXIMATE
 
   if flag(dep-array)
-    build-depends: array ^>= 0.5
+    build-depends: array ^>= 0.5.2
     cpp-options: -DDEP_ARRAY
 
   if flag(dep-async)
-    build-depends: async ^>= 2.2
+    build-depends: async ^>= 2.2.1
     cpp-options: -DDEP_ASYNC
 
   if flag(dep-atomic-primops)
@@ -662,27 +662,27 @@ library
     cpp-options: -DDEP_ATOMIC_PRIMOPS
 
   if flag(dep-base16-bytestring)
-    build-depends: base16-bytestring ^>= 0.1
+    build-depends: base16-bytestring ^>= 0.1.1
     cpp-options: -DDEP_BASE16_BYTESTRING
 
   if flag(dep-bits)
-    build-depends: bits ^>= 0.5
+    build-depends: bits ^>= 0.5.0
     cpp-options: -DDEP_BITS
 
   if flag(dep-bytestring)
-    build-depends: bytestring ^>= 0.10
+    build-depends: bytestring ^>= 0.10.8
     cpp-options: -DDEP_BYTESTRING
 
   if flag(dep-bytestring-lexing)
-    build-depends: bytestring-lexing ^>= 0.5
+    build-depends: bytestring-lexing ^>= 0.5.0
     cpp-options: -DDEP_BYTESTRING_LEXING
 
   if flag(dep-bytestring-trie)
-    build-depends: bytestring-trie ^>= 0.2
+    build-depends: bytestring-trie ^>= 0.2.4
     cpp-options: -DDEP_BYTESTRING_TRIE
 
   if flag(dep-case-insensitive)
-    build-depends: case-insensitive ^>= 1.2
+    build-depends: case-insensitive ^>= 1.2.0
     cpp-options: -DDEP_CASE_INSENSITIVE
 
   if flag(dep-comonad)
@@ -690,7 +690,7 @@ library
     cpp-options: -DDEP_COMONAD
 
   if flag(dep-compact)
-    build-depends: compact ^>= 0.1
+    build-depends: compact ^>= 0.1.0
     cpp-options: -DDEP_COMPACT
 
   if flag(dep-constraints)
@@ -698,15 +698,15 @@ library
     cpp-options: -DDEP_CONSTRAINTS
 
   if flag(dep-containers)
-    build-depends: containers ^>= 0.5
+    build-depends: containers ^>= 0.5.11
     cpp-options: -DDEP_CONTAINERS
 
   if flag(dep-contravariant)
-    build-depends: contravariant ^>= 1.4
+    build-depends: contravariant ^>= 1.4.1
     cpp-options: -DDEP_CONTRAVARIANT
 
   if flag(dep-contravariant-extras)
-    build-depends: contravariant-extras ^>= 0.3
+    build-depends: contravariant-extras ^>= 0.3.4
     cpp-options: -DDEP_CONTRAVARIANT_EXTRAS
 
   if flag(dep-deepseq)
@@ -714,19 +714,19 @@ library
     cpp-options: -DDEP_DEEPSEQ
 
   if flag(dep-directory)
-    build-depends: directory ^>= 1.3
+    build-depends: directory ^>= 1.3.3
     cpp-options: -DDEP_DIRECTORY
 
   if flag(dep-distributive)
-    build-depends: distributive ^>= 0.5
+    build-depends: distributive ^>= 0.5.3
     cpp-options: -DDEP_DISTRIBUTIVE
 
   if flag(dep-dlist)
-    build-depends: dlist ^>= 0.8
+    build-depends: dlist ^>= 0.8.0
     cpp-options: -DDEP_DLIST
 
-  if flag(dep-Earley)
-    build-depends: Earley ^>= 0.12
+  if flag(dep-earley)
+    build-depends: Earley ^>= 0.12.0
     cpp-options: -DDEP_EARLEY
 
   if flag(dep-envparse)
@@ -734,27 +734,27 @@ library
     cpp-options: -DDEP_ENVPARSE
 
   if flag(dep-erf)
-    build-depends: erf ^>= 2.0
+    build-depends: erf ^>= 2.0.0
     cpp-options: -DDEP_ERF
 
   if flag(dep-extra)
-    build-depends: extra ^>= 1.6
+    build-depends: extra ^>= 1.6.8
     cpp-options: -DDEP_EXTRA
 
   if flag(dep-fgl)
-    build-depends: fgl ^>= 5.6
+    build-depends: fgl ^>= 5.6.0
     cpp-options: -DDEP_FGL
 
   if flag(dep-filepath)
-    build-depends: filepath ^>= 1.4
+    build-depends: filepath ^>= 1.4.2
     cpp-options: -DDEP_FILEPATH
 
   if flag(dep-foldl)
-    build-depends: foldl ^>= 1.4
+    build-depends: foldl ^>= 1.4.0
     cpp-options: -DDEP_FOLDL
 
   if flag(dep-gauge)
-    build-depends: gauge ^>= 0.2
+    build-depends: gauge ^>= 0.2.1
     cpp-options: -DDEP_GAUGE
 
   if flag(dep-half)
@@ -762,19 +762,19 @@ library
     cpp-options: -DDEP_HALF
 
   if flag(dep-hashable)
-    build-depends: hashable ^>= 1.2
+    build-depends: hashable ^>= 1.2.7
     cpp-options: -DDEP_HASHABLE
 
   if flag(dep-heaps)
-    build-depends: heaps ^>= 0.3
+    build-depends: heaps ^>= 0.3.0
     cpp-options: -DDEP_HEAPS
 
   if flag(dep-hedgehog)
-    build-depends: hedgehog ^>= 0.5
+    build-depends: hedgehog ^>= 0.5.3 || ^>= 0.6
     cpp-options: -DDEP_HEDGEHOG
 
   if flag(dep-lens)
-    build-depends: lens ^>= 4.16
+    build-depends: lens ^>= 4.16.1
     cpp-options: -DDEP_LENS
 
   if flag(dep-list-transformer)
@@ -782,63 +782,63 @@ library
     cpp-options: -DDEP_LIST_TRANSFORMER
 
   if flag(dep-logict)
-    build-depends: logict ^>= 0.6
+    build-depends: logict ^>= 0.6.0
     cpp-options: -DDEP_LOGICT
 
   if flag(dep-managed)
-    build-depends: managed ^>= 1.0
+    build-depends: managed ^>= 1.0.6
     cpp-options: -DDEP_MANAGED
 
   if flag(dep-megaparsec)
-    build-depends: megaparsec ^>= 6.5
+    build-depends: megaparsec ^>= 6.5.0
     cpp-options: -DDEP_MEGAPARSEC
 
   if flag(dep-mmorph)
-    build-depends: mmorph ^>= 1.1
+    build-depends: mmorph ^>= 1.1.2
     cpp-options: -DDEP_MMORPH
 
   if flag(dep-monad-ste)
-    build-depends: monad-ste ^>= 0.1
+    build-depends: monad-ste ^>= 0.1.0
     cpp-options: -DDEP_MONAD_STE
 
   if flag(dep-mtl)
-    build-depends: mtl ^>= 2.2
+    build-depends: mtl ^>= 2.2.2
     cpp-options: -DDEP_MTL
 
   if flag(dep-multiset)
-    build-depends: multiset ^>= 0.3
+    build-depends: multiset ^>= 0.3.4
     cpp-options: -DDEP_MULTISET
 
   if flag(dep-mwc-random)
-    build-depends: mwc-random ^>= 0.13
+    build-depends: mwc-random ^>= 0.13.6
     cpp-options: -DDEP_MWC_RANDOM
 
   if flag(dep-network)
-    build-depends: network ^>= 2.7
+    build-depends: network ^>= 2.7.0
     cpp-options: -DDEP_NETWORK
 
   if flag(dep-network-uri)
-    build-depends: network-uri ^>= 2.6
+    build-depends: network-uri ^>= 2.6.1
     cpp-options: -DDEP_NETWORK_URI
 
   if flag(dep-nf)
-    build-depends: nf ^>= 1.0
+    build-depends: nf ^>= 1.0.1
     cpp-options: -DDEP_NF
 
   if flag(dep-optparse-applicative)
-    build-depends: optparse-applicative ^>= 0.14
+    build-depends: optparse-applicative ^>= 0.14.2
     cpp-options: -DDEP_OPTPARSE_APPLICATIVE
 
   if flag(dep-parallel)
-    build-depends: parallel ^>= 3.2
+    build-depends: parallel ^>= 3.2.1
     cpp-options: -DDEP_PARALLEL
 
   if flag(dep-prettyprinter)
-    build-depends: prettyprinter ^>= 1.2
+    build-depends: prettyprinter ^>= 1.2.0
     cpp-options: -DDEP_PRETTYPRINTER
 
   if flag(dep-primitive)
-    build-depends: primitive ^>= 0.6
+    build-depends: primitive ^>= 0.6.4
     cpp-options: -DDEP_PRIMITIVE
 
   if flag(dep-profunctors)
@@ -846,11 +846,11 @@ library
     cpp-options: -DDEP_PROFUNCTORS
 
   if flag(dep-psqueues)
-    build-depends: psqueues ^>= 0.2
+    build-depends: psqueues ^>= 0.2.7
     cpp-options: -DDEP_PSQUEUES
 
   if flag(dep-reactive-banana)
-    build-depends: reactive-banana ^>= 1.2
+    build-depends: reactive-banana ^>= 1.2.0
     cpp-options: -DDEP_REACTIVE_BANANA
 
   if flag(dep-reflection)
@@ -858,19 +858,19 @@ library
     cpp-options: -DDEP_REFLECTION
 
   if flag(dep-regex-applicative)
-    build-depends: regex-applicative ^>= 0.3
+    build-depends: regex-applicative ^>= 0.3.3
     cpp-options: -DDEP_REGEX_APPLICATIVE
 
   if flag(dep-safe-exceptions)
-    build-depends: safe-exceptions ^>= 0.1
+    build-depends: safe-exceptions ^>= 0.1.7
     cpp-options: -DDEP_SAFE_EXCEPTIONS
 
   if flag(dep-scientific)
-    build-depends: scientific ^>= 0.3
+    build-depends: scientific ^>= 0.3.6
     cpp-options: -DDEP_SCIENTIFIC
 
   if flag(dep-semigroups)
-    build-depends: semigroups ^>= 0.18
+    build-depends: semigroups ^>= 0.18.4
     cpp-options: -DDEP_SEMIGROUPS
 
   if flag(dep-stm)
@@ -878,47 +878,47 @@ library
     cpp-options: -DDEP_STM
 
   if flag(dep-stm-chans)
-    build-depends: stm-chans ^>= 3.0
+    build-depends: stm-chans ^>= 3.0.0
     cpp-options: -DDEP_STM_CHANS
 
   if flag(dep-stm-containers)
-    build-depends: stm-containers ^>= 0.2
+    build-depends: stm-containers ^>= 0.2.16
     cpp-options: -DDEP_STM_CONTAINERS
 
   if flag(dep-tagged)
-    build-depends: tagged ^>= 0.8
+    build-depends: tagged ^>= 0.8.5
     cpp-options: -DDEP_TAGGED
 
   if flag(dep-text)
-    build-depends: text ^>= 1.2
+    build-depends: text ^>= 1.2.3
     cpp-options: -DDEP_TEXT
 
   if flag(dep-text-short)
-    build-depends: text-short ^>= 0.1
+    build-depends: text-short ^>= 0.1.2
     cpp-options: -DDEP_TEXT_SHORT
 
   if flag(dep-time)
-    build-depends: time ^>= 1.8 || ^>= 1.9
+    build-depends: time ^>= 1.8 || ^>= 1.9.1
     cpp-options: -DDEP_TIME
 
   if flag(dep-transformers)
-    build-depends: transformers ^>= 0.5
+    build-depends: transformers ^>= 0.5.5
     cpp-options: -DDEP_TRANSFORMERS
 
   if flag(dep-transformers-base)
-    build-depends: transformers-base ^>= 0.4
+    build-depends: transformers-base ^>= 0.4.5
     cpp-options: -DDEP_TRANSFORMERS_BASE
 
   if flag(dep-typed-process)
-    build-depends: typed-process ^>= 0.2
+    build-depends: typed-process ^>= 0.2.2
     cpp-options: -DDEP_TYPED_PROCESS
 
   if flag(dep-unagi-chan)
-    build-depends: unagi-chan ^>= 0.4
+    build-depends: unagi-chan ^>= 0.4.1
     cpp-options: -DDEP_UNAGI_CHAN
 
   if flag(dep-unix)
-    build-depends: unix ^>= 2.7
+    build-depends: unix ^>= 2.7.2
     cpp-options: -DDEP_UNIX
 
   if flag(dep-unliftio)
@@ -926,19 +926,19 @@ library
     cpp-options: -DDEP_UNLIFTIO
 
   if flag(dep-unordered-containers)
-    build-depends: unordered-containers ^>= 0.2
+    build-depends: unordered-containers ^>= 0.2.9
     cpp-options: -DDEP_UNORDERED_CONTAINERS
 
   if flag(dep-vector)
-    build-depends: vector ^>= 0.12
+    build-depends: vector ^>= 0.12.0
     cpp-options: -DDEP_VECTOR
 
   if flag(dep-weigh)
-    build-depends: weigh ^>= 0.0
+    build-depends: weigh ^>= 0.0.12
     cpp-options: -DDEP_WEIGH
 
   if flag(dep-writer-cps-mtl)
-    build-depends: writer-cps-mtl ^>= 0.1
+    build-depends: writer-cps-mtl ^>= 0.1.1
     cpp-options: -DDEP_WRITER_CPS_MTL
 
   ------------------------------------------------------------------------------
@@ -1152,7 +1152,7 @@ library
       DList
       DList.Partial
 
-  if flag(dep-Earley)
+  if flag(dep-earley)
     exposed-modules:
       Parser.Earley
 

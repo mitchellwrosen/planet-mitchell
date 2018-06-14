@@ -12,6 +12,7 @@ module Except
 #ifdef DEP_MTL
     -- * MonadError
     MonadError(..),
+    liftEither,
 #elif defined(DEP_TRANSFORMERS)
     throwE,
     catchE,
