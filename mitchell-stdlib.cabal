@@ -6,6 +6,7 @@ build-type: Simple
 category: Prelude
 license: BSD3
 license-file: LICENSE
+tested-with: GHC == 8.4.3
 
 --------------------------------------------------------------------------------
 -- Flags
@@ -133,6 +134,11 @@ flag dep-distributive
 
 flag dep-dlist
   description: dlist dependency
+  default: False
+  manual: True
+
+flag dep-envparse
+  description: envparse dependency
   default: False
   manual: True
 
@@ -704,6 +710,10 @@ library
     build-depends: dlist ^>= 0.8
     cpp-options: -DDEP_DLIST
 
+  if flag(dep-envparse)
+    build-depends: envparse ^>= 0.4
+    cpp-options: -DDEP_ENVPARSE
+
   if flag(dep-erf)
     build-depends: erf ^>= 2.0
     cpp-options: -DDEP_ERF
@@ -1115,6 +1125,10 @@ library
       DList
       DList.Partial
 
+  if flag(dep-envparse)
+    exposed-modules:
+      Parser.Env
+
   if flag(dep-erf)
     exposed-modules:
       Numeric.Erf
@@ -1163,7 +1177,7 @@ library
 
   if flag(dep-optparse-applicative)
     exposed-modules:
-      Optparse
+      Parser.Cli
 
   if flag(dep-prettyprinter)
     exposed-modules:

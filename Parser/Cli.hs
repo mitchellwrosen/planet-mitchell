@@ -1,4 +1,4 @@
-module Optparse
+module Parser.Cli
   ( module Options.Applicative
   ) where
 
