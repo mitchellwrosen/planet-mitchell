@@ -12,6 +12,11 @@ tested-with: GHC == 8.4.3
 -- Flags
 --------------------------------------------------------------------------------
 
+flag all
+  description: Add all dependencies
+  default: False
+  manual: True
+
 ----------------
 -- Flags
 -- default: True
@@ -319,6 +324,11 @@ flag dep-scientific
 
 flag dep-semigroups
   description: semigroups dependency
+  default: False
+  manual: True
+
+flag dep-semilattices
+  description: semilattices dependency
   default: False
   manual: True
 
@@ -873,6 +883,10 @@ library
     build-depends: semigroups ^>= 0.18.4
     cpp-options: -DDEP_SEMIGROUPS
 
+  if flag(dep-semilattices)
+    build-depends: semilattices ^>= 0.0.0
+    cpp-options: -DDEP_SEMILATTICES
+
   if flag(dep-stm)
     build-depends: stm ^>= 2.4.5
     cpp-options: -DDEP_STM
@@ -1292,6 +1306,10 @@ library
   if flag(dep-scientific)
     exposed-modules:
       Numeric.Scientific
+
+  if flag(dep-semilattices)
+    exposed-modules:
+      Semilattice
 
   if flag(dep-stm)
     exposed-modules:

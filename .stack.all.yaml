@@ -10,6 +10,7 @@ extra-deps:
   - network-2.7.0.0
   - nf-1.0.1.0
   - reactive-banana-1.2.0.0
+  - semilattices-0.0.0.0
   - unagi-chan-0.4.1.0
 
 flags:
@@ -74,6 +75,7 @@ flags:
     dep-safe-exceptions: true
     dep-scientific: true
     dep-semigroups: true
+    dep-semilattices: true
     dep-stm: true
     dep-stm-chans: true
     dep-stm-containers: true
