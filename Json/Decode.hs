@@ -1,6 +1,7 @@
 module Json.Decode
   (
     -- * Decoding
+    Value(..),
     FromJSON(..),
     FromJSONKey(..),
     FromJSONKeyFunction(..),

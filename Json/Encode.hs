@@ -1,7 +1,7 @@
 module Json.Encode
   (
     -- * Encoding
-    Value,
+    Value(..),
     Array,
     emptyArray,
     Object,
