@@ -1,3 +1,5 @@
+{-# language CPP #-}
+
 module Json.Encode
   (
     -- * Encoding
@@ -7,6 +9,9 @@ module Json.Encode
     Object,
     emptyObject,
     ToJSON(..),
+#ifdef DEP_GENERIC_AESON
+    gtoJson,
+#endif
     ToJSONKey(..),
     ToJSONKeyFunction(..),
     encode,
@@ -74,3 +79,6 @@ import Data.Aeson
 import Data.Aeson.Encoding
 import Data.Aeson.Text
 import Data.Aeson.Types
+#ifdef DEP_GENERIC_AESON
+import Generics.Generic.Aeson (gtoJson)
+#endif

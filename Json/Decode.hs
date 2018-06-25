@@ -1,8 +1,13 @@
+{-# language CPP #-}
+
 module Json.Decode
   (
     -- * Decoding
     Value(..),
     FromJSON(..),
+#ifdef DEP_GENERIC_AESON
+    gparseJson,
+#endif
     FromJSONKey(..),
     FromJSONKeyFunction(..),
     fromJSON,
@@ -52,3 +57,6 @@ import Data.Aeson
 import Data.Aeson.Internal
 import Data.Aeson.Parser
 import Data.Aeson.Types
+#ifdef DEP_GENERIC_AESON
+import Generics.Generic.Aeson (gparseJson)
+#endif
