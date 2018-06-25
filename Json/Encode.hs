@@ -70,6 +70,10 @@ module Json.Encode
     timeOfDay,
     zonedTime,
     value,
+#ifdef DEP_AESON_QQ
+    -- ** Quasi-quotation
+    aesonQQ,
+#endif
     -- * Newtypes
     DotNetTime(..),
     -- * Re-exports
@@ -80,6 +84,9 @@ import Json
 
 import Data.Aeson
 import Data.Aeson.Encoding
+#ifdef DEP_AESON_QQ
+import Data.Aeson.QQ (aesonQQ)
+#endif
 import Data.Aeson.Text
 import Data.Aeson.Types
 #ifdef DEP_GENERIC_AESON
