@@ -212,6 +212,11 @@ flag dep-lens
   default: False
   manual: True
 
+flag dep-lens-aeson
+  description: lens-aeson dependency
+  default: False
+  manual: True
+
 flag dep-list-transformer
   description: list-transformer dependency
   default: False
@@ -796,6 +801,10 @@ library
     build-depends: lens ^>= 4.16.1
     cpp-options: -DDEP_LENS
 
+  if flag(dep-lens-aeson) || flag(all)
+    build-depends: lens-aeson ^>= 1.0.2
+    cpp-options: -DDEP_LENS_AESON
+
   if flag(dep-list-transformer) || flag(all)
     build-depends: list-transformer ^>= 1.0.4
     cpp-options: -DDEP_LIST_TRANSFORMER
@@ -1085,6 +1094,7 @@ library
 
   if flag(dep-aeson) || flag(all)
     exposed-modules:
+      Json
       Json.Decode
       Json.Encode
 

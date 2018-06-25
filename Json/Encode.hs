@@ -3,7 +3,6 @@
 module Json.Encode
   (
     -- * Encoding
-    Value(..),
     Array,
     emptyArray,
     Object,
@@ -73,7 +72,11 @@ module Json.Encode
     value,
     -- * Newtypes
     DotNetTime(..),
+    -- * Re-exports
+    module Json,
   ) where
+
+import Json
 
 import Data.Aeson
 import Data.Aeson.Encoding

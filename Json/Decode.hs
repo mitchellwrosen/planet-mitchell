@@ -3,7 +3,6 @@
 module Json.Decode
   (
     -- * Decoding
-    Value(..),
     FromJSON(..),
 #ifdef DEP_GENERIC_AESON
     gparseJson,
@@ -51,7 +50,11 @@ module Json.Decode
     value',
     jstring,
     scientific,
+    -- * Re-exports
+    module Json,
   ) where
+
+import Json
 
 import Data.Aeson
 import Data.Aeson.Internal
