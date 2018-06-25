@@ -15,6 +15,9 @@ module Json.Encode
     ToJSONKeyFunction(..),
     encode,
     encodeToLazyText,
+#ifdef DEP_AESON_PRETTY
+    encodePretty,
+#endif
     KeyValue,
     (.=),
     object,
@@ -83,6 +86,9 @@ module Json.Encode
 import Json
 
 import Data.Aeson
+#ifdef DEP_AESON_PRETTY
+import Data.Aeson.Encode.Pretty (encodePretty)
+#endif
 import Data.Aeson.Encoding
 #ifdef DEP_AESON_QQ
 import Data.Aeson.QQ (aesonQQ)
