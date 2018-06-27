@@ -1391,6 +1391,7 @@ library
     exposed-modules:
       Text
       Text.Lazy
+      Text.Lazy.Builder
       Text.Partial
 
   if flag(dep-text-short) || flag(all)
