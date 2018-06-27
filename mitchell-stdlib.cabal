@@ -1209,8 +1209,8 @@ library
 
   if flag(dep-dlist) || flag(all)
     exposed-modules:
-      DList
-      DList.Partial
+      List.Builder
+      List.Builder.Partial
 
   if flag(dep-earley) || flag(all)
     exposed-modules:

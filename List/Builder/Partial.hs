@@ -1,4 +1,4 @@
-module DList.Partial
+module List.Builder.Partial
   ( head
   , tail
   ) where

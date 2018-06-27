@@ -1,5 +1,5 @@
-module DList
-  ( -- * DList
+module List.Builder
+  ( -- * List builder
     DList(Nil, Cons)
   , fromList
   , toList
