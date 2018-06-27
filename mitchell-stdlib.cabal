@@ -152,6 +152,11 @@ flag dep-dlist
   default: False
   manual: True
 
+flag dep-double-conversion
+  description: double-conversion dependency
+  default: False
+  manual: True
+
 flag dep-earley
   description: Earley dependency
   default: False
@@ -762,6 +767,10 @@ library
   if flag(dep-dlist) || flag(all)
     build-depends: dlist ^>= 0.8.0
     cpp-options: -DDEP_DLIST
+
+  if flag(dep-double-conversion) || flag(all)
+    build-depends: double-conversion ^>= 2.0.2.0
+    cpp-options: -DDEP_DOUBLE_CONVERSION
 
   if flag(dep-earley) || flag(all)
     build-depends: Earley ^>= 0.12.0
