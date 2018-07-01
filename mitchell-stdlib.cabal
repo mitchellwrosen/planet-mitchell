@@ -427,6 +427,11 @@ flag dep-unordered-containers
   default: False
   manual: True
 
+flag dep-utf8-string
+  description: utf8-string dependency
+  default: False
+  manual: True
+
 flag dep-vector
   description: vector dependency
   default: False
@@ -997,6 +1002,10 @@ library
     build-depends: unordered-containers ^>= 0.2.9
     cpp-options: -DDEP_UNORDERED_CONTAINERS
 
+  if flag(dep-utf8-string) || flag(all)
+    build-depends: utf8-string ^>= 1.0.1.1
+    cpp-options: -DDEP_UTF8_STRING
+
   if flag(dep-vector) || flag(all)
     build-depends: vector ^>= 0.12.0
     cpp-options: -DDEP_VECTOR
@@ -1434,6 +1443,11 @@ library
     exposed-modules:
       Map.Hash
       Set.Hash
+
+  if flag(dep-utf8-string) || flag(all)
+    exposed-modules:
+      ByteString.Utf8
+      ByteString.Lazy.Utf8
 
   if flag(dep-vector) || flag(all)
     exposed-modules:
