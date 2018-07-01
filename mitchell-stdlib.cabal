@@ -132,6 +132,11 @@ flag dep-contravariant-extras
   default: False
   manual: True
 
+flag dep-cryptohash-sha1
+  description: cryptohash-sha1 dependency
+  default: False
+  manual: True
+
 flag dep-deepseq
   description: deepseq dependency
   default: False
@@ -751,6 +756,10 @@ library
   if flag(dep-contravariant-extras) || flag(all)
     build-depends: contravariant-extras ^>= 0.3.4
     cpp-options: -DDEP_CONTRAVARIANT_EXTRAS
+
+  if flag(dep-cryptohash-sha1) || flag(all)
+    build-depends: cryptohash-sha1 ^>= 0.11.100.1
+    cpp-options: -DDEP_CRYPTOHASH_SHA1
 
   if flag(dep-deepseq) || flag(all)
     build-depends: deepseq ^>= 1.4.3

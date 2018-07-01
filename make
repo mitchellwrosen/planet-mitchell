@@ -3,20 +3,20 @@ set -e
 
 case "$1" in
   "build")
-    cabal new-build -O0 "${@:2}"
+    cabal new-build -O0 -w ghc-8.4.3 "${@:2}"
     ;;
   "docs")
-    cabal new-haddock -O0
+    cabal new-haddock -O0 -w ghc-8.4.3
     ;;
   "freeze")
     rm -f cabal.project.freeze
-    cabal new-freeze
+    cabal new-freeze -w ghc-8.4.3
     ;;
   "ghcid")
-    ghcid -c 'cabal new-repl -O0' --restart mitchell-stdlib.cabal
+    ghcid -c 'cabal new-repl -O0 -w ghc-8.4.3' --restart mitchell-stdlib.cabal
     ;;
   "repl")
-    cabal new-repl -O0 "${@:2}"
+    cabal new-repl -O0 -w ghc-8.4.3 "${@:2}"
     ;;
   *)
     echo "make {build, docs, freeze, ghcid, repl}" >&2

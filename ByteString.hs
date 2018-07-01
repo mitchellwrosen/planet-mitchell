@@ -29,6 +29,10 @@ module ByteString
     foldr,
     group,
     groupBy,
+#ifdef DEP_CRYPTOHASH_SHA1
+    hash,
+    hmac,
+#endif
     index,
     inits,
     intercalate,
@@ -78,4 +82,7 @@ module ByteString
     zipWith,
   ) where
 
+#ifdef DEP_CRYPTOHASH_SHA1
+import Crypto.Hash.SHA1 (hash, hmac)
+#endif
 import Data.ByteString
