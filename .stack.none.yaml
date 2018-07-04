@@ -11,6 +11,7 @@ extra-deps:
   - nf-1.0.1.0
   - reactive-banana-1.2.0.0
   - semilattices-0.0.0.0
+  - transformers-compat-0.6.2
   - unagi-chan-0.4.1.0
 
 flags:

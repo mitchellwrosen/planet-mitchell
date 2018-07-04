@@ -402,6 +402,11 @@ flag dep-transformers-base
   default: False
   manual: True
 
+flag dep-transformers-compat
+  description: transformers-compat dependency
+  default: False
+  manual: True
+
 flag dep-typed-process
   description: typed-process dependency
   default: False
@@ -981,6 +986,10 @@ library
   if flag(dep-transformers-base) || flag(all)
     build-depends: transformers-base ^>= 0.4.5
     cpp-options: -DDEP_TRANSFORMERS_BASE
+
+  if flag(dep-transformers-compat) || flag(all)
+    build-depends: transformers-compat ^>= 0.6.2
+    cpp-options: -DDEP_TRANSFORMERS_COMPAT
 
   if flag(dep-typed-process) || flag(all)
     build-depends: typed-process ^>= 0.2.2
