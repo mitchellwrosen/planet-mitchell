@@ -1,5 +1,8 @@
 {-# language CPP                #-}
 {-# language ExplicitNamespaces #-}
+#if __GLASGOW_HASKELL__ >= 806
+{-# language NoStarIsType       #-}
+#endif
 
 module Numeric.Nat
   ( -- * Nat
