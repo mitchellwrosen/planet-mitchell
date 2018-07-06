@@ -56,6 +56,8 @@ module Mitchell
     -- * Either
     Either(..),
     either,
+    -- * Enum
+    Enum(..),
     -- * Equality
     Eq(..),
     -- * Error
@@ -286,6 +288,7 @@ import Concurrency (STM, ThreadId, atomically, forkIO, myThreadId, threadDelay)
 import Debug
   (trace, traceId, traceM, traceShow, traceShowId, traceShowM, traceStack)
 import Either (Either(..), either)
+import Enum (Enum(..))
 import Equality (Eq(..))
 import Error
 import Exception (Exception, SomeAsyncException(..), SomeException(..), throwIO)
