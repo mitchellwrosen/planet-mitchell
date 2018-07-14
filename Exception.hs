@@ -13,13 +13,16 @@ module Exception
 #if defined(DEP_UNLIFTIO) || defined(DEP_SAFE_EXCEPTIONS)
     -- * Catching exceptions
     catch,
+    catchAny,
     catches,
     Handler(..),
     catchJust,
     handle,
     handleJust,
     try,
+    tryAny,
     tryJust,
+    tryIO,
     -- * Cleanup
     bracket,
     bracket_,
@@ -62,9 +65,9 @@ import UnliftIO.Exception hiding
   (Exception(..), IOException, SomeAsyncException(..), SomeException(..))
 #elif defined(DEP_SAFE_EXCEPTIONS)
 import Control.Exception.Safe
-  (Handler(..), bracket, bracket_, bracketOnError, catch, catches, catchJust,
-    finally, handle, handleJust, mask, mask_, onException, throwIO, try,
-    tryJust, uninterruptibleMask, uninterruptibleMask_)
+  (Handler(..), bracket, bracket_, bracketOnError, catch, catchAny, catches,
+    catchJust, finally, handle, handleJust, mask, mask_, onException, throwIO,
+    try, tryAny, tryJust, tryIO, uninterruptibleMask, uninterruptibleMask_)
 #else
 import Control.Exception (throwIO)
 #endif

@@ -25,6 +25,7 @@ module Concurrency
 #endif
     forkOn,
     forkOnWithUnmask,
+    forkFinally,
     throwTo,
     killThread,
 #if defined(DEP_ASYNC) || defined(DEP_UNLIFTIO)
@@ -110,6 +111,7 @@ import GHC.Conc
 #ifdef DEP_UNLIFTIO
 import UnliftIO.Concurrent
 #else
+import Control.Concurrent (forkFinally)
 import GHC.Conc
 #endif
 #ifdef DEP_UNLIFTIO

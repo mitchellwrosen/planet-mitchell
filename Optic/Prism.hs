@@ -11,6 +11,7 @@ module Optic.Prism
     _Just,
     _Nothing,
     is,
+    only,
   ) where
 
 import Control.Lens.Extras (is)

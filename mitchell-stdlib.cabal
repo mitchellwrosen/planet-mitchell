@@ -1297,6 +1297,8 @@ library
       Optic.Iso
       Optic.Lens
       Optic.Prism
+      Optic.Review
+      Optic.Setter
       Optic.Traversal
 
   if flag(dep-list-transformer) || flag(all)
