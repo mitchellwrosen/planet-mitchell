@@ -12,6 +12,9 @@ module ByteString
     break,
     breakEnd,
     breakSubstring,
+#ifdef DEP_LENS
+    bytes,
+#endif
     concat,
     concatMap,
     cons,
@@ -52,6 +55,9 @@ module ByteString
     pack,
     packCString,
     packCStringLen,
+#ifdef DEP_LENS
+    packedBytes,
+#endif
     partition,
     replicate,
     reverse,
@@ -77,6 +83,9 @@ module ByteString
     unfoldr,
     unfoldrN,
     unpack,
+#ifdef DEP_LENS
+    unpackedBytes,
+#endif
     unsnoc,
     unzip,
     useAsCString,
@@ -89,6 +98,9 @@ module ByteString
 import Crypto.Hash.SHA1 (hash, hmac)
 #endif
 import Data.ByteString
+#ifdef DEP_LENS
+import Data.ByteString.Lens
+#endif
 #ifdef DEP_BYTESTRING_LEXING
 import Data.ByteString.Lex.Integral (asHexadecimal)
 #endif

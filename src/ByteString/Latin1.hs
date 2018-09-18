@@ -8,6 +8,9 @@ module ByteString.Latin1
     break,
     breakEnd,
     breakSubstring,
+#ifdef DEP_LENS
+    chars,
+#endif
     concat,
     concatMap,
     cons,
@@ -49,6 +52,11 @@ module ByteString.Latin1
     packDecimal,
     packHexadecimal,
     packOctal,
+#endif
+#ifdef DEP_LENS
+    packedChars,
+#endif
+#ifdef DEP_BYTESTRING_LEXING
     readDecimal,
 #endif
     readInt,
@@ -83,6 +91,9 @@ module ByteString.Latin1
     unfoldrN,
     unlines,
     unpack,
+#ifdef DEP_LENS
+    unpackedChars,
+#endif
     unsnoc,
     unwords,
     unzip,
@@ -94,6 +105,9 @@ module ByteString.Latin1
   ) where
 
 import Data.ByteString.Char8
+#ifdef DEP_LENS
+import Data.ByteString.Lens
+#endif
 #ifdef DEP_BYTESTRING_LEXING
 import Data.ByteString.Lex.Integral
 #endif

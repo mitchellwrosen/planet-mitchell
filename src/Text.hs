@@ -1,7 +1,9 @@
+{-# language CPP       #-}
 {-# language MagicHash #-}
 
 module Text
-  ( Text,
+  ( -- * Text
+    Text,
     Reader,
     IReader,
     all,
@@ -97,9 +99,19 @@ module Text
     words,
     zip,
     zipWith,
+#ifdef DEP_LENS
+    -- ** Optics
+    packed,
+    unpacked,
+    text,
+    builder,
+#endif
   ) where
 
 import Data.Text
 import Data.Text.Encoding
 import Data.Text.Internal.Read (IReader)
 import Data.Text.Read
+#ifdef DEP_LENS
+import Data.Text.Strict.Lens (packed, unpacked, text, builder)
+#endif

@@ -6,7 +6,7 @@ module Mitchell
     guard,
     optional,
     -- * Applicative
-    Applicative((<*>), (<*), (*>), liftA2, pure),
+    Applicative(..),
     filterM,
     forever,
     liftA3,
@@ -17,18 +17,18 @@ module Mitchell
     zipWithM,
     zipWithM_,
     -- * Bool
-    Bool(False, True),
+    Bool(..),
     (&&),
     (||),
     not,
     otherwise,
     -- * Bounded
-    Bounded(maxBound, minBound),
+    Bounded(..),
 #ifdef DEP_BYTESTRING
     ByteString,
 #endif
     -- * Category
-    Category((.), id),
+    Category(..),
     (>>>),
     (<<<),
 #ifdef DEP_REFLECTION
@@ -248,10 +248,10 @@ module Mitchell
     lens,
 #endif
     -- * Ord
-    Ord((<), (<=), (>), (>=), compare, max, min),
-    Ordering(EQ, GT, LT),
+    Ord(..),
+    Ordering(..),
     -- * Semigroup
-    Semigroup((<>)),
+    Semigroup(..),
 #ifdef DEP_CONTAINERS
     -- * Sequence
     Seq,
@@ -298,7 +298,9 @@ import Either (Either(Left, Right), either)
 import Enum (Enum(..))
 import Equality (Eq(..))
 import Error
-import Exception (Exception, SomeAsyncException(..), SomeException(..), throwIO)
+import Exception
+  (Exception, SomeAsyncException(SomeAsyncException),
+    SomeException(SomeException), throwIO)
 import File (stderr, stdin, stdout)
 import File.Text (hGetChar, hPrint, print)
 #ifdef DEP_TEXT

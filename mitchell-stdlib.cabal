@@ -312,6 +312,11 @@ flag dep-prettyprinter
   default: False
   manual: True
 
+flag dep-prettyprinter-ansi-terminal
+  description: prettyprinter-ansi-terminal dependency
+  default: False
+  manual: True
+
 flag dep-primitive
   description: primitive dependency
   default: False
@@ -913,6 +918,10 @@ library
   if flag(dep-prettyprinter) || flag(all)
     build-depends: prettyprinter ^>= 1.2.0
     cpp-options: -DDEP_PRETTYPRINTER
+
+  if flag(dep-prettyprinter-ansi-terminal) || flag(all)
+    build-depends: prettyprinter-ansi-terminal ^>= 1.1.1
+    cpp-options: -DDEP_PRETTYPRINTER_ANSI_TERMINAL
 
   if flag(dep-primitive) || flag(all)
     build-depends: primitive ^>= 0.6.4
