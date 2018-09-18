@@ -1,11 +1,6 @@
 packages: .
 jobs: $ncpus
 
-package contravariant
-  flags: -statevar
-
 package mitchell-stdlib
   flags:
-    +dep-bytestring
-    +dep-containers
-    +dep-text
+    +all

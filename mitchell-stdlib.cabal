@@ -97,10 +97,10 @@ flag dep-bytestring-lexing
   default: False
   manual: True
 
-flag dep-bytestring-trie
-  description: bytestring-trie dependency
-  default: False
-  manual: True
+-- flag dep-bytestring-trie
+--   description: bytestring-trie dependency
+--   default: False
+--   manual: True
 
 flag dep-case-insensitive
   description: case-insensitive dependency
@@ -738,9 +738,9 @@ library
     build-depends: bytestring-lexing ^>= 0.5.0
     cpp-options: -DDEP_BYTESTRING_LEXING
 
-  if flag(dep-bytestring-trie) || flag(all)
-    build-depends: bytestring-trie ^>= 0.2.4
-    cpp-options: -DDEP_BYTESTRING_TRIE
+  -- if flag(dep-bytestring-trie) || flag(all)
+  --   build-depends: bytestring-trie ^>= 0.2.4
+  --   cpp-options: -DDEP_BYTESTRING_TRIE
 
   if flag(dep-case-insensitive) || flag(all)
     build-depends: case-insensitive ^>= 1.2.0
@@ -1035,6 +1035,7 @@ library
   ------------------------------------------------------------------------------
 
   exposed-modules:
+    Ala.Compose
     Ala.Const
     Ala.Identity
     Ala.Product
@@ -1054,7 +1055,6 @@ library
     Clock
     Coerce
     Coerce.Unsafe
-    Compose
     Concurrency
     Data
     Debug
@@ -1191,9 +1191,9 @@ library
     exposed-modules:
       File.Binary
 
-  if flag(dep-bytestring-trie) || flag(all)
-    exposed-modules:
-      Trie
+  -- if flag(dep-bytestring-trie) || flag(all)
+  --   exposed-modules:
+  --     Trie
 
   if flag(dep-case-insensitive) || flag(all)
     exposed-modules:

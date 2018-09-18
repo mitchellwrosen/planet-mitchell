@@ -1,4 +1,4 @@
-module Compose
+module Ala.Compose
   ( Compose(..)
   ) where
 

@@ -242,6 +242,12 @@ module Mitchell
     Word32,
     -- * Numeric.Word64
     Word64,
+#ifdef DEP_LENS
+    -- * Optic.Lens
+    Lens,
+    Lens',
+    lens,
+#endif
     -- * Ord
     Ord(..),
     Ordering(..),
@@ -346,6 +352,9 @@ import Numeric.Word8 (Word8)
 import Numeric.Word16 (Word16)
 import Numeric.Word32 (Word32)
 import Numeric.Word64 (Word64)
+#ifdef DEP_LENS
+import Optic.Lens (Lens, Lens', lens)
+#endif
 import Ord (Ord(..), Ordering(..))
 import Semigroup
 #ifdef DEP_CONTAINERS
