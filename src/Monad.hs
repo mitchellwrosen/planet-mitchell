@@ -6,17 +6,20 @@ module Monad
     (=<<),
     (>=>),
     (<=<),
-    join,
     (<$!>),
 #ifdef DEP_EXTRA
-    maybeM,
     eitherM,
-    whileM,
-    whenM,
-    whenJustM,
-    unlessM,
     ifM,
+#endif
+#ifdef DEP_EXTRA
+    join,
+    loopM,
+    maybeM,
     notM,
+    unlessM,
+    whenJustM,
+    whenM,
+    whileM,
 #endif
     Kleisli(..),
   ) where

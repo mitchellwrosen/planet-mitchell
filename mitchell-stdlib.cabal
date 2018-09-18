@@ -812,7 +812,7 @@ library
     cpp-options: -DDEP_ERF
 
   if flag(dep-extra) || flag(all)
-    build-depends: extra ^>= 1.6.8
+    build-depends: extra ^>= 1.6.9 || ^>= 1.6.10 || ^>= 1.6.11
     cpp-options: -DDEP_EXTRA
 
   if flag(dep-fgl) || flag(all)

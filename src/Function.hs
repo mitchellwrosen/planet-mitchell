@@ -2,25 +2,30 @@
 
 module Function
   (
-    const,
-    flip,
     ($),
     ($!),
     (&),
-    until,
     asTypeOf,
+    const,
     fix,
+    flip,
+#ifdef DEP_EXTRA
+    loop,
+#endif
     on,
+    until,
     Endo(..),
-    diff,
 #ifdef DEP_CONTRAVARIANT
     Op(..),
 #endif
   ) where
 
+#ifdef DEP_EXTRA
+import Control.Monad.Extra (loop)
+#endif
 import Data.Function
 #ifdef DEP_CONTRAVARIANT
 import Data.Functor.Contravariant
 #endif
-import Data.Semigroup
+import Data.Semigroup (Endo(Endo, appEndo))
 import GHC.Base

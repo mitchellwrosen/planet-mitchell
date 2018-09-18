@@ -10,6 +10,7 @@ module Semigroup
     First(..),
     Last(..),
     Dual(..),
+    diff,
     cycle1,
   ) where
 
