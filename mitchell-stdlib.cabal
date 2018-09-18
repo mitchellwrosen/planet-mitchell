@@ -1300,6 +1300,7 @@ library
       Optic.Review
       Optic.Setter
       Optic.Traversal
+      Plated
 
   if flag(dep-list-transformer) || flag(all)
     exposed-modules:
