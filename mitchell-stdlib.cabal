@@ -457,8 +457,8 @@ flag dep-writer-cps-mtl
 --------------------------------------------------------------------------------
 
 library
-  hs-source-dirs: .
-  ghc-options: -Wall
+  hs-source-dirs: src
+  ghc-options: -Weverything -fno-warn-safe -fno-warn-unsafe
   default-extensions: NoImplicitPrelude
   default-language: Haskell2010
 
