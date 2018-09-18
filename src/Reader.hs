@@ -21,8 +21,16 @@ module Reader
     local,
     reader,
 #endif
+#ifdef DEP_LENS
+    -- * Magnify
+    Magnify,
+    magnify,
+#endif
   ) where
 
+#ifdef DEP_LENS
+import Control.Lens.Zoom (Magnify(magnify))
+#endif
 #ifdef DEP_MTL
 import Control.Monad.Reader.Class
 #endif

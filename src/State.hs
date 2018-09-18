@@ -31,8 +31,17 @@ module State
     modify,
     modify',
 #endif
+#ifdef DEP_LENS
+    -- * Zoom
+    Zoom,
+    zoom,
+    Zoomed,
+#endif
   ) where
 
+#ifdef DEP_LENS
+import Control.Lens.Zoom (Zoom(zoom), Zoomed)
+#endif
 #ifdef DEP_MTL
 import Control.Monad.State.Class (MonadState(..), modify, modify', gets)
 #elif defined(DEP_TRANSFORMERS)
