@@ -16,18 +16,6 @@ module Concurrency
     replicateConcurrently_,
     Concurrently(..),
 #endif
-    -- ** Low-level concurrency using @forkIO@
-    forkIO,
-#if DEP_UNLIFTIO
-    forkWithUnmask,
-#else
-    forkIOWithUnmask,
-#endif
-    forkOn,
-    forkOnWithUnmask,
-    forkFinally,
-    throwTo,
-    killThread,
 #if defined(DEP_ASYNC) || defined(DEP_UNLIFTIO)
     -- ** Low-level concurrency using @async@
     Async,
@@ -75,6 +63,18 @@ module Concurrency
     AsyncCancelled(..),
 #endif
 #endif
+    -- ** Low-level concurrency using @forkIO@
+    forkIO,
+#if DEP_UNLIFTIO
+    forkWithUnmask,
+#else
+    forkIOWithUnmask,
+#endif
+    forkOn,
+    forkOnWithUnmask,
+    forkFinally,
+    throwTo,
+    killThread,
     -- * STM
     STM,
     atomically,

@@ -8,7 +8,7 @@ module Bool
   , not
   , otherwise
   , bool
-    -- * Boolean newtypes
+    -- ** Newtypes
   , All(..)
   , Any(..)
     -- * Boolean type functions

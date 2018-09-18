@@ -1186,6 +1186,7 @@ library
       ByteString.Lazy
       ByteString.Lazy.Latin1
       ByteString.Latin1
+      ByteString.Latin1.Partial
 
   if flag(dep-bytestring) || flag(dep-unliftio) || flag(all)
     exposed-modules:

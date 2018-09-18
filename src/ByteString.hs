@@ -5,6 +5,9 @@ module ByteString
     ByteString,
     all,
     any,
+#ifdef DEP_BYTESTRING_LEXING
+    asHexadecimal,
+#endif
     append,
     break,
     breakEnd,
@@ -86,3 +89,6 @@ module ByteString
 import Crypto.Hash.SHA1 (hash, hmac)
 #endif
 import Data.ByteString
+#ifdef DEP_BYTESTRING_LEXING
+import Data.ByteString.Lex.Integral (asHexadecimal)
+#endif

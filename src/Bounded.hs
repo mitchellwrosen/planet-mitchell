@@ -1,10 +1,12 @@
 {-# language CPP #-}
 
 module Bounded
-  ( Bounded(..),
+  ( -- * Bounded
+    Bounded(..),
 #ifdef DEP_SEMILATTICES
     Lower(..),
     Upper(..),
+    -- ** Newtypes
     Bound(..),
 #endif
   ) where

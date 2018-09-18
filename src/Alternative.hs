@@ -1,9 +1,10 @@
 module Alternative
   ( -- * Alternative
-    Alternative(..)
+    Alternative((<|>), empty, many)
   , some1
   , optional
   , guard
+    -- ** Newtypes
   , Alt(..)
   ) where
 
