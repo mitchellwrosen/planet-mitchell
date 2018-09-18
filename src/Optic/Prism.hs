@@ -6,10 +6,6 @@ module Optic.Prism
     APrism',
     prism,
     prism',
-    _Left,
-    _Right,
-    _Just,
-    _Nothing,
     is,
     only,
   ) where
