@@ -2,11 +2,11 @@
 
 module Mitchell
   ( -- * Alternative
-    Alternative(..),
+    Alternative((<|>), empty),
     guard,
     optional,
     -- * Applicative
-    Applicative(..),
+    Applicative((<*>), (<*), (*>), liftA2, pure),
     filterM,
     forever,
     liftA3,
@@ -14,24 +14,23 @@ module Mitchell
     replicateM_,
     unless,
     when,
-#ifdef DEP_EXTRA
-    whenJust,
-#endif
     zipWithM,
     zipWithM_,
     -- * Bool
-    Bool(..),
+    Bool(False, True),
     (&&),
     (||),
     not,
     otherwise,
     -- * Bounded
-    Bounded(..),
+    Bounded(maxBound, minBound),
 #ifdef DEP_BYTESTRING
     ByteString,
 #endif
     -- * Category
-    module Category,
+    Category((.), id),
+    (>>>),
+    (<<<),
 #ifdef DEP_REFLECTION
     foldMapBy,
     foldBy,
@@ -54,7 +53,7 @@ module Mitchell
     traceM,
     traceShowM,
     -- * Either
-    Either(..),
+    Either(Left, Right),
     either,
     -- * Enum
     Enum(..),
@@ -249,10 +248,10 @@ module Mitchell
     lens,
 #endif
     -- * Ord
-    Ord(..),
-    Ordering(..),
+    Ord((<), (<=), (>), (>=), compare, max, min),
+    Ordering(EQ, GT, LT),
     -- * Semigroup
-    Semigroup(..),
+    Semigroup((<>)),
 #ifdef DEP_CONTAINERS
     -- * Sequence
     Seq,
@@ -266,7 +265,7 @@ module Mitchell
     HashSet,
 #endif
     -- * Show
-    Show(..),
+    Show(show),
 #ifdef DEP_TEXT
     -- * Text
     Text,
@@ -281,19 +280,21 @@ module Mitchell
     snd,
   ) where
 
-import Alternative (Alternative(..), guard, optional)
+import Alternative (Alternative((<|>), empty), guard, optional)
 import Applicative
-import Bool (Bool(..), (&&), (||), otherwise, not)
-import Bounded (Bounded(..))
+  (Applicative, (<*>), (<*), (*>), filterM, forever, liftA2, liftA3, pure,
+    replicateM, replicateM_, unless, when, zipWithM, zipWithM_)
+import Bool (Bool(False, True), (&&), (||), otherwise, not)
+import Bounded (Bounded(maxBound, minBound))
 #ifdef DEP_BYTESTRING
 import ByteString (ByteString)
 #endif
-import Category (Category(..), (<<<), (>>>))
+import Category (Category((.), id), (<<<), (>>>))
 import Char (Char)
 import Concurrency (STM, ThreadId, atomically, forkIO, myThreadId, threadDelay)
 import Debug
   (trace, traceId, traceM, traceShow, traceShowId, traceShowM, traceStack)
-import Either (Either(..), either)
+import Either (Either(Left, Right), either)
 import Enum (Enum(..))
 import Equality (Eq(..))
 import Error
@@ -355,8 +356,8 @@ import Numeric.Word64 (Word64)
 #ifdef DEP_LENS
 import Optic.Lens (Lens, Lens', lens)
 #endif
-import Ord (Ord(..), Ordering(..))
-import Semigroup
+import Ord (Ord((<), (<=), (>), (>=), compare, max, min), Ordering(EQ, GT, LT))
+import Semigroup (Semigroup((<>)))
 #ifdef DEP_CONTAINERS
 import Sequence (Seq)
 import Set (Set)
@@ -365,9 +366,9 @@ import Set.Int (IntSet)
 #ifdef DEP_UNORDERED_CONTAINERS
 import Set.Hash (HashSet)
 #endif
-import Show
+import Show (Show, show)
 #ifdef DEP_TEXT
 import Text (Text)
 #endif
 import Traversable (Traversable, for, sequenceA, traverse)
-import Tuple
+import Tuple (fst, snd)

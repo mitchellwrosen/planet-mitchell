@@ -19,5 +19,5 @@ module Either
 
 #ifdef DEP_LENS
 import Control.Lens.Prism
-#endif DEP_LENS
+#endif
 import Data.Either
