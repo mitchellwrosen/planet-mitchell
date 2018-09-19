@@ -1,5 +1,3 @@
-# WIP
-
 ### Summary
 
 A modern Haskell standard library.

@@ -65,7 +65,7 @@ module Concurrency
 #endif
     -- ** Lower-level concurrency using @forkIO@
     forkIO,
-#if DEP_UNLIFTIO
+#ifdef DEP_UNLIFTIO
     forkWithUnmask,
 #else
     forkIOWithUnmask,
@@ -105,9 +105,10 @@ module Concurrency
   ) where
 
 import GHC.Conc
-  (BlockReason(..), ThreadStatus(..), catchSTM, closeFdWith, labelThread, retry,
-    threadStatus, threadWaitReadSTM, threadWaitWriteSTM, throwSTM,
-    unsafeIOToSTM)
+  (BlockReason(BlockedOnBlackHole, BlockedOnException, BlockedOnForeignCall,
+    BlockedOnMVar, BlockedOnOther, BlockedOnSTM), ThreadStatus(..), catchSTM,
+    closeFdWith, labelThread, retry, threadStatus, threadWaitReadSTM,
+    threadWaitWriteSTM, throwSTM, unsafeIOToSTM)
 #ifdef DEP_UNLIFTIO
 import UnliftIO.Concurrent
 #else
