@@ -63,7 +63,7 @@ module Concurrency
     AsyncCancelled(..),
 #endif
 #endif
-    -- ** Low-level concurrency using @forkIO@
+    -- ** Lower-level concurrency using @forkIO@
     forkIO,
 #if DEP_UNLIFTIO
     forkWithUnmask,

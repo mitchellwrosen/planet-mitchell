@@ -1,7 +1,7 @@
 {-# language CPP #-}
 
 module ByteString
-  (
+  ( -- * ByteString
     ByteString,
     all,
     any,
@@ -12,9 +12,6 @@ module ByteString
     break,
     breakEnd,
     breakSubstring,
-#ifdef DEP_LENS
-    bytes,
-#endif
     concat,
     concatMap,
     cons,
@@ -55,9 +52,6 @@ module ByteString
     pack,
     packCString,
     packCStringLen,
-#ifdef DEP_LENS
-    packedBytes,
-#endif
     partition,
     replicate,
     reverse,
@@ -83,15 +77,18 @@ module ByteString
     unfoldr,
     unfoldrN,
     unpack,
-#ifdef DEP_LENS
-    unpackedBytes,
-#endif
     unsnoc,
     unzip,
     useAsCString,
     useAsCStringLen,
     zip,
     zipWith,
+#ifdef DEP_LENS
+    -- ** Optics
+    bytes,
+    packedBytes,
+    unpackedBytes,
+#endif
   ) where
 
 #ifdef DEP_CRYPTOHASH_SHA1

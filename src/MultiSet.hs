@@ -1,5 +1,7 @@
 module MultiSet
-  ( MultiSet
+  ( -- * MultiSet
+    MultiSet
+  , Occur
   , null
   , size
   , distinctSize

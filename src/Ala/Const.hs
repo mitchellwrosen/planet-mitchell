@@ -2,4 +2,4 @@ module Ala.Const
   ( Const(..)
   ) where
 
-import Data.Functor.Const
+import Data.Functor.Const (Const(Const, getConst))

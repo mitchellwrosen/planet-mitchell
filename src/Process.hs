@@ -2,7 +2,19 @@
 
 module Process
   (
+    -- * Spawning processes
+#ifdef DEP_TYPED_PROCESS
+    -- ** High-level Haskell API
+    module System.Process.Typed,
+#endif
 #ifdef DEP_UNIX
+    -- ** Low-level POSIX API
+    forkProcess,
+    forkProcessWithUnmask,
+    -- ** Waiting
+    getProcessStatus,
+    getAnyProcessStatus,
+    getGroupProcessStatus,
     -- * Exiting the current process
     exitImmediately,
     -- * Replacing the current process
@@ -17,18 +29,6 @@ module Process
     joinProcessGroup,
     setProcessGroupIDOf,
     createSession,
-#endif
-    -- * Spawning processes
-#ifdef DEP_TYPED_PROCESS
-    module System.Process.Typed,
-#endif
-#ifdef DEP_UNIX
-    forkProcess,
-    forkProcessWithUnmask,
-    -- ** Waiting
-    getProcessStatus,
-    getAnyProcessStatus,
-    getGroupProcessStatus,
 #endif
   ) where
 

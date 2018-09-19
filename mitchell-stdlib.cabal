@@ -693,7 +693,7 @@ library
   -- Dependencies
   ------------------------------------------------------------------------------
 
-  build-depends: base ^>= 4.10 || ^>= 4.11 || ^>= 4.12
+  build-depends: base ^>= 4.10 || ^>= 4.11
 
   if flag(dep-aeson) || flag(all)
     build-depends: aeson ^>= 1.3.1 || ^>= 1.4.0
@@ -1065,6 +1065,9 @@ library
     Coerce
     Coerce.Unsafe
     Concurrency
+    Concurrency.IORef
+    Concurrency.MVar
+    Concurrency.QSem
     Data
     Debug
     Dynamic
@@ -1085,17 +1088,15 @@ library
     Generic
     IO
     IO.Unsafe
-    IORef
     Ix
     Label
     List
     List.Partial
     List1
     List1.Partial
-    MVar
     Maybe
     Maybe.Partial
-    Mitchell
+    Mitchell.Prelude
     Monad
     Monad.Fail
     Monad.Fix
@@ -1139,8 +1140,7 @@ library
     Ptr.Stable
     Ptr.Static
     Ptr.Weak
-    QSem
-    RTS
+    RuntimeSystem
     Read
     Read.Partial
     ST
@@ -1155,7 +1155,6 @@ library
     Type
     Typeable
     Unique
-    Version
     Void
 
   if flag(dep-aeson) || flag(all)
@@ -1180,7 +1179,7 @@ library
 
   if flag(dep-atomic-primops) || flag(all)
     exposed-modules:
-      Counter
+      Concurrency.Counter
 
   if flag(dep-base16-bytestring) || flag(all)
     exposed-modules:
@@ -1192,6 +1191,7 @@ library
       ByteString
       ByteString.Partial
       ByteString.Short
+      ByteString.Short.Partial
       ByteString.Lazy
       ByteString.Lazy.Latin1
       ByteString.Latin1
@@ -1215,7 +1215,7 @@ library
 
   if flag(dep-compact) || flag(all)
     exposed-modules:
-      Compact
+      CompactRegion
 
   if flag(dep-constraints) || flag(all)
     exposed-modules:
@@ -1297,20 +1297,24 @@ library
 
   if flag(dep-lens) || flag(all)
     exposed-modules:
-      At
-      Cons
-      Each
-      Empty
       Optic.Fold
       Optic.Getter
       Optic.Getting
       Optic.Iso
+      Optic.Iso.Reversing
+      Optic.Iso.Strict
       Optic.Lens
+      Optic.Lens.At
+      Optic.Lens.Contains
       Optic.Prism
+      Optic.Prism.Cons
+      Optic.Prism.Empty
+      Optic.Prism.Snoc
       Optic.Review
       Optic.Setter
       Optic.Traversal
-      Plated
+      Optic.Traversal.Each
+      Optic.Traversal.Ixed
 
   if flag(dep-list-transformer) || flag(all)
     exposed-modules:
@@ -1334,9 +1338,9 @@ library
 
   if flag(dep-psqueues) || flag(all)
     exposed-modules:
-      PSQ.Hash
-      PSQ.Int
-      PSQ.Ord
+      Queue.Prio.Hash
+      Queue.Prio.Int
+      Queue.Prio.Ord
 
   if flag(dep-managed) || flag(all)
     exposed-modules:
@@ -1346,11 +1350,6 @@ library
     exposed-modules:
       Parser.Text
       Parser.Binary
-
-  if flag(dep-mmorph) || flag(all)
-    exposed-modules:
-      MFunctor
-      MMonad
 
   if flag(dep-mtl) || flag(dep-transformers) || flag(all)
     exposed-modules:
@@ -1402,29 +1401,29 @@ library
 
   if flag(dep-stm) || flag(all)
     exposed-modules:
-      STM.TSem
+      Concurrency.TSem
 
   if flag(dep-stm) || flag(dep-unliftio) || flag(all)
     exposed-modules:
-      STM.TBQueue
-      STM.TChan
-      STM.TMVar
-      STM.TVar
+      Concurrency.TBQueue
+      Concurrency.TChan
+      Concurrency.TMVar
+      Concurrency.TVar
 
   if flag(dep-stm-chans) || flag(all)
     exposed-modules:
-      STM.TBChan
-      STM.TBMChan
-      STM.TBMQueue
-      STM.TMChan
-      STM.TMQueue
+      Concurrency.TBChan
+      Concurrency.TBMChan
+      Concurrency.TBMQueue
+      Concurrency.TMChan
+      Concurrency.TMQueue
 
   if flag(dep-stm-containers) || flag(all)
     exposed-modules:
-      STM.TBimap
-      STM.TMap
-      STM.TMultimap
-      STM.TSet
+      Concurrency.TBimap
+      Concurrency.TMap
+      Concurrency.TMultimap
+      Concurrency.TSet
 
   if flag(dep-tagged) || flag(all)
     exposed-modules:
@@ -1462,7 +1461,7 @@ library
 
   if flag(dep-unagi-chan) || flag(all)
     exposed-modules:
-      Chan
+      Concurrency.Chan
 
   if flag(dep-unordered-containers) || flag(all)
     exposed-modules:

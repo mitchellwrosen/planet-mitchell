@@ -11,7 +11,6 @@ module Optic.Iso
     curried,
     uncurried,
     flipped,
-    Swapped(..),
     Strict(..),
     lazy,
   ) where

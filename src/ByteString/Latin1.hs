@@ -1,16 +1,13 @@
 {-# language CPP #-}
 
 module ByteString.Latin1
-  (
+  ( -- * Latin-1 ByteString
     all,
     any,
     append,
     break,
     breakEnd,
     breakSubstring,
-#ifdef DEP_LENS
-    chars,
-#endif
     concat,
     concatMap,
     cons,
@@ -52,11 +49,6 @@ module ByteString.Latin1
     packDecimal,
     packHexadecimal,
     packOctal,
-#endif
-#ifdef DEP_LENS
-    packedChars,
-#endif
-#ifdef DEP_BYTESTRING_LEXING
     readDecimal,
 #endif
     readInt,
@@ -91,9 +83,6 @@ module ByteString.Latin1
     unfoldrN,
     unlines,
     unpack,
-#ifdef DEP_LENS
-    unpackedChars,
-#endif
     unsnoc,
     unwords,
     unzip,
@@ -102,11 +91,17 @@ module ByteString.Latin1
     words,
     zip,
     zipWith,
+#ifdef DEP_LENS
+    -- ** Optics
+    chars,
+    packedChars,
+    unpackedChars,
+#endif
   ) where
 
 import Data.ByteString.Char8
 #ifdef DEP_LENS
-import Data.ByteString.Lens
+import Data.ByteString.Lens (chars, packedChars, unpackedChars)
 #endif
 #ifdef DEP_BYTESTRING_LEXING
 import Data.ByteString.Lex.Integral
