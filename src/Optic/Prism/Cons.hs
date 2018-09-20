@@ -1,4 +1,4 @@
-{-# language PatternSynonyms #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 module Optic.Prism.Cons
   ( -- * Cons
@@ -11,5 +11,5 @@ module Optic.Prism.Cons
   , pattern (:<)
   ) where
 
-import Control.Lens.Cons
-  (Cons(_Cons), (<|), cons, uncons, _head, _tail, pattern (:<))
+import Control.Lens.Cons (pattern (:<), Cons(_Cons), cons, uncons, (<|), _head,
+                          _tail)

@@ -9,5 +9,5 @@ module Contravariant
   , contramapped
   ) where
 
-import Control.Lens.Setter (contramapped)
+import Control.Lens.Setter        (contramapped)
 import Data.Functor.Contravariant

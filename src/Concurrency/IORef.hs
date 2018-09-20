@@ -22,6 +22,6 @@ module Concurrency.IORef
   , atomicModifyIORefCAS_
   ) where
 
-import Data.IORef.Extra (atomicWriteIORef', writeIORef')
 import Data.Atomics
+import Data.IORef.Extra (atomicWriteIORef', writeIORef')
 import UnliftIO.IORef

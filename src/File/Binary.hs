@@ -22,4 +22,4 @@ module File.Binary
   ) where
 
 import Data.ByteString
-import UnliftIO.IO (withBinaryFile)
+import UnliftIO.IO     (withBinaryFile)

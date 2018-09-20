@@ -15,7 +15,8 @@ module Concurrency.TBQueue
   ) where
 
 import Control.Concurrent.STM.TBQueue (flushTBQueue)
-import UnliftIO.STM
-  (TBQueue, isEmptyTBQueue, isFullTBQueue, newTBQueue, newTBQueueIO,
-    peekTBQueue, readTBQueue, tryPeekTBQueue, tryReadTBQueue, unGetTBQueue,
-    writeTBQueue)
+import UnliftIO.STM                   (TBQueue, isEmptyTBQueue, isFullTBQueue,
+                                       newTBQueue, newTBQueueIO, peekTBQueue,
+                                       readTBQueue, tryPeekTBQueue,
+                                       tryReadTBQueue, unGetTBQueue,
+                                       writeTBQueue)

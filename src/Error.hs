@@ -7,5 +7,5 @@ module Error
   , assert
   ) where
 
-import GHC.Err
 import Control.Exception
+import GHC.Err

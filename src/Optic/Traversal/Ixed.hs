@@ -5,4 +5,4 @@ module Optic.Traversal.Ixed
   , IxValue
   ) where
 
-import Control.Lens.At (Index, Ixed(ix), IxValue)
+import Control.Lens.At (Index, IxValue, Ixed(ix))

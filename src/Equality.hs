@@ -1,4 +1,4 @@
-{-# language ExplicitNamespaces #-}
+{-# LANGUAGE ExplicitNamespaces #-}
 
 module Equality
   (

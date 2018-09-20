@@ -6,4 +6,4 @@ module Numeric.RealFrac
   ) where
 
 import GHC.Real (RealFrac(..))
-import Numeric (readFloat)
+import Numeric  (readFloat)

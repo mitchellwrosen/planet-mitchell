@@ -22,7 +22,8 @@ module Monad
   , (|>=)
   ) where
 
-import Control.Arrow (Kleisli(Kleisli, runKleisli))
-import Control.Monad (Monad((>>=), return), (=<<), (>=>), (<=<), (<$!>), join)
+import Control.Arrow       (Kleisli(Kleisli, runKleisli))
+import Control.Monad       (Monad(return, (>>=)), join, (<$!>), (<=<), (=<<),
+                            (>=>))
 import Control.Monad.Extra (loopM, unlessM, whenJustM, whenM, whileM)
-import Control.Monad.Morph (MMonad(embed), squash, (>|>), (<|<), (=<|), (|>=))
+import Control.Monad.Morph (MMonad(embed), squash, (<|<), (=<|), (>|>), (|>=))

@@ -31,5 +31,5 @@ module Json
   , values
   ) where
 
-import Data.Aeson (Value(..))
+import Data.Aeson      (Value(..))
 import Data.Aeson.Lens

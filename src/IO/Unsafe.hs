@@ -5,5 +5,5 @@ module IO.Unsafe
   , unsafeFixIO
   ) where
 
-import System.IO.Unsafe
-  (unsafeFixIO, unsafeInterleaveIO, unsafeDupablePerformIO, unsafePerformIO)
+import System.IO.Unsafe (unsafeDupablePerformIO, unsafeFixIO,
+                         unsafeInterleaveIO, unsafePerformIO)

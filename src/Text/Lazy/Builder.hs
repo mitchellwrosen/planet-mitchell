@@ -16,6 +16,6 @@ module Text.Lazy.Builder
   ) where
 
 import Data.Text.Lazy.Builder
-import Data.Text.Lazy.Builder.Int (decimal, hexadecimal)
-import Data.Text.Lazy.Builder.RealFloat
-  (FPFormat(..), realFloat, formatRealFloat)
+import Data.Text.Lazy.Builder.Int       (decimal, hexadecimal)
+import Data.Text.Lazy.Builder.RealFloat (FPFormat(..), formatRealFloat,
+                                         realFloat)

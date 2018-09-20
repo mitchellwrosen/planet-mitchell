@@ -7,5 +7,5 @@ module Optic.Traversal
   , sequenceAOf
   ) where
 
-import Control.Lens.Traversal
-  (Traversal, Traversal', forOf, sequenceAOf, traverseOf)
+import Control.Lens.Traversal (Traversal, Traversal', forOf, sequenceAOf,
+                               traverseOf)

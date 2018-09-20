@@ -11,4 +11,4 @@ module Text.Lazy
 
 import Data.Text.Lazy
 import Data.Text.Lazy.Encoding
-import Data.Text.Lazy.Lens (packed, unpacked, text, builder)
+import Data.Text.Lazy.Lens     (builder, packed, text, unpacked)

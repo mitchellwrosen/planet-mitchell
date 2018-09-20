@@ -1,6 +1,5 @@
 module Json.Encode
-  (
-    -- * Encoding
+  ( -- * Encoding
     Array
   , emptyArray
   , Object
@@ -80,7 +79,7 @@ import Json
 import Data.Aeson
 import Data.Aeson.Encode.Pretty (encodePretty)
 import Data.Aeson.Encoding
-import Data.Aeson.QQ (aesonQQ)
+import Data.Aeson.QQ            (aesonQQ)
 import Data.Aeson.Text
 import Data.Aeson.Types
-import Generics.Generic.Aeson (gtoJson)
+import Generics.Generic.Aeson   (gtoJson)

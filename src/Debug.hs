@@ -1,4 +1,4 @@
-{-# language PackageImports #-}
+{-# LANGUAGE PackageImports #-}
 
 module Debug
   ( -- * Tracing strings

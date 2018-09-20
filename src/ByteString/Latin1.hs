@@ -92,5 +92,5 @@ module ByteString.Latin1
   ) where
 
 import Data.ByteString.Char8
-import Data.ByteString.Lens (chars, packedChars, unpackedChars)
+import Data.ByteString.Lens         (chars, packedChars, unpackedChars)
 import Data.ByteString.Lex.Integral

@@ -1,4 +1,4 @@
-{-# language CPP #-}
+{-# LANGUAGE CPP #-}
 
 module Functor
   ( -- * Functor
@@ -18,7 +18,7 @@ module Functor
 
 import Control.Lens.Setter (mapped)
 import Control.Monad.Morph (MFunctor, hoist)
-import Data.Functor (Functor(fmap, (<$)), (<$>), ($>), void)
+import Data.Functor        (Functor(fmap, (<$)), void, ($>), (<$>))
 #if MIN_VERSION_base(4,11,0)
 import Data.Functor ((<&>))
 #endif

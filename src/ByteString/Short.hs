@@ -10,5 +10,5 @@ module ByteString.Short
   , length
   ) where
 
-import Data.ByteString.Short
-  (ShortByteString, toShort, fromShort, pack, unpack, empty, null, length)
+import Data.ByteString.Short (ShortByteString, empty, fromShort, length, null,
+                              pack, toShort, unpack)

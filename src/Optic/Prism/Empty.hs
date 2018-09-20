@@ -1,4 +1,4 @@
-{-# language PatternSynonyms #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 module Optic.Prism.Empty
   ( -- * Empty

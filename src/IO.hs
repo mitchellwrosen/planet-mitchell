@@ -11,7 +11,7 @@ module IO
   ) where
 
 import Control.Concurrent.Extra (once, onceFork)
-import Control.Monad.IO.Class (MonadIO(..))
+import Control.Monad.IO.Class   (MonadIO(..))
 import System.IO
 import System.IO.Error
-import UnliftIO.Timeout (timeout)
+import UnliftIO.Timeout         (timeout)

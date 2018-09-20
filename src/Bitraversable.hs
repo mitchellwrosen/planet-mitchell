@@ -11,6 +11,5 @@ module Bitraversable
   , bifoldMapDefault
   ) where
 
-import Data.Bitraversable
-  (Bitraversable(bitraverse), bifor, bimapAccumL, bimapAccumR,
-    bifoldMapDefault, bimapDefault, bisequence)
+import Data.Bitraversable (Bitraversable(bitraverse), bifoldMapDefault, bifor,
+                           bimapAccumL, bimapAccumR, bimapDefault, bisequence)

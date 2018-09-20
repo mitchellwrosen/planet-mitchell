@@ -25,7 +25,12 @@ source-repository head
 
 library
   hs-source-dirs: src
-  ghc-options: -Weverything -fno-warn-safe -fno-warn-unsafe
+  ghc-options:
+    -Weverything
+    -fno-warn-safe
+    -fno-warn-unsafe
+    -- TODO re-enable
+    -fno-warn-missing-import-lists
   default-extensions: NoImplicitPrelude
   default-language: Haskell2010
 

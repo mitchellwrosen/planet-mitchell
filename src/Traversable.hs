@@ -12,7 +12,6 @@ module Traversable
   , foldMapDefault
   ) where
 
-import Data.Reflection (sequenceBy, traverseBy)
-import Data.Traversable
-  (Traversable(traverse, sequenceA), for, mapAccumL, mapAccumR, fmapDefault,
-    foldMapDefault)
+import Data.Reflection  (sequenceBy, traverseBy)
+import Data.Traversable (Traversable(sequenceA, traverse), fmapDefault,
+                         foldMapDefault, for, mapAccumL, mapAccumR)

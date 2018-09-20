@@ -12,5 +12,5 @@ module Numeric.Real
   ) where
 
 import Data.Fixed (div', divMod', mod')
-import GHC.Real (Real(..), realToFrac, showSigned)
-import Numeric (readSigned)
+import GHC.Real   (Real(..), realToFrac, showSigned)
+import Numeric    (readSigned)

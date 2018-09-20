@@ -7,6 +7,6 @@ module Numeric.Double
   , toShortest
   ) where
 
+import Data.Double.Conversion.Text (toExponential, toFixed, toPrecision,
+                                    toShortest)
 import GHC.Float
-import Data.Double.Conversion.Text
-  (toExponential, toFixed, toPrecision, toShortest)

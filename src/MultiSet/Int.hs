@@ -1,5 +1,6 @@
 module MultiSet.Int
-  ( IntMultiSet
+  ( -- * IntMultiSet
+    IntMultiSet
   , Key
   , null
   , size

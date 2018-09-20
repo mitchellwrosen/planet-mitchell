@@ -1,4 +1,4 @@
-{-# language PatternSynonyms #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 module Optic.Prism.Snoc
   ( -- * Snoc
@@ -11,5 +11,5 @@ module Optic.Prism.Snoc
   , pattern (:>)
   ) where
 
-import Control.Lens.Cons
-  (Snoc(_Snoc), (|>), snoc, unsnoc, _init, _last, pattern (:>))
+import Control.Lens.Cons (pattern (:>), Snoc(_Snoc), snoc, unsnoc, _init, _last,
+                          (|>))

@@ -13,8 +13,8 @@ module Function
   , Op(..)
   ) where
 
-import Control.Monad.Extra (loop)
+import Control.Monad.Extra        (loop)
 import Data.Function
 import Data.Functor.Contravariant
-import Data.Semigroup (Endo(Endo, appEndo))
+import Data.Semigroup             (Endo(Endo, appEndo))
 import GHC.Base

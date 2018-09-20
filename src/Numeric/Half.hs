@@ -1,5 +1,4 @@
-{-# language PackageImports  #-}
-{-# language PatternSynonyms #-}
+{-# LANGUAGE PackageImports, PatternSynonyms #-}
 
 module Numeric.Half
   ( Half(..)

@@ -97,18 +97,18 @@ module Concurrency
   , module Concurrency.TMVar
   ) where
 
-import GHC.Conc
-  (BlockReason(BlockedOnBlackHole, BlockedOnException, BlockedOnForeignCall,
-    BlockedOnMVar, BlockedOnOther, BlockedOnSTM), ThreadStatus(..), catchSTM,
-    closeFdWith, labelThread, retry, threadStatus, threadWaitReadSTM,
-    threadWaitWriteSTM, throwSTM, unsafeIOToSTM)
-import UnliftIO.Concurrent
+import Control.Concurrent.Async (AsyncCancelled(..),
+                                 ExceptionInLinkedThread(..), compareAsyncs)
+import GHC.Conc                 (BlockReason(BlockedOnBlackHole, BlockedOnException, BlockedOnForeignCall, BlockedOnMVar, BlockedOnOther, BlockedOnSTM),
+                                 ThreadStatus(..), catchSTM, closeFdWith,
+                                 labelThread, retry, threadStatus,
+                                 threadWaitReadSTM, threadWaitWriteSTM,
+                                 throwSTM, unsafeIOToSTM)
 import UnliftIO.Async
-import Control.Concurrent.Async
-  (AsyncCancelled(..), ExceptionInLinkedThread(..), compareAsyncs)
+import UnliftIO.Concurrent
 import UnliftIO.STM
 
--- For re-export
+-- Re-exports
 import Concurrency.IORef
 import Concurrency.MVar
 import Concurrency.TMVar

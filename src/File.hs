@@ -42,10 +42,9 @@ module File
   , module UnliftIO.Directory
   ) where
 
-import System.FilePath hiding (FilePath)
-import System.IO
-  (FilePath, HandlePosn, SeekMode(..), hGetPosn, hSetBinaryMode, hSetPosn,
-    hShow)
+import System.FilePath    hiding (FilePath)
+import System.IO          (FilePath, HandlePosn, SeekMode(..), hGetPosn,
+                           hSetBinaryMode, hSetPosn, hShow)
 import UnliftIO.Directory
 import UnliftIO.IO
 import UnliftIO.Temporary

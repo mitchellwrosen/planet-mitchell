@@ -11,4 +11,4 @@ module Tree
 
 import Data.Graph.Inductive.Basic (postorder, postorderF, preorder, preorderF)
 import Data.Tree
-import Data.Tree.Lens (branches, root)
+import Data.Tree.Lens             (branches, root)

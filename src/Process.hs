@@ -1,6 +1,5 @@
 module Process
-  (
-    -- * Spawning processes
+  ( -- * Spawning processes
     -- ** High-level Haskell API
     module System.Process.Typed
     -- ** Low-level POSIX API
@@ -26,10 +25,11 @@ module Process
   , createSession
   ) where
 
-import System.Posix.Process
-  (createProcessGroupFor, createSession, executeFile, exitImmediately,
-    forkProcess, forkProcessWithUnmask, getAnyProcessStatus,
-    getGroupProcessStatus, getParentProcessID, getProcessGroupID,
-    getProcessGroupIDOf, getProcessID, getProcessStatus, joinProcessGroup,
-    setProcessGroupIDOf)
+import System.Posix.Process (createProcessGroupFor, createSession, executeFile,
+                             exitImmediately, forkProcess,
+                             forkProcessWithUnmask, getAnyProcessStatus,
+                             getGroupProcessStatus, getParentProcessID,
+                             getProcessGroupID, getProcessGroupIDOf,
+                             getProcessID, getProcessStatus, joinProcessGroup,
+                             setProcessGroupIDOf)
 import System.Process.Typed

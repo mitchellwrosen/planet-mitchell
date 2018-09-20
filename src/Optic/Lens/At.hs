@@ -6,5 +6,5 @@ module Optic.Lens.At
   , module Optic.Traversal.Ixed
   ) where
 
-import Control.Lens.At (At(at), sans)
+import Control.Lens.At      (At(at), sans)
 import Optic.Traversal.Ixed

@@ -20,8 +20,8 @@ module Maybe
   , Last(..)
   ) where
 
-import Control.Lens.Prism (_Just, _Nothing)
+import Control.Lens.Prism  (_Just, _Nothing)
 import Control.Monad.Extra (maybeM)
 import Data.Maybe
 import Data.Monoid
-import Data.Semigroup (Option(..), option)
+import Data.Semigroup      (Option(..), option)

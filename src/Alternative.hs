@@ -8,7 +8,7 @@ module Alternative
   , Alt(..)
   ) where
 
-import Control.Applicative (Alternative((<|>), empty, many), optional)
-import Control.Monad (guard)
-import Data.List.NonEmpty (some1)
-import Data.Monoid (Alt(Alt, getAlt))
+import Control.Applicative (Alternative(empty, many, (<|>)), optional)
+import Control.Monad       (guard)
+import Data.List.NonEmpty  (some1)
+import Data.Monoid         (Alt(Alt, getAlt))

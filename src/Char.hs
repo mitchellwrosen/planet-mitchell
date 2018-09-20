@@ -34,4 +34,4 @@ module Char
   ) where
 
 import Data.Char
-import GHC.Show (showChar)
+import GHC.Show  (showChar)

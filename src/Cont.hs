@@ -1,17 +1,16 @@
 module Cont
-  (
-    -- * Cont
-    Cont,
-    cont,
-    runCont,
-    mapCont,
-    withCont,
+  ( -- * Cont
+    Cont
+  , cont
+  , runCont
+  , mapCont
+  , withCont
     -- * ContT
-    ContT(..),
-    mapContT,
-    withContT,
+  , ContT(..)
+  , mapContT
+  , withContT
     -- * MonadCont
-    MonadCont(..),
+  , MonadCont(..)
   ) where
 
 import Control.Monad.Cont.Class

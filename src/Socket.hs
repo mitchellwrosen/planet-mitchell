@@ -81,5 +81,5 @@ module Socket
   , setNonBlockIfNeeded
   ) where
 
-import Network.Socket hiding (recv, recvFrom, send, sendTo)
+import Network.Socket            hiding (recv, recvFrom, send, sendTo)
 import Network.Socket.ByteString

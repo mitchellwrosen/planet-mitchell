@@ -8,4 +8,4 @@ module Set.Int
   ) where
 
 import Data.IntSet
-import Data.IntSet.Lens (members, setmapped, setOf)
+import Data.IntSet.Lens (members, setOf, setmapped)

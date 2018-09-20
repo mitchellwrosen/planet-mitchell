@@ -17,6 +17,5 @@ module Optic.Setter
   , over
   ) where
 
-import Control.Lens.Setter
-  (Setter, Setter', (.~), (%~), (+~), (-~), (*~), (//~), (^~), (^^~), (**~),
-    (||~), (&&~), over, set)
+import Control.Lens.Setter (Setter, Setter', over, set, (%~), (&&~), (**~),
+                            (*~), (+~), (-~), (.~), (//~), (^^~), (^~), (||~))

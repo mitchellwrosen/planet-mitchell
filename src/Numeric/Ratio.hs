@@ -9,4 +9,4 @@ module Numeric.Ratio
   ) where
 
 import Data.Ratio
-import GHC.Float (fromRat)
+import GHC.Float  (fromRat)

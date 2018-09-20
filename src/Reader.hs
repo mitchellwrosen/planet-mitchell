@@ -15,6 +15,6 @@ module Reader
   , magnify
   ) where
 
-import Control.Lens.Zoom (Magnify(magnify))
+import Control.Lens.Zoom          (Magnify(magnify))
 import Control.Monad.Reader.Class
 import Control.Monad.Trans.Reader

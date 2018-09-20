@@ -1,4 +1,4 @@
-{-# language MagicHash #-}
+{-# LANGUAGE MagicHash #-}
 
 module Text
   ( -- * Text
@@ -109,4 +109,4 @@ import Data.Text
 import Data.Text.Encoding
 import Data.Text.Internal.Read (IReader)
 import Data.Text.Read
-import Data.Text.Strict.Lens (packed, unpacked, text, builder)
+import Data.Text.Strict.Lens   (builder, packed, text, unpacked)

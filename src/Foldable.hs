@@ -30,6 +30,6 @@ module Foldable
 
 import Control.Monad
 import Data.Foldable
-import Data.List.NonEmpty
-  (group, groupAllWith, groupBy, groupWith, inits, insert, tails)
+import Data.List.NonEmpty (group, groupAllWith, groupBy, groupWith, inits,
+                           insert, tails)
 import Data.Reflection

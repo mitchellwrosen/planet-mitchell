@@ -48,12 +48,14 @@ module Exception
   , asyncExceptionFromException
   ) where
 
-import Control.Exception
-  (AsyncException(..), Exception(..), IOException, MaskingState(..),
-    SomeAsyncException(..), SomeException(..), allowInterrupt,
-    asyncExceptionFromException, asyncExceptionToException, getMaskingState,
-    interruptible, ioError, mapException)
-import System.IO.Error (userError)
-import UnliftIO.Exception hiding
-  (Exception(..), IOException, SomeAsyncException(..), SomeException(..))
-import System.Exit (ExitCode(..), die, exitFailure, exitSuccess, exitWith)
+import Control.Exception  (AsyncException(..), Exception(..), IOException,
+                           MaskingState(..), SomeAsyncException(..),
+                           SomeException(..), allowInterrupt,
+                           asyncExceptionFromException,
+                           asyncExceptionToException, getMaskingState,
+                           interruptible, ioError, mapException)
+import System.Exit        (ExitCode(..), die, exitFailure, exitSuccess,
+                           exitWith)
+import System.IO.Error    (userError)
+import UnliftIO.Exception hiding (Exception(..), IOException,
+                           SomeAsyncException(..), SomeException(..))

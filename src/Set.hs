@@ -7,4 +7,4 @@ module Set
   ) where
 
 import Data.Set
-import Data.Set.Lens (setmapped, setOf)
+import Data.Set.Lens (setOf, setmapped)

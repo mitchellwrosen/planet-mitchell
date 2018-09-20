@@ -23,8 +23,9 @@ module State
   , Zoomed
   ) where
 
-import Control.Lens.Zoom (Zoom(zoom), Zoomed)
-import Control.Monad.State.Class (MonadState(..), modify, modify', gets)
-import Control.Monad.Trans.State.Strict
-  (State, StateT(..), evalState, evalStateT, execState, execStateT, mapState,
-    mapStateT, runState, withState, withStateT)
+import Control.Lens.Zoom                (Zoom(zoom), Zoomed)
+import Control.Monad.State.Class        (MonadState(..), gets, modify, modify')
+import Control.Monad.Trans.State.Strict (State, StateT(..), evalState,
+                                         evalStateT, execState, execStateT,
+                                         mapState, mapStateT, runState,
+                                         withState, withStateT)

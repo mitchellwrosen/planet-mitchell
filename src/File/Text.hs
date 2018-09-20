@@ -43,7 +43,7 @@ module File.Text
 
 import Data.Text.IO
 import GHC.IO.Handle.FD (openFileBlocking)
-import System.IO
-  (TextEncoding, getChar, hGetChar, hPrint, hSetEncoding, hGetEncoding, latin1,
-    print, utf8, utf8_bom, utf16, utf16be, utf16le, utf32, utf32be, utf32le)
-import UnliftIO.IO (withFile)
+import System.IO        (TextEncoding, getChar, hGetChar, hGetEncoding, hPrint,
+                         hSetEncoding, latin1, print, utf16, utf16be, utf16le,
+                         utf32, utf32be, utf32le, utf8, utf8_bom)
+import UnliftIO.IO      (withFile)

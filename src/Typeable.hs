@@ -1,4 +1,4 @@
-{-# language PatternSynonyms #-}
+{-# LANGUAGE PatternSynonyms #-}
 
 module Typeable
   ( Typeable
@@ -38,6 +38,7 @@ module Typeable
   , _gcast
   ) where
 
-import Data.Typeable hiding (TypeRep, rnfTypeRep, typeOf, typeRep, typeRepTyCon)
+import Data.Typeable      hiding (TypeRep, rnfTypeRep, typeOf, typeRep,
+                           typeRepTyCon)
 import Data.Typeable.Lens (_cast, _gcast)
 import Type.Reflection

@@ -14,4 +14,4 @@ module Numeric.Integral
   ) where
 
 import GHC.Real
-import Numeric (showInt, showIntAtBase, showHex, showOct)
+import Numeric  (showHex, showInt, showIntAtBase, showOct)

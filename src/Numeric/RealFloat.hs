@@ -1,4 +1,4 @@
-{-# language CPP #-}
+{-# LANGUAGE CPP #-}
 
 module Numeric.RealFloat
   ( -- * RealFloat
