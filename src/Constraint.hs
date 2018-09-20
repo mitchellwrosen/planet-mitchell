@@ -1,6 +1,9 @@
+-- | <https://hackage.haskell.org/package/constraints>
+
 module Constraint
-  ( module Data.Constraint
-  , module Data.Constraint.Forall
+  ( -- * Re-exports
+    module Data.Constraint,
+    module Data.Constraint.Forall,
   ) where
 
 import Data.Constraint

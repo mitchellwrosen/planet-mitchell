@@ -1,22 +1,24 @@
 {-# language CPP #-}
 
 module Traversable
-  (
-    Traversable,
-    traverse,
-    sequenceA,
+  ( -- * Traversable
+    Traversable(..),
     for,
     mapAccumL,
     mapAccumR,
-    fmapDefault,
-    foldMapDefault,
 #ifdef DEP_REFLECTION
     traverseBy,
     sequenceBy,
 #endif
+    -- * Default @Functor@ implementation
+    fmapDefault,
+    -- * Default @Foldable@ implementation
+    foldMapDefault,
   ) where
 
 #ifdef DEP_REFLECTION
-import Data.Reflection
+import Data.Reflection (sequenceBy, traverseBy)
 #endif
 import Data.Traversable
+  (Traversable(traverse, sequenceA), for, mapAccumL, mapAccumR, fmapDefault,
+    foldMapDefault)

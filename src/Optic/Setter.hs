@@ -1,10 +1,22 @@
--- TODO: Lots more from Control.Lens.Setter
-
 module Optic.Setter
   ( -- * Setter
     Setter,
-    ASetter,
+    Setter',
+    (.~),
+    (%~),
+    (+~),
+    (-~),
+    (*~),
+    (//~),
+    (^~),
+    (^^~),
+    (**~),
+    (||~),
+    (&&~),
+    set,
     over,
   ) where
 
 import Control.Lens.Setter
+  (Setter, Setter', (.~), (%~), (+~), (-~), (*~), (//~), (^~), (^^~), (**~),
+    (||~), (&&~), over, set)

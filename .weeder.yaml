@@ -1,5 +1,5 @@
 - package:
-  - name: mitchell-stdlib
+  - name: planet-mitchell
   - section:
     - name: library
     - message:

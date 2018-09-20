@@ -4,6 +4,9 @@ module Maybe
   ( -- * Maybe
     Maybe(..),
     maybe,
+#ifdef DEP_EXTRA
+    maybeM,
+#endif
     isJust,
     isNothing,
     fromMaybe,
@@ -12,7 +15,7 @@ module Maybe
     catMaybes,
     mapMaybe,
 #ifdef DEP_LENS
-    -- ** Optics
+    -- ** Prisms
     _Just,
     _Nothing,
 #endif
@@ -24,7 +27,10 @@ module Maybe
   ) where
 
 #ifdef DEP_LENS
-import Control.Lens.Prism
+import Control.Lens.Prism (_Just, _Nothing)
+#endif
+#ifdef DEP_EXTRA
+import Control.Monad.Extra (maybeM)
 #endif
 import Data.Maybe
 import Data.Monoid

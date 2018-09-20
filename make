@@ -13,7 +13,7 @@ case "$1" in
     cabal new-freeze -w ghc-8.4.3
     ;;
   "ghcid")
-    ghcid -c 'cabal new-repl -O0 -w ghc-8.4.3' --restart mitchell-stdlib.cabal
+    ghcid -c 'cabal new-repl -O0 -w ghc-8.4.3' --restart planet-mitchell.cabal
     ;;
   "repl")
     cabal new-repl -O0 -w ghc-8.4.3 "${@:2}"

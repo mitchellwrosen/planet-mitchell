@@ -8,3 +8,4 @@ module Optic.Traversal
   ) where
 
 import Control.Lens.Traversal
+  (Traversal, Traversal', forOf, sequenceAOf, traverseOf)

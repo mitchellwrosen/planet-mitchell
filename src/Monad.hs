@@ -8,14 +8,8 @@ module Monad
     (<=<),
     (<$!>),
 #ifdef DEP_EXTRA
-    eitherM,
-    ifM,
-#endif
-#ifdef DEP_EXTRA
     join,
     loopM,
-    maybeM,
-    notM,
     unlessM,
     whenJustM,
     whenM,
@@ -37,8 +31,7 @@ module Monad
 import Control.Arrow (Kleisli(Kleisli, runKleisli))
 import Control.Monad (Monad((>>=), return), (=<<), (>=>), (<=<), (<$!>), join)
 #ifdef DEP_EXTRA
-import Control.Monad.Extra
-  (eitherM, ifM, loopM, maybeM, notM, unlessM, whenJustM, whenM, whileM)
+import Control.Monad.Extra (loopM, unlessM, whenJustM, whenM, whileM)
 #endif
 #ifdef DEP_MMORPH
 import Control.Monad.Morph (MMonad(embed), squash, (>|>), (<|<), (=<|), (|>=))

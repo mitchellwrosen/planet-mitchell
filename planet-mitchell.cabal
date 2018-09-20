@@ -1,12 +1,27 @@
 cabal-version: 2.0
 
-name: mitchell-stdlib
-version: 0.1.0
+author: Mitchell Rosen
 build-type: Simple
 category: Prelude
-license: BSD3
+description: Planet Mitchell.
 license-file: LICENSE
+license: BSD3
+maintainer: Mitchell Rosen <mitchellwrosen@gmail.com>
+name: planet-mitchell
+synopsis: Planet Mitchell
 tested-with: GHC == 8.4.3
+version: 0.0.0
+homepage: https://github.com/mitchellwrosen/planet-mitchell
+bug-reports: https://github.com/mitchellwrosen/planet-mitchell/issues
+copyright: (c) 2018, Mitchell Rosen
+
+extra-source-files:
+  .travis.yml
+  README.md
+
+source-repository head
+  type: git
+  location: git://github.com/mitchellwrosen/planet-mitchell.git
 
 --------------------------------------------------------------------------------
 -- Flags
@@ -1108,10 +1123,6 @@ library
     Numeric.Floating
     Numeric.Fractional
     Numeric.Int
-    Numeric.Int8
-    Numeric.Int16
-    Numeric.Int32
-    Numeric.Int64
     Numeric.Integer
     Numeric.Integral
     Numeric.Float
@@ -1125,10 +1136,6 @@ library
     Numeric.RealFrac
     Numeric.Sum
     Numeric.Word
-    Numeric.Word8
-    Numeric.Word16
-    Numeric.Word32
-    Numeric.Word64
     Ord
     Parallelism
     Posix
@@ -1494,11 +1501,11 @@ library
 -- Benchmarks
 --------------------------------------------------------------------------------
 
-benchmark semaphore
-  hs-source-dirs: bench
-  main-is: Semaphore.hs
-  ghc-options: -Wall
-  type: exitcode-stdio-1.0
-  ghc-options: -O -rtsopts -threaded "-with-rtsopts=-N4 -qg"
-  build-depends: mitchell-stdlib
-  default-language: Haskell2010
+-- benchmark semaphore
+--   hs-source-dirs: bench
+--   main-is: Semaphore.hs
+--   ghc-options: -Wall
+--   type: exitcode-stdio-1.0
+--   ghc-options: -O -rtsopts -threaded "-with-rtsopts=-N4 -qg"
+--   build-depends: planet-mitchell
+--   default-language: Haskell2010

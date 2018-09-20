@@ -102,6 +102,13 @@ module Concurrency
     threadWaitWrite,
     threadWaitWriteSTM,
     closeFdWith,
+    -- * Re-exports
+    module Concurrency.IORef,
+    module Concurrency.MVar,
+#if defined(DEP_STM) || defined(DEP_UNLIFTIO)
+    module Concurrency.TVar,
+    module Concurrency.TMVar,
+#endif
   ) where
 
 import GHC.Conc
@@ -126,4 +133,12 @@ import Control.Concurrent.Async
 #endif
 #ifdef DEP_UNLIFTIO
 import UnliftIO.STM
+#endif
+
+-- For re-export
+import Concurrency.IORef
+import Concurrency.MVar
+#if defined(DEP_STM) || defined(DEP_UNLIFTIO)
+import Concurrency.TVar
+import Concurrency.TMVar
 #endif

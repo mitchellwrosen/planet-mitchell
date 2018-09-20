@@ -11,8 +11,6 @@ module Optic.Iso
     curried,
     uncurried,
     flipped,
-    Strict(..),
-    lazy,
   ) where
 
 import Control.Lens.Iso

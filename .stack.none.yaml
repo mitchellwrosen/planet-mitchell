@@ -1,7 +1,7 @@
 resolver: lts-11.8
 
 flags:
-  mitchell-stdlib:
+  planet-mitchell:
     dep-bytestring: false
     dep-containers: false
     dep-text: false

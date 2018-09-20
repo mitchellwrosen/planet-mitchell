@@ -5,9 +5,12 @@ module Bitraversable
   , bifor
   , bimapAccumL
   , bimapAccumR
-    -- * Default @Bifoldable@ implementations
+    -- * Default @Bifunctor@ implementation
   , bimapDefault
+    -- * Default @Bifoldable@ implementation
   , bifoldMapDefault
   ) where
 
 import Data.Bitraversable
+  (Bitraversable(bitraverse), bifor, bimapAccumL, bimapAccumR,
+    bifoldMapDefault, bimapDefault, bisequence)
