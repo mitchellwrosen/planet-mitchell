@@ -33,10 +33,6 @@ module Mitchell.Prelude
     Category(..),
     (>>>),
     (<<<),
-#ifdef DEP_REFLECTION
-    foldMapBy,
-    foldBy,
-#endif
     -- * Char
     Char,
 #if MIN_VERSION_base(4,11,0)
@@ -113,6 +109,10 @@ module Mitchell.Prelude
     find,
     foldM,
     foldM_,
+#ifdef DEP_REFLECTION
+    foldMapBy,
+    foldBy,
+#endif
     -- * Function
     ($),
     ($!),
@@ -371,8 +371,11 @@ import File.Text (hGetContents, hGetLine, hPutStr, hPutStrLn, putStr, putStrLn)
 #endif
 import Foldable
   (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product,
-    sum, toList), all, and, asum, concatMap, find, foldBy, foldM, foldM_,
-    foldMapBy, foldlM, foldrM, for_, or, msum, notElem, sequenceA_, traverse_,)
+    sum, toList), all, and, asum, concatMap, find, foldM, foldM_, foldlM,
+    foldrM, for_, or, msum, notElem, sequenceA_, traverse_,)
+#ifdef DEP_REFLECTION
+import Foldable (foldBy, foldMapBy)
+#endif
 import Function (Endo(Endo, appEndo), ($), ($!), (&), const, fix, flip, until)
 import Functor (Functor((<$), fmap), ($>), (<$>), (<&>), void)
 import Generic (Generic)

@@ -7,8 +7,8 @@ module Monad
     (>=>),
     (<=<),
     (<$!>),
-#ifdef DEP_EXTRA
     join,
+#ifdef DEP_EXTRA
     loopM,
     unlessM,
     whenJustM,
