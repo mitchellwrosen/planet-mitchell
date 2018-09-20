@@ -283,7 +283,6 @@ library
     , contravariant-extras ^>= 0.3.4
     , cryptohash-sha1 ^>= 0.11.100.1
     , deepseq ^>= 1.4.3
-    , directory ^>= 1.3.3
     , distributive ^>= 0.5.3
     , dlist ^>= 0.8.0
     , double-conversion ^>= 2.0.2.0
@@ -324,7 +323,6 @@ library
     , reactive-banana ^>= 1.2.0
     , reflection ^>= 2.1
     , regex-applicative ^>= 0.3.3
-    , safe-exceptions ^>= 0.1.7
     , scientific ^>= 0.3.6
     , semigroups ^>= 0.18.4
     , semilattices ^>= 0.0.0

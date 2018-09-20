@@ -315,12 +315,15 @@ import Foldable  (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, n
                   foldrM, for_, msum, notElem, or, sequenceA_, traverse_)
 import Foldable  (foldBy, foldMapBy)
 import Function  (Endo(Endo, appEndo), const, fix, flip, until, ($), ($!), (&))
-import Functor   (Functor(fmap, (<$)), void, ($>), (<$>), (<&>))
-import Generic   (Generic)
-import Hashable  (Hashable)
-import IO        (IO, MonadIO(liftIO))
-import List      (cycle, iterate, map, repeat, replicate, scanl, scanl', scanl1,
-                  scanr, scanr1, unfoldr, (++))
+import Functor   (Functor(fmap, (<$)), void, ($>), (<$>))
+#if MIN_VERSION_base(4,11,0)
+import Functor ((<&>))
+#endif
+import Generic  (Generic)
+import Hashable (Hashable)
+import IO       (IO, MonadIO(liftIO))
+import List     (cycle, iterate, map, repeat, replicate, scanl, scanl', scanl1,
+                 scanr, scanr1, unfoldr, (++))
 #if MIN_VERSION_base(4,11,0)
 import List (iterate')
 #endif
