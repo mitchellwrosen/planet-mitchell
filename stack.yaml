@@ -26,7 +26,5 @@ extra-deps:
   - weigh-0.0.12
 
 flags:
-  planet-mitchell:
-    all: true
   transformers-compat:
     five-three: true

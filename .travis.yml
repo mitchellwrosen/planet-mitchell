@@ -17,12 +17,9 @@ before_install:
   - travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
 
 install:
-  - mv .stack.all.yaml stack.yaml
   - stack --no-terminal setup
   - stack --no-terminal build --fast --only-dependencies
 
 script:
   - stack --no-terminal build --fast --bench --no-run-benchmarks
   - curl -sL https://raw.github.com/ndmitchell/weeder/master/misc/travis.sh | sh -s .
-  - mv .stack.none.yaml stack.yaml
-  - stack --no-terminal build --fast

@@ -23,459 +23,6 @@ source-repository head
   type: git
   location: git://github.com/mitchellwrosen/planet-mitchell.git
 
---------------------------------------------------------------------------------
--- Flags
---------------------------------------------------------------------------------
-
-flag all
-  description: Add all dependencies
-  default: False
-  manual: True
-
-----------------
--- Flags
--- default: True
-----------------
-
-flag dep-bytestring
-  description: bytestring dependency
-  default: True
-  manual: True
-
-flag dep-containers
-  description: containers dependency
-  default: True
-  manual: True
-
-flag dep-text
-  description: text dependency
-  default: True
-  manual: True
-
------------------
--- Flags
--- default: False
------------------
-
-flag dep-aeson
-  description: aeson dependency
-  default: False
-  manual: True
-
-flag dep-aeson-pretty
-  description: aeson-pretty dependency
-  default: False
-  manual: True
-
-flag dep-aeson-qq
-  description: aeson-qq dependency
-  default: False
-  manual: True
-
-flag dep-ansi-terminal
-  description: ansi-terminal dependency
-  default: False
-  manual: True
-
-flag dep-approximate
-  description: dep-approximate dependency
-  default: False
-  manual: True
-
-flag dep-array
-  description: array dependency
-  default: False
-  manual: True
-
-flag dep-async
-  description: async dependency
-  default: False
-  manual: True
-
-flag dep-atomic-primops
-  description: atomic-primops dependency
-  default: False
-  manual: True
-
-flag dep-base16-bytestring
-  description: base16-bytestring dependency
-  default: False
-  manual: True
-
-flag dep-bits
-  description: bits dependency
-  default: False
-  manual: True
-
-flag dep-bytestring-lexing
-  description: bytestring-lexing dependency
-  default: False
-  manual: True
-
--- flag dep-bytestring-trie
---   description: bytestring-trie dependency
---   default: False
---   manual: True
-
-flag dep-case-insensitive
-  description: case-insensitive dependency
-  default: False
-  manual: True
-
-flag dep-comonad
-  description: comonad dependency
-  default: False
-  manual: True
-
-flag dep-compact
-  description: compact dependency
-  default: False
-  manual: True
-
-flag dep-constraints
-  description: constraints dependency
-  default: False
-  manual: True
-
-flag dep-contravariant
-  description: contravariant dependency
-  default: False
-  manual: True
-
-flag dep-contravariant-extras
-  description: contravariant-extras dependency
-  default: False
-  manual: True
-
-flag dep-cryptohash-sha1
-  description: cryptohash-sha1 dependency
-  default: False
-  manual: True
-
-flag dep-deepseq
-  description: deepseq dependency
-  default: False
-  manual: True
-
-flag dep-directory
-  description: directory dependency
-  default: False
-  manual: True
-
-flag dep-distributive
-  description: distributive dependency
-  default: False
-  manual: True
-
-flag dep-dlist
-  description: dlist dependency
-  default: False
-  manual: True
-
-flag dep-double-conversion
-  description: double-conversion dependency
-  default: False
-  manual: True
-
-flag dep-earley
-  description: Earley dependency
-  default: False
-  manual: True
-
-flag dep-envparse
-  description: envparse dependency
-  default: False
-  manual: True
-
-flag dep-erf
-  description: erf dependency
-  default: False
-  manual: True
-
-flag dep-extra
-  description: extra dependency
-  default: False
-  manual: True
-
-flag dep-fgl
-  description: fgl dependency
-  default: False
-  manual: True
-
-flag dep-filepath
-  description: filepath dependency
-  default: False
-  manual: True
-
-flag dep-foldl
-  description: foldl dependency
-  default: False
-  manual: True
-
-flag dep-gauge
-  description: gauge dependency
-  default: False
-  manual: True
-
-flag dep-generic-aeson
-  description: generic-aeson dependency
-  default: False
-  manual: True
-
-flag dep-half
-  description: half dependency
-  default: False
-  manual: True
-
-flag dep-hashable
-  description: hashable dependency
-  default: False
-  manual: True
-
-flag dep-hedgehog
-  description: hedgehog dependency
-  default: False
-  manual: True
-
-flag dep-heaps
-  description: heaps dependency
-  default: False
-  manual: True
-
-flag dep-lens
-  description: lens dependency
-  default: False
-  manual: True
-
-flag dep-lens-aeson
-  description: lens-aeson dependency
-  default: False
-  manual: True
-
-flag dep-list-transformer
-  description: list-transformer dependency
-  default: False
-  manual: True
-
-flag dep-logict
-  description: logict dependency
-  default: False
-  manual: True
-
-flag dep-managed
-  description: managed dependency
-  default: False
-  manual: True
-
-flag dep-megaparsec
-  description: megaparsec dependency
-  default: False
-  manual: True
-
-flag dep-mmorph
-  description: mmorph dependency
-  default: False
-  manual: True
-
-flag dep-monad-ste
-  description: monad-ste dependency
-  default: False
-  manual: True
-
-flag dep-mtl
-  description: mtl dependency
-  default: False
-  manual: True
-
-flag dep-multiset
-  description: multiset dependency
-  default: False
-  manual: True
-
-flag dep-mwc-random
-  description: mwc-random dependency
-  default: False
-  manual: True
-
-flag dep-network
-  description: network dependency
-  default: False
-  manual: True
-
-flag dep-network-uri
-  description: network-uri dependency
-  default: False
-  manual: True
-
-flag dep-nf
-  description: nf dependency
-  default: False
-  manual: True
-
-flag dep-optparse-applicative
-  description: optparse-applicative dependency
-  default: False
-  manual: True
-
-flag dep-parallel
-  description: parallel dependency
-  default: False
-  manual: True
-
-flag dep-prettyprinter
-  description: prettyprinter dependency
-  default: False
-  manual: True
-
-flag dep-prettyprinter-ansi-terminal
-  description: prettyprinter-ansi-terminal dependency
-  default: False
-  manual: True
-
-flag dep-primitive
-  description: primitive dependency
-  default: False
-  manual: True
-
-flag dep-profunctors
-  description: profunctors dependency
-  default: False
-  manual: True
-
-flag dep-psqueues
-  description: psqueues dependency
-  default: False
-  manual: True
-
-flag dep-reactive-banana
-  description: reactive-banana dependency
-  default: False
-  manual: False
-
-flag dep-reflection
-  description: reflection dependency
-  default: False
-  manual: True
-
-flag dep-regex-applicative
-  description: regex-applicative dependency
-  default: False
-  manual: True
-
-flag dep-safe-exceptions
-  description: safe-exceptions dependency
-  default: False
-  manual: True
-
-flag dep-scientific
-  description: scientific dependency
-  default: False
-  manual: True
-
-flag dep-semigroups
-  description: semigroups dependency
-  default: False
-  manual: True
-
-flag dep-semilattices
-  description: semilattices dependency
-  default: False
-  manual: True
-
-flag dep-stm
-  description: stm dependency
-  default: False
-  manual: True
-
-flag dep-stm-chans
-  description: stm-chans dependency
-  default: False
-  manual: True
-
-flag dep-stm-containers
-  description: stm-containers dependency
-  default: False
-  manual: True
-
-flag dep-tagged
-  description: tagged dependency
-  default: False
-  manual: True
-
-flag dep-text-short
-  description: text-short dependency
-  default: False
-  manual: True
-
-flag dep-time
-  description: time dependency
-  default: False
-  manual: True
-
-flag dep-transformers
-  description: transformers dependency
-  default: False
-  manual: True
-
-flag dep-transformers-base
-  description: transformers-base dependency
-  default: False
-  manual: True
-
-flag dep-transformers-compat
-  description: transformers-compat dependency
-  default: False
-  manual: True
-
-flag dep-typed-process
-  description: typed-process dependency
-  default: False
-  manual: True
-
-flag dep-unagi-chan
-  description: unagi-chan dependency
-  default: False
-  manual: True
-
-flag dep-unix
-  description: unix dependency
-  default: False
-  manual: True
-
-flag dep-unliftio
-  description: unliftio dependency
-  default: False
-  manual: True
-
-flag dep-unordered-containers
-  description: unordered-containers dependency
-  default: False
-  manual: True
-
-flag dep-utf8-string
-  description: utf8-string dependency
-  default: False
-  manual: True
-
-flag dep-vector
-  description: vector dependency
-  default: False
-  manual: True
-
-flag dep-weigh
-  description: weigh dependency
-  default: False
-  manual: True
-
-flag dep-writer-cps-mtl
-  description: writer-cps-mtl dependency
-  default: False
-  manual: True
-
---------------------------------------------------------------------------------
--- Library
---------------------------------------------------------------------------------
-
 library
   hs-source-dirs: src
   ghc-options: -Weverything -fno-warn-safe -fno-warn-unsafe
@@ -708,355 +255,93 @@ library
   -- Dependencies
   ------------------------------------------------------------------------------
 
-  build-depends: base ^>= 4.10 || ^>= 4.11
-
-  if flag(dep-aeson) || flag(all)
-    build-depends: aeson ^>= 1.3.1 || ^>= 1.4.0
-    cpp-options: -DDEP_AESON
-
-  if flag(dep-aeson-pretty) || flag(all)
-    build-depends: aeson-pretty ^>= 0.8.7
-    cpp-options: -DDEP_AESON_PRETTY
-
-  if flag(dep-aeson-qq) || flag(all)
-    build-depends: aeson-qq ^>= 0.8.2
-    cpp-options: -DDEP_AESON_QQ
-
-  if flag(dep-ansi-terminal) || flag(all)
-    build-depends: ansi-terminal ^>= 0.8.0
-    cpp-options: -DDEP_ANSI_TERMINAL
-
-  if flag(dep-approximate) || flag(all)
-    build-depends: approximate ^>= 0.3.1
-    cpp-options: -DDEP_APPROXIMATE
-
-  if flag(dep-array) || flag(all)
-    build-depends: array ^>= 0.5.2
-    cpp-options: -DDEP_ARRAY
-
-  if flag(dep-async) || flag(all)
-    build-depends: async ^>= 2.2.1
-    cpp-options: -DDEP_ASYNC
-
-  if flag(dep-atomic-primops) || flag(all)
-    build-depends: atomic-primops ^>= 0.8
-    cpp-options: -DDEP_ATOMIC_PRIMOPS
-
-  if flag(dep-base16-bytestring) || flag(all)
-    build-depends: base16-bytestring ^>= 0.1.1
-    cpp-options: -DDEP_BASE16_BYTESTRING
-
-  if flag(dep-bits) || flag(all)
-    build-depends: bits ^>= 0.5.0
-    cpp-options: -DDEP_BITS
-
-  if flag(dep-bytestring) || flag(all)
-    build-depends: bytestring ^>= 0.10.8
-    cpp-options: -DDEP_BYTESTRING
-
-  if flag(dep-bytestring-lexing) || flag(all)
-    build-depends: bytestring-lexing ^>= 0.5.0
-    cpp-options: -DDEP_BYTESTRING_LEXING
-
-  -- if flag(dep-bytestring-trie) || flag(all)
-  --   build-depends: bytestring-trie ^>= 0.2.4
-  --   cpp-options: -DDEP_BYTESTRING_TRIE
-
-  if flag(dep-case-insensitive) || flag(all)
-    build-depends: case-insensitive ^>= 1.2.0
-    cpp-options: -DDEP_CASE_INSENSITIVE
-
-  if flag(dep-comonad) || flag(all)
-    build-depends: comonad ^>= 5.0
-    cpp-options: -DDEP_COMONAD
-
-  if flag(dep-compact) || flag(all)
-    build-depends: compact ^>= 0.1.0
-    cpp-options: -DDEP_COMPACT
-
-  if flag(dep-constraints) || flag(all)
-    build-depends: constraints ^>= 0.10
-    cpp-options: -DDEP_CONSTRAINTS
-
-  if flag(dep-containers) || flag(all)
-    build-depends: containers ^>= 0.5.11
-    cpp-options: -DDEP_CONTAINERS
-
-  if flag(dep-contravariant) || flag(all)
-    build-depends: contravariant ^>= 1.4.1
-    cpp-options: -DDEP_CONTRAVARIANT
-
-  if flag(dep-contravariant-extras) || flag(all)
-    build-depends: contravariant-extras ^>= 0.3.4
-    cpp-options: -DDEP_CONTRAVARIANT_EXTRAS
-
-  if flag(dep-cryptohash-sha1) || flag(all)
-    build-depends: cryptohash-sha1 ^>= 0.11.100.1
-    cpp-options: -DDEP_CRYPTOHASH_SHA1
-
-  if flag(dep-deepseq) || flag(all)
-    build-depends: deepseq ^>= 1.4.3
-    cpp-options: -DDEP_DEEPSEQ
-
-  if flag(dep-directory) || flag(all)
-    build-depends: directory ^>= 1.3.3
-    cpp-options: -DDEP_DIRECTORY
-
-  if flag(dep-distributive) || flag(all)
-    build-depends: distributive ^>= 0.5.3
-    cpp-options: -DDEP_DISTRIBUTIVE
-
-  if flag(dep-dlist) || flag(all)
-    build-depends: dlist ^>= 0.8.0
-    cpp-options: -DDEP_DLIST
-
-  if flag(dep-double-conversion) || flag(all)
-    build-depends: double-conversion ^>= 2.0.2.0
-    cpp-options: -DDEP_DOUBLE_CONVERSION
-
-  if flag(dep-earley) || flag(all)
-    build-depends: Earley ^>= 0.12.0
-    cpp-options: -DDEP_EARLEY
-
-  if flag(dep-envparse) || flag(all)
-    build-depends: envparse ^>= 0.4
-    cpp-options: -DDEP_ENVPARSE
-
-  if flag(dep-erf) || flag(all)
-    build-depends: erf ^>= 2.0.0
-    cpp-options: -DDEP_ERF
-
-  if flag(dep-extra) || flag(all)
-    build-depends: extra ^>= 1.6.9 || ^>= 1.6.10 || ^>= 1.6.11
-    cpp-options: -DDEP_EXTRA
-
-  if flag(dep-fgl) || flag(all)
-    build-depends: fgl ^>= 5.6.0
-    cpp-options: -DDEP_FGL
-
-  if flag(dep-filepath) || flag(all)
-    build-depends: filepath ^>= 1.4.2
-    cpp-options: -DDEP_FILEPATH
-
-  if flag(dep-foldl) || flag(all)
-    build-depends: foldl ^>= 1.4.0
-    cpp-options: -DDEP_FOLDL
-
-  if flag(dep-gauge) || flag(all)
-    build-depends: gauge ^>= 0.2.1
-    cpp-options: -DDEP_GAUGE
-
-  if flag(dep-generic-aeson) || flag(all)
-    build-depends: generic-aeson ^>= 0.2.0.9
-    cpp-options: -DDEP_GENERIC_AESON
-
-  if flag(dep-half) || flag(all)
-    build-depends: half ^>= 0.3
-    cpp-options: -DDEP_HALF
-
-  if flag(dep-hashable) || flag(all)
-    build-depends: hashable ^>= 1.2.7
-    cpp-options: -DDEP_HASHABLE
-
-  if flag(dep-heaps) || flag(all)
-    build-depends: heaps ^>= 0.3.0
-    cpp-options: -DDEP_HEAPS
-
-  if flag(dep-hedgehog) || flag(all)
-    build-depends: hedgehog ^>= 0.5.3 || ^>= 0.6
-    cpp-options: -DDEP_HEDGEHOG
-
-  if flag(dep-lens) || flag(all)
-    build-depends: lens ^>= 4.16.1
-    cpp-options: -DDEP_LENS
-
-  if flag(dep-lens-aeson) || flag(all)
-    build-depends: lens-aeson ^>= 1.0.2
-    cpp-options: -DDEP_LENS_AESON
-
-  if flag(dep-list-transformer) || flag(all)
-    build-depends: list-transformer ^>= 1.0.4
-    cpp-options: -DDEP_LIST_TRANSFORMER
-
-  if flag(dep-logict) || flag(all)
-    build-depends: logict ^>= 0.6.0
-    cpp-options: -DDEP_LOGICT
-
-  if flag(dep-managed) || flag(all)
-    build-depends: managed ^>= 1.0.6
-    cpp-options: -DDEP_MANAGED
-
-  if flag(dep-megaparsec) || flag(all)
-    build-depends: megaparsec ^>= 6.5.0
-    cpp-options: -DDEP_MEGAPARSEC
-
-  if flag(dep-mmorph) || flag(all)
-    build-depends: mmorph ^>= 1.1.2
-    cpp-options: -DDEP_MMORPH
-
-  if flag(dep-monad-ste) || flag(all)
-    build-depends: monad-ste ^>= 0.1.0
-    cpp-options: -DDEP_MONAD_STE
-
-  if flag(dep-mtl) || flag(all)
-    build-depends: mtl ^>= 2.2.2
-    cpp-options: -DDEP_MTL
-
-  if flag(dep-multiset) || flag(all)
-    build-depends: multiset ^>= 0.3.4
-    cpp-options: -DDEP_MULTISET
-
-  if flag(dep-mwc-random) || flag(all)
-    build-depends: mwc-random ^>= 0.13.6
-    cpp-options: -DDEP_MWC_RANDOM
-
-  if flag(dep-network) || flag(all)
-    build-depends: network ^>= 2.7.0
-    cpp-options: -DDEP_NETWORK
-
-  if flag(dep-network-uri) || flag(all)
-    build-depends: network-uri ^>= 2.6.1
-    cpp-options: -DDEP_NETWORK_URI
-
-  if flag(dep-nf) || flag(all)
-    build-depends: nf ^>= 1.0.1
-    cpp-options: -DDEP_NF
-
-  if flag(dep-optparse-applicative) || flag(all)
-    build-depends: optparse-applicative ^>= 0.14.2
-    cpp-options: -DDEP_OPTPARSE_APPLICATIVE
-
-  if flag(dep-parallel) || flag(all)
-    build-depends: parallel ^>= 3.2.1
-    cpp-options: -DDEP_PARALLEL
-
-  if flag(dep-prettyprinter) || flag(all)
-    build-depends: prettyprinter ^>= 1.2.0
-    cpp-options: -DDEP_PRETTYPRINTER
-
-  if flag(dep-prettyprinter-ansi-terminal) || flag(all)
-    build-depends: prettyprinter-ansi-terminal ^>= 1.1.1
-    cpp-options: -DDEP_PRETTYPRINTER_ANSI_TERMINAL
-
-  if flag(dep-primitive) || flag(all)
-    build-depends: primitive ^>= 0.6.4
-    cpp-options: -DDEP_PRIMITIVE
-
-  if flag(dep-profunctors) || flag(all)
-    build-depends: profunctors ^>= 5.2
-    cpp-options: -DDEP_PROFUNCTORS
-
-  if flag(dep-psqueues) || flag(all)
-    build-depends: psqueues ^>= 0.2.7
-    cpp-options: -DDEP_PSQUEUES
-
-  if flag(dep-reactive-banana) || flag(all)
-    build-depends: reactive-banana ^>= 1.2.0
-    cpp-options: -DDEP_REACTIVE_BANANA
-
-  if flag(dep-reflection) || flag(all)
-    build-depends: reflection ^>= 2.1
-    cpp-options: -DDEP_REFLECTION
-
-  if flag(dep-regex-applicative) || flag(all)
-    build-depends: regex-applicative ^>= 0.3.3
-    cpp-options: -DDEP_REGEX_APPLICATIVE
-
-  if flag(dep-safe-exceptions) || flag(all)
-    build-depends: safe-exceptions ^>= 0.1.7
-    cpp-options: -DDEP_SAFE_EXCEPTIONS
-
-  if flag(dep-scientific) || flag(all)
-    build-depends: scientific ^>= 0.3.6
-    cpp-options: -DDEP_SCIENTIFIC
-
-  if flag(dep-semigroups) || flag(all)
-    build-depends: semigroups ^>= 0.18.4
-    cpp-options: -DDEP_SEMIGROUPS
-
-  if flag(dep-semilattices) || flag(all)
-    build-depends: semilattices ^>= 0.0.0
-    cpp-options: -DDEP_SEMILATTICES
-
-  if flag(dep-stm) || flag(all)
-    build-depends: stm ^>= 2.4.5
-    cpp-options: -DDEP_STM
-
-  if flag(dep-stm-chans) || flag(all)
-    build-depends: stm-chans ^>= 3.0.0
-    cpp-options: -DDEP_STM_CHANS
-
-  if flag(dep-stm-containers) || flag(all)
-    build-depends: stm-containers ^>= 0.2.16
-    cpp-options: -DDEP_STM_CONTAINERS
-
-  if flag(dep-tagged) || flag(all)
-    build-depends: tagged ^>= 0.8.5
-    cpp-options: -DDEP_TAGGED
-
-  if flag(dep-text) || flag(all)
-    build-depends: text ^>= 1.2.3
-    cpp-options: -DDEP_TEXT
-
-  if flag(dep-text-short) || flag(all)
-    build-depends: text-short ^>= 0.1.2
-    cpp-options: -DDEP_TEXT_SHORT
-
-  if flag(dep-time) || flag(all)
-    build-depends: time ^>= 1.8 || ^>= 1.9.1
-    cpp-options: -DDEP_TIME
-
-  if flag(dep-transformers) || flag(all)
-    build-depends: transformers ^>= 0.5.5
-    cpp-options: -DDEP_TRANSFORMERS
-
-  if flag(dep-transformers-base) || flag(all)
-    build-depends: transformers-base ^>= 0.4.5
-    cpp-options: -DDEP_TRANSFORMERS_BASE
-
-  if flag(dep-transformers-compat) || flag(all)
-    build-depends: transformers-compat ^>= 0.6.2
-    cpp-options: -DDEP_TRANSFORMERS_COMPAT
-
-  if flag(dep-typed-process) || flag(all)
-    build-depends: typed-process ^>= 0.2.2
-    cpp-options: -DDEP_TYPED_PROCESS
-
-  if flag(dep-unagi-chan) || flag(all)
-    build-depends: unagi-chan ^>= 0.4.1
-    cpp-options: -DDEP_UNAGI_CHAN
-
-  if flag(dep-unix) || flag(all)
-    build-depends: unix ^>= 2.7.2
-    cpp-options: -DDEP_UNIX
-
-  if flag(dep-unliftio) || flag(all)
-    build-depends: unliftio ^>= 0.2.7.0
-    cpp-options: -DDEP_UNLIFTIO
-
-  if flag(dep-unordered-containers) || flag(all)
-    build-depends: unordered-containers ^>= 0.2.9
-    cpp-options: -DDEP_UNORDERED_CONTAINERS
-
-  if flag(dep-utf8-string) || flag(all)
-    build-depends: utf8-string ^>= 1.0.1.1
-    cpp-options: -DDEP_UTF8_STRING
-
-  if flag(dep-vector) || flag(all)
-    build-depends: vector ^>= 0.12.0
-    cpp-options: -DDEP_VECTOR
-
-  if flag(dep-weigh) || flag(all)
-    build-depends: weigh ^>= 0.0.12
-    cpp-options: -DDEP_WEIGH
-
-  if flag(dep-writer-cps-mtl) || flag(all)
-    build-depends: writer-cps-mtl ^>= 0.1.1
-    cpp-options: -DDEP_WRITER_CPS_MTL
-
-  ------------------------------------------------------------------------------
-  -- Exposed modules
-  ------------------------------------------------------------------------------
+  build-depends:
+      aeson ^>= 1.3.1 || ^>= 1.4.0
+    , base ^>= 4.10 || ^>= 4.11
+    , aeson-pretty ^>= 0.8.7
+    , aeson-qq ^>= 0.8.2
+    , ansi-terminal ^>= 0.8.0
+    , approximate ^>= 0.3.1
+    , array ^>= 0.5.2
+    , async ^>= 2.2.1
+    , atomic-primops ^>= 0.8
+    , base16-bytestring ^>= 0.1.1
+    , bits ^>= 0.5.0
+    , bytestring ^>= 0.10.8
+    , bytestring-lexing ^>= 0.5.0
+    , case-insensitive ^>= 1.2.0
+    , comonad ^>= 5.0
+    , compact ^>= 0.1.0
+    , constraints ^>= 0.10
+    , containers ^>= 0.5.11
+    , contravariant ^>= 1.4.1
+    , contravariant-extras ^>= 0.3.4
+    , cryptohash-sha1 ^>= 0.11.100.1
+    , deepseq ^>= 1.4.3
+    , directory ^>= 1.3.3
+    , distributive ^>= 0.5.3
+    , dlist ^>= 0.8.0
+    , double-conversion ^>= 2.0.2.0
+    , Earley ^>= 0.12.0
+    , envparse ^>= 0.4
+    , erf ^>= 2.0.0
+    , extra ^>= 1.6.9 || ^>= 1.6.10 || ^>= 1.6.11
+    , fgl ^>= 5.6.0
+    , filepath ^>= 1.4.2
+    , foldl ^>= 1.4.0
+    , gauge ^>= 0.2.1
+    , generic-aeson ^>= 0.2.0.9
+    , half ^>= 0.3
+    , hashable ^>= 1.2.7
+    , heaps ^>= 0.3.0
+    , hedgehog ^>= 0.5.3 || ^>= 0.6
+    , lens ^>= 4.16.1
+    , lens-aeson ^>= 1.0.2
+    , list-transformer ^>= 1.0.4
+    , logict ^>= 0.6.0
+    , managed ^>= 1.0.6
+    , megaparsec ^>= 6.5.0
+    , mmorph ^>= 1.1.2
+    , monad-ste ^>= 0.1.0
+    , mtl ^>= 2.2.2
+    , multiset ^>= 0.3.4
+    , mwc-random ^>= 0.13.6
+    , network ^>= 2.7.0
+    , network-uri ^>= 2.6.1
+    , nf ^>= 1.0.1
+    , optparse-applicative ^>= 0.14.2
+    , parallel ^>= 3.2.1
+    , prettyprinter ^>= 1.2.0
+    , prettyprinter-ansi-terminal ^>= 1.1.1
+    , primitive ^>= 0.6.4
+    , profunctors ^>= 5.2
+    , psqueues ^>= 0.2.7
+    , reactive-banana ^>= 1.2.0
+    , reflection ^>= 2.1
+    , regex-applicative ^>= 0.3.3
+    , safe-exceptions ^>= 0.1.7
+    , scientific ^>= 0.3.6
+    , semigroups ^>= 0.18.4
+    , semilattices ^>= 0.0.0
+    , stm ^>= 2.4.5
+    , stm-chans ^>= 3.0.0
+    , stm-containers ^>= 0.2.16
+    , tagged ^>= 0.8.5
+    , text ^>= 1.2.3
+    , text-short ^>= 0.1.2
+    , time ^>= 1.8 || ^>= 1.9.1
+    , transformers ^>= 0.5.5
+    , transformers-base ^>= 0.4.5
+    , transformers-compat ^>= 0.6.2
+    , typed-process ^>= 0.2.2
+    , unagi-chan ^>= 0.4.1
+    , unix ^>= 2.7.2
+    , unliftio ^>= 0.2.7.0
+    , unordered-containers ^>= 0.2.9
+    , utf8-string ^>= 1.0.1.1
+    , vector ^>= 0.12.0
+    , weigh ^>= 0.0.12
+    , writer-cps-mtl ^>= 0.1.1
 
   exposed-modules:
     Ala.Compose
@@ -1066,6 +351,9 @@ library
     Ala.Sum
     Alternative
     Applicative
+    Array
+    Array.Partial
+    Benchmark
     Bifoldable
     Bifoldable.Partial
     Bifunctor
@@ -1073,18 +361,55 @@ library
     Bits
     Bool
     Bounded
+    ByteString
+    ByteString.Base16
+    ByteString.Latin1
+    ByteString.Latin1.Partial
+    ByteString.Lazy
+    ByteString.Lazy.Base16
+    ByteString.Lazy.Latin1
+    ByteString.Lazy.Utf8
+    ByteString.Partial
+    ByteString.Short
+    ByteString.Short.Partial
+    ByteString.Utf8
+    CaseInsensitive
     Category
     Char
     Char.Partial
     Clock
     Coerce
     Coerce.Unsafe
+    Comonad
+    CompactRegion
     Concurrency
+    Concurrency.Chan
+    Concurrency.Counter
     Concurrency.IORef
     Concurrency.MVar
     Concurrency.QSem
+    Concurrency.TBChan
+    Concurrency.TBMChan
+    Concurrency.TBMQueue
+    Concurrency.TBQueue
+    Concurrency.TBimap
+    Concurrency.TChan
+    Concurrency.TMChan
+    Concurrency.TMQueue
+    Concurrency.TMVar
+    Concurrency.TMap
+    Concurrency.TMultimap
+    Concurrency.TSem
+    Concurrency.TSet
+    Concurrency.TVar
+    Constraint
+    Cont
+    Contravariant
     Data
     Debug
+    Decidable
+    Distributive
+    Divisible
     Dynamic
     Either
     Enum
@@ -1092,40 +417,71 @@ library
     Equality
     Error
     Eval
+    Except
     Exception
+    FRP
     Field
     File
+    File.Binary
     File.Text
     Foldable
     Foldable.Partial
+    Foldl
     Function
     Functor
     Generic
+    Graph.Adjacency
+    Graph.Inductive
+    Hashable
+    Heap
     IO
     IO.Unsafe
     Ix
+    Json
+    Json.Decode
+    Json.Encode
     Label
     List
+    List.Builder
+    List.Builder.Partial
     List.Partial
     List1
     List1.Partial
+    ListT
+    Logic
+    Managed
+    Map
+    Map.Hash
+    Map.Int
+    Map.Int.Lazy
+    Map.Lazy
     Maybe
     Maybe.Partial
+    MaybeT
     Mitchell.Prelude
     Monad
+    Monad.Base
     Monad.Fail
     Monad.Fix
     Monad.Plus
+    Monad.Trans
     Monad.Zip
     Monoid
+    MultiSet
+    MultiSet.Int
+    Numeric.Approximate
     Numeric.Complex
     Numeric.Double
+    Numeric.Erf
+    Numeric.Fast
+    Numeric.Float
     Numeric.Floating
     Numeric.Fractional
+    Numeric.Half
     Numeric.Int
     Numeric.Integer
     Numeric.Integral
-    Numeric.Float
+    Numeric.InvErf
     Numeric.Nat
     Numeric.Natural
     Numeric.Num
@@ -1134,12 +490,41 @@ library
     Numeric.Real
     Numeric.RealFloat
     Numeric.RealFrac
+    Numeric.Scientific
     Numeric.Sum
     Numeric.Word
+    Optic.Fold
+    Optic.Getter
+    Optic.Getting
+    Optic.Iso
+    Optic.Iso.Reversing
+    Optic.Iso.Strict
+    Optic.Lens
+    Optic.Lens.At
+    Optic.Lens.Contains
+    Optic.Prism
+    Optic.Prism.Cons
+    Optic.Prism.Empty
+    Optic.Prism.Snoc
+    Optic.Review
+    Optic.Setter
+    Optic.Traversal
+    Optic.Traversal.Each
+    Optic.Traversal.Ixed
     Ord
     Parallelism
+    Parser.Binary
+    Parser.Cli
+    Parser.Earley
+    Parser.Env
+    Parser.Text
     Posix
+    Predicate
+    Pretty
+    Prim
     Printf
+    Process
+    Profunctor
     Proxy
     Ptr
     Ptr.Foreign
@@ -1147,359 +532,59 @@ library
     Ptr.Stable
     Ptr.Static
     Ptr.Weak
-    RuntimeSystem
+    Queue.Prio.Hash
+    Queue.Prio.Int
+    Queue.Prio.Ord
+    Random
     Read
     Read.Partial
+    Reader
+    Reflection
+    Regex
+    RuntimeSystem
     ST
     Semigroup
+    Semilattice
+    Sequence
+    Set
+    Set.Hash
+    Set.Int
     Show
+    Socket
     StableName
+    State
     Storable
     Symbol
     System
+    Tagged
+    Terminal
+    Test
+    Test.Gen
+    Test.Range
+    Text
+    Text.Lazy
+    Text.Lazy.Builder
+    Text.Partial
+    Text.Short
+    Text.Short.Partial
+    Text.Short.Unsafe
+    Time
     Traversable
+    Tree
     Tuple
     Type
     Typeable
+    URI
     Unique
+    Vector
+    Vector.Generic
+    Vector.Mutable
+    Vector.Primitive
+    Vector.Storable
+    Vector.Unboxed
     Void
-
-  if flag(dep-aeson) || flag(all)
-    exposed-modules:
-      Json
-      Json.Decode
-      Json.Encode
-
-  if flag(dep-ansi-terminal) || flag(all)
-    exposed-modules:
-      Terminal
-
-  if flag(dep-approximate) || flag(all)
-    exposed-modules:
-      Numeric.Approximate
-      Numeric.Fast
-
-  if flag(dep-array) || flag(all)
-    exposed-modules:
-      Array
-      Array.Partial
-
-  if flag(dep-atomic-primops) || flag(all)
-    exposed-modules:
-      Concurrency.Counter
-
-  if flag(dep-base16-bytestring) || flag(all)
-    exposed-modules:
-      ByteString.Base16
-      ByteString.Lazy.Base16
-
-  if flag(dep-bytestring) || flag(all)
-    exposed-modules:
-      ByteString
-      ByteString.Partial
-      ByteString.Short
-      ByteString.Short.Partial
-      ByteString.Lazy
-      ByteString.Lazy.Latin1
-      ByteString.Latin1
-      ByteString.Latin1.Partial
-
-  if flag(dep-bytestring) || flag(dep-unliftio) || flag(all)
-    exposed-modules:
-      File.Binary
-
-  -- if flag(dep-bytestring-trie) || flag(all)
-  --   exposed-modules:
-  --     Trie
-
-  if flag(dep-case-insensitive) || flag(all)
-    exposed-modules:
-      CaseInsensitive
-
-  if flag(dep-comonad) || flag(all)
-    exposed-modules:
-      Comonad
-
-  if flag(dep-compact) || flag(all)
-    exposed-modules:
-      CompactRegion
-
-  if flag(dep-constraints) || flag(all)
-    exposed-modules:
-      Constraint
-
-  if flag(dep-contravariant) || flag(all)
-    exposed-modules:
-      Contravariant
-      Predicate
-
-  if flag(dep-contravariant) || flag(dep-contravariant-extras) || flag(all)
-    exposed-modules:
-      Decidable
-      Divisible
-
-  if flag(dep-containers) || flag(all)
-    exposed-modules:
-      Graph.Adjacency
-      Map
-      Map.Int
-      Map.Int.Lazy
-      Map.Lazy
-      Sequence
-      Set
-      Set.Int
-      Tree
-
-  if flag(dep-distributive) || flag(all)
-    exposed-modules:
-      Distributive
-
-  if flag(dep-dlist) || flag(all)
-    exposed-modules:
-      List.Builder
-      List.Builder.Partial
-
-  if flag(dep-earley) || flag(all)
-    exposed-modules:
-      Parser.Earley
-
-  if flag(dep-envparse) || flag(all)
-    exposed-modules:
-      Parser.Env
-
-  if flag(dep-erf) || flag(all)
-    exposed-modules:
-      Numeric.Erf
-      Numeric.InvErf
-
-  if flag(dep-fgl) || flag(all)
-    exposed-modules:
-      Graph.Inductive
-
-  if flag(dep-foldl) || flag(all)
-    exposed-modules:
-      Foldl
-
-  if flag(dep-gauge) || flag(all)
-    exposed-modules:
-      Benchmark
-
-  if flag(dep-half) || flag(all)
-    exposed-modules:
-      Numeric.Half
-
-  if flag(dep-hashable) || flag(all)
-    exposed-modules:
-      Hashable
-
-  if flag(dep-heaps) || flag(all)
-    exposed-modules:
-      Heap
-
-  if flag(dep-hedgehog) || flag(all)
-    exposed-modules:
-      Test
-      Test.Gen
-      Test.Range
-
-  if flag(dep-lens) || flag(all)
-    exposed-modules:
-      Optic.Fold
-      Optic.Getter
-      Optic.Getting
-      Optic.Iso
-      Optic.Iso.Reversing
-      Optic.Iso.Strict
-      Optic.Lens
-      Optic.Lens.At
-      Optic.Lens.Contains
-      Optic.Prism
-      Optic.Prism.Cons
-      Optic.Prism.Empty
-      Optic.Prism.Snoc
-      Optic.Review
-      Optic.Setter
-      Optic.Traversal
-      Optic.Traversal.Each
-      Optic.Traversal.Ixed
-
-  if flag(dep-list-transformer) || flag(all)
-    exposed-modules:
-      ListT
-
-  if flag(dep-logict) || flag(all)
-    exposed-modules:
-      Logic
-
-  if flag(dep-optparse-applicative) || flag(all)
-    exposed-modules:
-      Parser.Cli
-
-  if flag(dep-prettyprinter) || flag(all)
-    exposed-modules:
-      Pretty
-
-  if flag(dep-primitive) || flag(all)
-    exposed-modules:
-      Prim
-
-  if flag(dep-psqueues) || flag(all)
-    exposed-modules:
-      Queue.Prio.Hash
-      Queue.Prio.Int
-      Queue.Prio.Ord
-
-  if flag(dep-managed) || flag(all)
-    exposed-modules:
-      Managed
-
-  if flag(dep-megaparsec) || flag(all)
-    exposed-modules:
-      Parser.Text
-      Parser.Binary
-
-  if flag(dep-mtl) || flag(dep-transformers) || flag(all)
-    exposed-modules:
-      Cont
-      Except
-      Reader
-      State
-
-  if flag(dep-multiset) || flag(all)
-    exposed-modules:
-      MultiSet
-      MultiSet.Int
-
-  if flag(dep-mwc-random) || flag(all)
-    exposed-modules:
-      Random
-
-  if flag(dep-network) || flag(all)
-    exposed-modules:
-      Socket
-
-  if flag(dep-network-uri) || flag(all)
-    exposed-modules:
-      URI
-
-  if flag(dep-profunctors) || flag(all)
-    exposed-modules:
-      Profunctor
-
-  if flag(dep-reactive-banana) || flag(all)
-    exposed-modules:
-      FRP
-
-  if flag(dep-reflection) || flag(all)
-    exposed-modules:
-      Reflection
-
-  if flag(dep-regex-applicative) || flag(all)
-    exposed-modules:
-      Regex
-
-  if flag(dep-scientific) || flag(all)
-    exposed-modules:
-      Numeric.Scientific
-
-  if flag(dep-semilattices) || flag(all)
-    exposed-modules:
-      Semilattice
-
-  if flag(dep-stm) || flag(all)
-    exposed-modules:
-      Concurrency.TSem
-
-  if flag(dep-stm) || flag(dep-unliftio) || flag(all)
-    exposed-modules:
-      Concurrency.TBQueue
-      Concurrency.TChan
-      Concurrency.TMVar
-      Concurrency.TVar
-
-  if flag(dep-stm-chans) || flag(all)
-    exposed-modules:
-      Concurrency.TBChan
-      Concurrency.TBMChan
-      Concurrency.TBMQueue
-      Concurrency.TMChan
-      Concurrency.TMQueue
-
-  if flag(dep-stm-containers) || flag(all)
-    exposed-modules:
-      Concurrency.TBimap
-      Concurrency.TMap
-      Concurrency.TMultimap
-      Concurrency.TSet
-
-  if flag(dep-tagged) || flag(all)
-    exposed-modules:
-      Tagged
-
-  if flag(dep-text) || flag(all)
-    exposed-modules:
-      Text
-      Text.Lazy
-      Text.Lazy.Builder
-      Text.Partial
-
-  if flag(dep-text-short) || flag(all)
-    exposed-modules:
-      Text.Short
-      Text.Short.Partial
-      Text.Short.Unsafe
-
-  if flag(dep-time) || flag(all)
-    exposed-modules:
-      Time
-
-  if flag(dep-transformers) || flag(all)
-    exposed-modules:
-      MaybeT
-      Monad.Trans
-
-  if flag(dep-transformers-base) || flag(all)
-    exposed-modules:
-      Monad.Base
-
-  if flag(dep-typed-process) || flag(dep-unix) || flag(all)
-    exposed-modules:
-      Process
-
-  if flag(dep-unagi-chan) || flag(all)
-    exposed-modules:
-      Concurrency.Chan
-
-  if flag(dep-unordered-containers) || flag(all)
-    exposed-modules:
-      Map.Hash
-      Set.Hash
-
-  if flag(dep-utf8-string) || flag(all)
-    exposed-modules:
-      ByteString.Utf8
-      ByteString.Lazy.Utf8
-
-  if flag(dep-vector) || flag(all)
-    exposed-modules:
-      Vector
-      Vector.Generic
-      Vector.Mutable
-      Vector.Primitive
-      Vector.Storable
-      Vector.Unboxed
-
-  if flag(dep-weigh) || flag(all)
-    exposed-modules:
-      Weigh
-
-  if flag(dep-writer-cps-mtl) || flag(all)
-    exposed-modules:
-      Writer
-
---------------------------------------------------------------------------------
--- Benchmarks
---------------------------------------------------------------------------------
+    Weigh
+    Writer
 
 -- benchmark semaphore
 --   hs-source-dirs: bench

@@ -37,22 +37,3 @@ packages, similar to [https://hackage.haskell.org/package/rebase](rebase).
 
 Alpha quality, massive breaking changes should be expected and no changelog will
 be kept for some time. Don't use this package.
-
-### Usage
-
-All dependencies of `planet-mitchell` except the following must be explicitly
-enabled by a Cabal flag:
-
-* `base`
-* `bytestring`
-* `containers`
-* `text`
-
-To use this package, I recommend you:
-
-* Start with the most stripped-down version with no explicit flags, using the
-  haddocks to figure out what could be there (they were generated with every
-  flag enabled).
-
-* When you hit a build error due to a missing type or function, enable the
-  corresponding flag.

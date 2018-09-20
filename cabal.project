@@ -1,6 +1,2 @@
 packages: .
 jobs: $ncpus
-
-package planet-mitchell
-  flags:
-    +all
