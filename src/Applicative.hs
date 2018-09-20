@@ -1,5 +1,3 @@
-{-# language CPP #-}
-
 module Applicative
   ( -- * Applicative
     Applicative(..),

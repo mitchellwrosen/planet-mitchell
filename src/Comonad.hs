@@ -1,20 +1,20 @@
 module Comonad
   ( -- * Comonad
-    Comonad(..),
-    wfix,
-    cfix,
-    kfix,
-    (=>=),
-    (=<=),
-    (<<=),
-    (=>>),
+    Comonad(..)
+  , wfix
+  , cfix
+  , kfix
+  , (=>=)
+  , (=<=)
+  , (<<=)
+  , (=>>)
     -- * ComonadApply
-    ComonadApply(..),
-    (<@@>),
-    liftW2,
-    liftW3,
+  , ComonadApply(..)
+  , (<@@>)
+  , liftW2
+  , liftW3
     -- * Newtypes
-    Cokleisli(..),
+  , Cokleisli(..)
   ) where
 
 import Control.Comonad

@@ -1,5 +1,6 @@
 module Dynamic
-  ( Dynamic(..)
+  ( -- * Dynamic
+    Dynamic(..)
   , toDyn
   , fromDynamic
   , dynApply

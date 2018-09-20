@@ -1,19 +1,13 @@
-{-# language CPP #-}
-
 module Contravariant
   ( -- * Contravariant
-    Contravariant(..),
-    phantom,
-    (>$<),
-    (>$$<),
-    ($<),
-#ifdef DEP_LENS
+    Contravariant(..)
+  , phantom
+  , (>$<)
+  , (>$$<)
+  , ($<)
     -- ** Optics
-    contramapped
-#endif
+  , contramapped
   ) where
 
-#ifdef DEP_LENS
 import Control.Lens.Setter (contramapped)
-#endif
 import Data.Functor.Contravariant

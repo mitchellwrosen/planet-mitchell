@@ -1,9 +1,9 @@
 module Optic.Lens.At
   ( -- * At
-    At(..),
-    sans,
+    At(..)
+  , sans
     -- ** Re-exports
-    module Optic.Traversal.Ixed
+  , module Optic.Traversal.Ixed
   ) where
 
 import Control.Lens.At (At(at), sans)

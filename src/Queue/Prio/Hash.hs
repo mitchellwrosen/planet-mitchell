@@ -1,34 +1,34 @@
 module Queue.Prio.Hash
   ( -- * HashPSQ
-    HashPSQ,
+    HashPSQ
     -- * Construction
-    empty,
-    singleton,
-    fromList,
+  , empty
+  , singleton
+  , fromList
     -- * Querying
-    null,
-    size,
-    member,
-    lookup,
-    findMin,
-    minView,
-    atMostView,
+  , null
+  , size
+  , member
+  , lookup
+  , findMin
+  , minView
+  , atMostView
     -- * Insertion
-    insert,
-    insertView,
+  , insert
+  , insertView
     -- * Deletion
-    delete,
-    deleteView,
+  , delete
+  , deleteView
     -- * Alteration
-    alter,
-    alterMin,
+  , alter
+  , alterMin
     -- * Mapping
-    map,
-    unsafeMapMonotonic,
+  , map
+  , unsafeMapMonotonic
     -- * Folding
-    toList,
-    keys,
-    fold',
+  , toList
+  , keys
+  , fold'
   ) where
 
 import Data.HashPSQ

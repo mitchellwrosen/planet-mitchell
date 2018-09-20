@@ -1,57 +1,51 @@
-{-# language CPP #-}
-
 module Exception
   ( -- * Throwing exceptions
-    throwIO,
+    throwIO
     -- ** Throwing specific exceptions
-    ioError,
-    userError,
-    exitWith,
-    exitFailure,
-    exitSuccess,
-    die,
-#if defined(DEP_UNLIFTIO) || defined(DEP_SAFE_EXCEPTIONS)
+  , ioError
+  , userError
+  , exitWith
+  , exitFailure
+  , exitSuccess
+  , die
     -- * Catching exceptions
-    catch,
-    catchAny,
-    catches,
-    Handler(..),
-    catchJust,
-    handle,
-    handleJust,
-    try,
-    tryAny,
-    tryJust,
-    tryIO,
+  , catch
+  , catchAny
+  , catches
+  , Handler(..)
+  , catchJust
+  , handle
+  , handleJust
+  , try
+  , tryAny
+  , tryJust
+  , tryIO
     -- * Cleanup
-    bracket,
-    bracket_,
-    bracketOnError,
-    finally,
-    onException,
-#endif
+  , bracket
+  , bracket_
+  , bracketOnError
+  , finally
+  , onException
     -- * Masking exceptions
-    MaskingState(..),
-#if defined(DEP_UNLIFTIO) || defined(DEP_SAFE_EXCEPTIONS)
-    mask,
-    mask_,
-    uninterruptibleMask,
-    uninterruptibleMask_,
-#endif
-    getMaskingState,
-    interruptible,
-    allowInterrupt,
+  , MaskingState(..)
+  , mask
+  , mask_
+  , uninterruptibleMask
+  , uninterruptibleMask_
+  , getMaskingState
+  , interruptible
+  , allowInterrupt
     -- * Exception types
-    SomeException(..),
-    Exception(..),
-    mapException,
-    ExitCode(..),
-    IOException,
+  , SomeException(..)
+  , Exception(..)
+  , mapException
+  , ExitCode(..)
+  , IOException
     -- ** Asynchronous exceptions
-    SomeAsyncException(..),
-    AsyncException(..),
-    asyncExceptionToException,
-    asyncExceptionFromException,
+  , SomeAsyncException(..)
+  , AsyncException(..)
+  , asyncExceptionToException
+  , asyncExceptionFromException
   ) where
 
 import Control.Exception
@@ -60,15 +54,6 @@ import Control.Exception
     asyncExceptionFromException, asyncExceptionToException, getMaskingState,
     interruptible, ioError, mapException)
 import System.IO.Error (userError)
-#ifdef DEP_UNLIFTIO
 import UnliftIO.Exception hiding
   (Exception(..), IOException, SomeAsyncException(..), SomeException(..))
-#elif defined(DEP_SAFE_EXCEPTIONS)
-import Control.Exception.Safe
-  (Handler(..), bracket, bracket_, bracketOnError, catch, catchAny, catches,
-    catchJust, finally, handle, handleJust, mask, mask_, onException, throwIO,
-    try, tryAny, tryJust, tryIO, uninterruptibleMask, uninterruptibleMask_)
-#else
-import Control.Exception (throwIO)
-#endif
 import System.Exit (ExitCode(..), die, exitFailure, exitSuccess, exitWith)

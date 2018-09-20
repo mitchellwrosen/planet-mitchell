@@ -1,6 +1,6 @@
 module ByteString.Short.Partial
   ( -- * ShortByteString
-    index,
+    index
   ) where
 
 import Data.ByteString.Short (index)

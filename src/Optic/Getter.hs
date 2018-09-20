@@ -1,7 +1,7 @@
 module Optic.Getter
   ( -- * Getter
-    Getter,
-    to,
+    Getter
+  , to
   ) where
 
 import Control.Lens.Getter

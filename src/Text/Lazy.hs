@@ -1,20 +1,14 @@
-{-# language CPP #-}
-
 module Text.Lazy
   ( -- * Text
-    module Data.Text.Lazy,
-    module Data.Text.Lazy.Encoding,
-#ifdef DEP_LENS
+    module Data.Text.Lazy
+  , module Data.Text.Lazy.Encoding
     -- ** Optics
-    packed,
-    unpacked,
-    text,
-    builder,
-#endif
+  , packed
+  , unpacked
+  , text
+  , builder
   ) where
 
 import Data.Text.Lazy
 import Data.Text.Lazy.Encoding
-#ifdef DEP_LENS
 import Data.Text.Lazy.Lens (packed, unpacked, text, builder)
-#endif

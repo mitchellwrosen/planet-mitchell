@@ -19,13 +19,11 @@ module Numeric.Nat
   , type (*)
   , type (^)
   , type (-)
-#ifdef DEP_CONSTRAINTS
   , Min
   , Max
   , Lcm
   , Gcd
   , Divides
-#endif
 #if MIN_VERSION_base(4,11,0)
   , Div
   , Mod
@@ -33,7 +31,6 @@ module Numeric.Nat
 #endif
   , CmpNat
     -- ** Constraints
-#ifdef DEP_CONSTRAINTS
   , plusNat
   , timesNat
   , powNat
@@ -118,10 +115,7 @@ module Numeric.Nat
   , leId
   , leTrans
   , zeroLe
-#endif
   ) where
 
-#ifdef DEP_CONSTRAINTS
 import Data.Constraint.Nat
-#endif
 import GHC.TypeLits

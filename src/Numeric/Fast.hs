@@ -1,6 +1,6 @@
 module Numeric.Fast
-  ( Fast(..),
-    blog,
+  ( Fast(..)
+  , blog
   ) where
 
 import Data.Approximate.Numerics

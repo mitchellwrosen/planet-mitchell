@@ -1,108 +1,96 @@
-{-# language CPP #-}
-
 module ByteString.Latin1
   ( -- * Latin-1 ByteString
-    all,
-    any,
-    append,
-    break,
-    breakEnd,
-    breakSubstring,
-    concat,
-    concatMap,
-    cons,
-    copy,
-    count,
-    drop,
-    dropWhile,
-    elem,
-    elemIndex,
-    elemIndexEnd,
-    elemIndices,
-    empty,
-    filter,
-    find,
-    findIndex,
-    findIndices,
-    foldl',
-    foldr',
-    foldr,
-    group,
-    groupBy,
-    inits,
-    intercalate,
-    intersperse,
-    isInfixOf,
-    isPrefixOf,
-    isSuffixOf,
-    length,
-    lines,
-    map,
-    mapAccumL,
-    mapAccumR,
-    notElem,
-    null,
-    pack,
-    packCString,
-    packCStringLen,
-#ifdef DEP_BYTESTRING_LEXING
-    packDecimal,
-    packHexadecimal,
-    packOctal,
-    readDecimal,
-#endif
-    readInt,
-    readInteger,
-#ifdef DEP_BYTESTRING_LEXING
-    readHexadecimal,
-    readOctal,
-    readSigned,
-#endif
-    replicate,
-    reverse,
-    scanl,
-    scanl1,
-    scanr,
-    scanr1,
-    singleton,
-    snoc,
-    sort,
-    span,
-    spanEnd,
-    split,
-    splitAt,
-    splitWith,
-    stripPrefix,
-    stripSuffix,
-    tails,
-    take,
-    takeWhile,
-    transpose,
-    uncons,
-    unfoldr,
-    unfoldrN,
-    unlines,
-    unpack,
-    unsnoc,
-    unwords,
-    unzip,
-    useAsCString,
-    useAsCStringLen,
-    words,
-    zip,
-    zipWith,
-#ifdef DEP_LENS
+    all
+  , any
+  , append
+  , break
+  , breakEnd
+  , breakSubstring
+  , concat
+  , concatMap
+  , cons
+  , copy
+  , count
+  , drop
+  , dropWhile
+  , elem
+  , elemIndex
+  , elemIndexEnd
+  , elemIndices
+  , empty
+  , filter
+  , find
+  , findIndex
+  , findIndices
+  , foldl'
+  , foldr'
+  , foldr
+  , group
+  , groupBy
+  , inits
+  , intercalate
+  , intersperse
+  , isInfixOf
+  , isPrefixOf
+  , isSuffixOf
+  , length
+  , lines
+  , map
+  , mapAccumL
+  , mapAccumR
+  , notElem
+  , null
+  , pack
+  , packCString
+  , packCStringLen
+  , packDecimal
+  , packHexadecimal
+  , packOctal
+  , readDecimal
+  , readInt
+  , readInteger
+  , readHexadecimal
+  , readOctal
+  , readSigned
+  , replicate
+  , reverse
+  , scanl
+  , scanl1
+  , scanr
+  , scanr1
+  , singleton
+  , snoc
+  , sort
+  , span
+  , spanEnd
+  , split
+  , splitAt
+  , splitWith
+  , stripPrefix
+  , stripSuffix
+  , tails
+  , take
+  , takeWhile
+  , transpose
+  , uncons
+  , unfoldr
+  , unfoldrN
+  , unlines
+  , unpack
+  , unsnoc
+  , unwords
+  , unzip
+  , useAsCString
+  , useAsCStringLen
+  , words
+  , zip
+  , zipWith
     -- ** Optics
-    chars,
-    packedChars,
-    unpackedChars,
-#endif
+  , chars
+  , packedChars
+  , unpackedChars
   ) where
 
 import Data.ByteString.Char8
-#ifdef DEP_LENS
 import Data.ByteString.Lens (chars, packedChars, unpackedChars)
-#endif
-#ifdef DEP_BYTESTRING_LEXING
 import Data.ByteString.Lex.Integral
-#endif

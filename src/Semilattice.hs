@@ -1,7 +1,7 @@
 module Semilattice
-  ( Join(..),
-    Meet(..),
-    Order(..),
+  ( Join(..)
+  , Meet(..)
+  , Order(..)
   ) where
 
 import Data.Semilattice.Join

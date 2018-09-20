@@ -2,13 +2,13 @@
 
 module Optic.Prism.Cons
   ( -- * Cons
-    Cons(..),
-    (<|),
-    cons,
-    uncons,
-    _head,
-    _tail,
-    pattern (:<),
+    Cons(..)
+  , (<|)
+  , cons
+  , uncons
+  , _head
+  , _tail
+  , pattern (:<)
   ) where
 
 import Control.Lens.Cons

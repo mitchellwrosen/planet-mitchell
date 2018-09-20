@@ -1,24 +1,14 @@
-{-# language CPP #-}
-
 module Tree
-  ( module Data.Tree,
-#ifdef DEP_FGL
-    postorder,
-    postorderF,
-    preorder,
-    preorderF,
-#endif
-#ifdef DEP_LENS
+  ( module Data.Tree
+  , postorder
+  , postorderF
+  , preorder
+  , preorderF
     -- ** Optics
-    root,
-    branches,
-#endif
+  , root
+  , branches
   ) where
 
-#ifdef DEP_FGL
 import Data.Graph.Inductive.Basic (postorder, postorderF, preorder, preorderF)
-#endif
 import Data.Tree
-#ifdef DEP_LENS
 import Data.Tree.Lens (branches, root)
-#endif

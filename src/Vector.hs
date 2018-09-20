@@ -1,18 +1,12 @@
-{-# language CPP #-}
-
 module Vector
   ( -- * Vector
-    module Data.Vector,
-#ifdef DEP_LENS
+    module Data.Vector
     -- ** Optics
-    toVectorOf,
-    vector,
-    forced,
-    sliced,
-#endif
+  , toVectorOf
+  , vector
+  , forced
+  , sliced
   ) where
 
 import Data.Vector
-#ifdef DEP_LENS
 import Data.Vector.Lens (forced, sliced, toVectorOf, vector)
-#endif

@@ -2,8 +2,8 @@
 
 module Constraint
   ( -- * Re-exports
-    module Data.Constraint,
-    module Data.Constraint.Forall,
+    module Data.Constraint
+  , module Data.Constraint.Forall
   ) where
 
 import Data.Constraint

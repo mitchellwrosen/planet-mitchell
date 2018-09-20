@@ -1,20 +1,20 @@
 module Optic.Setter
   ( -- * Setter
-    Setter,
-    Setter',
-    (.~),
-    (%~),
-    (+~),
-    (-~),
-    (*~),
-    (//~),
-    (^~),
-    (^^~),
-    (**~),
-    (||~),
-    (&&~),
-    set,
-    over,
+    Setter
+  , Setter'
+  , (.~)
+  , (%~)
+  , (+~)
+  , (-~)
+  , (*~)
+  , (//~)
+  , (^~)
+  , (^^~)
+  , (**~)
+  , (||~)
+  , (&&~)
+  , set
+  , over
   ) where
 
 import Control.Lens.Setter

@@ -7,10 +7,8 @@ module System
     targetByteOrder,
 #endif
     os,
-#ifdef DEP_EXTRA
     isWindows,
     isMac,
-#endif
     arch,
     compilerName,
     compilerVersion,
@@ -20,6 +18,4 @@ module System
 import GHC.ByteOrder
 #endif
 import System.Info
-#ifdef DEP_EXTRA
 import System.Info.Extra
-#endif

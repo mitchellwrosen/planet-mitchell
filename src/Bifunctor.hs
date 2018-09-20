@@ -1,14 +1,8 @@
-{-# language CPP #-}
-
 module Bifunctor
   ( -- * Bifunctor
-    Bifunctor(..),
-#ifdef DEP_LENS
-    Swapped(..),
-#endif
+    Bifunctor(..)
+  , Swapped(..)
   ) where
 
-#ifdef DEP_LENS
 import Control.Lens.Iso (Swapped(swapped))
-#endif
 import Data.Bifunctor

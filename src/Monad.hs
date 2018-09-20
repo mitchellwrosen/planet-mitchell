@@ -1,38 +1,28 @@
-{-# language CPP #-}
-
 module Monad
   ( -- * Monad
-    Monad((>>=), return),
-    (=<<),
-    (>=>),
-    (<=<),
-    (<$!>),
-    join,
-#ifdef DEP_EXTRA
-    loopM,
-    unlessM,
-    whenJustM,
-    whenM,
-    whileM,
-#endif
+    Monad((>>=), return)
+  , (=<<)
+  , (>=>)
+  , (<=<)
+  , (<$!>)
+  , join
+  , loopM
+  , unlessM
+  , whenJustM
+  , whenM
+  , whileM
     -- ** Newtypes
-    Kleisli(..),
-#ifdef DEP_MMORPH
+  , Kleisli(..)
     -- * MMonad
-    MMonad(..),
-    squash,
-    (>|>),
-    (<|<),
-    (=<|),
-    (|>=),
-#endif
+  , MMonad(..)
+  , squash
+  , (>|>)
+  , (<|<)
+  , (=<|)
+  , (|>=)
   ) where
 
 import Control.Arrow (Kleisli(Kleisli, runKleisli))
 import Control.Monad (Monad((>>=), return), (=<<), (>=>), (<=<), (<$!>), join)
-#ifdef DEP_EXTRA
 import Control.Monad.Extra (loopM, unlessM, whenJustM, whenM, whileM)
-#endif
-#ifdef DEP_MMORPH
 import Control.Monad.Morph (MMonad(embed), squash, (>|>), (<|<), (=<|), (|>=))
-#endif

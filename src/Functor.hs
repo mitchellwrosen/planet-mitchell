@@ -2,30 +2,22 @@
 
 module Functor
   ( -- * Functor
-    Functor(..),
-    (<$>),
-    ($>),
+    Functor(..)
+  , (<$>)
+  , ($>)
 #if MIN_VERSION_base(4,11,0)
-    (<&>),
+  , (<&>)
 #endif
-    void,
-    unzip,
-#ifdef DEP_LENS
+  , void
+  , unzip
     -- ** Optics
-    mapped,
-#endif
-#ifdef DEP_MMORPH
+  , mapped
     -- * MFunctor
-    MFunctor(..),
-#endif
+  , MFunctor(..)
   ) where
 
-#ifdef DEP_LENS
 import Control.Lens.Setter (mapped)
-#endif
-#ifdef DEP_MMORPH
 import Control.Monad.Morph (MFunctor, hoist)
-#endif
 import Data.Functor (Functor(fmap, (<$)), (<$>), ($>), void)
 #if MIN_VERSION_base(4,11,0)
 import Data.Functor ((<&>))

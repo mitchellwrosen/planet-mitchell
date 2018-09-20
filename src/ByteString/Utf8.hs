@@ -1,26 +1,20 @@
-{-# language CPP #-}
-
 module ByteString.Utf8
-  ( break,
-    drop,
-    foldl,
-    foldr,
-    fromString,
-    length,
-    span,
-    splitAt,
-    take,
-    toString,
-    uncons,
-#ifdef DEP_LENS
+  ( break
+  , drop
+  , foldl
+  , foldr
+  , fromString
+  , length
+  , span
+  , splitAt
+  , take
+  , toString
+  , uncons
     -- ** Optics
-    utf8,
-#endif
+  , utf8
   ) where
 
 import Data.ByteString.UTF8
   (break, drop, foldl, foldr, fromString, length, span, splitAt, take, toString,
     uncons)
-#ifdef DEP_LENS
 import Data.Text.Strict.Lens (utf8)
-#endif

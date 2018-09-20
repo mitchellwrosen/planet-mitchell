@@ -1,16 +1,10 @@
-{-# language CPP #-}
-
 module Set
   ( -- * Set
-    module Data.Set,
-#if DEP_LENS
+    module Data.Set
     -- ** Optics
-    setmapped,
-    setOf,
-#endif
+  , setmapped
+  , setOf
   ) where
 
 import Data.Set
-#if DEP_LENS
 import Data.Set.Lens (setmapped, setOf)
-#endif

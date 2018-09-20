@@ -1,10 +1,10 @@
 module Error
   ( -- * Error
-    error,
-    errorWithoutStackTrace,
-    undefined,
-    throw,
-    assert,
+    error
+  , errorWithoutStackTrace
+  , undefined
+  , throw
+  , assert
   ) where
 
 import GHC.Err

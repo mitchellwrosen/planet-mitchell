@@ -1,114 +1,100 @@
-{-# language CPP #-}
-
 module Concurrency
   ( -- * Concurrency
-#if defined(DEP_ASYNC) || defined(DEP_UNLIFTIO)
     -- ** High-level concurrency
-    concurrently,
-    concurrently_,
-    race,
-    race_,
-    mapConcurrently,
-    mapConcurrently_,
-    forConcurrently,
-    forConcurrently_,
-    replicateConcurrently,
-    replicateConcurrently_,
-    Concurrently(..),
-#endif
-#if defined(DEP_ASYNC) || defined(DEP_UNLIFTIO)
+    concurrently
+  , concurrently_
+  , race
+  , race_
+  , mapConcurrently
+  , mapConcurrently_
+  , forConcurrently
+  , forConcurrently_
+  , replicateConcurrently
+  , replicateConcurrently_
+  , Concurrently(..)
     -- ** Low-level concurrency using @async@
-    Async,
-    async,
-    asyncBound,
-    asyncOn,
-    asyncWithUnmask,
-    asyncOnWithUnmask,
-    cancel,
-    uninterruptibleCancel,
-    cancelWith,
-    withAsync,
-    withAsyncBound,
-    withAsyncOn,
-    withAsyncWithUnmask,
-    withAsyncOnWithUnmask,
-    wait,
-    waitSTM,
-    waitCatch,
-    waitCatchSTM,
-    waitAny,
-    waitAnySTM,
-    waitAnyCatch,
-    waitAnyCatchSTM,
-    waitAnyCancel,
-    waitAnyCatchCancel,
-    waitEither,
-    waitEitherSTM,
-    waitEither_,
-    waitEitherSTM_,
-    waitEitherCatch,
-    waitEitherCatchSTM,
-    waitEitherCancel,
-    waitEitherCatchCancel,
-    waitBoth,
-    waitBothSTM,
-    poll,
-    pollSTM,
-    link,
-    link2,
-    asyncThreadId,
-#ifdef DEP_ASYNC
-    compareAsyncs,
-    ExceptionInLinkedThread(..),
-    AsyncCancelled(..),
-#endif
-#endif
+  , Async
+  , async
+  , asyncBound
+  , asyncOn
+  , asyncWithUnmask
+  , asyncOnWithUnmask
+  , cancel
+  , uninterruptibleCancel
+  , cancelWith
+  , withAsync
+  , withAsyncBound
+  , withAsyncOn
+  , withAsyncWithUnmask
+  , withAsyncOnWithUnmask
+  , wait
+  , waitSTM
+  , waitCatch
+  , waitCatchSTM
+  , waitAny
+  , waitAnySTM
+  , waitAnyCatch
+  , waitAnyCatchSTM
+  , waitAnyCancel
+  , waitAnyCatchCancel
+  , waitEither
+  , waitEitherSTM
+  , waitEither_
+  , waitEitherSTM_
+  , waitEitherCatch
+  , waitEitherCatchSTM
+  , waitEitherCancel
+  , waitEitherCatchCancel
+  , waitBoth
+  , waitBothSTM
+  , poll
+  , pollSTM
+  , link
+  , link2
+  , asyncThreadId
+  , compareAsyncs
+  , ExceptionInLinkedThread(..)
+  , AsyncCancelled(..)
     -- ** Lower-level concurrency using @forkIO@
-    forkIO,
-#ifdef DEP_UNLIFTIO
-    forkWithUnmask,
-#else
-    forkIOWithUnmask,
-#endif
-    forkOn,
-    forkOnWithUnmask,
-    forkFinally,
-    throwTo,
-    killThread,
+  , forkIO
+  , forkWithUnmask
+  , forkOn
+  , forkOnWithUnmask
+  , forkFinally
+  , throwTo
+  , killThread
     -- * STM
-    STM,
-    atomically,
-    retry,
-    throwSTM,
-    catchSTM,
-    unsafeIOToSTM,
+  , STM
+  , atomically
+  , retry
+  , throwSTM
+  , catchSTM
+  , unsafeIOToSTM
     -- * Delay
-    threadDelay,
-    registerDelay,
+  , threadDelay
+  , registerDelay
     -- * Cooperative concurrency
-    yield,
+  , yield
     -- * Thread info
-    ThreadId,
-    myThreadId,
-    mkWeakThreadId,
-    ThreadStatus(..),
-    BlockReason(..),
-    threadStatus,
-    threadCapability,
-    labelThread,
+  , ThreadId
+  , myThreadId
+  , mkWeakThreadId
+  , ThreadStatus(..)
+  , BlockReason(..)
+  , threadStatus
+  , threadCapability
+  , labelThread
     -- * File descriptor blocking
-    threadWaitRead,
-    threadWaitReadSTM,
-    threadWaitWrite,
-    threadWaitWriteSTM,
-    closeFdWith,
+  , threadWaitRead
+  , threadWaitReadSTM
+  , threadWaitWrite
+  , threadWaitWriteSTM
+  , closeFdWith
     -- * Re-exports
-    module Concurrency.IORef,
-    module Concurrency.MVar,
-#if defined(DEP_STM) || defined(DEP_UNLIFTIO)
-    module Concurrency.TVar,
-    module Concurrency.TMVar,
-#endif
+  , module Concurrency.IORef
+  , module Concurrency.MVar
+  , module Concurrency.TVar
+  , module Concurrency.TMVar
   ) where
 
 import GHC.Conc
@@ -116,29 +102,14 @@ import GHC.Conc
     BlockedOnMVar, BlockedOnOther, BlockedOnSTM), ThreadStatus(..), catchSTM,
     closeFdWith, labelThread, retry, threadStatus, threadWaitReadSTM,
     threadWaitWriteSTM, throwSTM, unsafeIOToSTM)
-#ifdef DEP_UNLIFTIO
 import UnliftIO.Concurrent
-#else
-import Control.Concurrent (forkFinally)
-import GHC.Conc
-#endif
-#ifdef DEP_UNLIFTIO
 import UnliftIO.Async
-#ifdef DEP_ASYNC
 import Control.Concurrent.Async
   (AsyncCancelled(..), ExceptionInLinkedThread(..), compareAsyncs)
-#endif
-#elif defined(DEP_ASYNC)
-import Control.Concurrent.Async
-#endif
-#ifdef DEP_UNLIFTIO
 import UnliftIO.STM
-#endif
 
 -- For re-export
 import Concurrency.IORef
 import Concurrency.MVar
-#if defined(DEP_STM) || defined(DEP_UNLIFTIO)
-import Concurrency.TVar
 import Concurrency.TMVar
-#endif
+import Concurrency.TVar

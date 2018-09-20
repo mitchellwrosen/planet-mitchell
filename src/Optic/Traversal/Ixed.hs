@@ -1,8 +1,8 @@
 module Optic.Traversal.Ixed
   ( -- * Ixed
-    Ixed(..),
-    Index,
-    IxValue,
+    Ixed(..)
+  , Index
+  , IxValue
   ) where
 
 import Control.Lens.At (Index, Ixed(ix), IxValue)

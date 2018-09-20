@@ -1,7 +1,7 @@
 module Optic.Iso.Strict
   ( -- * Strict
-    Strict(..),
-    lazy,
+    Strict(..)
+  , lazy
   ) where
 
 import Control.Lens.Iso (Strict(strict), lazy)

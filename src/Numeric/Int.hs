@@ -1,9 +1,9 @@
 module Numeric.Int
-  ( Int,
-    Int8,
-    Int16,
-    Int32,
-    Int64,
+  ( Int
+  , Int8
+  , Int16
+  , Int32
+  , Int64
   ) where
 
 import GHC.Int (Int, Int8, Int16, Int32, Int64)

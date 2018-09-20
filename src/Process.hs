@@ -1,45 +1,35 @@
-{-# language CPP #-}
-
 module Process
   (
     -- * Spawning processes
-#ifdef DEP_TYPED_PROCESS
     -- ** High-level Haskell API
-    module System.Process.Typed,
-#endif
-#ifdef DEP_UNIX
+    module System.Process.Typed
     -- ** Low-level POSIX API
-    forkProcess,
-    forkProcessWithUnmask,
+  , forkProcess
+  , forkProcessWithUnmask
     -- ** Waiting
-    getProcessStatus,
-    getAnyProcessStatus,
-    getGroupProcessStatus,
+  , getProcessStatus
+  , getAnyProcessStatus
+  , getGroupProcessStatus
     -- * Exiting the current process
-    exitImmediately,
+  , exitImmediately
     -- * Replacing the current process
-    executeFile,
+  , executeFile
     -- * Process info
-    getProcessID,
-    getParentProcessID,
+  , getProcessID
+  , getParentProcessID
     -- ** Process groups
-    getProcessGroupID,
-    getProcessGroupIDOf,
-    createProcessGroupFor,
-    joinProcessGroup,
-    setProcessGroupIDOf,
-    createSession,
-#endif
+  , getProcessGroupID
+  , getProcessGroupIDOf
+  , createProcessGroupFor
+  , joinProcessGroup
+  , setProcessGroupIDOf
+  , createSession
   ) where
 
-#ifdef DEP_UNIX
 import System.Posix.Process
   (createProcessGroupFor, createSession, executeFile, exitImmediately,
     forkProcess, forkProcessWithUnmask, getAnyProcessStatus,
     getGroupProcessStatus, getParentProcessID, getProcessGroupID,
     getProcessGroupIDOf, getProcessID, getProcessStatus, joinProcessGroup,
     setProcessGroupIDOf)
-#endif
-#ifdef DEP_TYPED_PROCESS
 import System.Process.Typed
-#endif

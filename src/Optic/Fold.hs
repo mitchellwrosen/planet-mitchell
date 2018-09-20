@@ -1,65 +1,65 @@
 module Optic.Fold
   ( -- * Fold
-    Fold,
-    (^..),
-    (^?),
-    pre,
-    preview,
-    previews,
-    preuse,
-    preuses,
-    has,
-    hasn't,
-    folding,
-    folded,
-    folded64,
-    unfolded,
-    iterated,
-    filtered,
-    backwards,
-    repeated,
-    replicated,
-    cycled,
-    takingWhile,
-    droppingWhile,
-    foldMapOf,
-    foldMapByOf,
-    foldOf,
-    foldByOf,
-    foldrOf,
-    foldrOf',
-    foldrMOf,
-    foldlOf',
-    foldlMOf,
-    toListOf,
-    toNonEmptyOf,
-    anyOf,
-    allOf,
-    noneOf,
-    andOf,
-    orOf,
-    productOf,
-    sumOf,
-    traverseOf_,
-    forOf_,
-    sequenceAOf_,
-    asumOf,
-    msumOf,
-    concatMapOf,
-    elemOf,
-    notElemOf,
-    lengthOf,
-    nullOf,
-    notNullOf,
-    firstOf,
-    lastOf,
-    maximumOf,
-    minimumOf,
-    maximumByOf,
-    minimumByOf,
-    findOf,
-    findMOf,
-    lookupOf,
+    Fold
+  , (^..)
+  , (^?)
+  , pre
+  , preview
+  , previews
+  , preuse
+  , preuses
+  , has
+  , hasn't
+  , folding
+  , folded
+  , folded64
+  , unfolded
+  , iterated
+  , filtered
+  , backwards
+  , repeated
+  , replicated
+  , cycled
+  , takingWhile
+  , droppingWhile
+  , foldMapOf
+  , foldMapByOf
+  , foldOf
+  , foldByOf
+  , foldrOf
+  , foldrOf'
+  , foldrMOf
+  , foldlOf'
+  , foldlMOf
+  , toListOf
+  , toNonEmptyOf
+  , anyOf
+  , allOf
+  , noneOf
+  , andOf
+  , orOf
+  , productOf
+  , sumOf
+  , traverseOf_
+  , forOf_
+  , sequenceAOf_
+  , asumOf
+  , msumOf
+  , concatMapOf
+  , elemOf
+  , notElemOf
+  , lengthOf
+  , nullOf
+  , notNullOf
+  , firstOf
+  , lastOf
+  , maximumOf
+  , minimumOf
+  , maximumByOf
+  , minimumByOf
+  , findOf
+  , findMOf
+  , lookupOf
   ) where
 
 import Control.Lens.Fold

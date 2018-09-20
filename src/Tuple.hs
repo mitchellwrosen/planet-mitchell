@@ -1,15 +1,10 @@
-{-# language CPP #-}
-
 module Tuple
   ( fst
   , snd
   , curry
   , uncurry
   , swap
-#ifdef DEP_EXTRA
   , dupe
-#endif
-#ifdef DEP_LENS
     -- ** Optics
   , Field1(..)
   , _1'
@@ -49,13 +44,8 @@ module Tuple
   , _18'
   , Field19(..)
   , _19'
-#endif
   ) where
 
-#ifdef DEP_LENS
 import Control.Lens.Tuple
-#endif
 import Data.Tuple
-#ifdef DEP_EXTRA
 import Data.Tuple.Extra
-#endif

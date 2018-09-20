@@ -1,14 +1,14 @@
 module Prim
   ( -- * Re-exports
-    module Control.Monad.Primitive,
-    module Data.Primitive.Addr,
-    module Data.Primitive.Array,
-    module Data.Primitive.ByteArray,
-    module Data.Primitive.MachDeps,
-    module Data.Primitive.MutVar,
-    module Data.Primitive.SmallArray,
-    module Data.Primitive.Types,
-    module Data.Primitive.UnliftedArray,
+    module Control.Monad.Primitive
+  , module Data.Primitive.Addr
+  , module Data.Primitive.Array
+  , module Data.Primitive.ByteArray
+  , module Data.Primitive.MachDeps
+  , module Data.Primitive.MutVar
+  , module Data.Primitive.SmallArray
+  , module Data.Primitive.Types
+  , module Data.Primitive.UnliftedArray
   ) where
 
 import Control.Monad.Primitive

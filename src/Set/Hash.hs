@@ -1,15 +1,9 @@
-{-# language CPP #-}
-
 module Set.Hash
   ( -- * HashSet
-    module Data.HashSet,
-#ifdef DEP_LENS
+    module Data.HashSet
     -- ** Optics
-    setOf,
-#endif
+  , setOf
   ) where
 
 import Data.HashSet
-#ifdef DEP_LENS
 import Data.HashSet.Lens (setOf)
-#endif

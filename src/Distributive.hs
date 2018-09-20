@@ -1,5 +1,6 @@
 module Distributive
-  ( Distributive(..)
+  ( -- * Distributive
+    Distributive(..)
   , cotraverse
   , comapM
   , fmapCollect

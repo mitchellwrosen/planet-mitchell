@@ -1,18 +1,18 @@
 module Text.Lazy.Builder
   ( -- * Builder
-    Builder,
-    toLazyText,
-    toLazyTextWith,
-    singleton,
-    fromText,
-    fromLazyText,
-    fromString,
-    flush,
-    decimal,
-    hexadecimal,
-    FPFormat(..),
-    realFloat,
-    formatRealFloat,
+    Builder
+  , toLazyText
+  , toLazyTextWith
+  , singleton
+  , fromText
+  , fromLazyText
+  , fromString
+  , flush
+  , decimal
+  , hexadecimal
+  , FPFormat(..)
+  , realFloat
+  , formatRealFloat
   ) where
 
 import Data.Text.Lazy.Builder

@@ -1,20 +1,14 @@
-{-# language CPP #-}
-
 module Semigroup
   ( -- * Semigroup
-    Semigroup(..),
-#ifdef DEP_SEMIGROUPS
-    gmappend,
-#endif
+    Semigroup(..)
+  , gmappend
     -- * Newtypes
-    First(..),
-    Last(..),
-    Dual(..),
-    diff,
-    cycle1,
+  , First(..)
+  , Last(..)
+  , Dual(..)
+  , diff
+  , cycle1
   ) where
 
 import Data.Semigroup
-#ifdef DEP_SEMIGROUPS
 import Data.Semigroup.Generic
-#endif
