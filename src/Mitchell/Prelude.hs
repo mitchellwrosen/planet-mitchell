@@ -3,10 +3,6 @@
 module Mitchell.Prelude
   ( -- * Ala.Identity
     Identity(..)
-    -- * Alternative
-  , Alternative((<|>), empty)
-  , guard
-  , optional
     -- * Applicative
   , Applicative(..)
   , filterM
@@ -18,6 +14,9 @@ module Mitchell.Prelude
   , when
   , zipWithM
   , zipWithM_
+  , Alternative((<|>), empty)
+  , guard
+  , optional
     -- * Bool
   , Bool(..)
   , (&&)
@@ -161,7 +160,6 @@ module Mitchell.Prelude
   , (=<<)
   , (>=>)
   , (<=<)
-  , join
   , unlessM
   , whenJustM
   , whenM
@@ -284,10 +282,10 @@ module Mitchell.Prelude
   ) where
 
 import Ala.Identity (Identity(Identity, runIdentity))
-import Alternative  (Alternative(empty, (<|>)), guard, optional)
-import Applicative  (Applicative, filterM, forever, liftA2, liftA3, pure,
-                     replicateM, replicateM_, unless, when, zipWithM, zipWithM_,
-                     (*>), (<*), (<*>))
+import Applicative  (Alternative(empty, (<|>)), Applicative, filterM, forever,
+                     guard, liftA2, liftA3, optional, pure, replicateM,
+                     replicateM_, unless, when, zipWithM, zipWithM_, (*>), (<*),
+                     (<*>))
 import Bool         (Bool(False, True), not, otherwise, (&&), (||))
 import Bounded      (Bounded(maxBound, minBound))
 import ByteString   (ByteString)
@@ -334,7 +332,7 @@ import Maybe                (Maybe(Just, Nothing), catMaybes, fromMaybe,
                              mapMaybe, maybe)
 import Maybe                (maybeM)
 import Maybe                (_Just, _Nothing)
-import Monad                (Monad((>>=)), join, (<=<), (=<<), (>=>))
+import Monad                (Monad((>>=)), (<=<), (=<<), (>=>))
 import Monad                (unlessM, whenJustM, whenM, whileM)
 import Monad.Trans          (MonadTrans(lift))
 import Monoid               (Monoid, mconcat, mempty)
@@ -374,3 +372,5 @@ import Tuple                (fst, snd)
 import Tuple                (Field1(_1), Field2(_2), Field3(_3), Field4(_4),
                              Field5(_5), Field6(_6))
 import Void                 (Void)
+
+import Data.Orphans ()

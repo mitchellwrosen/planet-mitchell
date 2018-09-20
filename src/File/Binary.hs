@@ -5,8 +5,10 @@ module File.Binary
     withBinaryFile
     -- ** Reading
   , readFile
+  , readFileDeserialise
     -- ** Writing
   , writeFile
+  , writeFileSerialise
   , appendFile
     -- * File handle operations
     -- ** Reading
@@ -21,5 +23,6 @@ module File.Binary
   , hPutNonBlocking
   ) where
 
+import Codec.Serialise (readFileDeserialise, writeFileSerialise)
 import Data.ByteString
 import UnliftIO.IO     (withBinaryFile)

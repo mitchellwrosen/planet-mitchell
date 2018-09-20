@@ -3,7 +3,12 @@ cabal-version: 2.0
 author: Mitchell Rosen
 build-type: Simple
 category: Prelude
-description: Planet Mitchell.
+description:
+  Planet Mitchell.
+  .
+  This package provides a curated, highly unstable collection of reorganized
+  re-exports. Mostly for me but please poke around and see README.md for a bit
+  more information ;)
 license-file: LICENSE
 license: BSD3
 maintainer: Mitchell Rosen <mitchellwrosen@gmail.com>
@@ -256,13 +261,10 @@ library
         base:GHC.PArr
   -- TODO: Add new 8.6 modules
 
-  ------------------------------------------------------------------------------
-  -- Dependencies
-  ------------------------------------------------------------------------------
-
   build-depends:
       aeson ^>= 1.3.1 || ^>= 1.4.0
     , base ^>= 4.10 || ^>= 4.11
+    , base-orphans ^>= 0.8
     , aeson-pretty ^>= 0.8.7
     , aeson-qq ^>= 0.8.2
     , ansi-terminal ^>= 0.8.0
@@ -275,13 +277,13 @@ library
     , bytestring ^>= 0.10.8
     , bytestring-lexing ^>= 0.5.0
     , case-insensitive ^>= 1.2.0
+    , cborg ^>= 0.2.0
     , comonad ^>= 5.0
     , compact ^>= 0.1.0
     , constraints ^>= 0.10
     , containers ^>= 0.5.11
     , contravariant ^>= 1.4.1
     , contravariant-extras ^>= 0.3.4
-    , cryptohash-sha1 ^>= 0.11.100.1
     , deepseq ^>= 1.4.3
     , distributive ^>= 0.5.3
     , dlist ^>= 0.8.0
@@ -289,16 +291,19 @@ library
     , Earley ^>= 0.12.0
     , envparse ^>= 0.4
     , erf ^>= 2.0.0
+    , exceptions ^>= 0.10.0
     , extra ^>= 1.6.9 || ^>= 1.6.10 || ^>= 1.6.11
     , fgl ^>= 5.6.0
     , filepath ^>= 1.4.2
     , foldl ^>= 1.4.0
+    , free ^>= 5.1
     , gauge ^>= 0.2.1
     , generic-aeson ^>= 0.2.0.9
     , half ^>= 0.3
     , hashable ^>= 1.2.7
     , heaps ^>= 0.3.0
     , hedgehog ^>= 0.5.3 || ^>= 0.6
+    , integer-logarithms ^>= 1.0.2
     , lens ^>= 4.16.1
     , lens-aeson ^>= 1.0.2
     , list-transformer ^>= 1.0.4
@@ -311,21 +316,27 @@ library
     , multiset ^>= 0.3.4
     , mwc-random ^>= 0.13.6
     , network ^>= 2.7.0
+    , network-info ^>= 0.2.0
     , network-uri ^>= 2.6.1
     , nf ^>= 1.0.1
     , optparse-applicative ^>= 0.14.2
     , parallel ^>= 3.2.1
+    , parser-combinators ^>= 1.0.0
+    , pointed ^>= 5.0.1
     , prettyprinter ^>= 1.2.0
     , prettyprinter-ansi-terminal ^>= 1.1.1
     , primitive ^>= 0.6.4
-    , profunctors ^>= 5.2
+    , profunctors ^>= 5.2 || ^>= 5.3
     , psqueues ^>= 0.2.7
     , reactive-banana ^>= 1.2.0
     , reflection ^>= 2.1
     , regex-applicative ^>= 0.3.3
     , scientific ^>= 0.3.6
+    , semigroupoids ^>= 5.3.1
     , semigroups ^>= 0.18.4
     , semilattices ^>= 0.0.0
+    , serialise ^>= 0.2.0
+    , split ^>= 0.2.3.3
     , stm ^>= 2.4.5
     , stm-chans ^>= 3.0.0
     , stm-containers ^>= 0.2.16
@@ -342,7 +353,11 @@ library
     , unliftio ^>= 0.2.7.0
     , unordered-containers ^>= 0.2.9
     , utf8-string ^>= 1.0.1.1
+    , uuid ^>= 1.3.13
+    , uuid-types ^>= 1.0.3
+    , vault ^>= 0.3.1
     , vector ^>= 0.12.0
+    , vector-builder ^>= 0.3.6
     , weigh ^>= 0.0.12
     , writer-cps-mtl ^>= 0.1.1
 
@@ -352,7 +367,6 @@ library
     Ala.Identity
     Ala.Product
     Ala.Sum
-    Alternative
     Applicative
     Array
     Array.Partial
@@ -408,6 +422,7 @@ library
     Constraint
     Cont
     Contravariant
+    Copointed
     Data
     Debug
     Decidable
@@ -435,6 +450,7 @@ library
     Generic
     Graph.Adjacency
     Graph.Inductive
+    Groupoid
     Hashable
     Heap
     IO
@@ -521,6 +537,7 @@ library
     Parser.Earley
     Parser.Env
     Parser.Text
+    Pointed
     Posix
     Predicate
     Pretty
@@ -547,8 +564,10 @@ library
     RuntimeSystem
     ST
     Semigroup
+    Semigroupoid
     Semilattice
     Sequence
+    Serialise
     Set
     Set.Hash
     Set.Int
@@ -578,9 +597,14 @@ library
     Type
     Typeable
     URI
+    UUID
     Unique
+    Vault
+    Vault.Lazy
     Vector
+    Vector.Builder
     Vector.Generic
+    Vector.Generic.Mutable
     Vector.Mutable
     Vector.Primitive
     Vector.Storable

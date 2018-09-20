@@ -28,8 +28,6 @@ module ByteString
   , foldr
   , group
   , groupBy
-  , hash
-  , hmac
   , index
   , inits
   , intercalate
@@ -83,7 +81,6 @@ module ByteString
   , unpackedBytes
   ) where
 
-import Crypto.Hash.SHA1             (hash, hmac)
 import Data.ByteString
 import Data.ByteString.Lens
 import Data.ByteString.Lex.Integral (asHexadecimal)

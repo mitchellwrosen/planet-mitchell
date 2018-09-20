@@ -1,6 +1,7 @@
 module Exception
   ( -- * Throwing exceptions
     throwIO
+  , MonadThrow(..)
     -- ** Throwing specific exceptions
   , ioError
   , userError
@@ -48,14 +49,15 @@ module Exception
   , asyncExceptionFromException
   ) where
 
-import Control.Exception  (AsyncException(..), Exception(..), IOException,
-                           MaskingState(..), SomeAsyncException(..),
-                           SomeException(..), allowInterrupt,
-                           asyncExceptionFromException,
-                           asyncExceptionToException, getMaskingState,
-                           interruptible, ioError, mapException)
-import System.Exit        (ExitCode(..), die, exitFailure, exitSuccess,
-                           exitWith)
-import System.IO.Error    (userError)
-import UnliftIO.Exception hiding (Exception(..), IOException,
-                           SomeAsyncException(..), SomeException(..))
+import Control.Exception   (AsyncException(..), Exception(..), IOException,
+                            MaskingState(..), SomeAsyncException(..),
+                            SomeException(..), allowInterrupt,
+                            asyncExceptionFromException,
+                            asyncExceptionToException, getMaskingState,
+                            interruptible, ioError, mapException)
+import Control.Monad.Catch (MonadThrow(throwM))
+import System.Exit         (ExitCode(..), die, exitFailure, exitSuccess,
+                            exitWith)
+import System.IO.Error     (userError)
+import UnliftIO.Exception  hiding (Exception(..), IOException,
+                            SomeAsyncException(..), SomeException(..))

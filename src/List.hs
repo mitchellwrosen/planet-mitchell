@@ -10,13 +10,14 @@ module List
   , breakOn
   , breakOnEnd
   , breakEnd
-  , chunksOf
+  , chop
   , cons
   , cycle
   , delete
   , deleteBy
   , deleteFirstsBy
   , disjoint
+  , divvy
   , drop
   , dropEnd
   , dropPrefix
@@ -25,6 +26,7 @@ module List
   , dropWhileEnd
   , elemIndex
   , elemIndices
+  , endBy
   , filter
   , findIndex
   , findIndices
@@ -108,6 +110,7 @@ module List
   , unzip5
   , unzip6
   , unzip7
+  , wordsBy
   , zip
   , zip3
   , zip4
@@ -156,15 +159,15 @@ import Data.List (break, cycle, delete, deleteBy, deleteFirstsBy, drop,
 #if MIN_VERSION_base(4,11,0)
 import Data.List (iterate')
 #endif
-import Data.List.Extra (allSame, anySame, breakEnd, breakOn, breakOnEnd,
-                        chunksOf, cons, disjoint, dropEnd, dropPrefix,
-                        dropSuffix, groupOn, groupSort, groupSortBy,
-                        groupSortOn, lower, nubOn, nubOrd, nubOrdBy, nubOrdOn,
-                        nubSort, nubSortBy, nubSortOn, snoc, spanEnd, split,
-                        splitAtEnd, splitOn, stripInfix, stripInfixEnd,
-                        stripSuffix, takeEnd, takeWhileEnd, trim, trimEnd,
-                        trimStart, unsnoc, upper)
+import Data.List.Extra (allSame, anySame, breakEnd, breakOn, breakOnEnd, cons,
+                        disjoint, dropEnd, dropPrefix, dropSuffix, groupOn,
+                        groupSort, groupSortBy, groupSortOn, lower, nubOn,
+                        nubOrd, nubOrdBy, nubOrdOn, nubSort, nubSortBy,
+                        nubSortOn, snoc, spanEnd, split, splitAtEnd, stripInfix,
+                        stripInfixEnd, stripSuffix, takeEnd, takeWhileEnd, trim,
+                        trimEnd, trimStart, unsnoc, upper, wordsBy)
 import Data.List.Lens  (prefixed, suffixed)
+import Data.List.Split (chop, divvy, endBy, splitOn)
 import Data.String     (IsString(fromString), String)
 import GHC.Show        (showString)
 import Numeric         (lexDigits)

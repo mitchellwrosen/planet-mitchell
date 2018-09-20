@@ -22,6 +22,13 @@ module Bifoldable
   , biall
   , binotElem
   , bifind
+    -- * Bifoldable1
+  , Bifoldable1(..)
+  , bitraverse1_
+  , bifor1_
+  , bisequenceA1_
   ) where
 
 import Data.Bifoldable
+import Data.Semigroup.Bifoldable (Bifoldable1(bifold1, bifoldMap1), bifor1_,
+                                  bisequenceA1_, bitraverse1_)

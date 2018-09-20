@@ -4,9 +4,8 @@ module List.Partial
   , head
   , init
   , last
-  , splitOn
   , tail
   ) where
 
-import Data.List
-import Data.List.Extra
+import Data.List       (head, init, last, tail, (!!))
+import Data.List.Extra (chunksOf)

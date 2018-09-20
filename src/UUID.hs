@@ -1,0 +1,19 @@
+module UUID
+  ( UUID
+  , toText
+  , fromText
+  , toByteString
+  , fromByteString
+  , toWords
+  , fromWords
+  , null
+  , nil
+  , generateNamed
+  , namespaceDNS
+  , namespaceURL
+  , namespaceOID
+  , namespaceX500
+  ) where
+
+import Data.UUID.Types
+import Data.UUID.V5
