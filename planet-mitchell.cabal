@@ -81,6 +81,7 @@ library
     , hashable ^>= 1.2.7
     , heaps ^>= 0.3.0
     , hedgehog ^>= 0.5.3 || ^>= 0.6
+    , insert-ordered-containers ^>= 0.2.1
     , integer-logarithms ^>= 1.0.2
     , lens ^>= 4.16.1
     , lens-aeson ^>= 1.0.2
@@ -251,6 +252,7 @@ library
     Managed
     Map
     Map.Hash
+    Map.Hash.Linked
     Map.Int
     Map.Int.Lazy
     Map.Lazy

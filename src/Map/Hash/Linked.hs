@@ -1,0 +1,55 @@
+module Map.Hash.Linked
+  ( -- * InsOrdHashMap
+    InsOrdHashMap
+  , adjust
+  , alter
+  , delete
+  , difference
+  , elems
+  , empty
+  , filter
+  , filterWithKey
+  , foldMapWithKey
+  , foldl'
+  , foldlWithKey'
+  , foldr
+  , foldrWithKey
+  , fromHashMap
+  , fromList
+  , insert
+  , insertWith
+  , intersection
+  , intersectionWith
+  , intersectionWithKey
+  , keys
+  , lookup
+  , lookupDefault
+  , map
+  , mapKeys
+  , mapMaybe
+  , mapMaybeWithKey
+  , mapWithKey
+  , member
+  , null
+  , singleton
+  , size
+  , toHashMap
+  , toList
+  , toRevList
+  , traverseKeys
+  , traverseWithKey
+  , union
+  , unionWith
+  , unionWithKey
+  , unions
+  , unorderedFoldMap
+  , unorderedFoldMapWithKey
+  , unorderedTraverse
+  , unorderedTraverseWithKey
+  , update
+    -- ** Optics
+  , hashMap
+  , unorderedTraversal
+  ) where
+
+import Data.HashMap.Strict.InsOrd

@@ -11,6 +11,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Add `ByteString.random` from `random-bytestring`
 - Export `(^)` from `Numeric.Num`
 - Export `(^^)` from `Numeric.Fractional`
+- Add `Map.Hash.Linked`
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`

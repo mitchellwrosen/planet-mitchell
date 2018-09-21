@@ -8,5 +8,6 @@
 - pcg-random
 - dependent-sum
 - dependent-map
-- insert-ordered-containers
 - generics-sop
+- xdg-basedir
+- streaming
