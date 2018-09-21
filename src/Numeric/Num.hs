@@ -1,5 +1,6 @@
 module Numeric.Num
   ( Num(..)
+  , (^)
   , subtract
     -- ** Read
   , readInt
@@ -9,4 +10,5 @@ module Numeric.Num
   ) where
 
 import GHC.Num (Num(..), subtract)
+import GHC.Real ((^))
 import Numeric

@@ -178,6 +178,7 @@ module Mitchell.Prelude
   , Floating(..)
     -- * Numeric.Fractional
   , Fractional(..)
+  , (^^)
     -- * Numeric.Int
   , Int
   , Int8
@@ -202,6 +203,7 @@ module Mitchell.Prelude
   , someNatVal
     -- * Numeric.Num
   , Num(..)
+  , (^)
   , subtract
     -- * Numeric.Real
   , Real(..)
@@ -339,13 +341,13 @@ import Monoid               (Monoid, mconcat, mempty)
 import Numeric.Double       (Double)
 import Numeric.Float        (Float)
 import Numeric.Floating     (Floating(..))
-import Numeric.Fractional   (Fractional(..))
+import Numeric.Fractional   (Fractional(..), (^^))
 import Numeric.Int          (Int, Int16, Int32, Int64, Int8)
 import Numeric.Integer      (Integer)
 import Numeric.Integral     (Integral(..), even, fromIntegral, gcd, lcm, odd)
 import Numeric.Nat          (KnownNat, Nat, SomeNat(..), natVal, natVal',
                              someNatVal)
-import Numeric.Num          (Num(..), subtract)
+import Numeric.Num          (Num(..), (^), subtract)
 import Numeric.Real         (Real(..), div', divMod', mod', realToFrac)
 import Numeric.RealFloat    (RealFloat(..))
 import Numeric.RealFrac     (RealFrac(..))

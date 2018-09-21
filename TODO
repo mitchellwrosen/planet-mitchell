@@ -1,12 +1,12 @@
-- Grab more from `lens`
-- Spread `Posix` across other modules
-- More `.Partial` modules (what to do about "unsafe" functions?)
-- `adjunctions`
-- `discrimination`
-- `free`
-- `lens`
-- `semigroupoids`
-- `promises`
-- `vault`
+- Spread Posix across other modules
+- More .Partial modules
+- adjunctions
+- discrimination
+- promises
 - compactable
 - algebraic-graphs
+- pcg-random
+- dependent-sum
+- dependent-map
+- insert-ordered-containers
+- generics-sop

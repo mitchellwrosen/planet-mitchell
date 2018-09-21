@@ -8,10 +8,12 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 ## Unreleased
 
 ### Added
-- Add ByteString.random from `random-bytestring`
+- Add `ByteString.random` from `random-bytestring`
+- Export `(^)` from `Numeric.Num`
+- Export `(^^)` from `Numeric.Fractional`
 
 ### Changed
-- Swap Unique implementation from `base` to `unique`
+- Swap `Unique` implementation from `base` to `unique`
 
 ### Removed
 - Remove `envparse` dependency and `Parser.Env` module
