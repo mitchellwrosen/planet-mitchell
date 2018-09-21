@@ -7,8 +7,8 @@ description:
   Planet Mitchell.
   .
   This package provides a curated, highly unstable collection of reorganized
-  re-exports. Mostly for me but please poke around and see README.md for a bit
-  more information ;)
+  re-exports. Mostly for personal use at the moment, me but please poke around
+  and see README.md for a bit more information ;)
 license-file: LICENSE
 license: BSD3
 maintainer: Mitchell Rosen <mitchellwrosen@gmail.com>
