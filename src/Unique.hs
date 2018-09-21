@@ -1,7 +1,6 @@
 module Unique
   ( Unique
   , newUnique
-  , hashUnique
   ) where
 
-import Data.Unique
+import Control.Concurrent.Unique (Unique, newUnique)
