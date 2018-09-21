@@ -1,8 +1,10 @@
 module Ala.Identity
-  ( Identity(..)
+  ( -- * Identity
+    Identity(..)
+  , generalize
+    -- * IdentityT
   , IdentityT(..)
   , mapIdentityT
-  , generalize
   ) where
 
 import Control.Monad.Morph          (generalize)

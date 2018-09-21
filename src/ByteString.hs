@@ -45,6 +45,7 @@ module ByteString
   , packCString
   , packCStringLen
   , partition
+  , random
   , replicate
   , reverse
   , scanl
@@ -84,3 +85,4 @@ module ByteString
 import Data.ByteString
 import Data.ByteString.Lens
 import Data.ByteString.Lex.Integral (asHexadecimal)
+import Data.ByteString.Random.MWC   (random)

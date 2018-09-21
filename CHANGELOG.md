@@ -7,7 +7,11 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 
 ## Unreleased
 
-* Swap out base.Data.Unique for unique.Control.Concurrent.Unique
+### Added
+- Add ByteString.random from `random-bytestring`
+
+### Changed
+- Swap Unique implementation from `base` to `unique`
 
 ## [0.0.0] - 2018-09-20
 
