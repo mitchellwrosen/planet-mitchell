@@ -22,6 +22,7 @@ copyright: (c) 2018, Mitchell Rosen
 
 extra-source-files:
   .travis.yml
+  CHANGELOG.md
   README.md
 
 source-repository head
