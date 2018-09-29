@@ -12,6 +12,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Export `(^)` from `Numeric.Num`
 - Export `(^^)` from `Numeric.Fractional`
 - Add `Map.Hash.Linked`
+- Export `any` from `Foldable` and `Mitchell.Prelude`
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`

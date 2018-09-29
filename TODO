@@ -11,3 +11,7 @@
 - generics-sop
 - xdg-basedir
 - streaming
+- typerep-map
+- colour
+- terminal-size
+- yaml

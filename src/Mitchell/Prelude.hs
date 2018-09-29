@@ -94,6 +94,7 @@ module Mitchell.Prelude
   , and
   , or
   , all
+  , any
   , notElem
   , find
   , foldM
@@ -311,7 +312,7 @@ import File      (stderr, stdin, stdout)
 import File.Text (hGetChar, hPrint, print)
 import File.Text (hGetContents, hGetLine, hPutStr, hPutStrLn, putStr, putStrLn)
 import Foldable  (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product, sum, toList),
-                  all, and, asum, concatMap, find, foldM, foldM_, foldlM,
+                  all, and, any, asum, concatMap, find, foldM, foldM_, foldlM,
                   foldrM, for_, msum, notElem, or, sequenceA_, traverse_)
 import Foldable  (foldBy, foldMapBy)
 import Function  (Endo(Endo, appEndo), const, fix, flip, until, ($), ($!), (&))
@@ -347,7 +348,7 @@ import Numeric.Integer      (Integer)
 import Numeric.Integral     (Integral(..), even, fromIntegral, gcd, lcm, odd)
 import Numeric.Nat          (KnownNat, Nat, SomeNat(..), natVal, natVal',
                              someNatVal)
-import Numeric.Num          (Num(..), (^), subtract)
+import Numeric.Num          (Num(..), subtract, (^))
 import Numeric.Real         (Real(..), div', divMod', mod', realToFrac)
 import Numeric.RealFloat    (RealFloat(..))
 import Numeric.RealFrac     (RealFrac(..))

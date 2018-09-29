@@ -13,6 +13,7 @@ module Foldable
   , and
   , or
   , all
+  , any
   , notElem
   , find
   , foldM
