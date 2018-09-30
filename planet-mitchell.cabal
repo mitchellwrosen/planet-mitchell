@@ -68,7 +68,6 @@ library
     , dlist ^>= 0.8.0
     , double-conversion ^>= 2.0.2.0
     , Earley ^>= 0.12.0
-    , envparse ^>= 0.4
     , erf ^>= 2.0.0
     , exceptions ^>= 0.10.0
     , extra ^>= 1.6.9 || ^>= 1.6.10 || ^>= 1.6.11
@@ -316,7 +315,6 @@ library
     Parser.Binary
     Parser.Cli
     Parser.Earley
-    Parser.Env
     Parser.Text
     Pointed
     Posix

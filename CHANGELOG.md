@@ -13,6 +13,9 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 ### Changed
 - Swap Unique implementation from `base` to `unique`
 
+### Removed
+- Remove `envparse` dependency and `Parser.Env` module
+
 ## [0.0.0] - 2018-09-20
 
 ### Added
