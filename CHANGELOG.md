@@ -14,6 +14,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Add `Map.Hash.Linked`
 - Export `any` from `Foldable` and `Mitchell.Prelude`
 - Add `email-validate` dependency and `Email`/`Email.Unsafe` modules
+- Add `exact-pi` dependency and `Numeric.Pi` module
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
