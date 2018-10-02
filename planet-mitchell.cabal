@@ -9,6 +9,20 @@ description:
   This package provides a curated, highly unstable collection of reorganized
   re-exports. Mostly for personal use at the moment, me but please poke around
   and see README.md for a bit more information ;)
+  .
+  A note on module names:
+  .
+  /Partial/ means the module contains partial functions that may throw
+  exceptions if preconditions are violated.
+  .
+  /Unsafe/ means the module contains unsafe functions that either:
+  .
+  * assume that preconditions hold, e.g. @unsafeEmailAddress@, which constructs
+    an @EmailAddress@ from a @ByteString@ that is assumed to be valid.
+  .
+  * do other suspicious things like interleave @IO@ with evaluation, as
+    @unsafePerformIO@, or lie to the type checker, as @unsafeCoerce@. In a word,
+    dragons.
 license-file: LICENSE
 license: BSD3
 maintainer: Mitchell Rosen <mitchellwrosen@gmail.com>
@@ -68,6 +82,7 @@ library
     , dlist ^>= 0.8.0
     , double-conversion ^>= 2.0.2.0
     , Earley ^>= 0.12.0
+    , email-validate ^>= 2.3.2
     , erf ^>= 2.0.0
     , exceptions ^>= 0.10.0
     , extra ^>= 1.6.9 || ^>= 1.6.10 || ^>= 1.6.11
@@ -211,6 +226,8 @@ library
     Divisible
     Dynamic
     Either
+    Email
+    Email.Unsafe
     Enum
     Environment
     Equality

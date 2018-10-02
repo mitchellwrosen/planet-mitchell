@@ -13,6 +13,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Export `(^^)` from `Numeric.Fractional`
 - Add `Map.Hash.Linked`
 - Export `any` from `Foldable` and `Mitchell.Prelude`
+- Add `email-validate` dependency and `Email`/`Email.Unsafe` modules
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
