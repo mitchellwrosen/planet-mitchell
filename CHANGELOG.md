@@ -20,6 +20,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 
 ### Removed
 - Remove `envparse` dependency and `Parser.Env` module
+- Remove `Distributive.fmapCollect`
 
 ## [0.0.0] - 2018-09-20
 

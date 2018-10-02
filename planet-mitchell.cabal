@@ -78,7 +78,7 @@ library
     , contravariant ^>= 1.4.1
     , contravariant-extras ^>= 0.3.4
     , deepseq ^>= 1.4.3
-    , distributive ^>= 0.5.3
+    , distributive ^>= 0.5.3 || ^>= 0.6
     , dlist ^>= 0.8.0
     , double-conversion ^>= 2.0.2.0
     , Earley ^>= 0.12.0
