@@ -52,14 +52,36 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
   - Add `List.Partial.findIndexJust` function
   - Add `List.Partial.findJust` function
   - Add `List.Partial.lookupJust` function
+- Add `stringsearch` package
+  - Add `ByteString.breakAfter` function
+  - Add `ByteString.breakOn` function
+  - Add `ByteString.indices` function
+  - Add `ByteString.nonOverlappingIndices` function
+  - Add `ByteString.split` function
+  - Add `ByteString.splitKeepEnd` function
+  - Add `ByteString.splitKeepFront` function
+  - Add `ByteString.Lazy.breakAfter` function
+  - Add `ByteString.Lazy.breakFindAfter` function
+  - Add `ByteString.Lazy.breakOn` function
+  - Add `ByteString.Lazy.indices` function
+  - Add `ByteString.Lazy.nonOverlappingIndices` function
+  - Add `ByteString.Lazy.replace` function
+  - Add `ByteString.Lazy.split` function
+  - Add `ByteString.Lazy.splitKeepEnd` function
+  - Add `ByteString.Lazy.splitKeepFront` function
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
 - Shorten `Numeric.*` to `Num.*`
+- Relax `base` upper bound to `^>= 4.12.0`
+- Swap `ByteString.split` from `bytestring` for `ByteString.split` from `stringsearch`
 
 ### Removed
 - Remove `envparse` dependency and `Parser.Env` module
 - Remove `Distributive.fmapCollect`
+- Remove `ByteString.append`
+- Remove `ByteString.cons`
+- Remove `ByteString.empty`
 
 ## [0.0.0] - 2018-09-20
 

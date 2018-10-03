@@ -4,13 +4,13 @@ module ByteString
   , all
   , any
   , asHexadecimal
-  , append
   , break
+  , breakAfter
   , breakEnd
+  , breakOn
   , breakSubstring
   , concat
   , concatMap
-  , cons
   , copy
   , count
   , drop
@@ -19,7 +19,6 @@ module ByteString
   , elemIndex
   , elemIndexEnd
   , elemIndices
-  , empty
   , filter
   , find
   , findIndex
@@ -29,6 +28,7 @@ module ByteString
   , group
   , groupBy
   , index
+  , indices
   , inits
   , intercalate
   , intersperse
@@ -39,6 +39,7 @@ module ByteString
   , map
   , mapAccumL
   , mapAccumR
+  , nonOverlappingIndices
   , notElem
   , null
   , pack
@@ -46,6 +47,7 @@ module ByteString
   , packCStringLen
   , partition
   , random
+  , replace
   , replicate
   , reverse
   , scanl
@@ -59,6 +61,8 @@ module ByteString
   , spanEnd
   , split
   , splitAt
+  , splitKeepEnd
+  , splitKeepFront
   , splitWith
   , stripPrefix
   , stripSuffix
@@ -82,7 +86,10 @@ module ByteString
   , unpackedBytes
   ) where
 
-import Data.ByteString
-import Data.ByteString.Lens
+import Data.ByteString              hiding (split)
+import Data.ByteString.Lens         (bytes, packedBytes, unpackedBytes)
 import Data.ByteString.Lex.Integral (asHexadecimal)
 import Data.ByteString.Random.MWC   (random)
+import Data.ByteString.Search       (breakAfter, breakOn, indices,
+                                     nonOverlappingIndices, replace, split,
+                                     splitKeepEnd, splitKeepFront)

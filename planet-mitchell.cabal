@@ -140,6 +140,7 @@ library
     , stm ^>= 2.4.5
     , stm-chans ^>= 3.0.0
     , stm-containers ^>= 0.2.16
+    , stringsearch ^>= 0.3.6
     , tagged ^>= 0.8.5
     , text ^>= 1.2.3
     , text-short ^>= 0.1.2
