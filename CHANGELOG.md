@@ -36,16 +36,18 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
   - Add `Enum.predMay` function
   - Add `Enum.succMay` function
   - Add `Enum.toEnumMay` function
+  - Add `Foldable.foldr1May` function
+  - Add `Foldable.maximumByMay` function
+  - Add `Foldable.maximumMay` function
+  - Add `Foldable.minimumByMay` function
+  - Add `Foldable.minimumMay` function
+  - Add `Foldable.Partial.findJust` function
   - Add `List.foldl1May'` function
   - Add `List.foldr1May` function
-  - Add `List.headMay` function
-  - Add `List.initMay` function
-  - Add `List.lastMay` function
   - Add `List.maximumByMay` function
   - Add `List.maximumMay` function
   - Add `List.minimumByMay` function
   - Add `List.minimumMay` function
-  - Add `List.tailMay` function
   - Add `List.Partial.elemIndexJust` function
   - Add `List.Partial.findIndexJust` function
   - Add `List.Partial.findJust` function

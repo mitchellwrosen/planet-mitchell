@@ -1,9 +1,11 @@
 module Foldable.Partial
-  ( foldr1
+  ( findJust
+  , foldr1
   , maximum
   , maximumBy
   , minimum
   , minimumBy
   ) where
 
-import Data.Foldable
+import Data.Foldable (foldr1, maximum, maximumBy, minimum, minimumBy)
+import Safe.Foldable (findJust)

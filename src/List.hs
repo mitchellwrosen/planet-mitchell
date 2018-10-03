@@ -44,8 +44,6 @@ module List
   , groupSort
   , groupSortBy
   , groupSortOn
-  , headMay
-  , initMay
   , inits
   , insert
   , insertBy
@@ -61,7 +59,6 @@ module List
 #if MIN_VERSION_base(4,11,0)
   , iterate'
 #endif
-  , lastMay
   , lookup
   , map
   , maximumByMay
@@ -102,7 +99,6 @@ module List
   , stripPrefix
   , stripSuffix
   , subsequences
-  , tailMay
   , tails
   , take
   , takeEnd
@@ -192,6 +188,5 @@ import Data.List.Split (chop, divvy, endBy, splitOn)
 import Data.String     (IsString(fromString), String)
 import GHC.Show        (showString)
 import Numeric         (lexDigits)
-import Safe            (foldl1May', foldr1May, headMay, initMay, lastMay,
-                        maximumByMay, maximumMay, minimumByMay, minimumMay,
-                        tailMay)
+import Safe            (foldl1May', foldr1May, maximumByMay, maximumMay,
+                        minimumByMay, minimumMay)

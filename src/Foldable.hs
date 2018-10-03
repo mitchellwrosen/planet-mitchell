@@ -2,31 +2,36 @@ module Foldable
   ( -- * Foldable
     Foldable(fold, foldMap, foldr, foldr', foldl', toList, null, length,
       elem, sum, product)
-  , foldrM
-  , foldlM
-  , traverse_
-  , for_
-  , sequenceA_
-  , asum
-  , msum
-  , concatMap
-  , and
-  , or
   , all
+  , and
   , any
-  , notElem
+  , asum
+  , concatMap
   , find
+  , foldBy
   , foldM
   , foldM_
   , foldMapBy
-  , foldBy
-  , inits
-  , tails
-  , insert
+  , foldlM
+  , foldr1May
+  , foldrM
+  , for_
   , group
+  , groupAllWith
   , groupBy
   , groupWith
-  , groupAllWith
+  , inits
+  , insert
+  , maximumByMay
+  , maximumMay
+  , minimumByMay
+  , minimumMay
+  , msum
+  , notElem
+  , or
+  , sequenceA_
+  , tails
+  , traverse_
     -- * Foldable1
   , Foldable1(..)
   , asum1
@@ -47,3 +52,5 @@ import Data.Reflection
 import Data.Semigroup.Foldable (Foldable1(fold1, foldMap1, toNonEmpty), asum1,
                                 foldlM1, foldrM1, for1_, intercalate1,
                                 intercalateMap1, sequenceA1_, traverse1_)
+import Safe.Foldable           (foldr1May, maximumByMay, maximumMay,
+                                minimumByMay, minimumMay)
