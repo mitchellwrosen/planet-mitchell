@@ -35,5 +35,5 @@ packages, similar to [https://hackage.haskell.org/package/rebase](rebase).
 
 ### Stability
 
-Alpha quality, massive breaking changes should be expected and no changelog will
-be kept for some time. Don't use this package.
+Alpha quality, massive churn and breaking changes should be expected. Don't use
+this package.
