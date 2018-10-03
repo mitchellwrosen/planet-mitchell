@@ -1,3 +1,5 @@
+{-# LANGUAGE CPP #-}
+
 module Concurrency.TBQueue
   (
     TBQueue
@@ -12,11 +14,15 @@ module Concurrency.TBQueue
   , unGetTBQueue
   , isEmptyTBQueue
   , isFullTBQueue
+#if MIN_VERSION_stm(2,5,0)
+  , lengthTBQueue
+#endif
   ) where
 
 import Control.Concurrent.STM.TBQueue (flushTBQueue)
-import UnliftIO.STM                   (TBQueue, isEmptyTBQueue, isFullTBQueue,
-                                       newTBQueue, newTBQueueIO, peekTBQueue,
-                                       readTBQueue, tryPeekTBQueue,
-                                       tryReadTBQueue, unGetTBQueue,
-                                       writeTBQueue)
+#if MIN_VERSION_stm(2,5,0)
+import Control.Concurrent.STM.TBQueue (lengthTBQueue)
+#endif
+import UnliftIO.STM (TBQueue, isEmptyTBQueue, isFullTBQueue, newTBQueue,
+                     newTBQueueIO, peekTBQueue, readTBQueue, tryPeekTBQueue,
+                     tryReadTBQueue, unGetTBQueue, writeTBQueue)

@@ -69,12 +69,20 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
   - Add `ByteString.Lazy.split` function
   - Add `ByteString.Lazy.splitKeepEnd` function
   - Add `ByteString.Lazy.splitKeepFront` function
+- Export `(^?!)` from `Optic.Fold.Unsafe`
+- Export `Concurrency.TBQueue.lengthTBQueue` if `stm >= 2.5.0`
+- Export `Concurrency.TVar.stateTVar` if `stm >= 2.5.0`
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
 - Shorten `Numeric.*` to `Num.*`
 - Relax `base` upper bound to `^>= 4.12.0`
 - Swap `ByteString.split` from `bytestring` for `ByteString.split` from `stringsearch`
+- Relax `stm` upper bound to `^>= 2.5.0`
+- Relax `contravariant` upper bound to `^>= 1.5`
+- Relax `lens` upper bound to `^>= 4.17`
+- Relax `mwc-random` upper bound to `^>= 0.14.0`
+- Relax `network` upper bound to `^>= 2.8.0`
 
 ### Removed
 - Remove `envparse` dependency and `Parser.Env` module
