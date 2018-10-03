@@ -3,8 +3,6 @@
 module Text
   ( -- * Text
     Text
-  , Reader
-  , IReader
   , all
   , any
   , append
@@ -20,7 +18,6 @@ module Text
   , concatMap
   , cons
   , copy
-  , decimal
   , decodeUtf8'
   , double
   , drop
@@ -41,7 +38,6 @@ module Text
   , foldr
   , group
   , groupBy
-  , hexadecimal
   , inits
   , intercalate
   , intersperse
@@ -66,7 +62,6 @@ module Text
   , scanl1
   , scanr
   , scanr1
-  , signed
   , singleton
   , snoc
   , span
@@ -98,6 +93,22 @@ module Text
   , words
   , zip
   , zipWith
+    -- ** Similarity metrics
+  , levenshtein
+  , levenshteinNorm
+  , damerauLevenshtein
+  , damerauLevenshteinNorm
+  , overlap
+  , jaccard
+  , hamming
+  , jaro
+  , jaroWinkler
+    -- ** Number conversion
+  , Reader
+  , IReader
+  , decimal
+  , hexadecimal
+  , signed
     -- ** Optics
   , packed
   , unpacked
@@ -108,5 +119,6 @@ module Text
 import Data.Text
 import Data.Text.Encoding
 import Data.Text.Internal.Read (IReader)
+import Data.Text.Metrics
 import Data.Text.Read
 import Data.Text.Strict.Lens   (builder, packed, text, unpacked)

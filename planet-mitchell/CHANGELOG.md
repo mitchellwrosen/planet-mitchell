@@ -72,6 +72,16 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Export `(^?!)` from `Optic.Fold.Unsafe`
 - Export `Concurrency.TBQueue.lengthTBQueue` if `stm >= 2.5.0`
 - Export `Concurrency.TVar.stateTVar` if `stm >= 2.5.0`
+- Add `text-metrics` package
+  - Add `levenshtein` function
+  - Add `levenshteinNorm` function
+  - Add `damerauLevenshtein` function
+  - Add `damerauLevenshteinNorm` function
+  - Add `overlap` function
+  - Add `jaccard` function
+  - Add `hamming` function
+  - Add `jaro` function
+  - Add `jaroWinkler` function
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
