@@ -1,4 +1,4 @@
-module Numeric.Scientific
+module Num.Scientific
   ( module Data.Scientific
   ) where
 

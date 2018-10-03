@@ -1,6 +1,6 @@
 {-# LANGUAGE PackageImports, PatternSynonyms #-}
 
-module Numeric.Half
+module Num.Half
   ( Half(..)
   , isZero
   , fromHalf

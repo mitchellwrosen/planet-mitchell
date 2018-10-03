@@ -1,4 +1,4 @@
-module Numeric.Product
+module Num.Product
   ( Product(..)
   ) where
 

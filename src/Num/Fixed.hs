@@ -1,4 +1,4 @@
-module Numeric.Fixed
+module Num.Fixed
   ( Fixed(..)
   , HasResolution(..)
   , showFixed

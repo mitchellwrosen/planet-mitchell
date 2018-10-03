@@ -1,5 +1,5 @@
-module Numeric.Erf
-  ( Erf(..)
+module Num.InvErf
+  ( InvErf(..)
   ) where
 
 import Data.Number.Erf

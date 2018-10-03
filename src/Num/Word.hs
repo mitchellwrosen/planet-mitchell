@@ -1,4 +1,4 @@
-module Numeric.Word
+module Num.Word
   ( -- * Word
     Word
   , wordLog2
@@ -11,6 +11,6 @@ module Numeric.Word
   , byteSwap64
   ) where
 
-import GHC.Word (Word, Word16, Word32, Word64, Word8, byteSwap16, byteSwap32,
-                 byteSwap64)
+import GHC.Word                     (Word, Word16, Word32, Word64, Word8,
+                                     byteSwap16, byteSwap32, byteSwap64)
 import Math.NumberTheory.Logarithms (wordLog2)

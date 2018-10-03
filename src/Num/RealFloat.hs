@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module Numeric.RealFloat
+module Num.RealFloat
   ( -- * RealFloat
     RealFloat(..)
   , floatToDigits

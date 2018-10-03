@@ -1,4 +1,4 @@
-module Numeric.Pi
+module Num.Pi
   ( ExactPi(..)
   , approximateValue
   , isZero

@@ -15,6 +15,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Export `any` from `Foldable` and `Mitchell.Prelude`
 - Add `email-validate` dependency and `Email`/`Email.Unsafe` modules
 - Add `exact-pi` dependency and `Numeric.Pi` module
+- Shorten `Numeric.*` to `Num.*`
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`

@@ -288,31 +288,31 @@ library
     Monoid
     MultiSet
     MultiSet.Int
-    Numeric.Approximate
-    Numeric.Complex
-    Numeric.Double
-    Numeric.Erf
-    Numeric.Fast
-    Numeric.Float
-    Numeric.Floating
-    Numeric.Fractional
-    Numeric.Half
-    Numeric.Int
-    Numeric.Integer
-    Numeric.Integral
-    Numeric.InvErf
-    Numeric.Nat
-    Numeric.Natural
-    Numeric.Num
-    Numeric.Pi
-    Numeric.Product
-    Numeric.Ratio
-    Numeric.Real
-    Numeric.RealFloat
-    Numeric.RealFrac
-    Numeric.Scientific
-    Numeric.Sum
-    Numeric.Word
+    Num.Approximate
+    Num.Complex
+    Num.Double
+    Num.Erf
+    Num.Fast
+    Num.Float
+    Num.Floating
+    Num.Fractional
+    Num.Half
+    Num.Int
+    Num.Integer
+    Num.Integral
+    Num.InvErf
+    Num.Nat
+    Num.Natural
+    Num.Num
+    Num.Pi
+    Num.Product
+    Num.Ratio
+    Num.Real
+    Num.RealFloat
+    Num.RealFrac
+    Num.Scientific
+    Num.Sum
+    Num.Word
     Optic.Fold
     Optic.Getter
     Optic.Getting

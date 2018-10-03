@@ -1,4 +1,4 @@
-module Numeric.RealFrac
+module Num.RealFrac
   ( -- * RealFrac
     RealFrac(..)
     -- ** Read

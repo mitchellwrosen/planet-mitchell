@@ -1,4 +1,4 @@
-module Numeric.Fast
+module Num.Fast
   ( Fast(..)
   , blog
   ) where

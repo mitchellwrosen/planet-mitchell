@@ -1,4 +1,4 @@
-module Numeric.Integral
+module Num.Integral
   ( -- * Integral
     Integral(..)
   , even

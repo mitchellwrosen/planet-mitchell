@@ -1,4 +1,4 @@
-module Numeric.Complex
+module Num.Complex
   ( -- * Complex
     Complex
   , realPart

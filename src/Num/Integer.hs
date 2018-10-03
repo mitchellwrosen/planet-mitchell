@@ -1,4 +1,4 @@
-module Numeric.Integer
+module Num.Integer
   ( -- * Integer
     Integer
   , integerLogBase

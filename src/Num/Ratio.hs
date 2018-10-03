@@ -1,4 +1,4 @@
-module Numeric.Ratio
+module Num.Ratio
   ( Ratio
   , Rational
   , (%)

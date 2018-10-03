@@ -1,4 +1,4 @@
-module Numeric.Fractional
+module Num.Fractional
   ( Fractional(..)
   , (^^)
   ) where

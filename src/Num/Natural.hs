@@ -1,6 +1,4 @@
-{-# LANGUAGE PackageImports #-}
-
-module Numeric.Natural
+module Num.Natural
   ( Natural
   , naturalLogBase
   , naturalLog2
@@ -8,4 +6,4 @@ module Numeric.Natural
   ) where
 
 import Math.NumberTheory.Logarithms (naturalLog10, naturalLog2, naturalLogBase)
-import "base" Numeric.Natural
+import Numeric.Natural (Natural)

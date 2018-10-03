@@ -3,7 +3,7 @@
 {-# LANGUAGE NoStarIsType #-}
 #endif
 
-module Numeric.Nat
+module Num.Nat
   ( -- * Nat
     Nat
   , KnownNat

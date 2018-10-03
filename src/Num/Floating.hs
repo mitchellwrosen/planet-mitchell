@@ -1,4 +1,4 @@
-module Numeric.Floating
+module Num.Floating
   ( Floating(..)
   ) where
 

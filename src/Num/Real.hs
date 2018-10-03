@@ -1,4 +1,4 @@
-module Numeric.Real
+module Num.Real
   ( -- * Real
     Real(..)
   , div'

@@ -1,4 +1,4 @@
-module Numeric.Num
+module Num.Num
   ( Num(..)
   , (^)
   , subtract

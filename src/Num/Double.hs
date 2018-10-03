@@ -1,4 +1,4 @@
-module Numeric.Double
+module Num.Double
   ( -- * Double
     Double
   , toExponential

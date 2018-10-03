@@ -1,4 +1,4 @@
-module Numeric.Int
+module Num.Int
   ( Int
   , intLog2
   , Int8

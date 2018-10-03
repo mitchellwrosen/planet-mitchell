@@ -1,4 +1,4 @@
-module Numeric.Sum
+module Num.Sum
   ( Sum(..)
   ) where
 

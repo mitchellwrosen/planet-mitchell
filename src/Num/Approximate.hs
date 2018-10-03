@@ -1,4 +1,4 @@
-module Numeric.Approximate
+module Num.Approximate
   ( -- * Approximate
     Approximate(..)
   , HasApproximate(..)
