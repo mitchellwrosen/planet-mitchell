@@ -1,2 +1,4 @@
 packages: planet-mitchell
+          planet-mitchell-test
+
 jobs: $ncpus

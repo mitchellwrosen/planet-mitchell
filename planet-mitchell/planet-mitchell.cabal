@@ -92,12 +92,10 @@ library
     , filepath ^>= 1.4.2
     , foldl ^>= 1.4.0
     , free ^>= 5.1
-    , gauge ^>= 0.2.1
     , generic-aeson ^>= 0.2.0.9
     , half ^>= 0.3
     , hashable ^>= 1.2.7
     , heaps ^>= 0.3.0
-    , hedgehog ^>= 0.5.3 || ^>= 0.6
     , insert-ordered-containers ^>= 0.2.1
     , integer-logarithms ^>= 1.0.2
     , lens ^>= 4.16.1
@@ -158,7 +156,6 @@ library
     , vault ^>= 0.3.1
     , vector ^>= 0.12.0
     , vector-builder ^>= 0.3.6
-    , weigh ^>= 0.0.12
     , writer-cps-mtl ^>= 0.1.1
 
   exposed-modules:
@@ -170,7 +167,6 @@ library
     Applicative
     Array
     Array.Partial
-    Benchmark
     Bifoldable
     Bifoldable.Partial
     Bifunctor
@@ -386,9 +382,6 @@ library
     System
     Tagged
     Terminal
-    Test
-    Test.Gen
-    Test.Range
     Text
     Text.Lazy
     Text.Lazy.Builder
@@ -416,7 +409,6 @@ library
     Vector.Storable
     Vector.Unboxed
     Void
-    Weigh
     Writer
 
 -- benchmark semaphore

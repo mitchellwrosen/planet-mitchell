@@ -82,6 +82,15 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Remove `ByteString.append`
 - Remove `ByteString.cons`
 - Remove `ByteString.empty`
+- Split off separate `mitchell-prelude-test` package
+  - Remove `gauge` dependency
+  - Remove `hedgehog` dependency
+  - Remove `weigh` dependency
+  - Remove `Bench` module
+  - Remove `Test` module
+  - Remove `Test.Gen` module
+  - Remove `Test.Range` module
+  - Remove `Weigh` module
 
 ## [0.0.0] - 2018-09-20
 
