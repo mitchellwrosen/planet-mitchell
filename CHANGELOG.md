@@ -16,6 +16,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Add `email-validate` dependency and `Email`/`Email.Unsafe` modules
 - Add `exact-pi` dependency and `Numeric.Pi` module
 - Shorten `Numeric.*` to `Num.*`
+- Add `compactable` dependency and `Compactable` module
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`

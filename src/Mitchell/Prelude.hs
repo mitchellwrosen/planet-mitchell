@@ -40,6 +40,10 @@ module Mitchell.Prelude
     -- * Coerce
   , Coercible
   , coerce
+    -- * Compactable
+  , Compactable(..)
+  , fforMaybe
+  , fforEither
     -- * Debug
   , trace
   , traceId
@@ -297,26 +301,30 @@ import Char         (Char)
 #if MIN_VERSION_base(4,11,0)
 import Clock (getMonotonicTime, getMonotonicTimeNSec)
 #endif
-import Coerce    (Coercible, coerce)
-import Debug     (trace, traceId, traceM, traceShow, traceShowId, traceShowM,
-                  traceStack)
-import Either    (Either(Left, Right), either)
-import Either    (eitherM)
-import Either    (_Left, _Right)
-import Enum      (Enum(enumFrom, enumFromThen, enumFromThenTo, enumFromTo, fromEnum, pred, succ, toEnum))
-import Equality  (Eq((/=), (==)))
-import Error     (assert, error, undefined)
-import Exception (Exception, SomeAsyncException(SomeAsyncException),
-                  SomeException(SomeException), throwIO)
-import File      (stderr, stdin, stdout)
-import File.Text (hGetChar, hPrint, print)
-import File.Text (hGetContents, hGetLine, hPutStr, hPutStrLn, putStr, putStrLn)
-import Foldable  (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product, sum, toList),
-                  all, and, any, asum, concatMap, find, foldM, foldM_, foldlM,
-                  foldrM, for_, msum, notElem, or, sequenceA_, traverse_)
-import Foldable  (foldBy, foldMapBy)
-import Function  (Endo(Endo, appEndo), const, fix, flip, until, ($), ($!), (&))
-import Functor   (Functor(fmap, (<$)), void, ($>), (<$>))
+import Coerce      (Coercible, coerce)
+import Compactable (Compactable(applyEither, applyMaybe, bindEither, bindMaybe, compact, filter, fmapEither, fmapMaybe, partition, separate, traverseEither, traverseMaybe),
+                    fforEither, fforMaybe)
+import Debug       (trace, traceId, traceM, traceShow, traceShowId, traceShowM,
+                    traceStack)
+import Either      (Either(Left, Right), either)
+import Either      (eitherM)
+import Either      (_Left, _Right)
+import Enum        (Enum(enumFrom, enumFromThen, enumFromThenTo, enumFromTo, fromEnum, pred, succ, toEnum))
+import Equality    (Eq((/=), (==)))
+import Error       (assert, error, undefined)
+import Exception   (Exception, SomeAsyncException(SomeAsyncException),
+                    SomeException(SomeException), throwIO)
+import File        (stderr, stdin, stdout)
+import File.Text   (hGetChar, hPrint, print)
+import File.Text   (hGetContents, hGetLine, hPutStr, hPutStrLn, putStr,
+                    putStrLn)
+import Foldable    (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product, sum, toList),
+                    all, and, any, asum, concatMap, find, foldM, foldM_, foldlM,
+                    foldrM, for_, msum, notElem, or, sequenceA_, traverse_)
+import Foldable    (foldBy, foldMapBy)
+import Function    (Endo(Endo, appEndo), const, fix, flip, until, ($), ($!),
+                    (&))
+import Functor     (Functor(fmap, (<$)), void, ($>), (<$>))
 #if MIN_VERSION_base(4,11,0)
 import Functor ((<&>))
 #endif

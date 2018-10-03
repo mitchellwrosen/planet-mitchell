@@ -73,6 +73,7 @@ library
     , cborg ^>= 0.2.0
     , comonad ^>= 5.0
     , compact ^>= 0.1.0
+    , compactable ^>= 0.1.2
     , constraints ^>= 0.10
     , containers ^>= 0.5.11
     , contravariant ^>= 1.4.1
@@ -195,6 +196,7 @@ library
     Coerce
     Coerce.Unsafe
     Comonad
+    Compactable
     CompactRegion
     Concurrency
     Concurrency.Chan
