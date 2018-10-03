@@ -28,7 +28,7 @@ license: BSD3
 maintainer: Mitchell Rosen <mitchellwrosen@gmail.com>
 name: planet-mitchell
 synopsis: Planet Mitchell
-tested-with: GHC == 8.4.3
+tested-with: GHC == 8.4.3, GHC == 8.6.1
 version: 0.0.0
 homepage: https://github.com/mitchellwrosen/planet-mitchell
 bug-reports: https://github.com/mitchellwrosen/planet-mitchell/issues
