@@ -9,85 +9,27 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 
 ### Added
 - Add `random-bytestring` dependency
-  - Add `ByteString.random` function
+- Add `insert-ordered-containers` dependency
+- Add `email-validate` dependency
+- Add `exact-pi` dependency
+- Add `compactable` dependency
+- Add `fast-digits` dependency
+- Add `Diff` dependency
+- Add `Safe` dependency
+- Add `stringsearch` package
+- Add `text-metrics` package
 - Export `(^)` from `Numeric.Num`
 - Export `(^^)` from `Numeric.Fractional`
-- Add `insert-ordered-containers` dependency
-  - Add `Map.Hash.Linked` module
 - Export `any` from `Foldable` and `Mitchell.Prelude`
-- Add `email-validate` dependency
-  - Add `Email` module
-  - Add `Email.Unsafe` module
-- Add `exact-pi` dependency
-  - Add `Numeric.Pi` module
-- Add `compactable` dependency
-  - Add `Compactable` module
-  - Export `Compactable(..)` from `Mitchell.Prelude`
-- Add `fast-digits` dependency
-  - Add `Num.Integer.Partial` module
-  - Add `Num.Natural.Partial` modules
-- Add `Diff` dependency
-  - Add `List.Diff(..)` type
-  - Add `List.getDiff` function
-  - Add `List.getDiffBy` function
-  - Add `List.getGroupedDiff` function
-  - Add `List.getGroupedDiffBy` function
-- Add `Safe` dependency
-  - Add `Enum.predMay` function
-  - Add `Enum.succMay` function
-  - Add `Enum.toEnumMay` function
-  - Add `Foldable.foldr1May` function
-  - Add `Foldable.maximumByMay` function
-  - Add `Foldable.maximumMay` function
-  - Add `Foldable.minimumByMay` function
-  - Add `Foldable.minimumMay` function
-  - Add `Foldable.Partial.findJust` function
-  - Add `List.foldl1May'` function
-  - Add `List.foldr1May` function
-  - Add `List.maximumByMay` function
-  - Add `List.maximumMay` function
-  - Add `List.minimumByMay` function
-  - Add `List.minimumMay` function
-  - Add `List.Partial.elemIndexJust` function
-  - Add `List.Partial.findIndexJust` function
-  - Add `List.Partial.findJust` function
-  - Add `List.Partial.lookupJust` function
-- Add `stringsearch` package
-  - Add `ByteString.breakAfter` function
-  - Add `ByteString.breakOn` function
-  - Add `ByteString.indices` function
-  - Add `ByteString.nonOverlappingIndices` function
-  - Add `ByteString.split` function
-  - Add `ByteString.splitKeepEnd` function
-  - Add `ByteString.splitKeepFront` function
-  - Add `ByteString.Lazy.breakAfter` function
-  - Add `ByteString.Lazy.breakFindAfter` function
-  - Add `ByteString.Lazy.breakOn` function
-  - Add `ByteString.Lazy.indices` function
-  - Add `ByteString.Lazy.nonOverlappingIndices` function
-  - Add `ByteString.Lazy.replace` function
-  - Add `ByteString.Lazy.split` function
-  - Add `ByteString.Lazy.splitKeepEnd` function
-  - Add `ByteString.Lazy.splitKeepFront` function
 - Export `(^?!)` from `Optic.Fold.Unsafe`
 - Export `Concurrency.TBQueue.lengthTBQueue` if `stm >= 2.5.0`
 - Export `Concurrency.TVar.stateTVar` if `stm >= 2.5.0`
-- Add `text-metrics` package
-  - Add `levenshtein` function
-  - Add `levenshteinNorm` function
-  - Add `damerauLevenshtein` function
-  - Add `damerauLevenshteinNorm` function
-  - Add `overlap` function
-  - Add `jaccard` function
-  - Add `hamming` function
-  - Add `jaro` function
-  - Add `jaroWinkler` function
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
+- Swap `ByteString.split` from `bytestring` for `ByteString.split` from `stringsearch`
 - Shorten `Numeric.*` to `Num.*`
 - Relax `base` upper bound to `^>= 4.12.0`
-- Swap `ByteString.split` from `bytestring` for `ByteString.split` from `stringsearch`
 - Relax `stm` upper bound to `^>= 2.5.0`
 - Relax `contravariant` upper bound to `^>= 1.5`
 - Relax `lens` upper bound to `^>= 4.17`
@@ -95,11 +37,11 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Relax `network` upper bound to `^>= 2.8.0`
 
 ### Removed
-- Remove `envparse` dependency and `Parser.Env` module
-- Remove `Distributive.fmapCollect`
-- Remove `ByteString.append`
-- Remove `ByteString.cons`
-- Remove `ByteString.empty`
+- Remove `envparse` dependency
+- Remove `Distributive.fmapCollect` function
+- Remove `ByteString.append` function
+- Remove `ByteString.cons` function
+- Remove `ByteString.empty` function
 - Split off separate `mitchell-prelude-test` package
   - Remove `gauge` dependency
   - Remove `hedgehog` dependency
