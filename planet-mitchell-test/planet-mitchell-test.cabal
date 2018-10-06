@@ -38,6 +38,10 @@ library
   build-depends:
       gauge ^>= 0.2.1
     , hedgehog ^>= 0.5.3 || ^>= 0.6
+    , hspec-expectations ^>= 0.8.2
+    , tasty ^>= 1.1.0
+    , tasty-hedgehog ^>= 0.2.0
+    , tasty-hunit ^>= 0.10.0
     , weigh ^>= 0.0.12
 
   exposed-modules:
