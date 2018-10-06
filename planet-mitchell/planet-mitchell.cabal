@@ -169,10 +169,6 @@ library
     Applicative
     Array
     Array.Partial
-    Bifoldable
-    Bifoldable.Partial
-    Bifunctor
-    Bitraversable
     Bits
     Bool
     Bounded

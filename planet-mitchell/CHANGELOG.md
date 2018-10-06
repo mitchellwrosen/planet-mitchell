@@ -35,6 +35,9 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Relax `lens` upper bound to `^>= 4.17`
 - Relax `mwc-random` upper bound to `^>= 0.14.0`
 - Relax `network` upper bound to `^>= 2.8.0`
+- Move `Bifoldable(.Partial)` modules info `Foldable(.Partial)` modules
+- Move `Bifunctor` module info `Functor` module
+- Move `Bitraversable` module info `Traversable` module
 
 ### Removed
 - Remove `envparse` dependency
