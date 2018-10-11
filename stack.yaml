@@ -35,12 +35,15 @@ extra-deps:
   - semigroupoids-5.3.1
   - semilattices-0.0.0.0
   - serialise-0.2.0.0
+  - tasty-1.1.0.3
+  - tasty-hedgehog-0.2.0.0
   - transformers-0.5.5.0
   - transformers-base-0.4.5.2
   - transformers-compat-0.6.2
   - unagi-chan-0.4.1.0
   - vector-builder-0.3.6
   - weigh-0.0.12
+  - wcwidth-0.0.2
 
 flags:
   transformers-compat:
