@@ -6,11 +6,13 @@ module Bits
   , FiniteBits(..)
   , Ranked(..)
   , msb
-    -- * Default @Bits@ implementations
-  , bitDefault
-  , testBitDefault
-  , popCountDefault
+    -- ** Optics
+  , (.|.~)
+  , (.&.~)
+  , bitAt
+  , bits
   ) where
 
-import Data.Bits
-import Data.Bits.Extras
+import Data.Bits        (Bits(..), FiniteBits(..), toIntegralSized)
+import Data.Bits.Extras (Ranked(..), msb, srl)
+import Data.Bits.Lens   (bitAt, bits, (.&.~), (.|.~))

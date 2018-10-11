@@ -18,12 +18,13 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Add `Safe` dependency
 - Add `stringsearch` package
 - Add `text-metrics` package
-- Export `(^)` from `Numeric.Num`
-- Export `(^^)` from `Numeric.Fractional`
-- Export `any` from `Foldable` and `Mitchell.Prelude`
-- Export `(^?!)` from `Optic.Fold.Unsafe`
 - Export `Concurrency.TBQueue.lengthTBQueue` if `stm >= 2.5.0`
 - Export `Concurrency.TVar.stateTVar` if `stm >= 2.5.0`
+- Export `Foldable.any` and `Mitchell.Prelude.any`
+- Export `(Numeric.Fractional.^^)`
+- Export `(Numeric.Num.^)`
+- Export `(Optic.Fold.Unsafe.^?!)`
+- Export `(Bits..|.~)`, `(Bits..&.~)`, `Bits.bitAt`, `Bits.bits`
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
@@ -45,6 +46,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Remove `ByteString.append` function
 - Remove `ByteString.cons` function
 - Remove `ByteString.empty` function
+- Remove `bitDefault`, `popCountDefault`, `testBitDefault` from `Bits`
 - Split off separate `mitchell-prelude-test` package
   - Remove `gauge` dependency
   - Remove `hedgehog` dependency
