@@ -340,6 +340,7 @@ library
     Parser.Text
     Pointed
     Posix
+    Posix.Signal
     Predicate
     Pretty
     Prim

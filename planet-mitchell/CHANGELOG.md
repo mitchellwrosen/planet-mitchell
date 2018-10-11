@@ -18,6 +18,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Add `Safe` dependency
 - Add `stringsearch` package
 - Add `text-metrics` package
+- Add `Posix.Signal` module
 - Export `Concurrency.TBQueue.lengthTBQueue` if `stm >= 2.5.0`
 - Export `Concurrency.TVar.stateTVar` if `stm >= 2.5.0`
 - Export `Foldable.any` and `Mitchell.Prelude.any`
