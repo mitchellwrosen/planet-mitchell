@@ -42,6 +42,7 @@ library
     , tasty ^>= 1.1.0
     , tasty-hedgehog ^>= 0.2.0
     , tasty-hunit ^>= 0.10.0
+    , tasty-rerun ^>= 1.1.13
     , weigh ^>= 0.0.12
 
   exposed-modules:
