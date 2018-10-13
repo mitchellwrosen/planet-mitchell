@@ -21,11 +21,14 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Add `Posix.Signal` module
 - Export `Concurrency.TBQueue.lengthTBQueue` if `stm >= 2.5.0`
 - Export `Concurrency.TVar.stateTVar` if `stm >= 2.5.0`
-- Export `Foldable.any` and `Mitchell.Prelude.any`
+- Export `Foldable.any`
 - Export `(Numeric.Fractional.^^)`
 - Export `(Numeric.Num.^)`
 - Export `(Optic.Fold.Unsafe.^?!)`
 - Export `(Bits..|.~)`, `(Bits..&.~)`, `Bits.bitAt`, `Bits.bits`
+- Export `Mitchell.Prelude.Contravariant`
+- Export `Mitchell.Prelude.any`
+- Export `Mitchell.Prelude.contramap`
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
