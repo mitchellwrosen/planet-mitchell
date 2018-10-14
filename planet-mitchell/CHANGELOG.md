@@ -15,6 +15,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Add `exact-pi` dependency
 - Add `fast-digits` dependency
 - Add `insert-ordered-containers` dependency
+- Add `neat-interpolation` dependency
 - Add `random-bytestring` dependency
 - Add `say` dependency
 - Add `stringsearch` dependency
