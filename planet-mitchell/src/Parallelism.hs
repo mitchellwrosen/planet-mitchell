@@ -3,6 +3,7 @@ module Parallelism
   , pseq
   , rpar
   , rparWith
+  , parEval
   , parTraversable
   , parList
   , parListChunk

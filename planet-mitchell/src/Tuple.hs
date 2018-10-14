@@ -1,8 +1,6 @@
 module Tuple
   ( fst
   , snd
-  , curry
-  , uncurry
   , swap
   , dupe
     -- ** Optics

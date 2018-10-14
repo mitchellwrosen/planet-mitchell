@@ -33,6 +33,15 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Export `Mitchell.Prelude.any`
 - Export `Mitchell.Prelude.contramap`
 - Export `File.Binary.hPutSerialise`
+- Export `Function.curry3`
+- Export `Function.uncurry3`
+- Export `IO.Memoized`
+- Export `IO.runMemoized`
+- Export `IO.memoizeMVar`
+- Export `Num.Nat.plusMinusInverse1`
+- Export `Num.Nat.plusMinusInverse2`
+- Export `Num.Nat.plusMinusInverse3`
+- Export `Parallelism.parEval`
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
@@ -48,6 +57,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Move `Bifoldable(.Partial)` modules info `Foldable(.Partial)` modules
 - Move `Bifunctor` module info `Functor` module
 - Move `Bitraversable` module info `Traversable` module
+- Move `Tuple.(un)curry` to `Function.(un)curry`
 
 ### Removed
 - Remove `envparse` dependency

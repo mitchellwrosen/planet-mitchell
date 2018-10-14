@@ -114,6 +114,9 @@ module Num.Nat
   , leId
   , leTrans
   , zeroLe
+  , plusMinusInverse1
+  , plusMinusInverse2
+  , plusMinusInverse3
   ) where
 
 import Data.Constraint.Nat
