@@ -320,20 +320,11 @@ library
     Optic.Getter
     Optic.Getting
     Optic.Iso
-    Optic.Iso.Reversing
-    Optic.Iso.Strict
     Optic.Lens
-    Optic.Lens.At
-    Optic.Lens.Contains
     Optic.Prism
-    Optic.Prism.Cons
-    Optic.Prism.Empty
-    Optic.Prism.Snoc
     Optic.Review
     Optic.Setter
     Optic.Traversal
-    Optic.Traversal.Each
-    Optic.Traversal.Ixed
     Ord
     Parallelism
     Parser.Binary

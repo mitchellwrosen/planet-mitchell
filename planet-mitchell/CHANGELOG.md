@@ -58,6 +58,10 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Move `Bifunctor` module info `Functor` module
 - Move `Bitraversable` module info `Traversable` module
 - Move `Tuple.(un)curry` to `Function.(un)curry`
+- Move `Optic.Iso.*` into `Optic.Iso`
+- Move `Optic.Lens.*` into `Optic.Lens`
+- Move `Optic.Prism.*` into `Optic.Prism`
+- Move `Optic.Traversal.*` into `Optic.Traversal`
 
 ### Removed
 - Remove `envparse` dependency
@@ -66,7 +70,12 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Remove `ByteString.cons` function
 - Remove `ByteString.empty` function
 - Remove `bitDefault`, `popCountDefault`, `testBitDefault` from `Bits`
-- Remove `hPrint`, `print` functions from `File.Text`
+- Remove `File.Text.hPrint` function
+- Remove `File.Text.print` function
+- Remove `Mitchell.Prelude.Index` type family
+- Remove `Mitchell.Prelude.IxValue` type family
+- Remove `Mitchell.Prelude.Ixed` type class
+- Remove `Mitchell.Prelude.ix` function
 - Split off separate `mitchell-prelude-test` package
   - Remove `gauge` dependency
   - Remove `hedgehog` dependency

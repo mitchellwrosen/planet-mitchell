@@ -237,7 +237,6 @@ module Mitchell.Prelude
   , Lens
   , Lens'
   , lens
-    -- * Optic.Lens.At
   , At(..)
     -- * Optic.Prism
   , Prism
@@ -250,10 +249,6 @@ module Mitchell.Prelude
   , set
     -- * Optic.Traversal
   , Traversal
-    -- * Optic.Traversal.Ixed
-  , Ixed(..)
-  , Index
-  , IxValue
     -- * Ord
   , Ord(..)
   , Ordering(..)
@@ -333,50 +328,47 @@ import List     (cycle, iterate, map, repeat, replicate, scanl, scanl', scanl1,
 #if MIN_VERSION_base(4,11,0)
 import List (iterate')
 #endif
-import Map                  (Map)
-import Map.Hash             (HashMap)
-import Map.Int              (IntMap)
-import Maybe                (Maybe(Just, Nothing), catMaybes, fromMaybe,
-                             mapMaybe, maybe)
-import Maybe                (maybeM, _Just, _Nothing)
-import Monad                (Monad((>>=)), unlessM, whenJustM, whenM, whileM,
-                             (<=<), (=<<), (>=>))
-import Monad.Trans          (MonadTrans(lift))
-import Monoid               (Monoid, mconcat, mempty)
-import Num.Double           (Double)
-import Num.Float            (Float)
-import Num.Floating         (Floating(..))
-import Num.Fractional       (Fractional(..), (^^))
-import Num.Int              (Int, Int16, Int32, Int64, Int8)
-import Num.Integer          (Integer)
-import Num.Integral         (Integral(..), even, fromIntegral, gcd, lcm, odd)
-import Num.Nat              (KnownNat, Nat, SomeNat(..), natVal, natVal',
-                             someNatVal)
-import Num.Num              (Num(..), subtract, (^))
-import Num.Real             (Real(..), div', divMod', mod', realToFrac)
-import Num.RealFloat        (RealFloat(..))
-import Num.RealFrac         (RealFrac(..))
-import Num.Word             (Word, Word16, Word32, Word64, Word8)
-import Optic.Fold           (folded, has, preview, (^?))
-import Optic.Getting        (view, (^.))
-import Optic.Lens           (Lens, Lens', lens)
-import Optic.Lens.At        (At(at))
-import Optic.Prism          (Prism, is, prism)
-import Optic.Setter         (over, set, (%~), (.~))
-import Optic.Traversal      (Traversal)
-import Optic.Traversal.Ixed (Index, IxValue, Ixed(ix))
-import Ord                  (Ord(compare, max, min, (<), (<=), (>), (>=)),
-                             Ordering(EQ, GT, LT))
-import Semigroup            (Semigroup((<>)))
-import Sequence             (Seq)
-import Set                  (Set)
-import Set.Hash             (HashSet)
-import Set.Int              (IntSet)
-import Show                 (Show, show)
-import Text                 (Text)
-import Traversable          (Traversable(sequenceA, traverse), for)
-import Tuple                (Field1(_1), Field2(_2), Field3(_3), Field4(_4),
-                             Field5(_5), Field6(_6), fst, snd)
-import Void                 (Void)
+import Map             (Map)
+import Map.Hash        (HashMap)
+import Map.Int         (IntMap)
+import Maybe           (Maybe(Just, Nothing), catMaybes, fromMaybe, mapMaybe,
+                        maybe)
+import Maybe           (maybeM, _Just, _Nothing)
+import Monad           (Monad((>>=)), unlessM, whenJustM, whenM, whileM, (<=<),
+                        (=<<), (>=>))
+import Monad.Trans     (MonadTrans(lift))
+import Monoid          (Monoid, mconcat, mempty)
+import Num.Double      (Double)
+import Num.Float       (Float)
+import Num.Floating    (Floating(..))
+import Num.Fractional  (Fractional(..), (^^))
+import Num.Int         (Int, Int16, Int32, Int64, Int8)
+import Num.Integer     (Integer)
+import Num.Integral    (Integral(..), even, fromIntegral, gcd, lcm, odd)
+import Num.Nat         (KnownNat, Nat, SomeNat(..), natVal, natVal', someNatVal)
+import Num.Num         (Num(..), subtract, (^))
+import Num.Real        (Real(..), div', divMod', mod', realToFrac)
+import Num.RealFloat   (RealFloat(..))
+import Num.RealFrac    (RealFrac(..))
+import Num.Word        (Word, Word16, Word32, Word64, Word8)
+import Optic.Fold      (folded, has, preview, (^?))
+import Optic.Getting   (view, (^.))
+import Optic.Lens      (At(at), Lens, Lens', lens)
+import Optic.Prism     (Prism, is, prism)
+import Optic.Setter    (over, set, (%~), (.~))
+import Optic.Traversal (Traversal)
+import Ord             (Ord(compare, max, min, (<), (<=), (>), (>=)),
+                        Ordering(EQ, GT, LT))
+import Semigroup       (Semigroup((<>)))
+import Sequence        (Seq)
+import Set             (Set)
+import Set.Hash        (HashSet)
+import Set.Int         (IntSet)
+import Show            (Show, show)
+import Text            (Text)
+import Traversable     (Traversable(sequenceA, traverse), for)
+import Tuple           (Field1(_1), Field2(_2), Field3(_3), Field4(_4),
+                        Field5(_5), Field6(_6), fst, snd)
+import Void            (Void)
 
 import Data.Orphans ()
