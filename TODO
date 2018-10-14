@@ -23,3 +23,5 @@
 - formatting
 - pipes
 - focus
+- generic-lens
+- reducers
