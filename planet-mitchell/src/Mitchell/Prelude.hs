@@ -174,52 +174,52 @@ module Mitchell.Prelude
   , Monoid
   , mconcat
   , mempty
-    -- * Numeric.Double
+    -- * Num.Double
   , Double
-    -- * Numeric.Float
+    -- * Num.Float
   , Float
-    -- * Numeric.Floating
+    -- * Num.Floating
   , Floating(..)
-    -- * Numeric.Fractional
+    -- * Num.Fractional
   , Fractional(..)
   , (^^)
-    -- * Numeric.Int
+    -- * Num.Int
   , Int
   , Int8
   , Int16
   , Int32
   , Int64
-    -- * Numeric.Integer
+    -- * Num.Integer
   , Integer
-    -- * Numeric.Integral
+    -- * Num.Integral
   , Integral(..)
   , even
   , odd
   , gcd
   , lcm
   , fromIntegral
-    -- * Numeric.Nat
+    -- * Num.Nat
   , Nat
   , KnownNat
   , natVal
   , natVal'
   , SomeNat(..)
   , someNatVal
-    -- * Numeric.Num
+    -- * Num.Num
   , Num(..)
   , (^)
   , subtract
-    -- * Numeric.Real
+    -- * Num.Real
   , Real(..)
   , div'
   , mod'
   , divMod'
   , realToFrac
-    -- * Numeric.RealFloat
+    -- * Num.RealFloat
   , RealFloat(..)
-    -- * Numeric.RealFrac
+    -- * Num.RealFrac
   , RealFrac(..)
-    -- * Numeric.Word
+    -- * Num.Word
   , Word
   , Word8
   , Word16
@@ -237,11 +237,14 @@ module Mitchell.Prelude
   , Lens
   , Lens'
   , lens
+  , HasAny(..)
   , At(..)
     -- * Optic.Prism
   , Prism
+  , Prism'
   , prism
   , is
+  , AsAny(..)
     -- * Optic.Setter
   , (.~)
   , (%~)
@@ -249,6 +252,7 @@ module Mitchell.Prelude
   , set
     -- * Optic.Traversal
   , Traversal
+  , Traversal'
     -- * Ord
   , Ord(..)
   , Ordering(..)
@@ -353,10 +357,10 @@ import Num.RealFrac    (RealFrac(..))
 import Num.Word        (Word, Word16, Word32, Word64, Word8)
 import Optic.Fold      (folded, has, preview, (^?))
 import Optic.Getting   (view, (^.))
-import Optic.Lens      (At(at), Lens, Lens', lens)
-import Optic.Prism     (Prism, is, prism)
+import Optic.Lens      (At(at), HasAny(the), Lens, Lens', lens)
+import Optic.Prism     (AsAny(_As), Prism, Prism', is, prism)
 import Optic.Setter    (over, set, (%~), (.~))
-import Optic.Traversal (Traversal)
+import Optic.Traversal (Traversal, Traversal')
 import Ord             (Ord(compare, max, min, (<), (<=), (>), (>=)),
                         Ordering(EQ, GT, LT))
 import Semigroup       (Semigroup((<>)))

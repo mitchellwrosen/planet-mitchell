@@ -14,6 +14,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Add `email-validate` dependency
 - Add `exact-pi` dependency
 - Add `fast-digits` dependency
+- Add `generic-lens` dependency
 - Add `ilist` dependency
 - Add `insert-ordered-containers` dependency
 - Add `neat-interpolation` dependency
@@ -42,6 +43,10 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Export `Num.Nat.plusMinusInverse2`
 - Export `Num.Nat.plusMinusInverse3`
 - Export `Parallelism.parEval`
+- Export `Mitchell.Prelude.Prism'`
+- Export `Mitchell.Prelude.Traversal'`
+- Export `Mitchell.Prelude.the`
+- Export `Mitchell.Prelude._As`
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`

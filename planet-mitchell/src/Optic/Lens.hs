@@ -3,6 +3,10 @@ module Optic.Lens
     Lens
   , Lens'
   , lens
+    -- * HasAny
+  , HasAny(..)
+    -- * Subtype
+  , Subtype(..)
     -- * At
   , At(..)
   , sans
@@ -12,5 +16,8 @@ module Optic.Lens
   , Contains(..)
   ) where
 
-import Control.Lens.At   (At(at), Contains(contains), Index, IxValue, sans)
-import Control.Lens.Lens (Lens, Lens', lens)
+import Control.Lens.At               (At(at), Contains(contains), Index,
+                                      IxValue, sans)
+import Control.Lens.Lens             (Lens, Lens', lens)
+import Data.Generics.Product.Any     (HasAny(the))
+import Data.Generics.Product.Subtype (Subtype(smash, super, upcast))

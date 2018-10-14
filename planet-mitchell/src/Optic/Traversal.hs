@@ -5,6 +5,7 @@ module Optic.Traversal
   , traverseOf
   , forOf
   , sequenceAOf
+  , types
     -- * Each
   , Each(..)
     -- * Ixed
@@ -13,7 +14,8 @@ module Optic.Traversal
   , IxValue
   ) where
 
-import Control.Lens.At        (Index, IxValue, Ixed(ix))
-import Control.Lens.Each      (Each(each))
-import Control.Lens.Traversal (Traversal, Traversal', forOf, sequenceAOf,
-                               traverseOf)
+import Control.Lens.At             (Index, IxValue, Ixed(ix))
+import Control.Lens.Each           (Each(each))
+import Control.Lens.Traversal      (Traversal, Traversal', forOf, sequenceAOf,
+                                    traverseOf)
+import Data.Generics.Product.Types (types)
