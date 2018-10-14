@@ -44,6 +44,24 @@ module List
   , groupSort
   , groupSortBy
   , groupSortOn
+  , iall
+  , iany
+  , iconcatMap
+  , idropWhile
+  , ifilter
+  , ifind
+  , ifindIndex
+  , ifindIndices
+  , ifoldMap
+  , ifoldl'
+  , ifoldlM
+  , ifoldr
+  , ifoldrM
+  , ifor
+  , ifor_
+  , imap
+  , imapAccumL
+  , imapAccumR
   , inits
   , insert
   , insertBy
@@ -51,14 +69,26 @@ module List
   , intersect
   , intersectBy
   , intersperse
+  , ipartition
+  , ireplicateM
+  , ireplicateM_
   , isInfixOf
   , isPrefixOf
   , isSubsequenceOf
   , isSuffixOf
+  , itakeWhile
   , iterate
+  , itraverse
+  , itraverse_
 #if MIN_VERSION_base(4,11,0)
   , iterate'
 #endif
+  , izipWith
+  , izipWith3
+  , izipWith4
+  , izipWith5
+  , izipWith6
+  , izipWith7
   , lookup
   , map
   , maximumByMay
@@ -183,6 +213,12 @@ import Data.List.Extra (allSame, anySame, breakEnd, breakOn, breakOnEnd, cons,
                         nubSortOn, snoc, spanEnd, split, splitAtEnd, stripInfix,
                         stripInfixEnd, stripSuffix, takeEnd, takeWhileEnd, trim,
                         trimEnd, trimStart, unsnoc, upper, wordsBy)
+import Data.List.Index (iall, iany, iconcatMap, idropWhile, ifilter, ifind,
+                        ifindIndex, ifindIndices, ifoldMap, ifoldl', ifoldlM,
+                        ifoldr, ifoldrM, ifor, ifor_, imap, imapAccumL,
+                        imapAccumR, ipartition, ireplicateM, ireplicateM_,
+                        itakeWhile, itraverse, itraverse_, izipWith, izipWith3,
+                        izipWith4, izipWith5, izipWith6, izipWith7)
 import Data.List.Lens  (prefixed, suffixed)
 import Data.List.Split (chop, divvy, endBy, splitOn)
 import Data.String     (IsString(fromString), String)

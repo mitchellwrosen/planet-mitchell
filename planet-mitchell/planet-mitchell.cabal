@@ -97,6 +97,7 @@ library
     , half ^>= 0.3
     , hashable ^>= 1.2.7
     , heaps ^>= 0.3.0
+    , ilist ^>= 0.3.1
     , insert-ordered-containers ^>= 0.2.1
     , integer-logarithms ^>= 1.0.2
     , lens ^>= 4.16.1 || ^>= 4.17
