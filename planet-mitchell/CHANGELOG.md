@@ -8,16 +8,17 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 ## Unreleased
 
 ### Added
-- Add `random-bytestring` dependency
-- Add `insert-ordered-containers` dependency
-- Add `email-validate` dependency
-- Add `exact-pi` dependency
-- Add `compactable` dependency
-- Add `fast-digits` dependency
 - Add `Diff` dependency
 - Add `Safe` dependency
-- Add `stringsearch` package
-- Add `text-metrics` package
+- Add `compactable` dependency
+- Add `email-validate` dependency
+- Add `exact-pi` dependency
+- Add `fast-digits` dependency
+- Add `insert-ordered-containers` dependency
+- Add `random-bytestring` dependency
+- Add `say` dependency
+- Add `stringsearch` dependency
+- Add `text-metrics` dependency
 - Add `Posix.Signal` module
 - Export `Concurrency.TBQueue.lengthTBQueue` if `stm >= 2.5.0`
 - Export `Concurrency.TVar.stateTVar` if `stm >= 2.5.0`
@@ -33,6 +34,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
 - Swap `ByteString.split` from `bytestring` for `ByteString.split` from `stringsearch`
+- Swap old text printing functions for `say` versions in `Mitchell.Prelude`
 - Shorten `Numeric.*` to `Num.*`
 - Relax `base` upper bound to `^>= 4.12.0`
 - Relax `stm` upper bound to `^>= 2.5.0`
@@ -51,6 +53,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Remove `ByteString.cons` function
 - Remove `ByteString.empty` function
 - Remove `bitDefault`, `popCountDefault`, `testBitDefault` from `Bits`
+- Remove `hPrint`, `print` functions from `File.Text`
 - Split off separate `mitchell-prelude-test` package
   - Remove `gauge` dependency
   - Remove `hedgehog` dependency

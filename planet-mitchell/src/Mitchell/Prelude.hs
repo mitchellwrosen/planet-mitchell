@@ -78,15 +78,12 @@ module Mitchell.Prelude
   , stdout
   , stderr
     -- * File.Text
-  , hGetChar
-  , hGetLine
-  , hGetContents
-  , putStr
-  , putStrLn
-  , print
-  , hPutStr
-  , hPutStrLn
-  , hPrint
+  , say
+  , sayString
+  , sayShow
+  , sayErr
+  , sayErrString
+  , sayErrShow
     -- * Foldable
   , Foldable(..)
   , foldrM
@@ -309,18 +306,14 @@ import Compactable   (Compactable(applyEither, applyMaybe, bindEither, bindMaybe
 import Contravariant (Contravariant(contramap))
 import Debug         (trace, traceId, traceM, traceShow, traceShowId,
                       traceShowM, traceStack)
-import Either        (Either(Left, Right), either)
-import Either        (eitherM)
-import Either        (_Left, _Right)
+import Either        (Either(Left, Right), either, eitherM, _Left, _Right)
 import Enum          (Enum(enumFrom, enumFromThen, enumFromThenTo, enumFromTo, fromEnum, pred, succ, toEnum))
 import Equality      (Eq((/=), (==)))
 import Error         (assert, error, undefined)
 import Exception     (Exception, SomeAsyncException(SomeAsyncException),
                       SomeException(SomeException), throwIO)
 import File          (stderr, stdin, stdout)
-import File.Text     (hGetChar, hPrint, print)
-import File.Text     (hGetContents, hGetLine, hPutStr, hPutStrLn, putStr,
-                      putStrLn)
+import File.Text     (say, sayErr, sayErrShow, sayErrString, sayShow, sayString)
 import Foldable      (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product, sum, toList),
                       all, and, any, asum, concatMap, find, foldM, foldM_,
                       foldlM, foldrM, for_, msum, notElem, or, sequenceA_,
@@ -345,10 +338,9 @@ import Map.Hash             (HashMap)
 import Map.Int              (IntMap)
 import Maybe                (Maybe(Just, Nothing), catMaybes, fromMaybe,
                              mapMaybe, maybe)
-import Maybe                (maybeM)
-import Maybe                (_Just, _Nothing)
-import Monad                (Monad((>>=)), (<=<), (=<<), (>=>))
-import Monad                (unlessM, whenJustM, whenM, whileM)
+import Maybe                (maybeM, _Just, _Nothing)
+import Monad                (Monad((>>=)), unlessM, whenJustM, whenM, whileM,
+                             (<=<), (=<<), (>=>))
 import Monad.Trans          (MonadTrans(lift))
 import Monoid               (Monoid, mconcat, mempty)
 import Num.Double           (Double)
@@ -383,9 +375,8 @@ import Set.Int              (IntSet)
 import Show                 (Show, show)
 import Text                 (Text)
 import Traversable          (Traversable(sequenceA, traverse), for)
-import Tuple                (fst, snd)
 import Tuple                (Field1(_1), Field2(_2), Field3(_3), Field4(_4),
-                             Field5(_5), Field6(_6))
+                             Field5(_5), Field6(_6), fst, snd)
 import Void                 (Void)
 
 import Data.Orphans ()
