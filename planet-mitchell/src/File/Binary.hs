@@ -21,8 +21,9 @@ module File.Binary
   , putStr
   , hPutStr
   , hPutNonBlocking
+  , hPutSerialise
   ) where
 
-import Codec.Serialise (readFileDeserialise, writeFileSerialise)
+import Codec.Serialise (hPutSerialise, readFileDeserialise, writeFileSerialise)
 import Data.ByteString
 import UnliftIO.IO     (withBinaryFile)

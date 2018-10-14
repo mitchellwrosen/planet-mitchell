@@ -30,6 +30,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Export `Mitchell.Prelude.Contravariant`
 - Export `Mitchell.Prelude.any`
 - Export `Mitchell.Prelude.contramap`
+- Export `File.Binary.hPutSerialise`
 
 ### Changed
 - Swap `Unique` implementation from `base` to `unique`
