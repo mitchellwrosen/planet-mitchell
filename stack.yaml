@@ -37,6 +37,7 @@ extra-deps:
   - serialise-0.2.0.0
   - tasty-1.1.0.3
   - tasty-hedgehog-0.2.0.0
+  - tasty-rerun-1.1.13
   - transformers-0.5.5.0
   - transformers-base-0.4.5.2
   - transformers-compat-0.6.2
