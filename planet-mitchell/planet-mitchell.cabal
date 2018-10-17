@@ -181,6 +181,7 @@ library
     ByteString.Latin1.Partial
     ByteString.Lazy
     ByteString.Lazy.Base16
+    ByteString.Lazy.Builder
     ByteString.Lazy.Latin1
     ByteString.Lazy.Utf8
     ByteString.Partial

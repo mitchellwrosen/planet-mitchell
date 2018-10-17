@@ -23,6 +23,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Add `stringsearch` dependency
 - Add `text-metrics` dependency
 - Add `Posix.Signal` module
+- Add `ByteString.Lazy.Builder` module
 - Export `Concurrency.TBQueue.lengthTBQueue` if `stm >= 2.5.0`
 - Export `Concurrency.TVar.stateTVar` if `stm >= 2.5.0`
 - Export `Foldable.any`
