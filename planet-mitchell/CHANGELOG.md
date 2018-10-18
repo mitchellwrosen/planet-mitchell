@@ -53,13 +53,9 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Swap `Unique` implementation from `base` to `unique`
 - Swap `ByteString.split` from `bytestring` for `ByteString.split` from `stringsearch`
 - Swap old text printing functions for `say` versions in `Mitchell.Prelude`
+- Rename `Posix` to `Lang.C`
+- Rename `Posix.Signal` to `Signal`
 - Shorten `Numeric.*` to `Num.*`
-- Relax `base` upper bound to `^>= 4.12.0`
-- Relax `stm` upper bound to `^>= 2.5.0`
-- Relax `contravariant` upper bound to `^>= 1.5`
-- Relax `lens` upper bound to `^>= 4.17`
-- Relax `mwc-random` upper bound to `^>= 0.14.0`
-- Relax `network` upper bound to `^>= 2.8.0`
 - Move `Bifoldable(.Partial)` modules info `Foldable(.Partial)` modules
 - Move `Bifunctor` module info `Functor` module
 - Move `Bitraversable` module info `Traversable` module

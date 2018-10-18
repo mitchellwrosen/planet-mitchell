@@ -261,6 +261,7 @@ library
     Json.Decode
     Json.Encode
     Label
+    Lang.C
     List
     List.Builder
     List.Builder.Partial
@@ -334,8 +335,6 @@ library
     Parser.Earley
     Parser.Text
     Pointed
-    Posix
-    Posix.Signal
     Predicate
     Pretty
     Prim
@@ -369,6 +368,7 @@ library
     Set.Hash
     Set.Int
     Show
+    Signal
     Socket
     StableName
     State

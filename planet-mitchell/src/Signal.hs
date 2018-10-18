@@ -1,4 +1,4 @@
-module Posix.Signal
+module Signal
   ( -- * Signals
     Signal
   , sigABRT
@@ -62,3 +62,4 @@ module Posix.Signal
   ) where
 
 import System.Posix.Signals
+
