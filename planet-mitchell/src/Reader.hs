@@ -10,11 +10,14 @@ module Reader
   , withReaderT
     -- * MonadReader
   , MonadReader(..)
-    -- * Magnify
+    -- * Optics
+  , view
+  , views
   , Magnify
   , magnify
   ) where
 
+import Control.Lens.Getter        (view, views)
 import Control.Lens.Zoom          (Magnify(magnify))
 import Control.Monad.Reader.Class
 import Control.Monad.Trans.Reader

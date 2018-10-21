@@ -1,8 +1,8 @@
 module Monoid
   ( -- * Monoid
-    Monoid(mconcat, mempty)
+    Monoid(..)
   , gmempty
   ) where
 
-import Data.Monoid
-import Data.Semigroup.Generic
+import Data.Monoid            (Monoid(mconcat, mempty, mappend))
+import Data.Semigroup.Generic (gmempty)

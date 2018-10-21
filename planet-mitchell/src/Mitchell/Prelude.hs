@@ -232,7 +232,6 @@ module Mitchell.Prelude
   , folded
     -- * Optic.Getting
   , (^.)
-  , view
     -- * Optic.Lens
   , Lens
   , Lens'
@@ -256,6 +255,8 @@ module Mitchell.Prelude
     -- * Ord
   , Ord(..)
   , Ordering(..)
+    -- * Reader
+  , view
     -- * Semigroup
   , Semigroup(..)
     -- * Sequence
@@ -282,6 +283,8 @@ module Mitchell.Prelude
   , Field4(..)
   , Field5(..)
   , Field6(..)
+    -- * Type
+  , Type
     -- * Void
   , Void
   ) where
@@ -356,13 +359,14 @@ import Num.RealFloat   (RealFloat(..))
 import Num.RealFrac    (RealFrac(..))
 import Num.Word        (Word, Word16, Word32, Word64, Word8)
 import Optic.Fold      (folded, has, preview, (^?))
-import Optic.Getting   (view, (^.))
+import Optic.Getting   ((^.))
 import Optic.Lens      (At(at), HasAny(the), Lens, Lens', lens)
 import Optic.Prism     (AsAny(_As), Prism, Prism', is, prism)
 import Optic.Setter    (over, set, (%~), (.~))
 import Optic.Traversal (Traversal, Traversal')
 import Ord             (Ord(compare, max, min, (<), (<=), (>), (>=)),
                         Ordering(EQ, GT, LT))
+import Reader          (view)
 import Semigroup       (Semigroup((<>)))
 import Sequence        (Seq)
 import Set             (Set)
@@ -373,6 +377,7 @@ import Text            (Text)
 import Traversable     (Traversable(sequenceA, traverse), for)
 import Tuple           (Field1(_1), Field2(_2), Field3(_3), Field4(_4),
                         Field5(_5), Field6(_6), fst, snd)
+import Type            (Type)
 import Void            (Void)
 
 import Data.Orphans ()

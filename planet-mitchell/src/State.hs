@@ -17,12 +17,18 @@ module State
   , gets
   , modify
   , modify'
-    -- * Zoom
+    -- * Optics
+  , use
+  , uses
+  , (.=)
+  , (%=)
   , Zoom
   , zoom
   , Zoomed
   ) where
 
+import Control.Lens.Getter              (use, uses)
+import Control.Lens.Setter              ((%=), (.=))
 import Control.Lens.Zoom                (Zoom(zoom), Zoomed)
 import Control.Monad.State.Class        (MonadState(..), gets, modify, modify')
 import Control.Monad.Trans.State.Strict (State, StateT(..), evalState,
