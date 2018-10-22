@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module Functor
+module Alg.Functor
   ( -- * Functor
     Functor(..)
   , (<$>)

@@ -1,4 +1,4 @@
-module Category
+module Alg.Category
   ( Category(..)
   , (>>>)
   , (<<<)

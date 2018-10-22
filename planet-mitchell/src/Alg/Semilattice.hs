@@ -1,4 +1,4 @@
-module Semilattice
+module Alg.Semilattice
   ( Join(..)
   , Meet(..)
   , Order(..)

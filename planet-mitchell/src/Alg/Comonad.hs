@@ -1,4 +1,4 @@
-module Comonad
+module Alg.Comonad
   ( -- * Comonad
     Comonad(..)
   , wfix

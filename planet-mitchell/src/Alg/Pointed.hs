@@ -1,4 +1,4 @@
-module Pointed
+module Alg.Pointed
   ( -- * Pointed
     Pointed(..)
   ) where

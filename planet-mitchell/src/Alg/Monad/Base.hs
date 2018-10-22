@@ -1,4 +1,4 @@
-module Monad.Base
+module Alg.Monad.Base
   ( MonadBase(..)
   ) where
 

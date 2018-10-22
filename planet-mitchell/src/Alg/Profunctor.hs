@@ -1,4 +1,4 @@
-module Profunctor
+module Alg.Profunctor
   ( Profunctor(..)
   ) where
 

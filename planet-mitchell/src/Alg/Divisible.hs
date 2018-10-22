@@ -1,4 +1,4 @@
-module Divisible
+module Alg.Divisible
   ( Divisible(..)
   , divided
   , conquered

@@ -169,7 +169,27 @@ library
     Ala.Identity
     Ala.Product
     Ala.Sum
-    Applicative
+    Alg.Applicative
+    Alg.Category
+    Alg.Comonad
+    Alg.Contravariant
+    Alg.Copointed
+    Alg.Divisible
+    Alg.Functor
+    Alg.Groupoid
+    Alg.Monad
+    Alg.Monad.Base
+    Alg.Monad.Fail
+    Alg.Monad.Fix
+    Alg.Monad.Plus
+    Alg.Monad.Trans
+    Alg.Monad.Zip
+    Alg.Monoid
+    Alg.Pointed
+    Alg.Profunctor
+    Alg.Semigroup
+    Alg.Semigroupoid
+    Alg.Semilattice
     Array
     Array.Partial
     Bits
@@ -189,13 +209,11 @@ library
     ByteString.Short.Partial
     ByteString.Utf8
     CaseInsensitive
-    Category
     Char
     Char.Partial
     Clock
     Coerce
     Coerce.Unsafe
-    Comonad
     Compactable
     CompactRegion
     Concurrency
@@ -220,13 +238,10 @@ library
     Concurrency.TVar
     Constraint
     Cont
-    Contravariant
-    Copointed
     Data
     Debug
     Decidable
     Distributive
-    Divisible
     Dynamic
     Either
     Email
@@ -247,11 +262,9 @@ library
     Foldable.Partial
     Foldl
     Function
-    Functor
     Generic
     Graph.Adjacency
     Graph.Inductive
-    Groupoid
     Hashable
     Heap
     IO
@@ -281,14 +294,6 @@ library
     Maybe.Partial
     MaybeT
     Mitchell.Prelude
-    Monad
-    Monad.Base
-    Monad.Fail
-    Monad.Fix
-    Monad.Plus
-    Monad.Trans
-    Monad.Zip
-    Monoid
     MultiSet
     MultiSet.Int
     Num.Approximate
@@ -334,13 +339,11 @@ library
     Parser.Cli
     Parser.Earley
     Parser.Text
-    Pointed
     Predicate
     Pretty
     Prim
     Printf
     Process
-    Profunctor
     Proxy
     Ptr
     Ptr.Foreign
@@ -359,9 +362,6 @@ library
     Regex
     RuntimeSystem
     ST
-    Semigroup
-    Semigroupoid
-    Semilattice
     Sequence
     Serialise
     Set

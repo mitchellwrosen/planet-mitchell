@@ -16,6 +16,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 ### Changed
 - Move `Optic.Getting.view(s)` to `Reader.view(s)`
 - Move `Optic.Getting.use(s)` to `State.view(s)`
+- Move algebra types into `Alg.*` module namespace
 
 ## [0.1.0] - 2018-10-21
 

@@ -1,4 +1,4 @@
-module Monad
+module Alg.Monad
   ( -- * Monad
     Monad((>>=), return)
   , (=<<)

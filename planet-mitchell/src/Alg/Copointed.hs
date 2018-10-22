@@ -1,4 +1,4 @@
-module Copointed
+module Alg.Copointed
   ( -- * Copointed
     Copointed(..)
   ) where

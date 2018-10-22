@@ -1,4 +1,4 @@
-module Monad.Trans
+module Alg.Monad.Trans
   ( -- * MonadTrans
     MonadTrans(..)
     -- * Free monad transformer

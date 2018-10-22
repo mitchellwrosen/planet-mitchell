@@ -1,4 +1,4 @@
-module Semigroupoid
+module Alg.Semigroupoid
   ( -- * Semigroupoid
     Semigroupoid(..)
     -- ** Newtypes

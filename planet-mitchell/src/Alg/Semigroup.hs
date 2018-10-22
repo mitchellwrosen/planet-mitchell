@@ -1,4 +1,4 @@
-module Semigroup
+module Alg.Semigroup
   ( -- * Semigroup
     Semigroup(..)
   , gmappend

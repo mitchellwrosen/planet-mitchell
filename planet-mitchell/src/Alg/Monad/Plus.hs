@@ -1,4 +1,4 @@
-module Monad.Plus
+module Alg.Monad.Plus
   ( MonadPlus(..)
   , endBy
   , endBy1

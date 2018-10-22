@@ -1,4 +1,4 @@
-module Monad.Fail
+module Alg.Monad.Fail
   ( MonadFail(..)
   ) where
 

@@ -1,4 +1,4 @@
-module Monad.Zip
+module Alg.Monad.Zip
   ( MonadZip(..)
   ) where
 

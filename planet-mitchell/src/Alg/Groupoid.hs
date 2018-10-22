@@ -1,4 +1,4 @@
-module Groupoid
+module Alg.Groupoid
   ( Groupoid(..)
   ) where
 

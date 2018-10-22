@@ -1,4 +1,4 @@
-module Monad.Fix
+module Alg.Monad.Fix
   ( MonadFix(..)
   ) where
 

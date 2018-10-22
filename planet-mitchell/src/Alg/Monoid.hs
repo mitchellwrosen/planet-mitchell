@@ -1,4 +1,4 @@
-module Monoid
+module Alg.Monoid
   ( -- * Monoid
     Monoid(..)
   , gmempty

@@ -3,7 +3,7 @@
 module Mitchell.Prelude
   ( -- * Ala.Identity
     Identity(..)
-    -- * Applicative
+    -- * Alg.Applicative
   , Applicative(..)
   , filterM
   , forever
@@ -17,6 +17,37 @@ module Mitchell.Prelude
   , Alternative((<|>), empty)
   , guard
   , optional
+    -- * Alg.Category
+  , Category(..)
+  , (>>>)
+  , (<<<)
+    -- * Alg.Contravariant
+  , Contravariant(..)
+    -- * Alg.Functor
+  , Functor(..)
+  , (<$>)
+  , ($>)
+#if MIN_VERSION_base(4,11,0)
+  , (<&>)
+#endif
+  , void
+    -- * Alg.Monad
+  , Monad(..)
+  , (=<<)
+  , (>=>)
+  , (<=<)
+  , unlessM
+  , whenJustM
+  , whenM
+  , whileM
+    -- * Alg.Monad.Trans
+  , MonadTrans(..)
+    -- * Alg.Monoid
+  , Monoid
+  , mconcat
+  , mempty
+    -- * Alg.Semigroup
+  , Semigroup(..)
     -- * Bool
   , Bool(..)
   , (&&)
@@ -26,10 +57,6 @@ module Mitchell.Prelude
     -- * Bounded
   , Bounded(..)
   , ByteString
-    -- * Category
-  , Category(..)
-  , (>>>)
-  , (<<<)
     -- * Char
   , Char
 #if MIN_VERSION_base(4,11,0)
@@ -44,8 +71,6 @@ module Mitchell.Prelude
   , Compactable(..)
   , fforMaybe
   , fforEither
-    -- * Contravariant
-  , Contravariant(..)
     -- * Debug
   , trace
   , traceId
@@ -113,14 +138,6 @@ module Mitchell.Prelude
   , flip
   , until
   , Endo(..)
-    -- * Functor
-  , Functor(..)
-  , (<$>)
-  , ($>)
-#if MIN_VERSION_base(4,11,0)
-  , (<&>)
-#endif
-  , void
     -- * Generic
   , Generic
     -- * Hashable
@@ -159,21 +176,6 @@ module Mitchell.Prelude
   , mapMaybe
   , _Nothing
   , _Just
-    -- * Monad
-  , Monad(..)
-  , (=<<)
-  , (>=>)
-  , (<=<)
-  , unlessM
-  , whenJustM
-  , whenM
-  , whileM
-    -- * Monad.Trans
-  , MonadTrans(..)
-    -- * Monoid
-  , Monoid
-  , mconcat
-  , mempty
     -- * Num.Double
   , Double
     -- * Num.Float
@@ -257,8 +259,6 @@ module Mitchell.Prelude
   , Ordering(..)
     -- * Reader
   , view
-    -- * Semigroup
-  , Semigroup(..)
     -- * Sequence
   , Seq
     -- * Set
@@ -289,43 +289,44 @@ module Mitchell.Prelude
   , Void
   ) where
 
-import Ala.Identity (Identity(Identity, runIdentity))
-import Applicative  (Alternative(empty, (<|>)), Applicative, filterM, forever,
-                     guard, liftA2, liftA3, optional, pure, replicateM,
-                     replicateM_, unless, when, zipWithM, zipWithM_, (*>), (<*),
-                     (<*>))
-import Bool         (Bool(False, True), not, otherwise, (&&), (||))
-import Bounded      (Bounded(maxBound, minBound))
-import ByteString   (ByteString)
-import Category     (Category(id, (.)), (<<<), (>>>))
-import Char         (Char)
+import Ala.Identity    (Identity(Identity, runIdentity))
+import Alg.Applicative (Alternative(empty, (<|>)), Applicative, filterM,
+                        forever, guard, liftA2, liftA3, optional, pure,
+                        replicateM, replicateM_, unless, when, zipWithM,
+                        zipWithM_, (*>), (<*), (<*>))
+import Alg.Category    (Category(id, (.)), (<<<), (>>>))
+import Bool            (Bool(False, True), not, otherwise, (&&), (||))
+import Bounded         (Bounded(maxBound, minBound))
+import ByteString      (ByteString)
+import Char            (Char)
 #if MIN_VERSION_base(4,11,0)
 import Clock (getMonotonicTime, getMonotonicTimeNSec)
 #endif
-import Coerce        (Coercible, coerce)
-import Compactable   (Compactable(applyEither, applyMaybe, bindEither, bindMaybe, compact, filter, fmapEither, fmapMaybe, partition, separate, traverseEither, traverseMaybe),
-                      fforEither, fforMaybe)
-import Contravariant (Contravariant(contramap))
-import Debug         (trace, traceId, traceM, traceShow, traceShowId,
-                      traceShowM, traceStack)
-import Either        (Either(Left, Right), either, eitherM, _Left, _Right)
-import Enum          (Enum(enumFrom, enumFromThen, enumFromThenTo, enumFromTo, fromEnum, pred, succ, toEnum))
-import Equality      (Eq((/=), (==)))
-import Error         (assert, error, undefined)
-import Exception     (Exception, SomeAsyncException(SomeAsyncException),
-                      SomeException(SomeException), throwIO)
-import File          (stderr, stdin, stdout)
-import File.Text     (say, sayErr, sayErrShow, sayErrString, sayShow, sayString)
-import Foldable      (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product, sum, toList),
-                      all, and, any, asum, concatMap, find, foldM, foldM_,
-                      foldlM, foldrM, for_, msum, notElem, or, sequenceA_,
-                      traverse_)
-import Foldable      (foldBy, foldMapBy)
-import Function      (Endo(Endo, appEndo), const, fix, flip, until, ($), ($!),
-                      (&))
-import Functor       (Functor(fmap, (<$)), void, ($>), (<$>))
+import Alg.Contravariant (Contravariant(contramap))
+import Alg.Functor       (Functor(fmap, (<$)), void, ($>), (<$>))
+import Coerce            (Coercible, coerce)
+import Compactable       (Compactable(applyEither, applyMaybe, bindEither, bindMaybe, compact, filter, fmapEither, fmapMaybe, partition, separate, traverseEither, traverseMaybe),
+                          fforEither, fforMaybe)
+import Debug             (trace, traceId, traceM, traceShow, traceShowId,
+                          traceShowM, traceStack)
+import Either            (Either(Left, Right), either, eitherM, _Left, _Right)
+import Enum              (Enum(enumFrom, enumFromThen, enumFromThenTo, enumFromTo, fromEnum, pred, succ, toEnum))
+import Equality          (Eq((/=), (==)))
+import Error             (assert, error, undefined)
+import Exception         (Exception, SomeAsyncException(SomeAsyncException),
+                          SomeException(SomeException), throwIO)
+import File              (stderr, stdin, stdout)
+import File.Text         (say, sayErr, sayErrShow, sayErrString, sayShow,
+                          sayString)
+import Foldable          (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product, sum, toList),
+                          all, and, any, asum, concatMap, find, foldM, foldM_,
+                          foldlM, foldrM, for_, msum, notElem, or, sequenceA_,
+                          traverse_)
+import Foldable          (foldBy, foldMapBy)
+import Function          (Endo(Endo, appEndo), const, fix, flip, until, ($),
+                          ($!), (&))
 #if MIN_VERSION_base(4,11,0)
-import Functor ((<&>))
+import Alg.Functor ((<&>))
 #endif
 import Generic  (Generic)
 import Hashable (Hashable)
@@ -335,16 +336,17 @@ import List     (cycle, iterate, map, repeat, replicate, scanl, scanl', scanl1,
 #if MIN_VERSION_base(4,11,0)
 import List (iterate')
 #endif
+import Alg.Monad       (Monad((>>=)), unlessM, whenJustM, whenM, whileM, (<=<),
+                        (=<<), (>=>))
+import Alg.Monad.Trans (MonadTrans(lift))
+import Alg.Monoid      (Monoid, mconcat, mempty)
+import Alg.Semigroup   (Semigroup((<>)))
 import Map             (Map)
 import Map.Hash        (HashMap)
 import Map.Int         (IntMap)
 import Maybe           (Maybe(Just, Nothing), catMaybes, fromMaybe, mapMaybe,
                         maybe)
 import Maybe           (maybeM, _Just, _Nothing)
-import Monad           (Monad((>>=)), unlessM, whenJustM, whenM, whileM, (<=<),
-                        (=<<), (>=>))
-import Monad.Trans     (MonadTrans(lift))
-import Monoid          (Monoid, mconcat, mempty)
 import Num.Double      (Double)
 import Num.Float       (Float)
 import Num.Floating    (Floating(..))
@@ -367,7 +369,6 @@ import Optic.Traversal (Traversal, Traversal')
 import Ord             (Ord(compare, max, min, (<), (<=), (>), (>=)),
                         Ordering(EQ, GT, LT))
 import Reader          (view)
-import Semigroup       (Semigroup((<>)))
 import Sequence        (Seq)
 import Set             (Set)
 import Set.Hash        (HashSet)
