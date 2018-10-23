@@ -1,4 +1,4 @@
-module Decidable
+module Alg.Decidable
   ( -- * Decidable
     Decidable(..)
   , chosen

@@ -1,5 +1,6 @@
 module Array
-  ( Array
+  ( -- * Array
+    Array
   , array
   , bounds
   , indices
@@ -7,6 +8,8 @@ module Array
   , (//)
   , accum
   , ixmap
+    -- * Ix
+  , Ix(..)
   ) where
 
 import Data.Array

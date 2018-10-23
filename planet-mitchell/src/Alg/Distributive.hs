@@ -1,4 +1,4 @@
-module Distributive
+module Alg.Distributive
   ( -- * Distributive
     Distributive(..)
   , cotraverse

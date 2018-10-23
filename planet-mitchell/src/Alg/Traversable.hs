@@ -1,4 +1,4 @@
-module Traversable
+module Alg.Traversable
   ( -- * Traversable
     Traversable(..)
   , for

@@ -174,6 +174,8 @@ library
     Alg.Comonad
     Alg.Contravariant
     Alg.Copointed
+    Alg.Decidable
+    Alg.Distributive
     Alg.Divisible
     Alg.Functor
     Alg.Groupoid
@@ -190,6 +192,7 @@ library
     Alg.Semigroup
     Alg.Semigroupoid
     Alg.Semilattice
+    Alg.Traversable
     Array
     Array.Partial
     Bits
@@ -240,8 +243,6 @@ library
     Cont
     Data
     Debug
-    Decidable
-    Distributive
     Dynamic
     Either
     Email
@@ -269,7 +270,6 @@ library
     Heap
     IO
     IO.Unsafe
-    Ix
     Json
     Json.Decode
     Json.Encode
@@ -386,7 +386,6 @@ library
     Text.Short.Partial
     Text.Short.Unsafe
     Time
-    Traversable
     Tree
     Tuple
     Type
