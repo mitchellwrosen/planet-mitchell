@@ -8,6 +8,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 ## Unreleased
 
 ### Added
+- Add `text-builder` dependency
 - Export `Mitchell.Prelude.Type`
 - Export `Monoid.mappend`
 - Export `(State..=)`
@@ -23,7 +24,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 
 ### Added
 - Add `Diff` dependency
-- Add `Safe` dependency
+- Add `safe` dependency
 - Add `compactable` dependency
 - Add `email-validate` dependency
 - Add `exact-pi` dependency
