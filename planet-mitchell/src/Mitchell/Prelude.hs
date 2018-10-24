@@ -54,6 +54,9 @@ module Mitchell.Prelude
   , (||)
   , not
   , otherwise
+    -- * Alg.Traversable
+  , Traversable(..)
+  , for
     -- * Bounded
   , Bounded(..)
   , ByteString
@@ -271,9 +274,6 @@ module Mitchell.Prelude
   , Show(show)
     -- * Text
   , Text
-    -- * Traversable
-  , Traversable(..)
-  , for
     -- * Tuple
   , fst
   , snd
@@ -341,6 +341,7 @@ import Alg.Monad       (Monad((>>=)), unlessM, whenJustM, whenM, whileM, (<=<),
 import Alg.Monad.Trans (MonadTrans(lift))
 import Alg.Monoid      (Monoid, mconcat, mempty)
 import Alg.Semigroup   (Semigroup((<>)))
+import Alg.Traversable (Traversable(sequenceA, traverse), for)
 import Map             (Map)
 import Map.Hash        (HashMap)
 import Map.Int         (IntMap)
@@ -375,7 +376,6 @@ import Set.Hash        (HashSet)
 import Set.Int         (IntSet)
 import Show            (Show, show)
 import Text            (Text)
-import Traversable     (Traversable(sequenceA, traverse), for)
 import Tuple           (Field1(_1), Field2(_2), Field3(_3), Field4(_4),
                         Field5(_5), Field6(_6), fst, snd)
 import Type            (Type)
