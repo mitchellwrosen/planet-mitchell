@@ -279,9 +279,9 @@ library
     List
     List.Builder
     List.Builder.Partial
+    List.NonEmpty
+    List.NonEmpty.Partial
     List.Partial
-    List1
-    List1.Partial
     ListT
     Logic
     Managed

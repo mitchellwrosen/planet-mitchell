@@ -1,4 +1,4 @@
-module List1
+module List.NonEmpty
   ( NonEmpty(..)
   , break
   , cons

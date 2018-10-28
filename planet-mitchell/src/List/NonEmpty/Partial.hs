@@ -1,4 +1,4 @@
-module List1.Partial
+module List.NonEmpty.Partial
   ( (!!)
   , fromList
   ) where

@@ -19,6 +19,8 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Move `Optic.Getting.use(s)` to `State.view(s)`
 - Move algebra types into `Alg.*` module namespace
 - Move `Ix` into `Array`
+- Rename `List1` to `List.NonEmpty`
+- Rename `List1.Partial` to `List.NonEmpty.Partial`
 
 ## [0.1.0] - 2018-10-21
 
