@@ -1,5 +1,5 @@
 module Concurrency.TMap
-  ( module STMContainers.Map
+  ( module StmContainers.Map
   ) where
 
-import STMContainers.Map
+import StmContainers.Map

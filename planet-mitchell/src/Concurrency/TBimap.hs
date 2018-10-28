@@ -1,5 +1,5 @@
 module Concurrency.TBimap
-  ( module STMContainers.Bimap
+  ( module StmContainers.Bimap
   ) where
 
-import STMContainers.Bimap
+import StmContainers.Bimap

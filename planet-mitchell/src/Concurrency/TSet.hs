@@ -1,5 +1,5 @@
 module Concurrency.TSet
-  ( module STMContainers.Set
+  ( module StmContainers.Set
   ) where
 
-import STMContainers.Set
+import StmContainers.Set

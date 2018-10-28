@@ -1,5 +1,5 @@
 module Concurrency.TMultimap
-  ( module STMContainers.Multimap
+  ( module StmContainers.Multimap
   ) where
 
-import STMContainers.Multimap
+import StmContainers.Multimap
