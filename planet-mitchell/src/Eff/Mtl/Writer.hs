@@ -1,4 +1,4 @@
-module Writer
+module Eff.Mtl.Writer
   ( -- * Writer
     Writer
   , runWriter

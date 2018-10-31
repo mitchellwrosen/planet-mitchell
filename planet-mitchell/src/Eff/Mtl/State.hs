@@ -1,4 +1,4 @@
-module State
+module Eff.Mtl.State
   ( -- * State
     State
   , runState

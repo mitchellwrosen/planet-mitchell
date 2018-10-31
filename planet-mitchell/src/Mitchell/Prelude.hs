@@ -82,6 +82,8 @@ module Mitchell.Prelude
   , traceStack
   , traceM
   , traceShowM
+    -- * Eff.Mtl.Reader
+  , view
     -- * Either
   , Either(Left, Right)
   , either
@@ -260,8 +262,6 @@ module Mitchell.Prelude
     -- * Ord
   , Ord(..)
   , Ordering(..)
-    -- * Reader
-  , view
     -- * Sequence
   , Seq
     -- * Set
@@ -342,6 +342,7 @@ import Alg.Monad.Trans (MonadTrans(lift))
 import Alg.Monoid      (Monoid, mconcat, mempty)
 import Alg.Semigroup   (Semigroup((<>)))
 import Alg.Traversable (Traversable(sequenceA, traverse), for)
+import Eff.Mtl.Reader  (view)
 import Map             (Map)
 import Map.Hash        (HashMap)
 import Map.Int         (IntMap)
@@ -369,7 +370,6 @@ import Optic.Setter    (over, set, (%~), (.~))
 import Optic.Traversal (Traversal, Traversal')
 import Ord             (Ord(compare, max, min, (<), (<=), (>), (>=)),
                         Ordering(EQ, GT, LT))
-import Reader          (view)
 import Sequence        (Seq)
 import Set             (Set)
 import Set.Hash        (HashSet)

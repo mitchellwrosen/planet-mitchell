@@ -3,7 +3,7 @@
 - adjunctions
 - discrimination
 - promises
-- algebraic-graphs
+- algebraic-graphs (replace fgl)
 - pcg-random
 - dependent-sum
 - dependent-map

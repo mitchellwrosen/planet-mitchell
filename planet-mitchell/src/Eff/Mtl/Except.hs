@@ -1,4 +1,4 @@
-module Except
+module Eff.Mtl.Except
   ( -- * ExceptT
     ExceptT(..)
   , runExceptT

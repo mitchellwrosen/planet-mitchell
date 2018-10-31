@@ -1,4 +1,4 @@
-module Cont
+module Eff.Mtl.Cont
   ( -- * Cont
     Cont
   , cont

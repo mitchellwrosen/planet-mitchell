@@ -21,6 +21,13 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Move `Ix` into `Array`
 - Rename `List1` to `List.NonEmpty`
 - Rename `List1.Partial` to `List.NonEmpty.Partial`
+- Rename `Cont` to `Eff.Mtl.Cont`
+- Rename `Except` to `Eff.Mtl.Except`
+- Rename `List` to `Eff.Mtl.List`
+- Rename `Logic` to `Eff.Mtl.Logic`
+- Rename `Reader` to `Eff.Mtl.Reader`
+- Rename `State` to `Eff.Mtl.State`
+- Rename `Writer` to `Eff.Mtl.Writer`
 
 ## [0.1.0] - 2018-10-21
 

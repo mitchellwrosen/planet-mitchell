@@ -1,4 +1,4 @@
-module ListT
+module Eff.Mtl.List
   ( ListT(..)
   , runListT
   , fold

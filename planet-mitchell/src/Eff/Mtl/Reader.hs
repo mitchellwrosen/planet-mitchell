@@ -1,4 +1,4 @@
-module Reader
+module Eff.Mtl.Reader
   ( -- * Reader
     Reader
   , runReader

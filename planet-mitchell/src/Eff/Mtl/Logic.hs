@@ -1,4 +1,4 @@
-module Logic
+module Eff.Mtl.Logic
   ( -- ** Logic
     Logic
   , logic

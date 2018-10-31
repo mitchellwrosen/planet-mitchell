@@ -241,10 +241,16 @@ library
     Concurrency.TSet
     Concurrency.TVar
     Constraint
-    Cont
     Data
     Debug
     Dynamic
+    Eff.Mtl.Cont
+    Eff.Mtl.Except
+    Eff.Mtl.List
+    Eff.Mtl.Logic
+    Eff.Mtl.Reader
+    Eff.Mtl.State
+    Eff.Mtl.Writer
     Either
     Email
     Email.Unsafe
@@ -253,7 +259,6 @@ library
     Equality
     Error
     Eval
-    Except
     Exception
     FRP
     Field
@@ -282,8 +287,6 @@ library
     List.NonEmpty
     List.NonEmpty.Partial
     List.Partial
-    ListT
-    Logic
     Managed
     Map
     Map.Hash
@@ -358,7 +361,6 @@ library
     Random
     Read
     Read.Partial
-    Reader
     Reflection
     Regex
     RuntimeSystem
@@ -372,7 +374,6 @@ library
     Signal
     Socket
     StableName
-    State
     Storable
     Symbol
     System
@@ -406,7 +407,6 @@ library
     Vector.Storable
     Vector.Unboxed
     Void
-    Writer
 
 -- benchmark semaphore
 --   hs-source-dirs: bench
