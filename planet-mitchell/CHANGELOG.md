@@ -9,6 +9,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 
 ### Added
 - Add `strict-tuple` dependency
+- Add `text-ansi` dependency
 - Add `text-builder` dependency
 - Export `Mitchell.Prelude.Type`
 - Export `Monoid.mappend`
@@ -29,6 +30,9 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Rename `Reader` to `Eff.Mtl.Reader`
 - Rename `State` to `Eff.Mtl.State`
 - Rename `Writer` to `Eff.Mtl.Writer`
+
+### Removed
+- Remove `ansi-terminal` dependency
 
 ## [0.1.0] - 2018-10-21
 
