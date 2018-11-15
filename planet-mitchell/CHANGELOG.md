@@ -8,6 +8,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 ## Unreleased
 
 ### Added
+- Add `strict-tuple` dependency
 - Add `text-builder` dependency
 - Export `Mitchell.Prelude.Type`
 - Export `Monoid.mappend`
