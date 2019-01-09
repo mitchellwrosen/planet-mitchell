@@ -1,5 +1,6 @@
 module UUID
   ( UUID
+  , nextRandom
   , toText
   , fromText
   , toByteString
@@ -8,12 +9,7 @@ module UUID
   , fromWords
   , null
   , nil
-  , generateNamed
-  , namespaceDNS
-  , namespaceURL
-  , namespaceOID
-  , namespaceX500
   ) where
 
 import Data.UUID.Types
-import Data.UUID.V5
+import Data.UUID.V4
