@@ -31,6 +31,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 - Rename `State` to `Eff.Mtl.State`
 - Rename `Writer` to `Eff.Mtl.Writer`
 - Switch `UUID` from Version 5 (namespaced) to Version 4 (random)
+- Move some `generic-lens` machinery into `Generic` module
 
 ### Removed
 - Remove `ansi-terminal` dependency

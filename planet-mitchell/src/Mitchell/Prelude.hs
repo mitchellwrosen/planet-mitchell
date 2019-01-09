@@ -145,6 +145,8 @@ module Mitchell.Prelude
   , Endo(..)
     -- * Generic
   , Generic
+  , AsAny(..)
+  , HasAny(..)
     -- * Hashable
   , Hashable
     -- * IO
@@ -243,14 +245,12 @@ module Mitchell.Prelude
   , Lens
   , Lens'
   , lens
-  , HasAny(..)
   , At(..)
     -- * Optic.Prism
   , Prism
   , Prism'
   , prism
   , is
-  , AsAny(..)
     -- * Optic.Setter
   , (.~)
   , (%~)
@@ -295,6 +295,15 @@ import Alg.Applicative (Alternative(empty, (<|>)), Applicative, filterM,
                         replicateM, replicateM_, unless, when, zipWithM,
                         zipWithM_, (*>), (<*), (<*>))
 import Alg.Category    (Category(id, (.)), (<<<), (>>>))
+#if MIN_VERSION_base(4,11,0)
+import Alg.Functor ((<&>))
+#endif
+import Alg.Monad       (Monad((>>=)), unlessM, whenJustM, whenM, whileM, (<=<),
+                        (=<<), (>=>))
+import Alg.Monad.Trans (MonadTrans(lift))
+import Alg.Monoid      (Monoid, mconcat, mempty)
+import Alg.Semigroup   (Semigroup((<>)))
+import Alg.Traversable (Traversable(sequenceA, traverse), for)
 import Bool            (Bool(False, True), not, otherwise, (&&), (||))
 import Bounded         (Bounded(maxBound, minBound))
 import ByteString      (ByteString)
@@ -309,6 +318,7 @@ import Compactable       (Compactable(applyEither, applyMaybe, bindEither, bindM
                           fforEither, fforMaybe)
 import Debug             (trace, traceId, traceM, traceShow, traceShowId,
                           traceShowM, traceStack)
+import Eff.Mtl.Reader    (view)
 import Either            (Either(Left, Right), either, eitherM, _Left, _Right)
 import Enum              (Enum(enumFrom, enumFromThen, enumFromThenTo, enumFromTo, fromEnum, pred, succ, toEnum))
 import Equality          (Eq((/=), (==)))
@@ -325,24 +335,14 @@ import Foldable          (Foldable(elem, fold, foldMap, foldl', foldr, foldr', l
 import Foldable          (foldBy, foldMapBy)
 import Function          (Endo(Endo, appEndo), const, fix, flip, until, ($),
                           ($!), (&))
-#if MIN_VERSION_base(4,11,0)
-import Alg.Functor ((<&>))
-#endif
-import Generic  (Generic)
-import Hashable (Hashable)
-import IO       (IO, MonadIO(liftIO))
-import List     (cycle, iterate, map, repeat, replicate, scanl, scanl', scanl1,
-                 scanr, scanr1, unfoldr, (++))
+import Generic           (AsAny(_As), Generic, HasAny(the))
+import Hashable          (Hashable)
+import IO                (IO, MonadIO(liftIO))
+import List              (cycle, iterate, map, repeat, replicate, scanl, scanl',
+                          scanl1, scanr, scanr1, unfoldr, (++))
 #if MIN_VERSION_base(4,11,0)
 import List (iterate')
 #endif
-import Alg.Monad       (Monad((>>=)), unlessM, whenJustM, whenM, whileM, (<=<),
-                        (=<<), (>=>))
-import Alg.Monad.Trans (MonadTrans(lift))
-import Alg.Monoid      (Monoid, mconcat, mempty)
-import Alg.Semigroup   (Semigroup((<>)))
-import Alg.Traversable (Traversable(sequenceA, traverse), for)
-import Eff.Mtl.Reader  (view)
 import Map             (Map)
 import Map.Hash        (HashMap)
 import Map.Int         (IntMap)
@@ -364,8 +364,8 @@ import Num.RealFrac    (RealFrac(..))
 import Num.Word        (Word, Word16, Word32, Word64, Word8)
 import Optic.Fold      (folded, has, preview, (^?))
 import Optic.Getting   ((^.))
-import Optic.Lens      (At(at), HasAny(the), Lens, Lens', lens)
-import Optic.Prism     (AsAny(_As), Prism, Prism', is, prism)
+import Optic.Lens      (At(at), Lens, Lens', lens)
+import Optic.Prism     (Prism, Prism', is, prism)
 import Optic.Setter    (over, set, (%~), (.~))
 import Optic.Traversal (Traversal, Traversal')
 import Ord             (Ord(compare, max, min, (<), (<=), (>), (>=)),
