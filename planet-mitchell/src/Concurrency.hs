@@ -50,7 +50,9 @@ module Concurrency
   , poll
   , pollSTM
   , link
+  , linkOnly
   , link2
+  , link2Only
   , asyncThreadId
   , compareAsyncs
   , ExceptionInLinkedThread(..)
@@ -98,7 +100,8 @@ module Concurrency
   ) where
 
 import Control.Concurrent.Async (AsyncCancelled(..),
-                                 ExceptionInLinkedThread(..), compareAsyncs)
+                                 ExceptionInLinkedThread(..), compareAsyncs,
+                                 link2Only, linkOnly)
 import GHC.Conc                 (BlockReason(BlockedOnBlackHole, BlockedOnException, BlockedOnForeignCall, BlockedOnMVar, BlockedOnOther, BlockedOnSTM),
                                  ThreadStatus(..), catchSTM, closeFdWith,
                                  labelThread, retry, threadStatus,
