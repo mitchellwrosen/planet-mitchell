@@ -108,12 +108,7 @@ module Mitchell.Prelude
   , stdout
   , stderr
     -- * File.Text
-  , say
-  , sayString
-  , sayShow
-  , sayErr
-  , sayErrString
-  , sayErrShow
+  , putStrLn
     -- * Foldable
   , Foldable(..)
   , foldrM
@@ -326,8 +321,7 @@ import Error             (assert, error, undefined)
 import Exception         (Exception, SomeAsyncException(SomeAsyncException),
                           SomeException(SomeException), throwIO)
 import File              (stderr, stdin, stdout)
-import File.Text         (say, sayErr, sayErrShow, sayErrString, sayShow,
-                          sayString)
+import File.Text         (putStrLn)
 import Foldable          (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product, sum, toList),
                           all, and, any, asum, concatMap, find, foldM, foldM_,
                           foldlM, foldrM, for_, msum, notElem, or, sequenceA_,
@@ -380,5 +374,3 @@ import Tuple           (Field1(_1), Field2(_2), Field3(_3), Field4(_4),
                         Field5(_5), Field6(_6), fst, snd)
 import Type            (Type)
 import Void            (Void)
-
-import Data.Orphans ()

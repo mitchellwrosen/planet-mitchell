@@ -46,13 +46,8 @@ module RuntimeSystem
   , RtsTime
   , getRTSStats
   , getRTSStatsEnabled
-    -- * Memory barriers
-  , storeLoadBarrier
-  , loadLoadBarrier
-  , writeBarrier
   ) where
 
-import Data.Atomics
 import GHC.Conc
 import GHC.Event
 import GHC.Stats

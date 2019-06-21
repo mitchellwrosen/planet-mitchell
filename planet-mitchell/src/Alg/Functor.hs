@@ -32,13 +32,10 @@ module Alg.Functor
   , Swapped(..)
     -- * Biapply
   , Biapply(..)
-    -- * MFunctor
-  , MFunctor(..)
   ) where
 
 import Control.Lens.Iso     (Swapped(swapped))
 import Control.Lens.Setter  (mapped)
-import Control.Monad.Morph  (MFunctor, hoist)
 import Data.Bifunctor
 import Data.Bifunctor.Apply (Biapply((.>>), (<<.), (<<.>>)))
 import Data.Functor         (Functor(fmap, (<$)), void, ($>), (<$>))

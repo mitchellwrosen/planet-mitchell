@@ -20,18 +20,10 @@ module File.Text
   , hGetChunk
   , hGetContents
     -- ** Writing
-  , say
-  , sayString
-  , sayShow
-  , sayErr
-  , sayErrString
-  , sayErrShow
-  , hSay
-  , hSayString
-  , hSayShow
-    -- *** Writing (no newlines)
   , putStr
+  , putStrLn
   , hPutStr
+  , hPutStrLn
     -- * File encoding
   , TextEncoding
   , hSetEncoding
@@ -49,8 +41,6 @@ module File.Text
 
 import Data.Text.IO
 import GHC.IO.Handle.FD (openFileBlocking)
-import Say              (hSay, hSayShow, hSayString, say, sayErr, sayErrShow,
-                         sayErrString, sayShow, sayString)
 import System.IO        (TextEncoding, getChar, hGetChar, hGetEncoding,
                          hSetEncoding, latin1, utf16, utf16be, utf16le, utf32,
                          utf32be, utf32le, utf8, utf8_bom)

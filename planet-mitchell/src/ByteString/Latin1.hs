@@ -43,15 +43,8 @@ module ByteString.Latin1
   , pack
   , packCString
   , packCStringLen
-  , packDecimal
-  , packHexadecimal
-  , packOctal
-  , readDecimal
   , readInt
   , readInteger
-  , readHexadecimal
-  , readOctal
-  , readSigned
   , replicate
   , reverse
   , scanl
@@ -93,4 +86,3 @@ module ByteString.Latin1
 
 import Data.ByteString.Char8
 import Data.ByteString.Lens         (chars, packedChars, unpackedChars)
-import Data.ByteString.Lex.Integral

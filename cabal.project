@@ -2,3 +2,10 @@ packages: planet-mitchell
           planet-mitchell-test
 
 jobs: $ncpus
+
+allow-newer:
+  planet-mitchell:exceptions
+  planet-mitchell:lens
+  planet-mitchell:semigroupoids
+
+  planet-mitchell-test:hedgehog

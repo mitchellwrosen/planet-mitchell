@@ -10,14 +10,12 @@ module List
   , breakOn
   , breakOnEnd
   , breakEnd
-  , chop
   , cons
   , cycle
   , delete
   , deleteBy
   , deleteFirstsBy
   , disjoint
-  , divvy
   , drop
   , dropEnd
   , dropPrefix
@@ -26,12 +24,9 @@ module List
   , dropWhileEnd
   , elemIndex
   , elemIndices
-  , endBy
   , filter
   , findIndex
   , findIndices
-  , foldl1May'
-  , foldr1May
   , genericDrop
   , genericIndex
   , genericLength
@@ -44,24 +39,6 @@ module List
   , groupSort
   , groupSortBy
   , groupSortOn
-  , iall
-  , iany
-  , iconcatMap
-  , idropWhile
-  , ifilter
-  , ifind
-  , ifindIndex
-  , ifindIndices
-  , ifoldMap
-  , ifoldl'
-  , ifoldlM
-  , ifoldr
-  , ifoldrM
-  , ifor
-  , ifor_
-  , imap
-  , imapAccumL
-  , imapAccumR
   , inits
   , insert
   , insertBy
@@ -69,32 +46,16 @@ module List
   , intersect
   , intersectBy
   , intersperse
-  , ipartition
-  , ireplicateM
-  , ireplicateM_
   , isInfixOf
   , isPrefixOf
   , isSubsequenceOf
   , isSuffixOf
-  , itakeWhile
   , iterate
-  , itraverse
-  , itraverse_
 #if MIN_VERSION_base(4,11,0)
   , iterate'
 #endif
-  , izipWith
-  , izipWith3
-  , izipWith4
-  , izipWith5
-  , izipWith6
-  , izipWith7
   , lookup
   , map
-  , maximumByMay
-  , maximumMay
-  , minimumByMay
-  , minimumMay
   , nub
   , nubBy
   , nubOn
@@ -122,7 +83,6 @@ module List
   , split
   , splitAt
   , splitAtEnd
-  , splitOn
   , snoc
   , stripInfix
   , stripInfixEnd
@@ -159,12 +119,6 @@ module List
   , zipWith5
   , zipWith6
   , zipWith7
-    -- ** Diff algorithm
-  , Diff(..)
-  , getDiff
-  , getDiffBy
-  , getGroupedDiff
-  , getGroupedDiffBy
     -- ** String
   , String
   , words
@@ -184,8 +138,6 @@ module List
   , suffixed
   ) where
 
-import Data.Algorithm.Diff (Diff(Both, First, Second), getDiff, getDiffBy,
-                            getGroupedDiff, getGroupedDiffBy)
 import Data.List           (break, cycle, delete, deleteBy, deleteFirstsBy,
                             drop, dropWhile, dropWhileEnd, elemIndex,
                             elemIndices, filter, findIndex, findIndices,
@@ -213,16 +165,7 @@ import Data.List.Extra (allSame, anySame, breakEnd, breakOn, breakOnEnd, cons,
                         nubSortOn, snoc, spanEnd, split, splitAtEnd, stripInfix,
                         stripInfixEnd, stripSuffix, takeEnd, takeWhileEnd, trim,
                         trimEnd, trimStart, unsnoc, upper, wordsBy)
-import Data.List.Index (iall, iany, iconcatMap, idropWhile, ifilter, ifind,
-                        ifindIndex, ifindIndices, ifoldMap, ifoldl', ifoldlM,
-                        ifoldr, ifoldrM, ifor, ifor_, imap, imapAccumL,
-                        imapAccumR, ipartition, ireplicateM, ireplicateM_,
-                        itakeWhile, itraverse, itraverse_, izipWith, izipWith3,
-                        izipWith4, izipWith5, izipWith6, izipWith7)
 import Data.List.Lens  (prefixed, suffixed)
-import Data.List.Split (chop, divvy, endBy, splitOn)
 import Data.String     (IsString(fromString), String)
 import GHC.Show        (showString)
 import Numeric         (lexDigits)
-import Safe            (foldl1May', foldr1May, maximumByMay, maximumMay,
-                        minimumByMay, minimumMay)

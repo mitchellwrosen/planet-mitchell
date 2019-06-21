@@ -13,7 +13,6 @@ module Foldable
   , foldM_
   , foldMapBy
   , foldlM
-  , foldr1May
   , foldrM
   , for_
   , group
@@ -22,10 +21,6 @@ module Foldable
   , groupWith
   , inits
   , insert
-  , maximumByMay
-  , maximumMay
-  , minimumByMay
-  , minimumMay
   , msum
   , notElem
   , or
@@ -88,5 +83,3 @@ import Data.Semigroup.Bifoldable (Bifoldable1(bifold1, bifoldMap1), bifor1_,
 import Data.Semigroup.Foldable   (Foldable1(fold1, foldMap1, toNonEmpty), asum1,
                                   foldlM1, foldrM1, for1_, intercalate1,
                                   intercalateMap1, sequenceA1_, traverse1_)
-import Safe.Foldable             (foldr1May, maximumByMay, maximumMay,
-                                  minimumByMay, minimumMay)

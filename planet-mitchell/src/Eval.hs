@@ -5,9 +5,6 @@ module Eval
   , ($!)
   , evaluate
     -- * Normal form
-  , NF
-  , makeNF
-  , getNF
   , NFData(..)
   , deepseq
   , force
@@ -42,5 +39,4 @@ module Eval
 import Control.DeepSeq
 import Control.Exception
 import Control.Parallel.Strategies hiding (rwhnf)
-import Data.NF
 import GHC.Base

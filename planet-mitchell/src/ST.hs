@@ -5,15 +5,6 @@ module ST
   , fixST
   , RealWorld
   , stToIO
-    -- * STE
-  , STE
-  , runSTE
-  , fixSTE
-  , throwSTE
-  , handleSTE
-  , unsafeInterleaveSTE
-  , unsafeIOToSTE
-  , unsafeSTEToIO
     -- * STRef
   , STRef
   , newSTRef
@@ -24,5 +15,4 @@ module ST
   ) where
 
 import Control.Monad.ST
-import Control.Monad.STE.Internal
 import Data.STRef

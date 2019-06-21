@@ -3,25 +3,6 @@ module Tuple
   , snd
   , swap
   , dupe
-    -- ** Strict tuples
-  , T1(..)
-  , T2(..)
-  , T4(..)
-  , T5(..)
-  , T6(..)
-  , T7(..)
-  , T8(..)
-  , T9(..)
-  , T10(..)
-  , T11(..)
-  , T12(..)
-  , T13(..)
-  , T14(..)
-  , T15(..)
-  , T16(..)
-  , T17(..)
-  , T18(..)
-  , T19(..)
     -- ** Optics
   , Field1(..)
   , _1'
@@ -72,6 +53,3 @@ import Control.Lens.Tuple (Field1(..), Field10(..), Field11(..), Field12(..),
                            _3', _4', _5', _6', _7', _8', _9')
 import Data.Tuple         (fst, snd, swap)
 import Data.Tuple.Extra   (dupe)
-import Data.Tuple.Strict  (T1(..), T10(..), T11(..), T12(..), T13(..), T14(..),
-                           T15(..), T16(..), T17(..), T18(..), T19(..), T2(..),
-                           T4(..), T5(..), T6(..), T7(..), T8(..), T9(..))
