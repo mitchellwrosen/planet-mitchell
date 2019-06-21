@@ -3,15 +3,31 @@ module Concurrency
     -- ** High-level concurrency
     concurrently
   , concurrently_
-  , race
-  , race_
   , mapConcurrently
   , mapConcurrently_
   , forConcurrently
   , forConcurrently_
   , replicateConcurrently
   , replicateConcurrently_
-  , Concurrently(..)
+  , race
+  , race_
+  , Conc
+  , conc
+  , runConc
+  , ConcException(..)
+    -- *** Pooled concurrency
+  , pooledMapConcurrently
+  , pooledMapConcurrently_
+  , pooledMapConcurrentlyN
+  , pooledMapConcurrentlyN_
+  , pooledForConcurrently
+  , pooledForConcurrently_
+  , pooledForConcurrentlyN
+  , pooledForConcurrentlyN_
+  , pooledReplicateConcurrently
+  , pooledReplicateConcurrently_
+  , pooledReplicateConcurrentlyN
+  , pooledReplicateConcurrentlyN_
     -- ** Low-level concurrency using @async@
   , Async
   , async
@@ -59,7 +75,7 @@ module Concurrency
   , AsyncCancelled(..)
     -- ** Lower-level concurrency using @forkIO@
   , forkIO
-  , forkWithUnmask
+  , forkIOWithUnmask
   , forkOn
   , forkOnWithUnmask
   , forkFinally
@@ -94,6 +110,8 @@ module Concurrency
   , closeFdWith
     -- * Re-exports
   , module Concurrency.IORef
+  , atomicModifyIORef_
+  , atomicModifyIORef'_
   , module Concurrency.MVar
   , module Concurrency.TVar
   , module Concurrency.TMVar
@@ -102,6 +120,7 @@ module Concurrency
 import Control.Concurrent.Async (AsyncCancelled(..),
                                  ExceptionInLinkedThread(..), compareAsyncs,
                                  link2Only, linkOnly)
+import Data.IORef.Extra         (atomicModifyIORef'_, atomicModifyIORef_)
 import GHC.Conc                 (BlockReason(BlockedOnBlackHole, BlockedOnException, BlockedOnForeignCall, BlockedOnMVar, BlockedOnOther, BlockedOnSTM),
                                  ThreadStatus(..), catchSTM, closeFdWith,
                                  labelThread, retry, threadStatus,

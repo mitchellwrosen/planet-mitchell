@@ -8,7 +8,6 @@ module Equality
   , comparisonEquivalence
   , Eq1(..)
   , eq1
-  , liftEqDefault
   , Eq2(..)
   , eq2
     -- * Propositional equality
@@ -27,6 +26,5 @@ module Equality
 
 import Data.Eq
 import Data.Functor.Classes
-import Data.Functor.Classes.Generic
 import Data.Functor.Contravariant
 import Data.Type.Equality

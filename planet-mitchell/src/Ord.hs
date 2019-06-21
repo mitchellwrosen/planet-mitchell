@@ -12,13 +12,11 @@ module Ord
   , ArgMax
   , Ord1(..)
   , compare1
-  , liftCompareDefault
   , Ord2(..)
   , compare2
   ) where
 
 import Data.Functor.Classes
-import Data.Functor.Classes.Generic
 import Data.Functor.Contravariant
 import Data.Ord
 import Data.Semigroup

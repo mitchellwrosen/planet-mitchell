@@ -1,5 +1,7 @@
 module List.NonEmpty
   ( NonEmpty(..)
+  , appendl
+  , appendr
   , break
   , cons
   , cycle
@@ -17,6 +19,12 @@ module List.NonEmpty
   , iterate
   , last
   , map
+  , maximum1
+  , maximumBy1
+  , maximumOn1
+  , minimum1
+  , minimumBy1
+  , minimumOn1
   , nonEmpty
   , nub
   , nubBy
@@ -29,18 +37,22 @@ module List.NonEmpty
   , scanr1
   , sort
   , sortBy
+  , sortOn
   , sortWith
   , span
   , splitAt
+  , snoc
   , tail
   , take
   , takeWhile
   , transpose
   , uncons
   , unfoldr
+  , union
+  , unionBy
   , xor
   , zip
   , zipWith
   ) where
 
-import Data.List.NonEmpty
+import Data.List.NonEmpty.Extra

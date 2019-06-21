@@ -206,10 +206,6 @@ Packages perhaps worth looking at that didn't make it into my planet:
 
   `STE s e a`, a faster alternative to `ExceptT e (ST s) a`.
 
-- `writer-cps-mtl`
-
-  A non-leaky alternative to `transformers`' `Control.Monad.Trans.Writer`.
-
 #### FRP
 
 - `reactive-banana`
@@ -252,6 +248,10 @@ Packages perhaps worth looking at that didn't make it into my planet:
 
   Helper newtype that `deepseq`s when `seq`'d, useful for ensuring that a data
   structure is fully evaluated before placing on a worker queue, for example.
+
+- `transformers-compat`
+
+  Generic deriving of `Eq1`, `Ord1`, etc.
 
 - `unique`
 

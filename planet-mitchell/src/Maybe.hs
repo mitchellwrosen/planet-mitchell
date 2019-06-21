@@ -6,6 +6,7 @@ module Maybe
   , isJust
   , isNothing
   , fromMaybe
+  , fromMaybeM
   , listToMaybe
   , maybeToList
   , catMaybes
@@ -21,7 +22,7 @@ module Maybe
   ) where
 
 import Control.Lens.Prism  (_Just, _Nothing)
-import Control.Monad.Extra (maybeM)
+import Control.Monad.Extra (fromMaybeM, maybeM)
 import Data.Maybe
 import Data.Monoid
 import Data.Semigroup      (Option(..), option)
