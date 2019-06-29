@@ -106,6 +106,10 @@ Packages perhaps worth looking at that didn't make it into my planet:
 
 #### Data structures
 
+- `algebraic-graphs`
+
+  Algebraic graphs.
+
 - `array`
 
   Arrays.
@@ -154,6 +158,10 @@ Packages perhaps worth looking at that didn't make it into my planet:
 - `strict-tuple`
 
   Strict tuples.
+
+- `topograph`
+
+  Directed, acyclic graphs.
 
 - `vault`
 

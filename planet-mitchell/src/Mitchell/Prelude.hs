@@ -1,8 +1,9 @@
 {-# LANGUAGE CPP #-}
 
 module Mitchell.Prelude
-  ( -- * Ala.Identity
-    Identity(..)
+  ( Alternative((<|>), empty)
+  , guard
+  , optional
     -- * Alg.Applicative
   , Applicative(..)
   , filterM
@@ -14,15 +15,36 @@ module Mitchell.Prelude
   , when
   , zipWithM
   , zipWithM_
-  , Alternative((<|>), empty)
-  , guard
-  , optional
     -- * Alg.Category
   , Category(..)
   , (>>>)
   , (<<<)
+    -- * Alg.Compactable
+  , Compactable(..)
+  , fforMaybe
+  , fforEither
     -- * Alg.Contravariant
   , Contravariant(..)
+    -- * Alg.Foldable
+  , Foldable(..)
+  , foldrM
+  , foldlM
+  , traverse_
+  , for_
+  , sequenceA_
+  , asum
+  , msum
+  , concatMap
+  , and
+  , or
+  , all
+  , any
+  , notElem
+  , find
+  , foldM
+  , foldM_
+  , foldMapBy
+  , foldBy
     -- * Alg.Functor
   , Functor(..)
   , (<$>)
@@ -43,9 +65,7 @@ module Mitchell.Prelude
     -- * Alg.Monad.Trans
   , MonadTrans(..)
     -- * Alg.Monoid
-  , Monoid
-  , mconcat
-  , mempty
+  , Monoid(mconcat, mempty)
     -- * Alg.Semigroup
   , Semigroup(..)
     -- * Bool
@@ -70,10 +90,6 @@ module Mitchell.Prelude
     -- * Coerce
   , Coercible
   , coerce
-    -- * Compactable
-  , Compactable(..)
-  , fforMaybe
-  , fforEither
     -- * Debug
   , trace
   , traceId
@@ -109,26 +125,6 @@ module Mitchell.Prelude
   , stderr
     -- * File.Text
   , putStrLn
-    -- * Foldable
-  , Foldable(..)
-  , foldrM
-  , foldlM
-  , traverse_
-  , for_
-  , sequenceA_
-  , asum
-  , msum
-  , concatMap
-  , and
-  , or
-  , all
-  , any
-  , notElem
-  , find
-  , foldM
-  , foldM_
-  , foldMapBy
-  , foldBy
     -- * Function
   , ($)
   , ($!)
@@ -284,9 +280,8 @@ module Mitchell.Prelude
   , Void
   ) where
 
-import Ala.Identity    (Identity(Identity, runIdentity))
-import Alg.Applicative (Alternative(empty, (<|>)), Applicative, filterM,
-                        forever, guard, liftA2, liftA3, optional, pure,
+import Alg.Alternative (Alternative(empty, (<|>)), guard, optional)
+import Alg.Applicative (Applicative, filterM, forever, liftA2, liftA3, pure,
                         replicateM, replicateM_, unless, when, zipWithM,
                         zipWithM_, (*>), (<*), (<*>))
 import Alg.Category    (Category(id, (.)), (<<<), (>>>))
@@ -296,7 +291,7 @@ import Alg.Functor ((<&>))
 import Alg.Monad       (Monad((>>=)), unlessM, whenJustM, whenM, whileM, (<=<),
                         (=<<), (>=>))
 import Alg.Monad.Trans (MonadTrans(lift))
-import Alg.Monoid      (Monoid, mconcat, mempty)
+import Alg.Monoid      (Monoid(mconcat, mempty))
 import Alg.Semigroup   (Semigroup((<>)))
 import Alg.Traversable (Traversable(sequenceA, traverse), for)
 import Bool            (Bool(False, True), not, otherwise, (&&), (||))
@@ -306,11 +301,15 @@ import Char            (Char)
 #if MIN_VERSION_base(4,11,0)
 import Clock (getMonotonicTime, getMonotonicTimeNSec)
 #endif
+import Alg.Compactable   (Compactable(applyEither, applyMaybe, bindEither, bindMaybe, compact, filter, fmapEither, fmapMaybe, partition, separate, traverseEither, traverseMaybe),
+                          fforEither, fforMaybe)
 import Alg.Contravariant (Contravariant(contramap))
+import Alg.Foldable      (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product, sum, toList),
+                          all, and, any, asum, concatMap, find, foldBy, foldM,
+                          foldM_, foldMapBy, foldlM, foldrM, for_, msum,
+                          notElem, or, sequenceA_, traverse_)
 import Alg.Functor       (Functor(fmap, (<$)), void, ($>), (<$>))
 import Coerce            (Coercible, coerce)
-import Compactable       (Compactable(applyEither, applyMaybe, bindEither, bindMaybe, compact, filter, fmapEither, fmapMaybe, partition, separate, traverseEither, traverseMaybe),
-                          fforEither, fforMaybe)
 import Debug             (trace, traceId, traceM, traceShow, traceShowId,
                           traceShowM, traceStack)
 import Either            (Either(Left, Right), either, eitherM, _Left, _Right)
@@ -321,11 +320,6 @@ import Exception         (Exception, SomeAsyncException(SomeAsyncException),
                           SomeException(SomeException), throwIO)
 import File              (stderr, stdin, stdout)
 import File.Text         (putStrLn)
-import Foldable          (Foldable(elem, fold, foldMap, foldl', foldr, foldr', length, null, product, sum, toList),
-                          all, and, any, asum, concatMap, find, foldM, foldM_,
-                          foldlM, foldrM, for_, msum, notElem, or, sequenceA_,
-                          traverse_)
-import Foldable          (foldBy, foldMapBy)
 import Function          (Endo(Endo, appEndo), const, fix, flip, until, ($),
                           ($!), (&))
 import Generic           (AsAny(_As), Generic, HasAny(the))

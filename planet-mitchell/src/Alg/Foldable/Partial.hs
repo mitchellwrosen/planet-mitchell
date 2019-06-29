@@ -1,4 +1,4 @@
-module Foldable.Partial
+module Alg.Foldable.Partial
   ( -- * Foldable
     foldr1
   , maximum

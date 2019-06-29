@@ -8,7 +8,7 @@ and this project adheres to the [Haskell Package Versioning Policy](https://pvp.
 ## Unreleased
 
 ### Changed
-- Removed many dependencies
+- Removed many dependencies and modules
 
 ## [0.1.0] - 2018-10-21
 

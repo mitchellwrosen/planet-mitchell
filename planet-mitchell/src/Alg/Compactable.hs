@@ -1,4 +1,4 @@
-module Compactable
+module Alg.Compactable
   ( Compactable(..)
   , fforMaybe
   , fforEither

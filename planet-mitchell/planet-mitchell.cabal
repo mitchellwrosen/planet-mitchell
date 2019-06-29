@@ -86,17 +86,16 @@ library
     , vector                      >= 0.12.0  && < 0.12.1
 
   exposed-modules:
-    Ala.Compose
-    Ala.Const
-    Ala.Identity
-    Ala.Product
-    Ala.Sum
+    Alg.Alternative
     Alg.Applicative
     Alg.Category
+    Alg.Compactable
     Alg.Contravariant
     Alg.Decidable
     Alg.Distributive
     Alg.Divisible
+    Alg.Foldable
+    Alg.Foldable.Partial
     Alg.Functor
     Alg.Groupoid
     Alg.Monad
@@ -128,7 +127,6 @@ library
     Clock
     Coerce
     Coerce.Unsafe
-    Compactable
     Concurrency
     Concurrency.IORef
     Concurrency.MVar
@@ -153,8 +151,6 @@ library
     File
     File.Binary
     File.Text
-    Foldable
-    Foldable.Partial
     Function
     Generic
     Graph.Adjacency

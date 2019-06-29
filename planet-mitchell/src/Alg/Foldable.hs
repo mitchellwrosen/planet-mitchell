@@ -1,4 +1,4 @@
-module Foldable
+module Alg.Foldable
   ( -- * Foldable
     Foldable(fold, foldMap, foldr, foldr', foldl', toList, null, length,
       elem, sum, product)
